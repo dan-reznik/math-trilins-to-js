@@ -1,0 +1,201 @@
+kimberling;trilins;name
+X1;1|1|1;INCENTER
+X2;b*c|a*c|a*b;CENTROID
+X3;cosA|cosB|cosC;CIRCUMCENTER
+X4;secA|secB|secC;ORTHOCENTER
+X5;cosB*cosC+sinB*sinC|cosA*cosC+sinA*sinC|cosA*cosB+sinA*sinB;NINE-POINT CENTER
+X6;a|b|c;SYMMEDIAN / LEMOINE / GREBE POINT
+X7;(b*c)/(-a+b+c)|(a*c)/(a-b+c)|(a*b)/(a+b-c);GERGONNE POINT
+X8;(-a+b+c)/a|(a-b+c)/b|(a+b-c)/c;NAGEL POINT
+X9;-a+b+c|a-b+c|a+b-c;MITTENPUNKT
+X10;b*c*(b+c)|a*c*(a+c)|a*b*(a+b);SPIEKER CENTER
+X11;1-cosB*cosC-sinB*sinC|1-cosA*cosC-sinA*sinC|1-cosA*cosB-sinA*sinB;FEUERBACH POINT
+X12;1+cosB*cosC+sinB*sinC|1+cosA*cosC+sinA*sinC|1+cosA*cosB+sinA*sinB;{X1,X5}-HARMONIC CONJUGATE OF X11
+X13;cscApPi3|cscBpPi3|cscCpPi3;1st ISOGONIC CENTER (FERMAT / TORRICELLI POINT)
+X14;cscAmPi3|cscBmPi3|cscCmPi3;2nd ISOGONIC CENTER
+X15;sinApPi3|sinBpPi3|sinCpPi3;1st ISODYNAMIC POINT
+X16;sinAmPi3|sinBmPi3|sinCmPi3;2nd ISODYNAMIC POINT
+X17;cscApPi6|cscBpPi6|cscCpPi6;1st NAPOLEON POINT
+X18;cscAmPi6|cscBmPi6|cscCmPi6;2nd NAPOLEON POINT
+X19;1/(-a2+b2+c2)|1/(a2-b2+c2)|1/(a2+b2-c2);CLAWSON POINT
+X20;cosA-cosB*cosC|cosB-cosA*cosC|-(cosA*cosB)+cosC;DE LONGCHAMPS POINT
+X21;(-a+b+c)/(b+c)|(a-b+c)/(a+c)|(a+b-c)/(a+b);SCHIFFLER POINT
+X22;a*(-a4+b4+c4)|b*(a4-b4+c4)|c*(a4+b4-c4);EXETER POINT
+X23;a*(-a4+b4-b2*c2+c4)|b*(a4-b4-a2*c2+c4)|c*(a4-a2*b2+b4-c4);FAR-OUT POINT
+X24;cos2A*secA|cos2B*secB|cos2C*secC;PERSPECTOR OF ABC AND ORTHIC-OF-ORTHIC TRIANGLE
+X25;a/(-a2+b2+c2)|b/(a2-b2+c2)|c/(a2+b2-c2);HOMOTHETIC CENTER OF ORTHIC AND TANGENTIAL TRIANGLES
+X26;a*(-(a2*cos2A)+b2*cos2B+c2*cos2C)|b*(a2*cos2A-b2*cos2B+c2*cos2C)|c*(a2*cos2A+b2*cos2B-c2*cos2C);CIRCUMCENTER OF THE TANGENTIAL TRIANGLE
+X27;secA/(b+c)|secB/(a+c)|secC/(a+b);CEVAPOINT OF ORTHOCENTER AND CLAWSON CENTER
+X28;tanA/(b+c)|tanB/(a+c)|tanC/(a+b);CEVAPOINT OF X19 AND X25
+X29;secA/(cosB+cosC)|secB/(cosA+cosC)|secC/(cosA+cosB);CEVAPOINT OF INCENTER AND ORTHOCENTER
+X30;-a+b+c|a-b+c|a+b-c;EULER INFINITY POINT
+X31;a2|b2|c2;2nd POWER POINT
+X32;a3|b3|c3;3rd POWER POINT
+X33;1+secA|1+secB|1+secC;PERSPECTOR OF THE ORTHIC AND INTANGENTS TRIANGLES
+X34;1-secA|1-secB|1-secC;X4-BETH CONJUGATE OF X4
+X35;1+2*cosA|1+2*cosB|1+2*cosC;{X1,X3}-HARMONIC CONJUGATE OF X36
+X36;1-2*cosA|1-2*cosB|1-2*cosC;INVERSE-IN-CIRCUMCIRCLE OF INCENTER
+X37;b+c|a+c|a+b;CROSSPOINT OF INCENTER AND CENTROID
+X38;b2+c2|a2+c2|a2+b2;CROSSPOINT OF X1 AND X75
+X39;a*(b2+c2)|b*(a2+c2)|(a2+b2)*c;BROCARD MIDPOINT
+X40;-1-cosA+cosB+cosC|-1+cosA-cosB+cosC|-1+cosA+cosB-cosC;BEVAN POINT
+X41;a2*(-a+b+c)|b2*(a-b+c)|(a+b-c)*c2;X6-CEVA CONJUGATE OF X31
+X42;a*(b+c)|b*(a+c)|(a+b)*c;CROSSPOINT OF INCENTER AND SYMMEDIAN POINT
+X43;a*b+a*c-b*c|a*b-a*c+b*c|-(a*b)+a*c+b*c;X6-CEVA CONJUGATE OF X1
+X44;-2*a+b+c|a-2*b+c|a+b-2*c;X6-LINE CONJUGATE OF X1
+X45;-a+2*b+2*c|2*a-b+2*c|2*a+2*b-c;X9-BETH CONJUGATE OF X1
+X46;-cosA+cosB+cosC|cosA-cosB+cosC|cosA+cosB-cosC;X4-CEVA CONJUGATE OF X1
+X47;cos2A|cos2B|cos2C;X110-BETH CONJUGATE OF X34
+X48;tanB+tanC|tanA+tanC|tanA+tanB;CROSSPOINT OF X1 AND X63
+X49;cos3A|cos3B|cos3C;CENTER OF SINE-TRIPLE-ANGLE CIRCLE
+X50;sin3A|sin3B|sin3C;X74-CEVA CONJUGATE OF X184
+X51;a2*(cosB*cosC+sinB*sinC)|b2*(cosA*cosC+sinA*sinC)|c2*(cosA*cosB+sinA*sinB);CENTROID OF ORTHIC TRIANGLE
+X52;cos2A*(cosB*cosC+sinB*sinC)|cos2B*(cosA*cosC+sinA*sinC)|cos2C*(cosA*cosB+sinA*sinB);ORTHOCENTER OF ORTHIC TRIANGLE
+X53;(cosB*cosC+sinB*sinC)*tanA|(cosA*cosC+sinA*sinC)*tanB|(cosA*cosB+sinA*sinB)*tanC;SYMMEDIAN POINT OF ORTHIC TRIANGLE
+X54;1/(cosB*cosC+sinB*sinC)|1/(cosA*cosC+sinA*sinC)|1/(cosA*cosB+sinA*sinB);KOSNITA POINT
+X55;a*(-a+b+c)|b*(a-b+c)|(a+b-c)*c;INSIMILICENTER(CIRCUMCIRCLE,INCIRCLE)
+X56;a/(-a+b+c)|b/(a-b+c)|c/(a+b-c);EXSIMILICENTER(CIRCUMCIRCLE,INCIRCLE)
+X57;1/(-a+b+c)|1/(a-b+c)|1/(a+b-c);ISOGONAL CONJUGATE OF X9
+X58;a/(b+c)|b/(a+c)|c/(a+b);ISOGONAL CONJUGATE OF X10
+X59;1/(1-cosB*cosC-sinB*sinC)|1/(1-cosA*cosC-sinA*sinC)|1/(1-cosA*cosB-sinA*sinB);ISOGONAL CONJUGATE OF X11
+X60;1/(1+cosB*cosC+sinB*sinC)|1/(1+cosA*cosC+sinA*sinC)|1/(1+cosA*cosB+sinA*sinB);ISOGONAL CONJUGATE OF X12
+X61;cPi6*sinA+cosA*sPi6|cPi6*sinB+cosB*sPi6|cPi6*sinC+cosC*sPi6;ISOGONAL CONJUGATE OF X17
+X62;cPi6*sinA-cosA*sPi6|cPi6*sinB-cosB*sPi6|cPi6*sinC-cosC*sPi6;ISOGONAL CONJUGATE OF X18
+X63;cotA|cotB|cotC;ISOGONAL CONJUGATE OF X19
+X64;1/(cosA-cosB*cosC)|1/(cosB-cosA*cosC)|1/(-(cosA*cosB)+cosC);ISOGONAL CONJUGATE OF X20
+X65;cosB+cosC|cosA+cosC|cosA+cosB;ORTHOCENTER OF THE INTOUCH TRIANGLE
+X66;(b*c)/(-a4+b4+c4)|(a*c)/(a4-b4+c4)|(a*b)/(a4+b4-c4);ISOGONAL CONJUGATE OF X22
+X67;(b*c)/(-a4+b4-b2*c2+c4)|(a*c)/(a4-b4-a2*c2+c4)|(a*b)/(a4-a2*b2+b4-c4);ISOGONAL CONJUGATE OF X23
+X68;cosA*sec2A|cosB*sec2B|cosC*sec2C;PRASOLOV POINT
+X69;cosA/a2|cosB/b2|cosC/c2;SYMMEDIAN POINT OF THE ANTICOMPLEMENTARY TRIANGLE
+X70;(b*c)/(-(a2*cos2A)+b2*cos2B+c2*cos2C)|(a*c)/(a2*cos2A-b2*cos2B+c2*cos2C)|(a*b)/(a2*cos2A+b2*cos2B-c2*cos2C);ISOGONAL CONJUGATE OF X26
+X71;(b+c)*cosA|(a+c)*cosB|(a+b)*cosC;ISOGONAL CONJUGATE OF X27
+X72;(b+c)*cotA|(a+c)*cotB|(a+b)*cotC;ISOGONAL CONJUGATE OF X28
+X73;secB+secC|secA+secC|secA+secB;CROSSPOINT OF INCENTER AND CIRCUMCENTER
+X74;1/(cosA-2*cosB*cosC)|1/(cosB-2*cosA*cosC)|1/(-2*cosA*cosB+cosC);ISOGONAL CONJUGATE OF EULER INFINITY POINT
+X75;1/a2|1/b2|1/c2;ISOTOMIC CONJUGATE OF INCENTER
+X76;1/a3|1/b3|1/c3;3rd BROCARD POINT
+X77;1/(1+secA)|1/(1+secB)|1/(1+secC);ISOGONAL CONJUGATE OF X33
+X78;1/(1-secA)|1/(1-secB)|1/(1-secC);ISOGONAL CONJUGATE OF X34
+X79;1/(1+2*cosA)|1/(1+2*cosB)|1/(1+2*cosC);ISOGONAL CONJUGATE OF X35
+X80;1/(1-2*cosA)|1/(1-2*cosB)|1/(1-2*cosC);REFLECTION OF INCENTER IN FEUERBACH POINT
+X81;1/(b+c)|1/(a+c)|1/(a+b);CEVAPOINT OF INCENTER AND SYMMEDIAN POINT
+X82;1/(b2+c2)|1/(a2+c2)|1/(a2+b2);ISOGONAL CONJUGATE OF X38
+X83;(b*c)/(b2+c2)|(a*c)/(a2+c2)|(a*b)/(a2+b2);CEVAPOINT OF CENTROID AND SYMMEDIAN POINT
+X84;1/(-1-cosA+cosB+cosC)|1/(-1+cosA-cosB+cosC)|1/(-1+cosA+cosB-cosC);ISOGONAL CONJUGATE OF X40
+X85;(b2*c2)/(-a+b+c)|(a2*c2)/(a-b+c)|(a2*b2)/(a+b-c);ISOTOMIC CONJUGATE OF X9
+X86;(b*c)/(b+c)|(a*c)/(a+c)|(a*b)/(a+b);CEVAPOINT OF INCENTER AND CENTROID
+X87;1/(a*b+a*c-b*c)|1/(a*b-a*c+b*c)|1/(-(a*b)+a*c+b*c);X2-CROSS CONJUGATE OF X1
+X88;1/(-2*a+b+c)|1/(a-2*b+c)|1/(a+b-2*c);ISOGONAL CONJUGATE OF X44
+X89;1/(-a+2*b+2*c)|1/(2*a-b+2*c)|1/(2*a+2*b-c);ISOGONAL CONJUGATE OF X45
+X90;1/(-cosA+cosB+cosC)|1/(cosA-cosB+cosC)|1/(cosA+cosB-cosC);X3-CROSS CONJUGATE OF X1
+X91;sec2A|sec2B|sec2C;ISOGONAL CONJUGATE OF X47
+X92;csc2A|csc2B|csc2C;CEVAPOINT OF INCENTER AND CLAWSON POINT
+X93;sec3A|sec3B|sec3C;ISOGONAL CONJUGATE OF X49
+X94;csc3A|csc3B|csc3C;ISOGONAL CONJUGATE OF X50
+X95;(b2*c2)/(cosB*cosC+sinB*sinC)|(a2*c2)/(cosA*cosC+sinA*sinC)|(a2*b2)/(cosA*cosB+sinA*sinB);CEVAPOINT OF CENTROID AND CIRCUMCENTER
+X96;sec2A/(cosB*cosC+sinB*sinC)|sec2B/(cosA*cosC+sinA*sinC)|sec2C/(cosA*cosB+sinA*sinB);ISOGONAL CONJUGATE OF X52
+X97;cotA/(cosB*cosC+sinB*sinC)|cotB/(cosA*cosC+sinA*sinC)|cotC/(cosA*cosB+sinA*sinB);ISOGONAL CONJUGATE OF X53
+X98;(b*c)/(-(a2*b2)+b4-a2*c2+c4)|(a*c)/(a4-a2*b2-b2*c2+c4)|(a*b)/(a4+b4-a2*c2-b2*c2);TARRY POINT
+X99;(b*c)/(b2-c2)|(a*c)/(-a2+c2)|(a*b)/(a2-b2);STEINER POINT
+X100;1/(b-c)|1/(-a+c)|1/(a-b);ANTICOMPLEMENT OF FEUERBACH POINT
+X101;a/(b-c)|b/(-a+c)|c/(a-b);Λ(INCENTER,ORTHOCENTER)Ψ(INCENTER,SYMMEDIAN POINT)
+X102;a/(2*a4-a3*(b+c)-a*a2*Math.pow(b-c,4)*(b+c)-(b2-c2)*(b2-c2))|b/(2*b4-b3*(a+c)-b*b2*Math.pow(-a+c,4)*(a+c)-(-a2+c2)*(-a2+c2))|c/(-(a2-b2)*(a2-b2)-Math.pow(a-b,4)*(a+b)*c*c2-(a+b)*c3+2*c4);Λ(INCENTER,ORTHOCENTER)
+X103;a/(2*a3-a2*(b+c)-(b-c)*(b-c)*(b+c))|b/(2*b3-b2*(a+c)-(-a+c)*(-a+c)*(a+c))|c/(-((a-b)*(a-b)*(a+b))-(a+b)*c2+2*c3);ANTIPODE OF X101
+X104;1/(b3+2*a*b*c-(b+c)*(a2+b*c)+c3)|1/(a3+2*a*b*c-(a+c)*(b2+a*c)+c3)|1/(a3+b3+2*a*b*c-(a+b)*(a*b+c2));ANTIPODE OF X100
+X105;1/(b2-a*(b+c)+c2)|1/(a2-b*(a+c)+c2)|1/(a2+b2-(a+b)*c);Λ(INCENTER,SYMMEDIAN POINT)
+X106;a/(2*a-b-c)|b/(-a+2*b-c)|c/(-a-b+2*c);Λ(INCENTER,CENTROID)
+X107;(b*c)/((b2-c2)*(-a2+b2+c2)*(-a2+b2+c2))|(a*c)/((-a2+c2)*(a2-b2+c2)*(a2-b2+c2))|(a*b)/((a2-b2)*(a2+b2-c2)*(a2+b2-c2));Ψ(SYMMEDIAN POINT,ORTHOCENTER)
+X108;1/((b-c)*(-a+b+c)*(-a2+b2+c2))|1/((-a+c)*(a-b+c)*(a2-b2+c2))|1/((a-b)*(a+b-c)*(a2+b2-c2));Ψ(CIRCUMCENTER,INCENTER)
+X109;a/((b-c)*(-a+b+c))|b/((-a+c)*(a-b+c))|c/((a-b)*(a+b-c));Ψ(INCENTER,CIRCUMCENTER)
+X110;a/(b2-c2)|b/(-a2+c2)|c/(a2-b2);FOCUS OF KIEPERT PARABOLA
+X111;a/(2*a2-b2-c2)|b/(-a2+2*b2-c2)|c/(-a2-b2+2*c2);PARRY POINT
+X112;a/((b2-c2)*(-a2+b2+c2))|b/((-a2+c2)*(a2-b2+c2))|c/((a2-b2)*(a2+b2-c2));Ψ(ORTHOCENTER,SYMMEDIAN POINT)
+X113;sinB*sinC*(sinB/(cosB-2*cosA*cosC)+sinC/(-2*cosA*cosB+cosC))|sinA*sinC*(sinA/(cosA-2*cosB*cosC)+sinC/(-2*cosA*cosB+cosC))|sinA*sinB*(sinA/(cosA-2*cosB*cosC)+sinB/(cosB-2*cosA*cosC));JERABEK ANTIPODE
+X114;((-(a2*b2)+b4-a2*c2+c4)*(2*a4-a2*b2+b4-a2*c2-2*b2*c2+c4))/a|((a4-a2*b2-b2*c2+c4)*(a4-a2*b2+2*b4-2*a2*c2-b2*c2+c4))/b|((a4+b4-a2*c2-b2*c2)*(a4-2*a2*b2+b4-a2*c2-b2*c2+2*c4))/c;KIEPERT ANTIPODE
+X115;b*c*(b2-c2)*(b2-c2)|a*c*(-a2+c2)*(-a2+c2)|a*b*(a2-b2)*(a2-b2);CENTER OF KIEPERT HYPERBOLA
+X116;b*(b-c)*(b-c)*c*(-(a*b)+b2-a*c+b*c+c2)|a*c*(-a+c)*(-a+c)*(a2-a*b+a*c-b*c+c2)|a*(a-b)*(a-b)*b*(a2+a*b+b2-a*c-b*c);MIDPOINT OF X4 AND X103
+X117;(b2*c)/(a*(-secA+secB)+c*(secB-secC))+(b*c2)/(a*(-secA+secC)+b*(-secB+secC))|(a2*c)/(b*(secA-secB)+c*(secA-secC))+(a*c2)/(a*(-secA+secC)+b*(-secB+secC))|(a2*b)/(b*(secA-secB)+c*(secA-secC))+(a*b2)/(a*(-secA+secB)+c*(secB-secC));MIDPOINT OF X4 AND X109
+X118;(b*c3)/((-b+c)/tanA+(-a+c)/tanB)+(b3*c)/((b-c)/tanA+(-a+b)/tanC)|(a*c3)/((-b+c)/tanA+(-a+c)/tanB)+(a3*c)/((a-c)/tanB+(a-b)/tanC)|(a3*b)/((a-c)/tanB+(a-b)/tanC)+(a*b3)/((b-c)/tanA+(-a+b)/tanC);MIDPOINT OF X4 AND X101
+X119;(-1+cosB+cosC)*cscA*(sin2B+sin2C+2*(-1+cosA)*(sinB+sinC))|(-1+cosA+cosC)*cscB*(sin2A+sin2C+2*(-1+cosB)*(sinA+sinC))|(-1+cosA+cosB)*cscC*(sin2A+sin2B+2*(-1+cosC)*(sinA+sinB));X119 = FEUERBACH ANTIPODE
+X120;b*c*(2*a*b*c-(a2+(b-c)*(b-c))*(b+c))*(-(a*b)+b2-a*c+c2)|a*c*(2*a*b*c-(a+c)*(b2+(-a+c)*(-a+c)))*(a2-a*b-b*c+c2)|a*b*(a2+b2-a*c-b*c)*(2*a*b*c-(a+b)*((a-b)*(a-b)+c2));X105-OF-MEDIAL-TRIANGLE
+X121;b*c*(-2*a+b+c)*(b3-2*b*c*(b+c)+a*(b2+c2)+c3)|a*c*(a-2*b+c)*(a3-2*a*c*(a+c)+b*(a2+c2)+c3)|a*b*(a+b-2*c)*(a3-2*a*b*(a+b)+b3+(a2+b2)*c);X106-OF-MEDIAL-TRIANGLE
+X122;((b2-c2)*(b2-c2)*(cosA-cosB*cosC))/(tanA*tanA)|((-a2+c2)*(-a2+c2)*(cosB-cosA*cosC))/(tanB*tanB)|((a2-b2)*(a2-b2)*(-(cosA*cosB)+cosC))/(tanC*tanC);X107-OF-MEDIAL-TRIANGLE
+X123;cscA*(secB-secC)*(secA*(sin2B-sin2C)-sinB*tanB+sinC*tanC)|cscB*(-secA+secC)*(secB*(-sin2A+sin2C)+sinA*tanA-sinC*tanC)|cscC*(secA-secB)*(secC*(sin2A-sin2B)-sinA*tanA+sinB*tanB);X108-OF-MEDIAL-TRIANGLE
+X124;b*(b-c)*(b-c)*c*(-a+b+c)*(a*b*c+(b+c)*(-a2+b2-b*c+c2))|a*c*(-a+c)*(-a+c)*(a-b+c)*(a*b*c+(a+c)*(a2-b2-a*c+c2))|a*(a-b)*(a-b)*b*(a+b-c)*(a*b*c+(a+b)*(a2-a*b+b2-c2));X109-OF-MEDIAL-TRIANGLE
+X125;b*c*(b2-c2)*(b2-c2)*(-a2+b2+c2)|a*c*(-a2+c2)*(-a2+c2)*(a2-b2+c2)|a*b*(a2-b2)*(a2-b2)*(a2+b2-c2);CENTER OF JERABEK HYPERBOLA
+X126;b*c*(2*a2-b2-c2)*(b4-4*b2*c2+a2*(b2+c2)+c4)|a*c*(-a2+2*b2-c2)*(a4-4*a2*c2+b2*(a2+c2)+c4)|a*b*(-a2-b2+2*c2)*(a4-4*a2*b2+b4+(a2+b2)*c2);X111-OF-MEDIAL-TRIANGLE
+X127;b*c*(sin2B-sin2C)*((b2-c2)*sin2A-b2*sin2B+c2*sin2C)|a*c*(-sin2A+sin2C)*(a2*sin2A+(-a2+c2)*sin2B-c2*sin2C)|a*b*(sin2A-sin2B)*(-(a2*sin2A)+b2*sin2B+(a2-b2)*sin2C);X112-OF-MEDIAL-TRIANGLE
+X128;(1+2*cos2A)*(cos2B+cos2C)*(cos2A+2*cos2B*cos2C)*secA|(1+2*cos2B)*(cos2A+cos2C)*(cos2B+2*cos2A*cos2C)*secB|(cos2A+cos2B)*(2*cos2A*cos2B+cos2C)*(1+2*cos2C)*secC;X74-OF-ORTHIC-TRIANGLE
+X129;secA*sin2A*(sin2B+sin2C)*(-(sin2A*sin2A*sin2B*sin2B)+Math.pow(sin2B,4)-sin2A*sin2A*sin2C*sin2C+Math.pow(sin2C,4))*(Math.pow(sin2A,4)+sin2B*(sin2B-sin2C)*(sin2B-sin2C)*sin2C+sin2A*sin2A*(-sin2B*sin2B+sin2B*sin2C-sin2C*sin2C))|secB*sin2B*(sin2A+sin2C)*(Math.pow(sin2A,4)-sin2A*sin2A*sin2B*sin2B-sin2B*sin2B*sin2C*sin2C+Math.pow(sin2C,4))*(Math.pow(sin2B,4)+sin2A*sin2C*(-sin2A+sin2C)*(-sin2A+sin2C)+sin2B*sin2B*(-sin2A*sin2A+sin2A*sin2C-sin2C*sin2C))|secC*(sin2A+sin2B)*sin2C*(Math.pow(sin2A,4)+Math.pow(sin2B,4)-sin2A*sin2A*sin2C*sin2C-sin2B*sin2B*sin2C*sin2C)*(sin2A*(sin2A-sin2B)*(sin2A-sin2B)*sin2B+(-sin2A*sin2A+sin2A*sin2B-sin2B*sin2B)*sin2C*sin2C+Math.pow(sin2C,4));X98-OF-ORTHIC-TRIANGLE
+X130;(sin2B-sin2C)*(sin2B-sin2C)*(sin2B+sin2C)*(sin2A*sin2A+sin2B*sin2C)*sinA|(-sin2A+sin2C)*(-sin2A+sin2C)*(sin2A+sin2C)*(sin2B*sin2B+sin2A*sin2C)*sinB|(sin2A-sin2B)*(sin2A-sin2B)*(sin2A+sin2B)*(sin2A*sin2B+sin2C*sin2C)*sinC;X99-OF-ORTHIC-TRIANGLE
+X131;secA*(-(S*sec2A)+sumT2)*(-((sec2B+sec2C)*sumS2)+2*sumT2)|secB*(-(S*sec2B)+sumT2)*(-((sec2A+sec2C)*sumS2)+2*sumT2)|secC*(-(S*sec2C)+sumT2)*(-((sec2A+sec2B)*sumS2)+2*sumT2);INTERSECTION OF LINES X3X125 AND X4X135
+X132;secA*(sin2A*sin2A+sin2A*(sin2A-sin2B-sin2C)+(sin2B-sin2C)*(sin2B-sin2C))*(-(sin2A*sin2B)+sin2B*sin2B-sin2A*sin2C+sin2C*sin2C)|secB*(sin2A*sin2A-sin2A*sin2B-sin2B*sin2C+sin2C*sin2C)*(sin2B*sin2B+sin2B*(-sin2A+sin2B-sin2C)+(-sin2A+sin2C)*(-sin2A+sin2C))|secC*(sin2A*sin2A+sin2B*sin2B-sin2A*sin2C-sin2B*sin2C)*((sin2A-sin2B)*(sin2A-sin2B)+sin2C*sin2C+sin2C*(-sin2A-sin2B+sin2C));X2X107∩X4X32
+X133;secA*(2*sin2A-sin2B-sin2C)*(sin2A*sin2B+(sin2B-sin2C)*(sin2B-sin2C)+sin2A*sin2C-2*sin2B*sin2C)|secB*(-sin2A+2*sin2B-sin2C)*(sin2A*sin2B-2*sin2A*sin2C+sin2B*sin2C+(-sin2A+sin2C)*(-sin2A+sin2C))|secC*(-sin2A-sin2B+2*sin2C)*((sin2A-sin2B)*(sin2A-sin2B)-2*sin2A*sin2B+sin2A*sin2C+sin2B*sin2C);INTERSECTION OF LINES X4X74 AND X5X122
+X134;secA*sin2A*(sin2B*sin2B-sin2C*sin2C)*Math.pow(-sin2A*sin2A+sin2B*sin2B+sin2C*sin2C,2)*((sin2A*sin2A-sin2B*sin2B)*sin2C*Math.pow(sin2A*sin2A+sin2B*sin2B-sin2C*sin2C,2)-sin2B*(sin2A*sin2A-sin2C*sin2C)*Math.pow(sin2A*sin2A-sin2B*sin2B+sin2C*sin2C,2))|secB*sin2B*(-sin2A*sin2A+sin2C*sin2C)*Math.pow(sin2A*sin2A-sin2B*sin2B+sin2C*sin2C,2)*(-((-sin2A*sin2A+sin2B*sin2B)*sin2C*Math.pow(sin2A*sin2A+sin2B*sin2B-sin2C*sin2C,2))+sin2A*(sin2B*sin2B-sin2C*sin2C)*Math.pow(-sin2A*sin2A+sin2B*sin2B+sin2C*sin2C,2))|secC*(sin2A*sin2A-sin2B*sin2B)*sin2C*Math.pow(sin2A*sin2A+sin2B*sin2B-sin2C*sin2C,2)*(sin2B*(-sin2A*sin2A+sin2C*sin2C)*Math.pow(sin2A*sin2A-sin2B*sin2B+sin2C*sin2C,2)-sin2A*(-sin2B*sin2B+sin2C*sin2C)*Math.pow(-sin2A*sin2A+sin2B*sin2B+sin2C*sin2C,2));X107-OF-ORTHIC-TRIANGLE
+X135;secA*(sin2B/(-sec2A+sec2C)+sin2C/(sec2A-sec2B))|secB*(sin2A/(sec2B-sec2C)+sin2C/(sec2A-sec2B))|secC*(sin2A/(sec2B-sec2C)+sin2B/(-sec2A+sec2C));INTERSECTION OF LINE X4X131 AND X25X114
+X136;((b2-c2)*(b2-c2)*(a4-2*a2*b2+b4-2*a2*c2+c4))/(a*(a2-b2-c2))|((-a2+c2)*(-a2+c2)*(a4-2*a2*b2+b4-2*b2*c2+c4))/(b*(-a2+b2-c2))|((a2-b2)*(a2-b2)*(a4+b4-2*a2*c2-2*b2*c2+c4))/(c*(-a2-b2+c2));INTERSECTION OF LINE X4X110 AND X25X132
+X137;secA*(sin2B-sin2C)*(sin2B-sin2C)*(sin2B+sin2C)*(sin2A*sin2A-sin2B*sin2B-sin2B*sin2C-sin2C*sin2C)|secB*(-sin2A+sin2C)*(-sin2A+sin2C)*(sin2A+sin2C)*(-sin2A*sin2A+sin2B*sin2B-sin2A*sin2C-sin2C*sin2C)|secC*(sin2A-sin2B)*(sin2A-sin2B)*(sin2A+sin2B)*(-sin2A*sin2A-sin2A*sin2B-sin2B*sin2B+sin2C*sin2C);X110-OF-ORTHIC-TRIANGLE
+X138;secA*(sin2B/(-sin2A*sin2A+2*sin2B*sin2B-sin2C*sin2C)+sin2C/(-sin2A*sin2A-sin2B*sin2B+2*sin2C*sin2C))|secB*(sin2A/(2*sin2A*sin2A-sin2B*sin2B-sin2C*sin2C)+sin2C/(-sin2A*sin2A-sin2B*sin2B+2*sin2C*sin2C))|secC*(sin2A/(2*sin2A*sin2A-sin2B*sin2B-sin2C*sin2C)+sin2B/(-sin2A*sin2A+2*sin2B*sin2B-sin2C*sin2C));X111-OF-ORTHIC-TRIANGLE
+X139;secA*(sin2B-sin2C)*(sin2B-sin2C)*(sin2B+sin2C)*(-sin2A*sin2A+sin2B*sin2B+sin2C*sin2C)*(-Math.pow(sin2A,4)+Math.pow(sin2B,4)+Math.pow(sin2C,4)+sin2B*sin2C*(-sin2A*sin2A+sin2B*sin2B+sin2C*sin2C))|secB*(-sin2A+sin2C)*(-sin2A+sin2C)*(sin2A+sin2C)*(sin2A*sin2A-sin2B*sin2B+sin2C*sin2C)*(Math.pow(sin2A,4)-Math.pow(sin2B,4)+Math.pow(sin2C,4)+sin2A*sin2C*(sin2A*sin2A-sin2B*sin2B+sin2C*sin2C))|secC*(sin2A-sin2B)*(sin2A-sin2B)*(sin2A+sin2B)*(sin2A*sin2A+sin2B*sin2B-sin2C*sin2C)*(Math.pow(sin2A,4)+Math.pow(sin2B,4)-Math.pow(sin2C,4)+sin2A*sin2B*(sin2A*sin2A+sin2B*sin2B-sin2C*sin2C));X112-OF-ORTHIC-TRIANGLE
+X140;2*a3+(b2-c2)*(b2-c2)/a-3*a*(b2+c2)|2*b3+(-a2+c2)*(-a2+c2)/b-3*b*(a2+c2)|(a2-b2)*(a2-b2)/c-3*(a2+b2)*c+2*c3;MIDPOINT OF X3 AND X5
+X141;b*c*(b2+c2)|a*c*(a2+c2)|a*b*(a2+b2);COMPLEMENT OF SYMMEDIAN POINT
+X142;b-(b-c)*(b-c)/a+c|a+c-(-a+c)*(-a+c)/b|a+b-(a-b)*(a-b)/c;COMPLEMENT OF X9
+X143;a*(a2*b2-b4+a2*c2+2*b2*c2-c4)*(a4-2*a2*b2+b4-2*a2*c2-b2*c2+c4)|b*(-a4+a2*b2+2*a2*c2+b2*c2-c4)*(a4-2*a2*b2+b4-a2*c2-2*b2*c2+c4)|c*(-a4+2*a2*b2-b4+a2*c2+b2*c2)*(a4-a2*b2+b4-2*a2*c2-2*b2*c2+c4);NINE-POINT CENTER OF ORTHIC TRIANGLE
+X144;3*a-(b-c)*(b-c)/a-2*(b+c)|3*b-(-a+c)*(-a+c)/b-2*(a+c)|-2*(a+b)-(a-b)*(a-b)/c+3*c;ANTICOMPLEMENT OF X7
+X145;b*(3*a-b-c)*c|a*(-a+3*b-c)*c|a*b*(-a-b+3*c);ANTICOMPLEMENT OF NAGEL POINT
+X146;Math.pow(a,9)+Math.pow(a,7)*(b2+c2)-(Math.pow(b2-c2,4)*(b2+c2))/a-a*(b2-c2)*(b2-c2)*(b4+9*b2*c2+c4)+2*a3*(b2+c2)*(4*b4-7*b2*c2+4*c4)-Math.pow(a,5)*(8*b4-9*b2*c2+8*c4)|Math.pow(b,9)+Math.pow(b,7)*(a2+c2)-(Math.pow(-a2+c2,4)*(a2+c2))/b-b*(-a2+c2)*(-a2+c2)*(a4+9*a2*c2+c4)+2*b3*(a2+c2)*(4*a4-7*a2*c2+4*c4)-Math.pow(b,5)*(8*a4-9*a2*c2+8*c4)|-((Math.pow(a2-b2,4)*(a2+b2))/c)-(a2-b2)*(a2-b2)*(a4+9*a2*b2+b4)*c-(8*a4-9*a2*b2+8*b4)*Math.pow(c,5)+(a2+b2)*Math.pow(c,7)+Math.pow(c,9)+2*(a2+b2)*(4*a4-7*a2*b2+4*b4)*c3;REFLECTION OF X20 IN X110
+X147;b*c*(a8-b8+b6*c2+a6*(b2+c2)-a4*(2*b4+3*b2*c2+2*c4)+b2*c6+a2*(b6+b4*c2+b2*c4+c6)-c8)|a*c*(-a8+b8+a6*c2+b6*(a2+c2)-b4*(2*a4+3*a2*c2+2*c4)+a2*c6+b2*(a6+a4*c2+a2*c4+c6)-c8)|a*b*(-a8+a6*b2+a2*b6-b8+(a6+a4*b2+a2*b4+b6)*c2-(2*a4+3*a2*b2+2*b4)*c4+(a2+b2)*c6+c8);TARRY POINT OF ANTICOMPLEMENTARY TRIANGLE
+X148;b*c*(a4-a2*b2-(b2-c2)*(b2-c2)-a2*c2+b2*c2)|a*c*(-(a2*b2)+b4+a2*c2-b2*c2-(-a2+c2)*(-a2+c2))|a*b*(-(a2-b2)*(a2-b2)+a2*b2-a2*c2-b2*c2+c4);STEINER POINT OF ANTICOMPLEMENTARY TRIANGLE
+X149;b*c*(-a3+b3+(b+c)*(a2-b*c)+a*(-b2+b*c-c2)+c3)|a*c*(a3-b3+(a+c)*(b2-a*c)+b*(-a2+a*c-c2)+c3)|a*b*(a3+b3+(-a2+a*b-b2)*c+(a+b)*(-(a*b)+c2)-c3);REFLECTION OF X20 IN X104
+X150;b*c*(-a4+b4+a3*(b+c)-b*c*(a2+b2+c2)+a*(-b3+b2*c+b*c2-c3)+c4)|a*c*(a4-b4+b3*(a+c)-a*c*(a2+b2+c2)+b*(-a3+a2*c+a*c2-c3)+c4)|a*b*(a4+b4+(-a3+a2*b+a*b2-b3)*c-a*b*(a2+b2+c2)+(a+b)*c3-c4);REFLECTION OF X20 IN X103
+X151;((a+b+c)*(a+b+c)*(Math.pow(a,10)-Math.pow(a,9)*(b+c)+12*Math.pow(a,5)*b*(b-c)*(b-c)*c*(b+c)+a*Math.pow(b-c,6)*Math.pow(b+c,3)+2*Math.pow(a,7)*(b+c)*(b2-4*b*c+c2)-Math.pow(b2-c2,4)*(b2-b*c+c2)+Math.pow(a,8)*(b2+3*b*c+c2)-2*a3*Math.pow(b-c,4)*(b+c)*(b2+4*b*c+c2)+4*a4*(b2-c2)*(b2-c2)*(2*b2-3*b*c+2*c2)+2*a6*(-4*b4+b3*c+8*b2*c2+b*c3-4*c4)-a2*(b2-c2)*(b2-c2)*(b4-6*b3*c+14*b2*c2-6*b*c3+c4)))/a|((a+b+c)*(a+b+c)*(Math.pow(b,10)-Math.pow(b,9)*(a+c)+12*a*Math.pow(b,5)*c*(-a+c)*(-a+c)*(a+c)+b*Math.pow(-a+c,6)*Math.pow(a+c,3)+2*Math.pow(b,7)*(a+c)*(a2-4*a*c+c2)-Math.pow(-a2+c2,4)*(a2-a*c+c2)+Math.pow(b,8)*(a2+3*a*c+c2)-2*b3*Math.pow(-a+c,4)*(a+c)*(a2+4*a*c+c2)+4*b4*(-a2+c2)*(-a2+c2)*(2*a2-3*a*c+2*c2)+2*b6*(-4*a4+a3*c+8*a2*c2+a*c3-4*c4)-b2*(-a2+c2)*(-a2+c2)*(a4-6*a3*c+14*a2*c2-6*a*c3+c4)))/b|((a+b+c)*(a+b+c)*(-(Math.pow(a2-b2,4)*(a2-a*b+b2))+Math.pow(a-b,6)*Math.pow(a+b,3)*c+12*a*(a-b)*(a-b)*b*(a+b)*Math.pow(c,5)+2*(a+b)*(a2-4*a*b+b2)*Math.pow(c,7)+(a2+3*a*b+b2)*Math.pow(c,8)-(a+b)*Math.pow(c,9)+Math.pow(c,10)-(a2-b2)*(a2-b2)*(a4-6*a3*b+14*a2*b2-6*a*b3+b4)*c2-2*Math.pow(a-b,4)*(a+b)*(a2+4*a*b+b2)*c3+4*(a2-b2)*(a2-b2)*(2*a2-3*a*b+2*b2)*c4+2*(-4*a4+a3*b+8*a2*b2+a*b3-4*b4)*c6))/c;REFLECTION OF X20 IN X109
+X152;(a8-Math.pow(a,7)*(b+c)+a*Math.pow(b-c,4)*Math.pow(b+c,3)-a4*b*c*(b2-6*b*c+c2)-Math.pow(b-c,4)*(b+c)*(b+c)*(b2+b*c+c2)+Math.pow(a,6)*(2*b2+b*c+2*c2)-a5*(b+c)*(5*b2-6*b*c+5*c2)+a3*(b-c)*(b-c)*(b+c)*(5*b2+6*b*c+5*c2)-a2*(b-c)*(b-c)*(2*b4+5*b3*c+10*b2*c2+5*b*c3+2*c4))/a|(b8-Math.pow(b,7)*(a+c)+b*Math.pow(-a+c,4)*Math.pow(a+c,3)-a*b4*c*(a2-6*a*c+c2)-Math.pow(-a+c,4)*(a+c)*(a+c)*(a2+a*c+c2)+Math.pow(b,6)*(2*a2+a*c+2*c2)-b5*(a+c)*(5*a2-6*a*c+5*c2)+b3*(-a+c)*(-a+c)*(a+c)*(5*a2+6*a*c+5*c2)-b2*(-a+c)*(-a+c)*(2*a4+5*a3*c+10*a2*c2+5*a*c3+2*c4))/b|(-(Math.pow(a-b,4)*(a+b)*(a+b)*(a2+a*b+b2))+Math.pow(a-b,4)*Math.pow(a+b,3)*c+(2*a2+a*b+2*b2)*Math.pow(c,6)-(a+b)*Math.pow(c,7)-(a-b)*(a-b)*(2*a4+5*a3*b+10*a2*b2+5*a*b3+2*b4)*c2+(a-b)*(a-b)*(a+b)*(5*a2+6*a*b+5*b2)*c3-a*b*(a2-6*a*b+b2)*c4-(a+b)*(5*a2-6*a*b+5*b2)*c5+c8)/c;REFLECTION OF X20 IN X101
+X153;(Math.pow(a,7)-a6*(b+c)-Math.pow(b-c,4)*Math.pow(b+c,3)-a5*(b2-7*b*c+c2)+a4*(b+c)*(b2-6*b*c+c2)+a*(b2-c2)*(b2-c2)*(b2-5*b*c+c2)+a2*(b-c)*(b-c)*(b+c)*(b2+6*b*c+c2)-a3*(b4+2*b3*c-10*b2*c2+2*b*c3+c4))/a|(Math.pow(b,7)-b6*(a+c)-Math.pow(-a+c,4)*Math.pow(a+c,3)-b5*(a2-7*a*c+c2)+b4*(a+c)*(a2-6*a*c+c2)+b*(-a2+c2)*(-a2+c2)*(a2-5*a*c+c2)+b2*(-a+c)*(-a+c)*(a+c)*(a2+6*a*c+c2)-b3*(a4+2*a3*c-10*a2*c2+2*a*c3+c4))/b|(-(Math.pow(a-b,4)*Math.pow(a+b,3))+(a2-b2)*(a2-b2)*(a2-5*a*b+b2)*c+Math.pow(c,7)+(a-b)*(a-b)*(a+b)*(a2+6*a*b+b2)*c2-(a4+2*a3*b-10*a2*b2+2*a*b3+b4)*c3+(a+b)*(a2-6*a*b+b2)*c4-(a2-7*a*b+b2)*c5-(a+b)*c6)/c;REFLECTION OF X20 IN X100
+X154;a*(-tanA+tanB+tanC)|b*(tanA-tanB+tanC)|c*(tanA+tanB-tanC);X3-CEVA CONJUGATE OF X6
+X155;cosA*(-cosA*cosA+cosB*cosB+cosC*cosC)|cosB*(cosA*cosA-cosB*cosB+cosC*cosC)|cosC*(cosA*cosA+cosB*cosB-cosC*cosC);EIGENCENTER OF ORTHIC TRIANGLE
+X156;a*(a2*Math.pow(a2-b2,3)+(-3*a6+2*a4*b2+b6)*c2+(3*a4-2*b4)*c4+(-a2+b2)*c6)|b*(b2*Math.pow(b2-c2,3)+a6*(-b2+c2)+a4*(3*b4-2*c4)+a2*(-3*b6+2*b4*c2+c6))|c*(b6*(a2-c2)+c2*Math.pow(-a2+c2,3)+b4*(-2*a4+3*c4)+b2*(a6+2*a2*c4-3*c6));X5-OF-TANGENTIAL-TRIANGLE
+X157;a*(-(a3*cosA)+b3*cosB+c3*cosC)|b*(a3*cosA-b3*cosB+c3*cosC)|c*(a3*cosA+b3*cosB-c3*cosC);X6-OF-TANGENTIAL-TRIANGLE
+X158;secA*secA|secB*secB|secC*secC;X19-CROSS CONJUGATE OF X92
+X159;a*((a2+b2+c2)*sin2A+(-a2-b2+c2)*sin2B+(-a2+b2-c2)*sin2C)|b*((-a2-b2+c2)*sin2A+(a2+b2+c2)*sin2B+(a2-b2-c2)*sin2C)|c*((-a2+b2-c2)*sin2A+(a2-b2-c2)*sin2B+(a2+b2+c2)*sin2C);X9-OF-TANGENTIAL-TRIANGLE
+X160;a*((b2+c2)*sin2A+(-a2+c2)*sin2B+(-a2+b2)*sin2C)|b*((-b2+c2)*sin2A+(a2+c2)*sin2B+(a2-b2)*sin2C)|c*((b2-c2)*sin2A+(a2-c2)*sin2B+(a2+b2)*sin2C);X37-OF-TANGENTIAL-TRIANGLE
+X161;a*((a2+b2+c2)*sin2A*sin2A+(-a2-b2+c2)*sin2B*sin2B+(-a2+b2-c2)*sin2C*sin2C)|b*((-a2-b2+c2)*sin2A*sin2A+(a2+b2+c2)*sin2B*sin2B+(a2-b2-c2)*sin2C*sin2C)|c*((-a2+b2-c2)*sin2A*sin2A+(a2-b2-c2)*sin2B*sin2B+(a2+b2+c2)*sin2C*sin2C);X63-OF-TANGENTIAL-TRIANGLE
+X162;1/((b2-c2)*(-a2+b2+c2))|1/((-a2+c2)*(a2-b2+c2))|1/((a2-b2)*(a2+b2-c2));CEVAPOINT OF X108 AND X109
+X163;a2/(b2-c2)|b2/(-a2+c2)|c2/(a2-b2);TRILINEAR PRODUCT X6*X110
+X164;-sinHalfA+sinHalfB+sinHalfC|sinHalfA-sinHalfB+sinHalfC|sinHalfA+sinHalfB-sinHalfC;INCENTER OF EXCENTRAL TRIANGLE
+X165;3*a2-(b-c)*(b-c)-2*a*(b+c)|3*b2-(-a+c)*(-a+c)-2*b*(a+c)|-(a-b)*(a-b)-2*(a+b)*c+3*c2;CENTROID OF THE EXCENTRAL TRIANGLE
+X166;tanHalfA/(-cosHalfA+cosHalfB+cosHalfC)-tanHalfB/(cosHalfA-cosHalfB+cosHalfC)-tanHalfC/(cosHalfA+cosHalfB-cosHalfC)|-(tanHalfA/(-cosHalfA+cosHalfB+cosHalfC))+tanHalfB/(cosHalfA-cosHalfB+cosHalfC)-tanHalfC/(cosHalfA+cosHalfB-cosHalfC)|-(tanHalfA/(-cosHalfA+cosHalfB+cosHalfC))-tanHalfB/(cosHalfA-cosHalfB+cosHalfC)+tanHalfC/(cosHalfA+cosHalfB-cosHalfC);GERGONNE POINT OF EXCENTRAL TRIANGLE
+X167;-(((-cosHalfA+cosHalfB+cosHalfC)*sinHalfA)/cosHalfA)+((cosHalfA-cosHalfB+cosHalfC)*sinHalfB)/cosHalfB+((cosHalfA+cosHalfB-cosHalfC)*sinHalfC)/cosHalfC|((-cosHalfA+cosHalfB+cosHalfC)*sinHalfA)/cosHalfA-((cosHalfA-cosHalfB+cosHalfC)*sinHalfB)/cosHalfB+((cosHalfA+cosHalfB-cosHalfC)*sinHalfC)/cosHalfC|((-cosHalfA+cosHalfB+cosHalfC)*sinHalfA)/cosHalfA+((cosHalfA-cosHalfB+cosHalfC)*sinHalfB)/cosHalfB-((cosHalfA+cosHalfB-cosHalfC)*sinHalfC)/cosHalfC;NAGEL POINT OF EXCENTRAL TRIANGLE
+X168;-(a/(1-sinHalfA))+b/(1-sinHalfB)+c/(1-sinHalfC)|a/(1-sinHalfA)-b/(1-sinHalfB)+c/(1-sinHalfC)|a/(1-sinHalfA)+b/(1-sinHalfB)-c/(1-sinHalfC);MITTENPUNKT OF EXCENTRAL TRIANGLE
+X169;a3-a2*(b+c)-(b-c)*(b-c)*(b+c)+a*(b2+c2)|b3-b2*(a+c)-(-a+c)*(-a+c)*(a+c)+b*(a2+c2)|-((a-b)*(a-b)*(a+b))+(a2+b2)*c-(a+b)*c2+c3;X85-CEVA CONJUGATE OF X1
+X170;-(tanHalfA/cosHalfA*cosHalfA)+tanHalfB/cosHalfB*cosHalfB+tanHalfC/cosHalfC*cosHalfC|tanHalfA/cosHalfA*cosHalfA-tanHalfB/cosHalfB*cosHalfB+tanHalfC/cosHalfC*cosHalfC|tanHalfA/cosHalfA*cosHalfA+tanHalfB/cosHalfB*cosHalfB-tanHalfC/cosHalfC*cosHalfC;X9-ALEPH CONJUGATE OF X9
+X171;a2+b*c|b2+a*c|a*b+c2;{X2,X31}-HARMONIC CONJUGATE OF X238
+X172;a3+a*b*c|b3+a*b*c|a*b*c+c3;TRILINEAR PRODUCT X6*X171
+X173;-cosHalfA+cosHalfB+cosHalfC|cosHalfA-cosHalfB+cosHalfC|cosHalfA+cosHalfB-cosHalfC;CONGRUENT ISOSCELIZERS POINT
+X174;1/cosHalfA|1/cosHalfB|1/cosHalfC;YFF CENTER OF CONGRUENCE
+X175;-1+(cosHalfB*cosHalfC)/cosHalfA|-1+(cosHalfA*cosHalfC)/cosHalfB|-1+(cosHalfA*cosHalfB)/cosHalfC;ISOPERIMETRIC POINT
+X176;1+(cosHalfB*cosHalfC)/cosHalfA|1+(cosHalfA*cosHalfC)/cosHalfB|1+(cosHalfA*cosHalfB)/cosHalfC;EQUAL DETOUR POINT
+X177;(cosHalfB+cosHalfC)/cosHalfA|(cosHalfA+cosHalfC)/cosHalfB|(cosHalfA+cosHalfB)/cosHalfC;1st MID-ARC POINT
+X178;(cosHalfB+cosHalfC)/a|(cosHalfA+cosHalfC)/b|(cosHalfA+cosHalfB)/c;2nd MID-ARC POINT
+X179;Math.pow(cosQuarterA,-4)|Math.pow(cosQuarterB,-4)|Math.pow(cosQuarterC,-4);1st AJIMA-MALFATTI POINT
+X180;1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterB*cosQuarterB)/cosQuarterC*cosQuarterC)+1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterC*cosQuarterC)/cosQuarterB*cosQuarterB)-1/(1+(2*cosQuarterB*cosQuarterB*cosQuarterC*cosQuarterC)/cosQuarterA*cosQuarterA)|1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterB*cosQuarterB)/cosQuarterC*cosQuarterC)-1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterC*cosQuarterC)/cosQuarterB*cosQuarterB)+1/(1+(2*cosQuarterB*cosQuarterB*cosQuarterC*cosQuarterC)/cosQuarterA*cosQuarterA)|-(1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterB*cosQuarterB)/cosQuarterC*cosQuarterC))+1/(1+(2*cosQuarterA*cosQuarterA*cosQuarterC*cosQuarterC)/cosQuarterB*cosQuarterB)+1/(1+(2*cosQuarterB*cosQuarterB*cosQuarterC*cosQuarterC)/cosQuarterA*cosQuarterA);2nd AJIMA-MALFATTI POINT
+X181;(a*(b+c)*(b+c))/(-a+b+c)|(b*(a+c)*(a+c))/(a-b+c)|((a+b)*(a+b)*c)/(a+b-c);APOLLONIUS POINT
+X182;a*(a4-a2*b2-a2*c2-2*b2*c2)|b*(-(a2*b2)+b4-2*a2*c2-b2*c2)|c*(-2*a2*b2-a2*c2-b2*c2+c4);MIDPOINT OF BROCARD DIAMETER
+X183;1/tanA+tanOmega|1/tanB+tanOmega|1/tanC+tanOmega;TRILINEAR PRODUCT X75X182
+X184;a2*cosA|b2*cosB|c2*cosC;INVERSE OF X125 IN THE BROCARD CIRCLE
+X185;cosA*(cosB*cosB+cosC*cosC)|cosB*(cosA*cosA+cosC*cosC)|(cosA*cosA+cosB*cosB)*cosC;NAGEL POINT OF THE ORTHIC TRIANGLE
+X186;-(1/cosA)+4*cosA|-(1/cosB)+4*cosB|-(1/cosC)+4*cosC;INVERSE-IN-CIRCUMCIRCLE OF X4
+X187;a*(2*a2-b2-c2)|b*(-a2+2*b2-c2)|c*(-a2-b2+2*c2);INVERSE-IN-CIRCUMCIRCLE OF X6 (SCHOUTE CENTER)
+X188;1/sinHalfA|1/sinHalfB|1/sinHalfC;2nd MID-ARC POINT OF ANTICOMPLEMENTARY TRIANGLE
+X189;(b*c)/(-1-cosA+cosB+cosC)|(a*c)/(-1+cosA-cosB+cosC)|(a*b)/(-1+cosA+cosB-cosC);CYCLOCEVIAN CONJUGATE OF X8
+X190;(b*c)/(b-c)|(a*c)/(-a+c)|(a*b)/(a-b);YFF PARABOLIC POINT
+X191;-a3+b3+(-a+b+c)*(a*b+a*c+b*c)+c3|a3-b3+(a-b+c)*(a*b+a*c+b*c)+c3|a3+b3+(a+b-c)*(a*b+a*c+b*c)-c3;X10-CEVA CONJUGATE OF X1
+X192;b*c*(a*b+a*c-b*c)|a*c*(a*b-a*c+b*c)|a*b*(-(a*b)+a*c+b*c);X1-CEVA CONJUGATE OF X2
+X193;3*a-(b2+c2)/a|3*b-(a2+c2)/b|-((a2+b2)/c)+3*c;X4-CEVA CONJUGATE OF X2
+X194;b*c*(a2*b2+a2*c2-b2*c2)|a*c*(a2*b2-a2*c2+b2*c2)|a*b*(-(a2*b2)+a2*c2+b2*c2);X6-CEVA CONJUGATE OF X2
+X195;a*(a8+b8-4*a6*(b2+c2)-2*b2*c2*(b4-b2*c2+c4)+a4*(6*b4+5*b2*c2+6*c4)-a2*(4*b6-b4*c2-b2*c4+4*c6)+c8)|b*(a8+b8-4*b6*(a2+c2)-2*a2*c2*(a4-a2*c2+c4)+b4*(6*a4+5*a2*c2+6*c4)-b2*(4*a6-a4*c2-a2*c4+4*c6)+c8)|c*(a8-2*a2*b2*(a4-a2*b2+b4)+b8-(4*a6-a4*b2-a2*b4+4*b6)*c2+(6*a4+5*a2*b2+6*b4)*c4-4*(a2+b2)*c6+c8);X5-CEVA CONJUGATE OF X3
+X196;((-1-cosA+cosB+cosC)*tanHalfA)/cosA|((-1+cosA-cosB+cosC)*tanHalfB)/cosB|((-1+cosA+cosB-cosC)*tanHalfC)/cosC;X7-CEVA CONJUGATE OF X4
+X197;a*(-(a2*tanHalfA)+b2*tanHalfB+c2*tanHalfC)|b*(a2*tanHalfA-b2*tanHalfB+c2*tanHalfC)|c*(a2*tanHalfA+b2*tanHalfB-c2*tanHalfC);X8-CEVA CONJUGATE OF X6
+X198;a*(a3+a2*(b+c)-(b-c)*(b-c)*(b+c)-a*(b+c)*(b+c))|b*(b3+b2*(a+c)-(-a+c)*(-a+c)*(a+c)-b*(a+c)*(a+c))|c*(-((a-b)*(a-b)*(a+b))-(a+b)*(a+b)*c+(a+b)*c2+c3);X9-CEVA CONJUGATE OF X6
+X199;a*(-a4+b4+(a*b+a*c+b*c)*(-a2+b2+c2)+c4)|b*(a4-b4+(a*b+a*c+b*c)*(a2-b2+c2)+c4)|c*(a4+b4+(a*b+a*c+b*c)*(a2+b2-c2)-c4);X10-CEVA CONJUGATE OF X6
+X200;(-a+b+c)*(-a+b+c)|(a-b+c)*(a-b+c)|(a+b-c)*(a+b-c);X8-CEVA CONJUGATE OF X9
