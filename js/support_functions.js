@@ -26,10 +26,13 @@ function get_Xn(orbit, sides, n) {
   return get_Xn_low(orbit, sides, get_fn_trilin(n));
 }
 
+const sqrt3 = Math.sqrt(3.0);
+const phi = (Math.sqrt(5)+1.0)/2;
 const cPi3 = Math.cos(Math.PI/3);
 const sPi3 = Math.sin(Math.PI/3);
 const cPi6 = Math.cos(Math.PI/6);
 const sPi6 = Math.sin(Math.PI/6);
+const Pi = Math.PI;
 
 function oneOv(x) { return 1.0/x; }
 
@@ -53,6 +56,16 @@ function getSinApmB(sa, sb, ca, cb) { return [sa*cb + sb*ca, sa*cb - sb*ca]; }
 function getSinApmB1(sa, sb, ca, cb) { return sa*cb + sb*ca; }
 function getSinApmB2(sa, sb, ca, cb) { return sa*cb - sb*ca; }
 
+function cosThirdAngle(c) {
+  let th = Math.acos(c);
+  return Math.cos(th/3);
+}
+
+function sinThirdAngle(s) {
+  let th = Math.asin(s);
+  return Math.sin(th/3);
+}
+
 function sinCosTripleAngle(s, c, s2, c2) {
   let c3 = c2*c - s2*s;
   let s3 = s2*c + s*c2;
@@ -65,4 +78,16 @@ function cosTripleAngle(s, c, s2, c2) {
 
 function sinTripleAngle(s, c, s2, c2) {
   return s2*c + s*c2;
+}
+
+function getJ(R,SW) {
+  return Math.sqrt(9*R*R-2*SW);
+}
+
+function getE(S,SW) {
+  return (S*SW*SW)/Math.sqrt(S*S+SW*SW);
+}
+
+function getCotPrime(a,b,c) {
+  return Math.cot((2*a*Math.PI)/(a+b+c));
 }

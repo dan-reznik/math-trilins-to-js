@@ -1,0 +1,103 @@
+---
+title: "PreProcess Moses"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+lines_moses <- read_lines("data_moses/ETCPoints_39381.m") %>%
+  discard(~str_length(.x)==0)
+```
+
+```{r}
+lines_moses %>% head
+```
+
+```{r}
+df_moses <- tibble(line=lines_moses,
+                   last_ch=line%>%str_sub(start=-1),
+                   split=lines_moses %>% str_split(fixed("=")),
+                   tokens=split %>% map_int(length)) %>%
+  mutate(row=row_number(),.before=line)
+```
+
+```{r}
+df_moses %>% count(tokens)
+```
+
+```{r}
+df_moses %>% count(last_ch)
+```
+
+```{r}
+df_moses %>% filter(last_ch!=";") %>% mutate(line_start=line %>% str_sub(end=40),
+                                             line_end=line%>%str_sub(-40),.after=row) %>%
+  select(row,last_ch,line_start,line_end)
+```
+
+
+```{r}
+df_moses %>% filter(tokens==1) %>% mutate(line=line %>% str_trunc(50))
+```
+
+# Clean
+
+```{r}
+df_moses_clean %>% count(last_ch)
+```
+
+# Method 2: read entire file
+
+```{r}
+vec_moses <- read_file("data_moses/ETCPoints_39381.m")%>%
+  str_split(fixed(";")) %>%
+  first %>%
+  str_squish
+vec_moses %>% length
+```
+
+```{r}
+vec_moses_clean <- vec_moses %>%
+  head(1000) %>%
+  str_remove_all("\\(\\*.+?\\*\\)") %>%
+  str_replace_all(c("\\b([abc])\\^([2-8])\\b"="\\1\\2",
+                    "\\b([Ss][ABC])\\^(2)\\b"="\\1\\2",
+                    "Sqrt\\[([abc])\\]"="sqrt_\\1",
+                    "Sin\\[([ABC])\\]"="sin\\1",
+                    "Cos\\[([ABC])\\]"="cos\\1",
+                    "Tan\\[([ABC])\\]"="tan\\1",
+                    "Cot\\[([ABC])\\]"="cot\\1",
+                    "Sec\\[([ABC])\\]"="sec\\1",
+                    "Csc\\[([ABC])\\]"="csc\\1",
+                    "Cos\\[([ABC])/4\\]"="cosQuarter\\1",
+                    "Sin\\[([ABC])/4\\]"="sinQuarter\\1",
+                    "Sec\\[([ABC])/4\\]"="secQuarter\\1",
+                    "Csc\\[([ABC])/4\\]"="cscQuarter\\1",
+                    "Tan\\[([ABC])/4\\]"="tanQuarter\\1",
+                    "Sin\\[([ABC])/3\\]"="sinThird\\1",
+                    "Cos\\[([ABC])/3\\]"="cosThird\\1",
+                    "Sec\\[([ABC])/3\\]"="secThird\\1",
+                    "Csc\\[([ABC])/3\\]"="cscThird\\1",
+                    "\\s*\\*\\s*"=" ")) %>%
+  str_replace_all(fixed("\\[CapitalDelta]"),"area") %>%
+  str_replace_all(fixed("\\[Tau]"),"phi") %>%
+  str_replace_all(fixed("\\[Pi]"),"Pi") %>%
+  str_replace_all(fixed("Sqrt[3]"),"sqrt3") %>%
+  # x[848] weirndess
+  str_replace_all(fixed("Cot[(2 a Pi)/(a+b+c)]"),"cotAp")
+```
+
+```{r}
+vec_moses_clean %>% write_lines("data_moses/vec_moses_1k_clean.txt")
+```
+
+TO DO:
+
+- watch out, these are barycentrics
+- remover o "x[...]="
+- use mathematica to rotate all tokens and create expressions with Pow and separators
+
+
