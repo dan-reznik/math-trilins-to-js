@@ -85,8 +85,15 @@ function getJ(R,SW) {
 }
 
 function getE(S,SW) {
-  return (S*SW*SW)/Math.sqrt(S*S+SW*SW);
+  // return (S*SW*SW)/Math.sqrt(S*S+SW*SW);
+  // moses: Sin[w]=S/Sqrt[S^2+SW^2]
+  // since e = Sqrt[1-4 Sin[w]^2], then:
+  // e = Sqrt[1-4/(1+(SW/S)^2)]
+  let ratio=SW/S;
+  return Math.sqrt(1-4/(1+ratio*ratio));
 }
+
+
 
 function getCotPrime(a,b,c) {
   return Math.cot((2*a*Math.PI)/(a+b+c));
