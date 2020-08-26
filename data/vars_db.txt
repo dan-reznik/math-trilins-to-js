@@ -1,3 +1,4 @@
+Sqrt=Math.sqrt
 a2=a*a
 b2=b*b
 c2=c*c

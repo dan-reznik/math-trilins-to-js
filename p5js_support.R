@@ -48,7 +48,7 @@ intersect_vars <- function(X1, X2) {
 
 delete_me <- function(x) {
   (x%in%c("","Math","pow","a","b","c",
-          "cPi3", "cPi6","sPi3","sPi6" ))|
+          "cPi3", "cPi6","sPi3","sPi6","sqrt3" ))|
     (str_detect(x,"^[:digit:]+$"))
 }
 
@@ -82,7 +82,8 @@ add_dependence_vars <- function(vars, vars_all,vars_dict_dependence){
 #    secC*(-(S*sec2C)+sumT2)*(-((sec2A+sec2B)*sumS2)+2*sumT2)
 #         ]
 # vars:  c("secA","S","sec2A","sumT2","sec2B","sec2C","sumS2","secB","secC") 
-create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence) {
+create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence,
+                               do_barys) {
   #n <- 1### TESTES
   #vars <- df_formulas_vars$vars[[n]]### TESTES
   #trilins <- df_formulas_vars$trilins[n]### TESTES
@@ -100,9 +101,22 @@ create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence) {
     map_chr(~str_c("   let ",.x,"=",get(.x,env=vars_dict),";")) %>%
     str_c(collapse="\n")
   
+  if(do_barys) {
+    s3 %>% map_chr(~str_glue(
+      "function barys_X{n}(orbit) {{",
+      "   /* begin vars */",
+      "{vars_block}",
+      "   /* end vars */",
+      "   let v1 = {.x[1]};",
+      "   let v2 = {.x[2]};",
+      "   let v3 = {.x[3]};",
+      "   let barys = [v1,v2,v3];",
+      "   return barys_to_cartesian(orbit, barys);",
+      "}}",
+      .sep="\n"))
+  } else {
   s3 %>% map_chr(~str_glue(
     "function trilin_X{n}(orbit, [a, b, c]) {{",
-    # inserir bloco de variaveis usando vars_dict ou inner_join
     "   /* begin vars */",
     "{vars_block}",
     "   /* end vars */",
@@ -113,13 +127,17 @@ create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence) {
     "   return trilin_to_cartesian(orbit, [a, b, c], tris);",
     "}}",
     .sep="\n"))
+  }
 }
 
-create_js_code <- function(df_formulas_vars,vars_dict,vars_dict_dependence){
+create_js_code <- function(df_formulas_vars,vars_dict,vars_dict_dependence,
+                           do_barys){
   df_formulas_vars %>%
     mutate(index = row_number(),
            js = pmap_chr(list(index, trilins, vars), 
-                     ~create_function_js(..1,..2,..3,vars_dict,vars_dict_dependence))) %>%
+                     ~create_function_js(..1,..2,..3,
+                                         vars_dict,vars_dict_dependence,
+                                         do_barys))) %>%
     pull(js) %>%
     str_c(collapse = "\n\n")
 }

@@ -4,7 +4,8 @@ source("p5js_support.R")
 
 convert_formulas <- function(fname_math_in,
                              vars_db,
-                             fname_js_support) {
+                             fname_js_support,
+                             do_barys) {
   fname_math_csv <- fs::path_ext_set(fname_math_in,"csv")
   # output goes to js directory
   fname_js_out <- fname_math_in %>%
@@ -28,7 +29,9 @@ convert_formulas <- function(fname_math_in,
   
   df_formulas_vars <- df_formulas %>%
     mutate(vars=trilins %>% process_trilins) # so reporta unicos
-  codigo_js <- create_js_code(df_formulas_vars,vars_dict,vars_dict_dependence) 
+  codigo_js <- create_js_code(df_formulas_vars,
+                              vars_dict,vars_dict_dependence,
+                              do_barys) 
   
   # concatena com support
   read_file(fname_js_support) %>%
@@ -41,16 +44,18 @@ convert_formulas <- function(fname_math_in,
 
 # input .txt: {"X(3)", "cosA|cosB|cosC", "CIRCUMCENTER"} 
 
-# Rscript p5js.R "data/x0001_0200 cform v2b.txt"
+# Rscript p5js.R "data/x0001_0200 v2b.cform" [barys]
 main <- function() {
   args <- commandArgs(trailingOnly = TRUE)
-  if (length(args)==1) {
+  if (length(args) %in% c(1,2)) {
     args <- commandArgs(trailingOnly = TRUE)
+    do_barys <- (length(args)==2&&args[2]=="barys")
     convert_formulas(args[1],
                      "data/vars_db.txt",
-                     "js/support_functions.js")
+                     "js/support_functions.js",
+                     do_barys)
   } else
-    print("Error: usage: Rscript p5js.R 'fname_math_in.txt'")
+    print("Error: usage: Rscript p5js.R 'fname_math_in.txt' [barys]")
 }
 
 main()

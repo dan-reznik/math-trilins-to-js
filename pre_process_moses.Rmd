@@ -7,6 +7,8 @@ output: html_document
 library(tidyverse)
 ```
 
+# Method 1 (not used): Reads 40k ETCPoints line by line
+
 ```{r}
 lines_moses <- read_lines("data_moses/ETCPoints_39381.m") %>%
   discard(~str_length(.x)==0)
@@ -38,18 +40,12 @@ df_moses %>% filter(last_ch!=";") %>% mutate(line_start=line %>% str_sub(end=40)
   select(row,last_ch,line_start,line_end)
 ```
 
-
 ```{r}
 df_moses %>% filter(tokens==1) %>% mutate(line=line %>% str_trunc(50))
 ```
 
-# Clean
 
-```{r}
-df_moses_clean %>% count(last_ch)
-```
-
-# Method 2: read entire file
+# Method 2: Read entire text file
 
 ```{r}
 vec_moses <- read_file("data_moses/ETCPoints_39381.m")%>%
@@ -58,6 +54,8 @@ vec_moses <- read_file("data_moses/ETCPoints_39381.m")%>%
   str_squish
 vec_moses %>% length
 ```
+
+## Restrict to 1000 and clean
 
 ```{r}
 vec_moses_clean <- vec_moses %>%
@@ -90,14 +88,129 @@ vec_moses_clean <- vec_moses %>%
   str_replace_all(fixed("Cot[(2 a Pi)/(a+b+c)]"),"cotAp")
 ```
 
+## Save cleaned file
+
 ```{r}
 vec_moses_clean %>% write_lines("data_moses/vec_moses_1k_clean.txt")
 ```
 
+# Last Phase: rotate literals
+
+{"X(3)", Hold@{cosA, cosB, cosC}, "CIRCUMCENTER"},
+
+a->b,b->c,c->a
+
 TO DO:
 
 - watch out, these are barycentrics
-- remover o "x[...]="
-- use mathematica to rotate all tokens and create expressions with Pow and separators
+- remover o "x[...]=", need names
+- use Mathematica to rotate all tokens and create expressions with Pow and separators
 
+## convert .txt to .m
+
+```{r}
+df_moses_1k <- tibble(line=read_lines("data_moses/vec_moses_1k_clean.txt")) %>%
+  mutate(tokens=str_split(line,"\\s*\\=\\s*"),
+         token_count=map_int(tokens,length)) %>%
+  mutate(row=row_number(),.before=line)
+```
+
+## Analyze tokens per line, all should be 2
+
+```{r}
+df_moses_1k %>% count(token_count)
+```
+Which ones are wrong
+
+```{r}
+df_moses_1k %>% filter(token_count!=2)
+```
+## token analysis
+
+```{r}
+reject_token <- function(tok_vec) {
+  discard(tok_vec, ~str_length(.x)==0)
+}
+  
+df_moses_1k_symbols <- df_moses_1k %>%
+  #head(10) %>%
+  # only valid ones
+  filter(token_count==2) %>%
+  # selects 2nd token
+  mutate(lhs=map_chr(tokens,1),
+         rhs=map_chr(tokens,2)) %>%
+  mutate(symbols=str_split(rhs,"[^[:alnum:]]") %>% map(reject_token)) %>%
+  filter(map_lgl(symbols,~length(.x)>0))
+```
+
+unnested symbols
+```{r}
+df_moses_1k_symbols_unnest <- df_moses_1k_symbols %>%
+  select(symbols) %>%
+  unnest(symbols)
+```
+
+Table of symbols
+
+```{r}
+df_moses_1k_symbols_unnest %>%
+  count(symbols)
+```
+
+Save to file, to create substitute table
+
+```{r}
+df_moses_1k_symbols_unnest %>%
+  count(symbols) %>%
+  filter(!str_detect(symbols,"^\\d+$")) %>%
+  pull(symbols) %>%
+  write_lines("data_moses/symbols_1k.txt")
+```
+
+## Read rotation dictionary
+
+note: perhaps rotation should be done w original barycentrics in mathematica first and then simplifying replacements should be done here.
+
+```{r}
+df_symbols_dict <- read_csv("data_moses/symbols_1k_rot_dict.txt")
+```
+
+Create replacement vector
+
+```{r}
+repl_symbols <- df_symbols_dict$to %>%
+  set_names(df_symbols_dict$from %>% str_c("\\b",.,"\\b"))
+```
+
+Note: ρ's prevent overwriting
+
+```{r}
+repl_symbols %>% head(5)
+```
+
+
+```{r}
+df_moses_1k_symbols_rotated <- df_moses_1k_symbols %>%
+  #head(10) %>%
+  select(lhs,rhs) %>%
+  mutate(lhs=lhs%>%str_replace_all(c("\\s+"="","x"="X","\\["="(","\\]"=")"))) %>%
+  mutate(rhs_1=str_replace_all(rhs,repl_symbols) %>%
+           str_remove_all("ρ"),
+         rhs_2=str_replace_all(rhs_1,repl_symbols) %>%
+           str_remove_all("ρ"))
+```
+
+{"X(3)", Hold@{cosA, cosB, cosC}, "CIRCUMCENTER"},
+
+```{r}
+df_moses_1k_symbols_rotated %>%
+  #head(10) %>%
+  mutate(wolfram=str_c('{"',lhs,'", Hold@{',rhs,', ',rhs_1,', ',rhs_2,'}, "get_name"},')) %>%
+  pull(wolfram) %>%
+  str_c(collapse="\n") %>%
+  # remove last comma
+  str_sub(end=-2) %>%
+  str_c("{\n",.,"\n}") %>%
+  write_file("data_moses/symbols_1k.m")
+```
 

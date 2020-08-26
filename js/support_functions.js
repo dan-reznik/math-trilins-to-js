@@ -13,8 +13,17 @@ function trilin_to_cartesian(
   ];
 }
 
+
 function get_Xn_low(orbit, sides, fn_trilin) {
   return fn_trilin(orbit,sides);
+}
+
+// vs = vertices (2-vectors), bs = barycentrics (scalars)
+function barys_to_cartesian(vs, bs) {
+  const bs_sum = sum(bs);
+  const vs_scaled = vs.map((v,i)=>vscale(v,bs[i]));
+  const vs_scaled_norm = vscale(vsum3(...vs_scaled),1/bs_sum);
+  return vs_scaled_norm;
 }
 
 function get_fn_trilin(n) {
@@ -92,8 +101,6 @@ function getE(S,SW) {
   let ratio=SW/S;
   return Math.sqrt(1-4/(1+ratio*ratio));
 }
-
-
 
 function getCotPrime(a,b,c) {
   return Math.cot((2*a*Math.PI)/(a+b+c));
