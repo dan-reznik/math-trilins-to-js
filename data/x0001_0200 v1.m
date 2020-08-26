@@ -103,7 +103,7 @@
 {"X(99)", Hold@{(b c)/(b2-c2), (c a)/(c2-a2), (a b)/(a2-b2)}, "STEINER POINT"}, 
 {"X(100)", Hold@{1/(b-c), 1/(c-a), 1/(a-b)}, "ANTICOMPLEMENT OF FEUERBACH POINT"},
 { "X(101)", Hold@{a/(b-c),b/(c-a),c/(a-b)},"\[CapitalLambda](INCENTER,ORTHOCENTER)\[CapitalPsi](INCENTER,SYMMEDIAN POINT)" },
-{ "X(102)", Hold@{a/(2 a4-(b+c)a3-(b-c)^2 a2 (b-c)^2 (b+c)a-(b2-c2)^2),b/(2 b4-(c+a)b3-(c-a)^2 b2 (c-a)^2 (c+a)b-(c2-a2)^2),c/(2 c4-(a+b)c3-(a-b)^2 c2 (a-b)^2 (a+b)c-(a2-b2)^2)},"\[CapitalLambda](INCENTER,ORTHOCENTER)" },
+{ "X(102)", Hold@{a/(2 a4-(b+c)a3-(b-c)^2 a2 + (b-c)^2 (b+c)a-(b2-c2)^2),b/(2 b4-(c+a)b3-(c-a)^2 b2 + (c-a)^2 (c+a)b-(c2-a2)^2),c/(2 c4-(a+b)c3-(a-b)^2 c2 + (a-b)^2 (a+b)c-(a2-b2)^2)},"\[CapitalLambda](INCENTER,ORTHOCENTER)" },
 { "X(103)", Hold@{a/(2 a3-a2(b+c)-(b-c)^2 (b+c)),b/(2 b3-b2(c+a)-(c-a)^2 (c+a)),c/(2 c3-c2(a+b)-(a-b)^2 (a+b))},"ANTIPODE OF X(101)" },
 { "X(104)", Hold@{1/(b3+c3-(a2+b c)(b+c)+2 a b c),1/(c3+a3-(b2+c a)(c+a)+2 b c a),1/(a3+b3-(c2+a b)(a+b)+2 c a b)},"ANTIPODE OF X(100)" },
 { "X(105)", Hold@{1/(b2+c2-a(b+c)),1/(c2+a2-b(c+a)),1/(a2+b2-c(a+b))},"\[CapitalLambda](INCENTER,SYMMEDIAN POINT)" },

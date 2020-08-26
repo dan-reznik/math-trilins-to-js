@@ -99,7 +99,7 @@
 {"X(99)", "(b*c)/(b2 - c2)|(a*c)/(-a2 + c2)|(a*b)/(a2 - b2)", "STEINER POINT"}
 {"X(100)", "1/(b - c)|1/(-a + c)|1/(a - b)", "ANTICOMPLEMENT OF FEUERBACH POINT"}
 {"X(101)", "a/(b - c)|b/(-a + c)|c/(a - b)", "Λ(INCENTER,ORTHOCENTER)Ψ(INCENTER,SYMMEDIAN POINT)"}
-{"X(102)", "a/(2*a4 - a3*(b + c) - a*a2*Power(b - c,4)*(b + c) - Power(b2 - c2,2))|b/(2*b4 - b3*(a + c) - b*b2*Power(-a + c,4)*(a + c) - Power(-a2 + c2,2))|c/(-Power(a2 - b2,2) - Power(a - b,4)*(a + b)*c*c2 - (a + b)*c3 + 2*c4)", "Λ(INCENTER,ORTHOCENTER)"}
+{"X(102)", "a/(2*a4 - a2*Power(b - c,2) - a3*(b + c) + a*Power(b - c,2)*(b + c) - Power(b2 - c2,2))|b/(2*b4 - b2*Power(-a + c,2) - b3*(a + c) + b*Power(-a + c,2)*(a + c) - Power(-a2 + c2,2))|c/(-Power(a2 - b2,2) + Power(a - b,2)*(a + b)*c - Power(a - b,2)*c2 - (a + b)*c3 + 2*c4)", "Λ(INCENTER,ORTHOCENTER)"}
 {"X(103)", "a/(2*a3 - a2*(b + c) - Power(b - c,2)*(b + c))|b/(2*b3 - b2*(a + c) - Power(-a + c,2)*(a + c))|c/(-(Power(a - b,2)*(a + b)) - (a + b)*c2 + 2*c3)", "ANTIPODE OF X(101)"}
 {"X(104)", "1/(b3 + 2*a*b*c - (b + c)*(a2 + b*c) + c3)|1/(a3 + 2*a*b*c - (a + c)*(b2 + a*c) + c3)|1/(a3 + b3 + 2*a*b*c - (a + b)*(a*b + c2))", "ANTIPODE OF X(100)"}
 {"X(105)", "1/(b2 - a*(b + c) + c2)|1/(a2 - b*(a + c) + c2)|1/(a2 + b2 - (a + b)*c)", "Λ(INCENTER,SYMMEDIAN POINT)"}
@@ -119,7 +119,7 @@
 {"X(119)", "(-1 + cosB + cosC)*cscA*(sin2B + sin2C + 2*(-1 + cosA)*(sinB + sinC))|(-1 + cosA + cosC)*cscB*(sin2A + sin2C + 2*(-1 + cosB)*(sinA + sinC))|(-1 + cosA + cosB)*cscC*(sin2A + sin2B + 2*(-1 + cosC)*(sinA + sinB))", "X(119) = FEUERBACH ANTIPODE"}
 {"X(120)", "b*c*(2*a*b*c - (a2 + Power(b - c,2))*(b + c))*(-(a*b) + b2 - a*c + c2)|a*c*(2*a*b*c - (a + c)*(b2 + Power(-a + c,2)))*(a2 - a*b - b*c + c2)|a*b*(a2 + b2 - a*c - b*c)*(2*a*b*c - (a + b)*(Power(a - b,2) + c2))", "X(105)-OF-MEDIAL-TRIANGLE"}
 {"X(121)", "b*c*(-2*a + b + c)*(b3 - 2*b*c*(b + c) + a*(b2 + c2) + c3)|a*c*(a - 2*b + c)*(a3 - 2*a*c*(a + c) + b*(a2 + c2) + c3)|a*b*(a + b - 2*c)*(a3 - 2*a*b*(a + b) + b3 + (a2 + b2)*c)", "X(106)-OF-MEDIAL-TRIANGLE"}
-{"X(122)", "(Power(b2 - c2,2)*(cosA - cosB*cosC))/(tanA*tanA)|(Power(-a2 + c2,2)*(cosB - cosA*cosC))/(tanB*tanB)|(Power(a2 - b2,2)*(-(cosA*cosB) + cosC))/(tanC*tanC)", "X(107)-OF-MEDIAL-TRIANGLE"}
+{"X(122)", "(Power(b2 - c2,2)*(cosA - cosB*cosC))/Power(tanA,2)|(Power(-a2 + c2,2)*(cosB - cosA*cosC))/Power(tanB,2)|(Power(a2 - b2,2)*(-(cosA*cosB) + cosC))/Power(tanC,2)", "X(107)-OF-MEDIAL-TRIANGLE"}
 {"X(123)", "cscA*(secB - secC)*(secA*(sin2B - sin2C) - sinB*tanB + sinC*tanC)|cscB*(-secA + secC)*(secB*(-sin2A + sin2C) + sinA*tanA - sinC*tanC)|cscC*(secA - secB)*(secC*(sin2A - sin2B) - sinA*tanA + sinB*tanB)", "X(108)-OF-MEDIAL-TRIANGLE"}
 {"X(124)", "b*Power(b - c,2)*c*(-a + b + c)*(a*b*c + (b + c)*(-a2 + b2 - b*c + c2))|a*c*Power(-a + c,2)*(a - b + c)*(a*b*c + (a + c)*(a2 - b2 - a*c + c2))|a*Power(a - b,2)*b*(a + b - c)*(a*b*c + (a + b)*(a2 - a*b + b2 - c2))", "X(109)-OF-MEDIAL-TRIANGLE"}
 {"X(125)", "b*c*Power(b2 - c2,2)*(-a2 + b2 + c2)|a*c*Power(-a2 + c2,2)*(a2 - b2 + c2)|a*b*Power(a2 - b2,2)*(a2 + b2 - c2)", "CENTER OF JERABEK HYPERBOLA"}

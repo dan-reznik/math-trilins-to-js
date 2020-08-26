@@ -2,6 +2,11 @@
 
 R code to convert trilinear file produced with mathematica into js
 
-Usage: Rscript p5js.R 'fname_math_in.txt'
+Usage: at linux terminal type:
 
-Output goes to 'js/fname_math_in.js'
+$ Rscript p5js.R 'fname_math_in.cform'
+
+e.g. Rscript psjs.R 'x0001_0200 v2b.cform'
+
+1) creates intermediate file 'fname_math_in.csv'
+2) using the csv creates 'js/fname_math_in.js'

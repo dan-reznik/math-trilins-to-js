@@ -34,6 +34,9 @@ convert_formulas <- function(fname_math_in,
   read_file(fname_js_support) %>%
     str_c("\n\n", codigo_js) %>%
     write_file(fname_js_out)
+  
+  # deleta csv auxiliar
+  fs::file_delete(fname_math_csv)
 }
 
 # input .txt: {"X(3)", "cosA|cosB|cosC", "CIRCUMCENTER"} 
