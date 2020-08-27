@@ -202,6 +202,4 @@
 { "X(198)", Hold@{a(a3+a2(b+c)-a (b+c)^2-(b-c)^2 (b+c)),b(b3+b2(c+a)-b (c+a)^2-(c-a)^2 (c+a)),c(c3+c2(a+b)-c (a+b)^2-(a-b)^2 (a+b))},"X(9)-CEVA CONJUGATE OF X(6)" },
 { "X(199)", Hold@{a(b4+c4-a4+(b2+c2-a2)(b c+c a+a b)),b(c4+a4-b4+(c2+a2-b2)(c a+a b+b c)),c(a4+b4-c4+(a2+b2-c2)(a b+b c+c a))},"X(10)-CEVA CONJUGATE OF X(6)" },
 { "X(200)", Hold@{(b+c-a)^2,(c+a-b)^2,(a+b-c)^2},"X(8)-CEVA CONJUGATE OF X(9)" },
-{ "X(376)", Hold@{2 cosA-cosB cosC,2 cosB-cosC cosA,2 cosC-cosA cosB},"CENTROID OF THE ANTIPEDAL TRIANGLE OF X(2)" }
 }
-

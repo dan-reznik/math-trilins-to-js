@@ -16141,3 +16141,19 @@ function barys_X999(orbit) {
    let barys = [v1,v2,v3];
    return barys_to_cartesian(orbit, barys);
 }
+
+function barys_X1000(orbit) {
+   /* begin vars */
+   let c2=c*c;
+   let b2=b*b;
+   let a2=a*a;
+   let SC=(a2+b2-c2)/2;
+   let SB=(c2+a2-b2)/2;
+   let SA=(b2+c2-a2)/2;
+   /* end vars */
+   let v1 = 1/(2*b*c-SA);
+   let v2 = 1/(2*a*c-SB);
+   let v3 = 1/(2*a*b-SC);
+   let barys = [v1,v2,v3];
+   return barys_to_cartesian(orbit, barys);
+}

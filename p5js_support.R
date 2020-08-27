@@ -31,8 +31,7 @@ clean_lines_old <- function(lines) {
 }
 
 prepare_formulas <- function(raw_formulas_file, formulas_csv_file){
-  lines <- read_lines(raw_formulas_file) %>%
-    head(-1)
+  lines <- read_lines(raw_formulas_file) # %>% head(-1)
   lines_clean <- clean_lines(lines)
   c("kimberling;trilins;name",
     lines_clean) %>% write_lines(formulas_csv_file)

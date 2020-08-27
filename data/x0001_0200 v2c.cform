@@ -198,4 +198,3 @@
 {"X(198)", "a*(a3 + a2*(b + c) - Power(b - c,2)*(b + c) - a*Power(b + c,2))|b*(b3 + b2*(a + c) - Power(-a + c,2)*(a + c) - b*Power(a + c,2))|c*(-(Power(a - b,2)*(a + b)) - Power(a + b,2)*c + (a + b)*c2 + c3)", "X(9)-CEVA CONJUGATE OF X(6)"}
 {"X(199)", "a*(-a4 + b4 + (a*b + a*c + b*c)*(-a2 + b2 + c2) + c4)|b*(a4 - b4 + (a*b + a*c + b*c)*(a2 - b2 + c2) + c4)|c*(a4 + b4 + (a*b + a*c + b*c)*(a2 + b2 - c2) - c4)", "X(10)-CEVA CONJUGATE OF X(6)"}
 {"X(200)", "Power(-a + b + c,2)|Power(a - b + c,2)|Power(a + b - c,2)", "X(8)-CEVA CONJUGATE OF X(9)"}
-{"X(376)", "2*cosA - cosB*cosC|2*cosB - cosA*cosC|-(cosA*cosB) + 2*cosC", "CENTROID OF THE ANTIPEDAL TRIANGLE OF X(2)"}
