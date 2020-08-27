@@ -62,7 +62,7 @@ vec_moses_clean <- vec_moses %>%
   head(1100) %>%
   str_remove_all("\\(\\*.+?\\*\\)") %>%
   str_replace_all(c("\\b([abc])\\^([2-8])\\b"="\\1\\2",
-                    "\\b([Ss][ABC])\\^(2)\\b"="\\1\\2",
+                    "\\b([Ss][ABC]?)\\^(2)\\b"="\\1\\2",
                     "Sqrt\\[([abc])\\]"="sqrt\\1",
                     "Sin\\[([ABC])\\]"="sin\\1",
                     "Cos\\[([ABC])\\]"="cos\\1",

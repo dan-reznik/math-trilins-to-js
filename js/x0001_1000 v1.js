@@ -3691,15 +3691,16 @@ function barys_X233(orbit) {
 
 function barys_X234(orbit) {
    /* begin vars */
+   let s=(a+b+c)/2;
    let sa=(b+c-a)/2;
    let Sqrt=Math.sqrt;
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
-   let s=(a+b+c)/2;
+   let s2=s*s;
    /* end vars */
-   let v1 = s*s*sb*sc*(Sqrt((s*sb)/(a*c))+Sqrt((s*sc)/(a*b)));
-   let v2 = s*s*sa*sc*(Sqrt((s*sa)/(b*c))+Sqrt((s*sc)/(a*b)));
-   let v3 = s*s*sa*sb*(Sqrt((s*sa)/(b*c))+Sqrt((s*sb)/(a*c)));
+   let v1 = s2*sb*sc*(Sqrt((s*sb)/(a*c))+Sqrt((s*sc)/(a*b)));
+   let v2 = s2*sa*sc*(Sqrt((s*sa)/(b*c))+Sqrt((s*sc)/(a*b)));
+   let v3 = s2*sa*sb*(Sqrt((s*sa)/(b*c))+Sqrt((s*sb)/(a*c)));
    let barys = [v1,v2,v3];
    return barys_to_cartesian(orbit, barys);
 }
@@ -5661,14 +5662,15 @@ function barys_X368(orbit) {
    let c2=c*c;
    let b2=b*b;
    let area=triAreaHeron(a,b,c);
+   let S=2*area;
    let SA=(b2+c2-a2)/2;
    let SC=(a2+b2-c2)/2;
    let SB=(c2+a2-b2)/2;
-   let S=2*area;
+   let S2=S*S;
    /* end vars */
-   let v1 = S*S-3*SB*SC;
-   let v2 = S*S-3*SA*SC;
-   let v3 = S*S-3*SA*SB;
+   let v1 = S2-3*SB*SC;
+   let v2 = S2-3*SA*SC;
+   let v3 = S2-3*SA*SB;
    let barys = [v1,v2,v3];
    return barys_to_cartesian(orbit, barys);
 }
@@ -5693,14 +5695,15 @@ function barys_X370(orbit) {
    let c2=c*c;
    let b2=b*b;
    let area=triAreaHeron(a,b,c);
+   let S=2*area;
    let SA=(b2+c2-a2)/2;
    let SC=(a2+b2-c2)/2;
    let SB=(c2+a2-b2)/2;
-   let S=2*area;
+   let S2=S*S;
    /* end vars */
-   let v1 = S*S-3*SB*SC;
-   let v2 = S*S-3*SA*SC;
-   let v3 = S*S-3*SA*SB;
+   let v1 = S2-3*SB*SC;
+   let v2 = S2-3*SA*SC;
+   let v3 = S2-3*SA*SB;
    let barys = [v1,v2,v3];
    return barys_to_cartesian(orbit, barys);
 }
@@ -7304,14 +7307,15 @@ function barys_X459(orbit) {
    let b2=b*b;
    let a2=a*a;
    let area=triAreaHeron(a,b,c);
+   let S=2*area;
    let SC=(a2+b2-c2)/2;
    let SB=(c2+a2-b2)/2;
-   let S=2*area;
+   let S2=S*S;
    let SA=(b2+c2-a2)/2;
    /* end vars */
-   let v1 = 1/(SA*(S*S-2*SB*SC));
-   let v2 = 1/(SB*(S*S-2*SA*SC));
-   let v3 = 1/((S*S-2*SA*SB)*SC);
+   let v1 = 1/(SA*(S2-2*SB*SC));
+   let v2 = 1/(SB*(S2-2*SA*SC));
+   let v3 = 1/((S2-2*SA*SB)*SC);
    let barys = [v1,v2,v3];
    return barys_to_cartesian(orbit, barys);
 }
