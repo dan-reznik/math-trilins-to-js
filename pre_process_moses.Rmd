@@ -55,11 +55,11 @@ vec_moses <- read_file("data_moses/ETCPoints_39381.m")%>%
 vec_moses %>% length
 ```
 
-## Restrict to 1000 and clean
+## Restrict to 1000 (first 1100) and clean
 
 ```{r}
 vec_moses_clean <- vec_moses %>%
-  head(1000) %>%
+  head(1100) %>%
   str_remove_all("\\(\\*.+?\\*\\)") %>%
   str_replace_all(c("\\b([abc])\\^([2-8])\\b"="\\1\\2",
                     "\\b([Ss][ABC])\\^(2)\\b"="\\1\\2",
@@ -188,7 +188,6 @@ Note: ρ's prevent overwriting
 repl_symbols %>% head(5)
 ```
 
-
 ```{r}
 df_moses_1k_symbols_rotated <- df_moses_1k_symbols %>%
   #head(10) %>%
@@ -200,17 +199,38 @@ df_moses_1k_symbols_rotated <- df_moses_1k_symbols %>%
            str_remove_all("ρ"))
 ```
 
-{"X(3)", Hold@{cosA, cosB, cosC}, "CIRCUMCENTER"},
+```{r}
+df_moses_1k_symbols_rotated %>% head(1000) %>% tail
+```
+
 
 ```{r}
 df_moses_1k_symbols_rotated %>%
-  #head(10) %>%
+  #head %>%
+  select(lhs) %>%
+  mutate(xnum=str_sub(lhs,start=3)%>%
+           str_sub(end=-2)%>%
+           as.integer,.before=lhs) %>%
+  mutate(xnum_diff=xnum-lag(xnum)) %>%
+  filter(xnum_diff > 1)
+```
+
+{"X(3)", Hold@{cosA, cosB, cosC}, "CIRCUMCENTER"},
+
+```{r}
+df_moses_mathematica <- df_moses_1k_symbols_rotated %>%
+  head(1000) %>%
   mutate(wolfram=str_c('{"',lhs,'", Hold@{',rhs,', ',rhs_1,', ',rhs_2,'}, "get_name"},')) %>%
   pull(wolfram) %>%
   str_c(collapse="\n") %>%
   # remove last comma
   str_sub(end=-2) %>%
-  str_c("{\n",.,"\n}") %>%
+  str_c("{\n",.,"\n}")
+```
+
+
+```{r}
+df_moses_mathematica %>%
   write_file("data_moses/symbols_1k.m")
 ```
 
