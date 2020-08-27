@@ -13,8 +13,20 @@ function trilin_to_cartesian(
   ];
 }
 
+// vs = vertices (2-vectors), bs = barycentrics (scalars)
+function barys_to_cartesian(vs, bs) {
+  const bs_sum = sum(bs);
+  const vs_scaled = vs.map((v,i)=>vscale(v,bs[i]));
+  const vs_scaled_norm = vscale(vsum3(...vs_scaled),1/bs_sum);
+  return vs_scaled_norm;
+}
+
 function get_Xn_low(orbit, sides, fn_trilin) {
   return fn_trilin(orbit,sides);
+}
+
+function get_Xn_low_bary(orbit, sides, fn_bary) {
+  return fn_bary(orbit,sides);
 }
 
 function get_fn_trilin(n) {
@@ -22,29 +34,18 @@ function get_fn_trilin(n) {
   return window[fn_name];
 }
 
-function get_Xn(orbit, sides, n) {
-  return get_Xn_low(orbit, sides, get_fn_trilin(n));
-}
-
-function get_Xn_low_bary(orbit, fn_bary) {
-  return fn_bary(orbit);
-}
-
 function get_fn_bary(n) {
   let fn_name = sprintf("bary_X%d",n);
   return window[fn_name];
 }
 
-function get_Xn_bary(orbit, n) {
-  return get_Xn_low_bary(orbit, get_fn_bary(n));
+function get_Xn(orbit, sides, n) {
+  return get_Xn_low(orbit, sides, get_fn_trilin(n));
 }
 
-// vs = vertices (2-vectors), bs = barycentrics (scalars)
-function barys_to_cartesian(vs, bs) {
-  const bs_sum = sum(bs);
-  const vs_scaled = vs.map((v,i)=>vscale(v,bs[i]));
-  const vs_scaled_norm = vscale(vsum3(...vs_scaled),1/bs_sum);
-  return vs_scaled_norm;
+
+function get_Xn_bary(orbit, n) {
+  return get_Xn_low_bary(orbit, sides, get_fn_bary(n));
 }
 
 const sqrt3 = Math.sqrt(3.0);
@@ -118,7 +119,7 @@ function getCotPrime(a,b,c) {
   return Math.cot((2*a*Math.PI)/(a+b+c));
 }
 
-function barys_X1(orbit) {
+function bary_X1(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -129,7 +130,7 @@ function barys_X1(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X2(orbit) {
+function bary_X2(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -140,7 +141,7 @@ function barys_X2(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X3(orbit) {
+function bary_X3(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -153,7 +154,7 @@ function barys_X3(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X4(orbit) {
+function bary_X4(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -166,7 +167,7 @@ function barys_X4(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X5(orbit) {
+function bary_X5(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -182,7 +183,7 @@ function barys_X5(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X6(orbit) {
+function bary_X6(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -195,7 +196,7 @@ function barys_X6(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X7(orbit) {
+function bary_X7(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -206,7 +207,7 @@ function barys_X7(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X8(orbit) {
+function bary_X8(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -217,7 +218,7 @@ function barys_X8(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X9(orbit) {
+function bary_X9(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -228,7 +229,7 @@ function barys_X9(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X10(orbit) {
+function bary_X10(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -239,7 +240,7 @@ function barys_X10(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X11(orbit) {
+function bary_X11(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -250,7 +251,7 @@ function barys_X11(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X12(orbit) {
+function bary_X12(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -261,7 +262,7 @@ function barys_X12(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X13(orbit) {
+function bary_X13(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -276,7 +277,7 @@ function barys_X13(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X14(orbit) {
+function bary_X14(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -291,7 +292,7 @@ function barys_X14(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X15(orbit) {
+function bary_X15(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -306,7 +307,7 @@ function barys_X15(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X16(orbit) {
+function bary_X16(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -321,7 +322,7 @@ function barys_X16(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X17(orbit) {
+function bary_X17(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -336,7 +337,7 @@ function barys_X17(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X18(orbit) {
+function bary_X18(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -351,7 +352,7 @@ function barys_X18(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X19(orbit) {
+function bary_X19(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -364,7 +365,7 @@ function barys_X19(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X20(orbit) {
+function bary_X20(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -380,7 +381,7 @@ function barys_X20(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X21(orbit) {
+function bary_X21(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -391,7 +392,7 @@ function barys_X21(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X22(orbit) {
+function bary_X22(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -407,7 +408,7 @@ function barys_X22(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X23(orbit) {
+function bary_X23(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -423,7 +424,7 @@ function barys_X23(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X24(orbit) {
+function bary_X24(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -439,7 +440,7 @@ function barys_X24(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X25(orbit) {
+function bary_X25(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -452,7 +453,7 @@ function barys_X25(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X26(orbit) {
+function bary_X26(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -474,7 +475,7 @@ function barys_X26(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X27(orbit) {
+function bary_X27(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -487,7 +488,7 @@ function barys_X27(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X28(orbit) {
+function bary_X28(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -500,7 +501,7 @@ function barys_X28(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X29(orbit) {
+function bary_X29(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -513,7 +514,7 @@ function barys_X29(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X30(orbit) {
+function bary_X30(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -529,7 +530,7 @@ function barys_X30(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X31(orbit) {
+function bary_X31(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -545,7 +546,7 @@ function barys_X31(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X32(orbit) {
+function bary_X32(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -561,7 +562,7 @@ function barys_X32(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X33(orbit) {
+function bary_X33(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -574,7 +575,7 @@ function barys_X33(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X34(orbit) {
+function bary_X34(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -587,7 +588,7 @@ function barys_X34(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X35(orbit) {
+function bary_X35(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -600,7 +601,7 @@ function barys_X35(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X36(orbit) {
+function bary_X36(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -613,7 +614,7 @@ function barys_X36(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X37(orbit) {
+function bary_X37(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -624,7 +625,7 @@ function barys_X37(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X38(orbit) {
+function bary_X38(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -637,7 +638,7 @@ function barys_X38(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X39(orbit) {
+function bary_X39(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -650,7 +651,7 @@ function barys_X39(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X40(orbit) {
+function bary_X40(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -666,7 +667,7 @@ function barys_X40(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X41(orbit) {
+function bary_X41(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -682,7 +683,7 @@ function barys_X41(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X42(orbit) {
+function bary_X42(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -695,7 +696,7 @@ function barys_X42(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X43(orbit) {
+function bary_X43(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -706,7 +707,7 @@ function barys_X43(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X44(orbit) {
+function bary_X44(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -717,7 +718,7 @@ function barys_X44(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X45(orbit) {
+function bary_X45(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -728,7 +729,7 @@ function barys_X45(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X46(orbit) {
+function bary_X46(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -744,7 +745,7 @@ function barys_X46(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X47(orbit) {
+function bary_X47(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -763,7 +764,7 @@ function barys_X47(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X48(orbit) {
+function bary_X48(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -779,7 +780,7 @@ function barys_X48(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X49(orbit) {
+function bary_X49(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -795,7 +796,7 @@ function barys_X49(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X50(orbit) {
+function bary_X50(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -811,7 +812,7 @@ function barys_X50(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X51(orbit) {
+function bary_X51(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -827,7 +828,7 @@ function barys_X51(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X52(orbit) {
+function bary_X52(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -843,7 +844,7 @@ function barys_X52(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X53(orbit) {
+function bary_X53(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -859,7 +860,7 @@ function barys_X53(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X54(orbit) {
+function bary_X54(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -875,7 +876,7 @@ function barys_X54(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X55(orbit) {
+function bary_X55(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -888,7 +889,7 @@ function barys_X55(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X56(orbit) {
+function bary_X56(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -901,7 +902,7 @@ function barys_X56(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X57(orbit) {
+function bary_X57(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -912,7 +913,7 @@ function barys_X57(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X58(orbit) {
+function bary_X58(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -925,7 +926,7 @@ function barys_X58(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X59(orbit) {
+function bary_X59(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -938,7 +939,7 @@ function barys_X59(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X60(orbit) {
+function bary_X60(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -951,7 +952,7 @@ function barys_X60(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X61(orbit) {
+function bary_X61(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -966,7 +967,7 @@ function barys_X61(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X62(orbit) {
+function bary_X62(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -981,7 +982,7 @@ function barys_X62(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X63(orbit) {
+function bary_X63(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -994,7 +995,7 @@ function barys_X63(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X64(orbit) {
+function bary_X64(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1010,7 +1011,7 @@ function barys_X64(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X65(orbit) {
+function bary_X65(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1021,7 +1022,7 @@ function barys_X65(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X66(orbit) {
+function bary_X66(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1037,7 +1038,7 @@ function barys_X66(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X67(orbit) {
+function bary_X67(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1053,7 +1054,7 @@ function barys_X67(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X68(orbit) {
+function bary_X68(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1069,7 +1070,7 @@ function barys_X68(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X69(orbit) {
+function bary_X69(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1082,7 +1083,7 @@ function barys_X69(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X70(orbit) {
+function bary_X70(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -1104,7 +1105,7 @@ function barys_X70(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X71(orbit) {
+function bary_X71(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1117,7 +1118,7 @@ function barys_X71(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X72(orbit) {
+function bary_X72(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1130,7 +1131,7 @@ function barys_X72(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X73(orbit) {
+function bary_X73(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1143,7 +1144,7 @@ function barys_X73(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X74(orbit) {
+function bary_X74(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1159,7 +1160,7 @@ function barys_X74(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X75(orbit) {
+function bary_X75(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1170,7 +1171,7 @@ function barys_X75(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X76(orbit) {
+function bary_X76(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1183,7 +1184,7 @@ function barys_X76(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X77(orbit) {
+function bary_X77(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1196,7 +1197,7 @@ function barys_X77(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X78(orbit) {
+function bary_X78(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1209,7 +1210,7 @@ function barys_X78(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X79(orbit) {
+function bary_X79(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1222,7 +1223,7 @@ function barys_X79(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X80(orbit) {
+function bary_X80(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1235,7 +1236,7 @@ function barys_X80(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X81(orbit) {
+function bary_X81(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1246,7 +1247,7 @@ function barys_X81(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X82(orbit) {
+function bary_X82(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1259,7 +1260,7 @@ function barys_X82(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X83(orbit) {
+function bary_X83(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1272,7 +1273,7 @@ function barys_X83(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X84(orbit) {
+function bary_X84(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1288,7 +1289,7 @@ function barys_X84(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X85(orbit) {
+function bary_X85(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1299,7 +1300,7 @@ function barys_X85(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X86(orbit) {
+function bary_X86(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1310,7 +1311,7 @@ function barys_X86(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X87(orbit) {
+function bary_X87(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1321,7 +1322,7 @@ function barys_X87(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X88(orbit) {
+function bary_X88(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1332,7 +1333,7 @@ function barys_X88(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X89(orbit) {
+function bary_X89(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1343,7 +1344,7 @@ function barys_X89(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X90(orbit) {
+function bary_X90(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1359,7 +1360,7 @@ function barys_X90(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X91(orbit) {
+function bary_X91(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1375,7 +1376,7 @@ function barys_X91(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X92(orbit) {
+function bary_X92(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1388,7 +1389,7 @@ function barys_X92(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X93(orbit) {
+function bary_X93(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1404,7 +1405,7 @@ function barys_X93(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X94(orbit) {
+function bary_X94(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -1417,7 +1418,7 @@ function barys_X94(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X95(orbit) {
+function bary_X95(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1433,7 +1434,7 @@ function barys_X95(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X96(orbit) {
+function bary_X96(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1449,7 +1450,7 @@ function barys_X96(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X97(orbit) {
+function bary_X97(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1465,7 +1466,7 @@ function barys_X97(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X98(orbit) {
+function bary_X98(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1481,7 +1482,7 @@ function barys_X98(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X99(orbit) {
+function bary_X99(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1492,7 +1493,7 @@ function barys_X99(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X100(orbit) {
+function bary_X100(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1503,7 +1504,7 @@ function barys_X100(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X101(orbit) {
+function bary_X101(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1516,7 +1517,7 @@ function barys_X101(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X102(orbit) {
+function bary_X102(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1535,7 +1536,7 @@ function barys_X102(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X103(orbit) {
+function bary_X103(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1551,7 +1552,7 @@ function barys_X103(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X104(orbit) {
+function bary_X104(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1567,7 +1568,7 @@ function barys_X104(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X105(orbit) {
+function bary_X105(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1580,7 +1581,7 @@ function barys_X105(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X106(orbit) {
+function bary_X106(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1593,7 +1594,7 @@ function barys_X106(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X107(orbit) {
+function bary_X107(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1606,7 +1607,7 @@ function barys_X107(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X108(orbit) {
+function bary_X108(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1619,7 +1620,7 @@ function barys_X108(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X109(orbit) {
+function bary_X109(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1632,7 +1633,7 @@ function barys_X109(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X110(orbit) {
+function bary_X110(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1645,7 +1646,7 @@ function barys_X110(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X111(orbit) {
+function bary_X111(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1658,7 +1659,7 @@ function barys_X111(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X112(orbit) {
+function bary_X112(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1671,7 +1672,7 @@ function barys_X112(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X113(orbit) {
+function bary_X113(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -1690,7 +1691,7 @@ function barys_X113(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X114(orbit) {
+function bary_X114(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1706,7 +1707,7 @@ function barys_X114(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X115(orbit) {
+function bary_X115(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -1717,7 +1718,7 @@ function barys_X115(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X116(orbit) {
+function bary_X116(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1730,7 +1731,7 @@ function barys_X116(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X117(orbit) {
+function bary_X117(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a3=a2*a;
@@ -1755,7 +1756,7 @@ function barys_X117(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X118(orbit) {
+function bary_X118(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a3=a2*a;
@@ -1777,7 +1778,7 @@ function barys_X118(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X119(orbit) {
+function bary_X119(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1796,7 +1797,7 @@ function barys_X119(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X120(orbit) {
+function bary_X120(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1812,7 +1813,7 @@ function barys_X120(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X121(orbit) {
+function bary_X121(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1828,7 +1829,7 @@ function barys_X121(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X122(orbit) {
+function bary_X122(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1844,7 +1845,7 @@ function barys_X122(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X123(orbit) {
+function bary_X123(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1860,7 +1861,7 @@ function barys_X123(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X124(orbit) {
+function bary_X124(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1876,7 +1877,7 @@ function barys_X124(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X125(orbit) {
+function bary_X125(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1889,7 +1890,7 @@ function barys_X125(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X126(orbit) {
+function bary_X126(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -1905,7 +1906,7 @@ function barys_X126(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X127(orbit) {
+function bary_X127(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -1921,7 +1922,7 @@ function barys_X127(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X128(orbit) {
+function bary_X128(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -1943,7 +1944,7 @@ function barys_X128(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X129(orbit) {
+function bary_X129(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -1965,7 +1966,7 @@ function barys_X129(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X130(orbit) {
+function bary_X130(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -1987,7 +1988,7 @@ function barys_X130(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X131(orbit) {
+function bary_X131(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2009,7 +2010,7 @@ function barys_X131(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X132(orbit) {
+function bary_X132(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2028,7 +2029,7 @@ function barys_X132(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X133(orbit) {
+function bary_X133(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -2050,7 +2051,7 @@ function barys_X133(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X134(orbit) {
+function bary_X134(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2072,7 +2073,7 @@ function barys_X134(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X135(orbit) {
+function bary_X135(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2091,7 +2092,7 @@ function barys_X135(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X136(orbit) {
+function bary_X136(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2107,7 +2108,7 @@ function barys_X136(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X137(orbit) {
+function bary_X137(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -2123,7 +2124,7 @@ function barys_X137(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X138(orbit) {
+function bary_X138(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2145,7 +2146,7 @@ function barys_X138(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X139(orbit) {
+function bary_X139(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2167,7 +2168,7 @@ function barys_X139(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X140(orbit) {
+function bary_X140(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2183,7 +2184,7 @@ function barys_X140(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X141(orbit) {
+function bary_X141(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -2196,7 +2197,7 @@ function barys_X141(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X142(orbit) {
+function bary_X142(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -2209,7 +2210,7 @@ function barys_X142(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X143(orbit) {
+function bary_X143(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -2225,7 +2226,7 @@ function barys_X143(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X144(orbit) {
+function bary_X144(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2238,7 +2239,7 @@ function barys_X144(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X145(orbit) {
+function bary_X145(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -2249,7 +2250,7 @@ function barys_X145(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X146(orbit) {
+function bary_X146(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2271,7 +2272,7 @@ function barys_X146(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X147(orbit) {
+function bary_X147(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2293,7 +2294,7 @@ function barys_X147(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X148(orbit) {
+function bary_X148(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2309,7 +2310,7 @@ function barys_X148(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X149(orbit) {
+function bary_X149(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2325,7 +2326,7 @@ function barys_X149(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X150(orbit) {
+function bary_X150(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2344,7 +2345,7 @@ function barys_X150(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X151(orbit) {
+function bary_X151(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2375,7 +2376,7 @@ function barys_X151(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X152(orbit) {
+function bary_X152(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2406,7 +2407,7 @@ function barys_X152(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X153(orbit) {
+function bary_X153(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2434,7 +2435,7 @@ function barys_X153(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X154(orbit) {
+function bary_X154(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2450,7 +2451,7 @@ function barys_X154(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X155(orbit) {
+function bary_X155(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2469,7 +2470,7 @@ function barys_X155(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X156(orbit) {
+function bary_X156(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2491,7 +2492,7 @@ function barys_X156(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X157(orbit) {
+function bary_X157(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2510,7 +2511,7 @@ function barys_X157(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X158(orbit) {
+function bary_X158(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2523,7 +2524,7 @@ function barys_X158(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X159(orbit) {
+function bary_X159(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2542,7 +2543,7 @@ function barys_X159(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X160(orbit) {
+function bary_X160(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2558,7 +2559,7 @@ function barys_X160(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X161(orbit) {
+function bary_X161(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -2580,7 +2581,7 @@ function barys_X161(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X162(orbit) {
+function bary_X162(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2593,7 +2594,7 @@ function barys_X162(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X163(orbit) {
+function bary_X163(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2609,7 +2610,7 @@ function barys_X163(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X164(orbit) {
+function bary_X164(orbit, [a,b,c]) {
    /* begin vars */
    let Sqrt=Math.sqrt;
    /* end vars */
@@ -2620,7 +2621,7 @@ function barys_X164(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X165(orbit) {
+function bary_X165(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2633,7 +2634,7 @@ function barys_X165(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X166(orbit) {
+function bary_X166(orbit, [a,b,c]) {
    /* begin vars */
    let sb=(c+a-b)/2;
    let sa=(b+c-a)/2;
@@ -2648,7 +2649,7 @@ function barys_X166(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X167(orbit) {
+function bary_X167(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -2668,7 +2669,7 @@ function barys_X167(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X168(orbit) {
+function bary_X168(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -2684,7 +2685,7 @@ function barys_X168(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X169(orbit) {
+function bary_X169(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2700,7 +2701,7 @@ function barys_X169(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X170(orbit) {
+function bary_X170(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -2722,7 +2723,7 @@ function barys_X170(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X171(orbit) {
+function bary_X171(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2735,7 +2736,7 @@ function barys_X171(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X172(orbit) {
+function bary_X172(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2748,7 +2749,7 @@ function barys_X172(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X173(orbit) {
+function bary_X173(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -2763,7 +2764,7 @@ function barys_X173(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X174(orbit) {
+function bary_X174(orbit, [a,b,c]) {
    /* begin vars */
    let sa=(b+c-a)/2;
    let sc=(a+b-c)/2;
@@ -2777,7 +2778,7 @@ function barys_X174(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X175(orbit) {
+function bary_X175(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -2789,7 +2790,7 @@ function barys_X175(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X176(orbit) {
+function bary_X176(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -2801,7 +2802,7 @@ function barys_X176(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X177(orbit) {
+function bary_X177(orbit, [a,b,c]) {
    /* begin vars */
    let sqrtc=sqrt(c);
    let sqrtb=sqrt(b);
@@ -2815,7 +2816,7 @@ function barys_X177(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X178(orbit) {
+function bary_X178(orbit, [a,b,c]) {
    /* begin vars */
    let Sqrt=Math.sqrt;
    /* end vars */
@@ -2826,7 +2827,7 @@ function barys_X178(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X179(orbit) {
+function bary_X179(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosHalfC=cosHalfAngle(cosC);
@@ -2851,7 +2852,7 @@ function barys_X179(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X180(orbit) {
+function bary_X180(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosB=lawOfCosines(b,a,c);
@@ -2876,7 +2877,7 @@ function barys_X180(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X181(orbit) {
+function bary_X181(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2889,7 +2890,7 @@ function barys_X181(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X182(orbit) {
+function bary_X182(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2905,7 +2906,7 @@ function barys_X182(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X183(orbit) {
+function bary_X183(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2921,7 +2922,7 @@ function barys_X183(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X184(orbit) {
+function bary_X184(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2937,7 +2938,7 @@ function barys_X184(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X185(orbit) {
+function bary_X185(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -2956,7 +2957,7 @@ function barys_X185(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X186(orbit) {
+function bary_X186(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2969,7 +2970,7 @@ function barys_X186(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X187(orbit) {
+function bary_X187(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -2982,7 +2983,7 @@ function barys_X187(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X188(orbit) {
+function bary_X188(orbit, [a,b,c]) {
    /* begin vars */
    let Sqrt=Math.sqrt;
    /* end vars */
@@ -2993,7 +2994,7 @@ function barys_X188(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X189(orbit) {
+function bary_X189(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3009,7 +3010,7 @@ function barys_X189(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X190(orbit) {
+function bary_X190(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3020,7 +3021,7 @@ function barys_X190(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X191(orbit) {
+function bary_X191(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3036,7 +3037,7 @@ function barys_X191(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X192(orbit) {
+function bary_X192(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3047,7 +3048,7 @@ function barys_X192(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X193(orbit) {
+function bary_X193(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3060,7 +3061,7 @@ function barys_X193(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X194(orbit) {
+function bary_X194(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3073,7 +3074,7 @@ function barys_X194(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X195(orbit) {
+function bary_X195(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -3095,7 +3096,7 @@ function barys_X195(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X196(orbit) {
+function bary_X196(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3111,7 +3112,7 @@ function barys_X196(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X197(orbit) {
+function bary_X197(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3127,7 +3128,7 @@ function barys_X197(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X198(orbit) {
+function bary_X198(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3143,7 +3144,7 @@ function barys_X198(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X199(orbit) {
+function bary_X199(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3162,7 +3163,7 @@ function barys_X199(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X200(orbit) {
+function bary_X200(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3173,7 +3174,7 @@ function barys_X200(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X201(orbit) {
+function bary_X201(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3186,7 +3187,7 @@ function barys_X201(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X202(orbit) {
+function bary_X202(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -3201,7 +3202,7 @@ function barys_X202(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X203(orbit) {
+function bary_X203(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -3216,7 +3217,7 @@ function barys_X203(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X204(orbit) {
+function bary_X204(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3232,7 +3233,7 @@ function barys_X204(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X205(orbit) {
+function bary_X205(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3251,7 +3252,7 @@ function barys_X205(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X206(orbit) {
+function bary_X206(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3267,7 +3268,7 @@ function barys_X206(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X207(orbit) {
+function bary_X207(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -3292,7 +3293,7 @@ function barys_X207(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X208(orbit) {
+function bary_X208(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3308,7 +3309,7 @@ function barys_X208(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X209(orbit) {
+function bary_X209(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3324,7 +3325,7 @@ function barys_X209(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X210(orbit) {
+function bary_X210(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3335,7 +3336,7 @@ function barys_X210(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X211(orbit) {
+function bary_X211(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3351,7 +3352,7 @@ function barys_X211(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X212(orbit) {
+function bary_X212(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3367,7 +3368,7 @@ function barys_X212(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X213(orbit) {
+function bary_X213(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3383,7 +3384,7 @@ function barys_X213(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X214(orbit) {
+function bary_X214(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3396,7 +3397,7 @@ function barys_X214(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X215(orbit) {
+function bary_X215(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3412,7 +3413,7 @@ function barys_X215(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X216(orbit) {
+function bary_X216(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3428,7 +3429,7 @@ function barys_X216(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X217(orbit) {
+function bary_X217(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3444,7 +3445,7 @@ function barys_X217(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X218(orbit) {
+function bary_X218(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3457,7 +3458,7 @@ function barys_X218(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X219(orbit) {
+function bary_X219(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3470,7 +3471,7 @@ function barys_X219(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X220(orbit) {
+function bary_X220(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3483,7 +3484,7 @@ function barys_X220(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X221(orbit) {
+function bary_X221(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3499,7 +3500,7 @@ function barys_X221(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X222(orbit) {
+function bary_X222(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3512,7 +3513,7 @@ function barys_X222(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X223(orbit) {
+function bary_X223(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3528,7 +3529,7 @@ function barys_X223(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X224(orbit) {
+function bary_X224(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3547,7 +3548,7 @@ function barys_X224(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X225(orbit) {
+function bary_X225(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3560,7 +3561,7 @@ function barys_X225(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X226(orbit) {
+function bary_X226(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3571,7 +3572,7 @@ function barys_X226(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X227(orbit) {
+function bary_X227(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3587,7 +3588,7 @@ function barys_X227(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X228(orbit) {
+function bary_X228(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3603,7 +3604,7 @@ function barys_X228(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X229(orbit) {
+function bary_X229(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3619,7 +3620,7 @@ function barys_X229(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X230(orbit) {
+function bary_X230(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3635,7 +3636,7 @@ function barys_X230(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X231(orbit) {
+function bary_X231(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -3657,7 +3658,7 @@ function barys_X231(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X232(orbit) {
+function bary_X232(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3673,7 +3674,7 @@ function barys_X232(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X233(orbit) {
+function bary_X233(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3689,7 +3690,7 @@ function barys_X233(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X234(orbit) {
+function bary_X234(orbit, [a,b,c]) {
    /* begin vars */
    let s=(a+b+c)/2;
    let sa=(b+c-a)/2;
@@ -3705,7 +3706,7 @@ function barys_X234(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X235(orbit) {
+function bary_X235(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -3724,7 +3725,7 @@ function barys_X235(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X236(orbit) {
+function bary_X236(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -3739,7 +3740,7 @@ function barys_X236(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X237(orbit) {
+function bary_X237(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3755,7 +3756,7 @@ function barys_X237(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X238(orbit) {
+function bary_X238(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3768,7 +3769,7 @@ function barys_X238(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X239(orbit) {
+function bary_X239(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3781,7 +3782,7 @@ function barys_X239(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X240(orbit) {
+function bary_X240(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3797,7 +3798,7 @@ function barys_X240(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X241(orbit) {
+function bary_X241(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -3810,7 +3811,7 @@ function barys_X241(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X242(orbit) {
+function bary_X242(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3823,7 +3824,7 @@ function barys_X242(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X243(orbit) {
+function bary_X243(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -3842,7 +3843,7 @@ function barys_X243(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X244(orbit) {
+function bary_X244(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -3853,7 +3854,7 @@ function barys_X244(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X245(orbit) {
+function bary_X245(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -3881,7 +3882,7 @@ function barys_X245(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X246(orbit) {
+function bary_X246(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -3903,7 +3904,7 @@ function barys_X246(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X247(orbit) {
+function bary_X247(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -3925,7 +3926,7 @@ function barys_X247(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X248(orbit) {
+function bary_X248(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3941,7 +3942,7 @@ function barys_X248(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X249(orbit) {
+function bary_X249(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3954,7 +3955,7 @@ function barys_X249(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X250(orbit) {
+function bary_X250(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3967,7 +3968,7 @@ function barys_X250(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X251(orbit) {
+function bary_X251(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3980,7 +3981,7 @@ function barys_X251(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X252(orbit) {
+function bary_X252(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -3996,7 +3997,7 @@ function barys_X252(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X253(orbit) {
+function bary_X253(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4012,7 +4013,7 @@ function barys_X253(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X254(orbit) {
+function bary_X254(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -4031,7 +4032,7 @@ function barys_X254(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X255(orbit) {
+function bary_X255(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4047,7 +4048,7 @@ function barys_X255(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X256(orbit) {
+function bary_X256(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4060,7 +4061,7 @@ function barys_X256(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X257(orbit) {
+function bary_X257(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4073,7 +4074,7 @@ function barys_X257(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X258(orbit) {
+function bary_X258(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -4088,7 +4089,7 @@ function barys_X258(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X259(orbit) {
+function bary_X259(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let sa=(b+c-a)/2;
@@ -4105,7 +4106,7 @@ function barys_X259(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X260(orbit) {
+function bary_X260(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let sa=(b+c-a)/2;
@@ -4123,7 +4124,7 @@ function barys_X260(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X261(orbit) {
+function bary_X261(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4134,7 +4135,7 @@ function barys_X261(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X262(orbit) {
+function bary_X262(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4150,7 +4151,7 @@ function barys_X262(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X263(orbit) {
+function bary_X263(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4166,7 +4167,7 @@ function barys_X263(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X264(orbit) {
+function bary_X264(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -4179,7 +4180,7 @@ function barys_X264(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X265(orbit) {
+function bary_X265(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4192,7 +4193,7 @@ function barys_X265(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X266(orbit) {
+function bary_X266(orbit, [a,b,c]) {
    /* begin vars */
    let sa=(b+c-a)/2;
    let sc=(a+b-c)/2;
@@ -4206,7 +4207,7 @@ function barys_X266(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X267(orbit) {
+function bary_X267(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4222,7 +4223,7 @@ function barys_X267(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X268(orbit) {
+function bary_X268(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4238,7 +4239,7 @@ function barys_X268(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X269(orbit) {
+function bary_X269(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4249,7 +4250,7 @@ function barys_X269(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X270(orbit) {
+function bary_X270(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4262,7 +4263,7 @@ function barys_X270(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X271(orbit) {
+function bary_X271(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4278,7 +4279,7 @@ function barys_X271(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X272(orbit) {
+function bary_X272(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4294,7 +4295,7 @@ function barys_X272(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X273(orbit) {
+function bary_X273(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4307,7 +4308,7 @@ function barys_X273(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X274(orbit) {
+function bary_X274(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4318,7 +4319,7 @@ function barys_X274(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X275(orbit) {
+function bary_X275(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4334,7 +4335,7 @@ function barys_X275(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X276(orbit) {
+function bary_X276(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4350,7 +4351,7 @@ function barys_X276(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X277(orbit) {
+function bary_X277(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4363,7 +4364,7 @@ function barys_X277(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X278(orbit) {
+function bary_X278(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4376,7 +4377,7 @@ function barys_X278(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X279(orbit) {
+function bary_X279(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4387,7 +4388,7 @@ function barys_X279(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X280(orbit) {
+function bary_X280(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4403,7 +4404,7 @@ function barys_X280(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X281(orbit) {
+function bary_X281(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4416,7 +4417,7 @@ function barys_X281(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X282(orbit) {
+function bary_X282(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4432,7 +4433,7 @@ function barys_X282(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X283(orbit) {
+function bary_X283(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4445,7 +4446,7 @@ function barys_X283(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X284(orbit) {
+function bary_X284(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4458,7 +4459,7 @@ function barys_X284(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X285(orbit) {
+function bary_X285(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4474,7 +4475,7 @@ function barys_X285(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X286(orbit) {
+function bary_X286(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4487,7 +4488,7 @@ function barys_X286(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X287(orbit) {
+function bary_X287(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4503,7 +4504,7 @@ function barys_X287(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X288(orbit) {
+function bary_X288(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4519,7 +4520,7 @@ function barys_X288(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X289(orbit) {
+function bary_X289(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4537,7 +4538,7 @@ function barys_X289(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X290(orbit) {
+function bary_X290(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4553,7 +4554,7 @@ function barys_X290(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X291(orbit) {
+function bary_X291(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4566,7 +4567,7 @@ function barys_X291(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X292(orbit) {
+function bary_X292(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4579,7 +4580,7 @@ function barys_X292(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X293(orbit) {
+function bary_X293(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4595,7 +4596,7 @@ function barys_X293(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X294(orbit) {
+function bary_X294(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4608,7 +4609,7 @@ function barys_X294(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X295(orbit) {
+function bary_X295(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4621,7 +4622,7 @@ function barys_X295(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X296(orbit) {
+function bary_X296(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4640,7 +4641,7 @@ function barys_X296(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X297(orbit) {
+function bary_X297(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4656,7 +4657,7 @@ function barys_X297(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X298(orbit) {
+function bary_X298(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -4674,7 +4675,7 @@ function barys_X298(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X299(orbit) {
+function bary_X299(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -4692,7 +4693,7 @@ function barys_X299(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X300(orbit) {
+function bary_X300(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let a2=a*a;
@@ -4707,7 +4708,7 @@ function barys_X300(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X301(orbit) {
+function bary_X301(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let a2=a*a;
@@ -4722,7 +4723,7 @@ function barys_X301(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X302(orbit) {
+function bary_X302(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -4737,7 +4738,7 @@ function barys_X302(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X303(orbit) {
+function bary_X303(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -4752,7 +4753,7 @@ function barys_X303(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X304(orbit) {
+function bary_X304(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4765,7 +4766,7 @@ function barys_X304(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X305(orbit) {
+function bary_X305(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4778,7 +4779,7 @@ function barys_X305(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X306(orbit) {
+function bary_X306(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4791,7 +4792,7 @@ function barys_X306(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X307(orbit) {
+function bary_X307(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4804,7 +4805,7 @@ function barys_X307(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X308(orbit) {
+function bary_X308(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -4817,7 +4818,7 @@ function barys_X308(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X309(orbit) {
+function bary_X309(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4833,7 +4834,7 @@ function barys_X309(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X310(orbit) {
+function bary_X310(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4846,7 +4847,7 @@ function barys_X310(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X311(orbit) {
+function bary_X311(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4862,7 +4863,7 @@ function barys_X311(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X312(orbit) {
+function bary_X312(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4873,7 +4874,7 @@ function barys_X312(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X313(orbit) {
+function bary_X313(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -4886,7 +4887,7 @@ function barys_X313(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X314(orbit) {
+function bary_X314(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4897,7 +4898,7 @@ function barys_X314(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X315(orbit) {
+function bary_X315(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4913,7 +4914,7 @@ function barys_X315(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X316(orbit) {
+function bary_X316(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4929,7 +4930,7 @@ function barys_X316(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X317(orbit) {
+function bary_X317(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4945,7 +4946,7 @@ function barys_X317(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X318(orbit) {
+function bary_X318(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4958,7 +4959,7 @@ function barys_X318(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X319(orbit) {
+function bary_X319(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4971,7 +4972,7 @@ function barys_X319(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X320(orbit) {
+function bary_X320(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -4984,7 +4985,7 @@ function barys_X320(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X321(orbit) {
+function bary_X321(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -4995,7 +4996,7 @@ function barys_X321(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X322(orbit) {
+function bary_X322(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5011,7 +5012,7 @@ function barys_X322(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X323(orbit) {
+function bary_X323(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5024,7 +5025,7 @@ function barys_X323(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X324(orbit) {
+function bary_X324(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5040,7 +5041,7 @@ function barys_X324(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X325(orbit) {
+function bary_X325(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5056,7 +5057,7 @@ function barys_X325(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X326(orbit) {
+function bary_X326(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5069,7 +5070,7 @@ function barys_X326(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X327(orbit) {
+function bary_X327(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5085,7 +5086,7 @@ function barys_X327(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X328(orbit) {
+function bary_X328(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -5098,7 +5099,7 @@ function barys_X328(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X329(orbit) {
+function bary_X329(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5114,7 +5115,7 @@ function barys_X329(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X330(orbit) {
+function bary_X330(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -5125,7 +5126,7 @@ function barys_X330(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X331(orbit) {
+function bary_X331(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -5138,7 +5139,7 @@ function barys_X331(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X332(orbit) {
+function bary_X332(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5151,7 +5152,7 @@ function barys_X332(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X333(orbit) {
+function bary_X333(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -5162,7 +5163,7 @@ function barys_X333(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X334(orbit) {
+function bary_X334(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5175,7 +5176,7 @@ function barys_X334(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X335(orbit) {
+function bary_X335(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5188,7 +5189,7 @@ function barys_X335(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X336(orbit) {
+function bary_X336(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5204,7 +5205,7 @@ function barys_X336(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X337(orbit) {
+function bary_X337(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5217,7 +5218,7 @@ function barys_X337(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X338(orbit) {
+function bary_X338(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5230,7 +5231,7 @@ function barys_X338(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X339(orbit) {
+function bary_X339(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5243,7 +5244,7 @@ function barys_X339(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X340(orbit) {
+function bary_X340(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5256,7 +5257,7 @@ function barys_X340(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X341(orbit) {
+function bary_X341(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -5267,7 +5268,7 @@ function barys_X341(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X342(orbit) {
+function bary_X342(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5283,7 +5284,7 @@ function barys_X342(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X343(orbit) {
+function bary_X343(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5299,7 +5300,7 @@ function barys_X343(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X344(orbit) {
+function bary_X344(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5312,7 +5313,7 @@ function barys_X344(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X345(orbit) {
+function bary_X345(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5325,7 +5326,7 @@ function barys_X345(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X346(orbit) {
+function bary_X346(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -5336,7 +5337,7 @@ function barys_X346(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X347(orbit) {
+function bary_X347(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5352,7 +5353,7 @@ function barys_X347(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X348(orbit) {
+function bary_X348(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5365,7 +5366,7 @@ function barys_X348(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X349(orbit) {
+function bary_X349(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5378,7 +5379,7 @@ function barys_X349(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X350(orbit) {
+function bary_X350(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5391,7 +5392,7 @@ function barys_X350(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X351(orbit) {
+function bary_X351(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5404,7 +5405,7 @@ function barys_X351(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X352(orbit) {
+function bary_X352(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5420,7 +5421,7 @@ function barys_X352(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X353(orbit) {
+function bary_X353(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5436,7 +5437,7 @@ function barys_X353(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X354(orbit) {
+function bary_X354(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5449,7 +5450,7 @@ function barys_X354(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X355(orbit) {
+function bary_X355(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5468,7 +5469,7 @@ function barys_X355(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X356(orbit) {
+function bary_X356(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosB=lawOfCosines(b,a,c);
@@ -5487,7 +5488,7 @@ function barys_X356(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X357(orbit) {
+function bary_X357(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosThirdC=cosThirdAngle(cosC);
@@ -5509,7 +5510,7 @@ function barys_X357(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X358(orbit) {
+function bary_X358(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosB=lawOfCosines(b,a,c);
@@ -5528,7 +5529,7 @@ function barys_X358(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X359(orbit) {
+function bary_X359(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosB=lawOfCosines(b,a,c);
@@ -5547,7 +5548,7 @@ function barys_X359(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X360(orbit) {
+function bary_X360(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosB=lawOfCosines(b,a,c);
@@ -5563,7 +5564,7 @@ function barys_X360(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X361(orbit) {
+function bary_X361(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -5577,7 +5578,7 @@ function barys_X361(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X362(orbit) {
+function bary_X362(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -5592,7 +5593,7 @@ function barys_X362(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X363(orbit) {
+function bary_X363(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -5606,7 +5607,7 @@ function barys_X363(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X364(orbit) {
+function bary_X364(orbit, [a,b,c]) {
    /* begin vars */
    let sqrtc=sqrt(c);
    let sqrtb=sqrt(b);
@@ -5619,7 +5620,7 @@ function barys_X364(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X365(orbit) {
+function bary_X365(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -5630,7 +5631,7 @@ function barys_X365(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X366(orbit) {
+function bary_X366(orbit, [a,b,c]) {
    /* begin vars */
    let sqrtc=sqrt(c);
    let sqrtb=sqrt(b);
@@ -5643,7 +5644,7 @@ function barys_X366(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X367(orbit) {
+function bary_X367(orbit, [a,b,c]) {
    /* begin vars */
    let sqrta=sqrt(a);
    let sqrtc=sqrt(c);
@@ -5656,7 +5657,7 @@ function barys_X367(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X368(orbit) {
+function bary_X368(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5675,7 +5676,7 @@ function barys_X368(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X369(orbit) {
+function bary_X369(orbit, [a,b,c]) {
    /* begin vars */
    let Sqrt=Math.sqrt;
    let c2=c*c;
@@ -5689,7 +5690,7 @@ function barys_X369(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X370(orbit) {
+function bary_X370(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5708,7 +5709,7 @@ function barys_X370(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X371(orbit) {
+function bary_X371(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -5723,7 +5724,7 @@ function barys_X371(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X372(orbit) {
+function bary_X372(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -5738,7 +5739,7 @@ function barys_X372(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X373(orbit) {
+function bary_X373(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5754,7 +5755,7 @@ function barys_X373(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X374(orbit) {
+function bary_X374(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5773,7 +5774,7 @@ function barys_X374(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X375(orbit) {
+function bary_X375(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5792,7 +5793,7 @@ function barys_X375(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X376(orbit) {
+function bary_X376(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5808,7 +5809,7 @@ function barys_X376(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X377(orbit) {
+function bary_X377(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -5824,7 +5825,7 @@ function barys_X377(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X378(orbit) {
+function bary_X378(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5844,7 +5845,7 @@ function barys_X378(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X379(orbit) {
+function bary_X379(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -5866,7 +5867,7 @@ function barys_X379(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X380(orbit) {
+function bary_X380(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5885,7 +5886,7 @@ function barys_X380(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X381(orbit) {
+function bary_X381(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5901,7 +5902,7 @@ function barys_X381(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X382(orbit) {
+function bary_X382(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5917,7 +5918,7 @@ function barys_X382(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X383(orbit) {
+function bary_X383(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5937,7 +5938,7 @@ function barys_X383(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X384(orbit) {
+function bary_X384(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5953,7 +5954,7 @@ function barys_X384(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X385(orbit) {
+function bary_X385(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5969,7 +5970,7 @@ function barys_X385(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X386(orbit) {
+function bary_X386(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -5985,7 +5986,7 @@ function barys_X386(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X387(orbit) {
+function bary_X387(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -6004,7 +6005,7 @@ function barys_X387(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X388(orbit) {
+function bary_X388(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6017,7 +6018,7 @@ function barys_X388(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X389(orbit) {
+function bary_X389(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6040,7 +6041,7 @@ function barys_X389(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X390(orbit) {
+function bary_X390(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6053,7 +6054,7 @@ function barys_X390(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X391(orbit) {
+function bary_X391(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -6064,7 +6065,7 @@ function barys_X391(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X392(orbit) {
+function bary_X392(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6080,7 +6081,7 @@ function barys_X392(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X393(orbit) {
+function bary_X393(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6099,7 +6100,7 @@ function barys_X393(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X394(orbit) {
+function bary_X394(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6118,7 +6119,7 @@ function barys_X394(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X395(orbit) {
+function bary_X395(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6132,7 +6133,7 @@ function barys_X395(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X396(orbit) {
+function bary_X396(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6146,7 +6147,7 @@ function barys_X396(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X397(orbit) {
+function bary_X397(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6163,7 +6164,7 @@ function barys_X397(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X398(orbit) {
+function bary_X398(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6180,7 +6181,7 @@ function barys_X398(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X399(orbit) {
+function bary_X399(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6200,7 +6201,7 @@ function barys_X399(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X400(orbit) {
+function bary_X400(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosHalfC=cosHalfAngle(cosC);
@@ -6225,7 +6226,7 @@ function barys_X400(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X401(orbit) {
+function bary_X401(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6244,7 +6245,7 @@ function barys_X401(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X402(orbit) {
+function bary_X402(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6263,7 +6264,7 @@ function barys_X402(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X403(orbit) {
+function bary_X403(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6282,7 +6283,7 @@ function barys_X403(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X404(orbit) {
+function bary_X404(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6298,7 +6299,7 @@ function barys_X404(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X405(orbit) {
+function bary_X405(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6314,7 +6315,7 @@ function barys_X405(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X406(orbit) {
+function bary_X406(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6333,7 +6334,7 @@ function barys_X406(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X407(orbit) {
+function bary_X407(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6349,7 +6350,7 @@ function barys_X407(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X408(orbit) {
+function bary_X408(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6368,7 +6369,7 @@ function barys_X408(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X409(orbit) {
+function bary_X409(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -6379,7 +6380,7 @@ function barys_X409(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X410(orbit) {
+function bary_X410(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6398,7 +6399,7 @@ function barys_X410(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X411(orbit) {
+function bary_X411(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6426,7 +6427,7 @@ function barys_X411(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X412(orbit) {
+function bary_X412(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6454,7 +6455,7 @@ function barys_X412(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X413(orbit) {
+function bary_X413(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6473,7 +6474,7 @@ function barys_X413(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X414(orbit) {
+function bary_X414(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6495,7 +6496,7 @@ function barys_X414(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X415(orbit) {
+function bary_X415(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6514,7 +6515,7 @@ function barys_X415(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X416(orbit) {
+function bary_X416(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6536,7 +6537,7 @@ function barys_X416(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X417(orbit) {
+function bary_X417(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -6558,7 +6559,7 @@ function barys_X417(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X418(orbit) {
+function bary_X418(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6580,7 +6581,7 @@ function barys_X418(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X419(orbit) {
+function bary_X419(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -6599,7 +6600,7 @@ function barys_X419(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X420(orbit) {
+function bary_X420(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6618,7 +6619,7 @@ function barys_X420(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X421(orbit) {
+function bary_X421(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6637,7 +6638,7 @@ function barys_X421(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X422(orbit) {
+function bary_X422(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -6656,7 +6657,7 @@ function barys_X422(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X423(orbit) {
+function bary_X423(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6672,7 +6673,7 @@ function barys_X423(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X424(orbit) {
+function bary_X424(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6694,7 +6695,7 @@ function barys_X424(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X425(orbit) {
+function bary_X425(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -6722,7 +6723,7 @@ function barys_X425(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X426(orbit) {
+function bary_X426(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6741,7 +6742,7 @@ function barys_X426(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X427(orbit) {
+function bary_X427(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6757,7 +6758,7 @@ function barys_X427(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X428(orbit) {
+function bary_X428(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6773,7 +6774,7 @@ function barys_X428(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X429(orbit) {
+function bary_X429(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6789,7 +6790,7 @@ function barys_X429(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X430(orbit) {
+function bary_X430(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6805,7 +6806,7 @@ function barys_X430(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X431(orbit) {
+function bary_X431(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a3=a2*a;
@@ -6827,7 +6828,7 @@ function barys_X431(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X432(orbit) {
+function bary_X432(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6846,7 +6847,7 @@ function barys_X432(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X433(orbit) {
+function bary_X433(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6865,7 +6866,7 @@ function barys_X433(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X434(orbit) {
+function bary_X434(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6884,7 +6885,7 @@ function barys_X434(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X435(orbit) {
+function bary_X435(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6903,7 +6904,7 @@ function barys_X435(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X436(orbit) {
+function bary_X436(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6919,7 +6920,7 @@ function barys_X436(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X437(orbit) {
+function bary_X437(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6932,7 +6933,7 @@ function barys_X437(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X438(orbit) {
+function bary_X438(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6948,7 +6949,7 @@ function barys_X438(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X439(orbit) {
+function bary_X439(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6961,7 +6962,7 @@ function barys_X439(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X440(orbit) {
+function bary_X440(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -6980,7 +6981,7 @@ function barys_X440(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X441(orbit) {
+function bary_X441(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -6999,7 +7000,7 @@ function barys_X441(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X442(orbit) {
+function bary_X442(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7015,7 +7016,7 @@ function barys_X442(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X443(orbit) {
+function bary_X443(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7031,7 +7032,7 @@ function barys_X443(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X444(orbit) {
+function bary_X444(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7047,7 +7048,7 @@ function barys_X444(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X445(orbit) {
+function bary_X445(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7063,7 +7064,7 @@ function barys_X445(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X446(orbit) {
+function bary_X446(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -7085,7 +7086,7 @@ function barys_X446(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X447(orbit) {
+function bary_X447(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7107,7 +7108,7 @@ function barys_X447(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X448(orbit) {
+function bary_X448(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7120,7 +7121,7 @@ function barys_X448(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X449(orbit) {
+function bary_X449(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7136,7 +7137,7 @@ function barys_X449(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X450(orbit) {
+function bary_X450(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7155,7 +7156,7 @@ function barys_X450(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X451(orbit) {
+function bary_X451(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7174,7 +7175,7 @@ function barys_X451(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X452(orbit) {
+function bary_X452(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7190,7 +7191,7 @@ function barys_X452(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X453(orbit) {
+function bary_X453(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7206,7 +7207,7 @@ function barys_X453(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X454(orbit) {
+function bary_X454(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7225,7 +7226,7 @@ function barys_X454(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X455(orbit) {
+function bary_X455(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7244,7 +7245,7 @@ function barys_X455(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X456(orbit) {
+function bary_X456(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -7263,7 +7264,7 @@ function barys_X456(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X457(orbit) {
+function bary_X457(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7282,7 +7283,7 @@ function barys_X457(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X458(orbit) {
+function bary_X458(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7301,7 +7302,7 @@ function barys_X458(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X459(orbit) {
+function bary_X459(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7320,7 +7321,7 @@ function barys_X459(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X460(orbit) {
+function bary_X460(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7339,7 +7340,7 @@ function barys_X460(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X461(orbit) {
+function bary_X461(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7355,7 +7356,7 @@ function barys_X461(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X462(orbit) {
+function bary_X462(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7372,7 +7373,7 @@ function barys_X462(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X463(orbit) {
+function bary_X463(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7389,7 +7390,7 @@ function barys_X463(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X464(orbit) {
+function bary_X464(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7408,7 +7409,7 @@ function barys_X464(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X465(orbit) {
+function bary_X465(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7425,7 +7426,7 @@ function barys_X465(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X466(orbit) {
+function bary_X466(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7442,7 +7443,7 @@ function barys_X466(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X467(orbit) {
+function bary_X467(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7458,7 +7459,7 @@ function barys_X467(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X468(orbit) {
+function bary_X468(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7471,7 +7472,7 @@ function barys_X468(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X469(orbit) {
+function bary_X469(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7487,7 +7488,7 @@ function barys_X469(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X470(orbit) {
+function bary_X470(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7504,7 +7505,7 @@ function barys_X470(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X471(orbit) {
+function bary_X471(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7521,7 +7522,7 @@ function barys_X471(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X472(orbit) {
+function bary_X472(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7538,7 +7539,7 @@ function barys_X472(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X473(orbit) {
+function bary_X473(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7555,7 +7556,7 @@ function barys_X473(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X474(orbit) {
+function bary_X474(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7571,7 +7572,7 @@ function barys_X474(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X475(orbit) {
+function bary_X475(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7590,7 +7591,7 @@ function barys_X475(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X476(orbit) {
+function bary_X476(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let b2=b*b;
@@ -7612,7 +7613,7 @@ function barys_X476(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X477(orbit) {
+function bary_X477(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7631,7 +7632,7 @@ function barys_X477(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X478(orbit) {
+function bary_X478(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7647,7 +7648,7 @@ function barys_X478(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X479(orbit) {
+function bary_X479(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -7658,7 +7659,7 @@ function barys_X479(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X480(orbit) {
+function bary_X480(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7671,7 +7672,7 @@ function barys_X480(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X481(orbit) {
+function bary_X481(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    /* end vars */
@@ -7682,7 +7683,7 @@ function barys_X481(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X482(orbit) {
+function bary_X482(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    /* end vars */
@@ -7693,7 +7694,7 @@ function barys_X482(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X483(orbit) {
+function bary_X483(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosHalfC=cosHalfAngle(cosC);
@@ -7718,7 +7719,7 @@ function barys_X483(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X484(orbit) {
+function bary_X484(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7734,7 +7735,7 @@ function barys_X484(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X485(orbit) {
+function bary_X485(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7751,7 +7752,7 @@ function barys_X485(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X486(orbit) {
+function bary_X486(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7768,7 +7769,7 @@ function barys_X486(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X487(orbit) {
+function bary_X487(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7785,7 +7786,7 @@ function barys_X487(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X488(orbit) {
+function bary_X488(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7802,7 +7803,7 @@ function barys_X488(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X489(orbit) {
+function bary_X489(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7819,7 +7820,7 @@ function barys_X489(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X490(orbit) {
+function bary_X490(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7836,7 +7837,7 @@ function barys_X490(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X491(orbit) {
+function bary_X491(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7853,7 +7854,7 @@ function barys_X491(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X492(orbit) {
+function bary_X492(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7870,7 +7871,7 @@ function barys_X492(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X493(orbit) {
+function bary_X493(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -7885,7 +7886,7 @@ function barys_X493(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X494(orbit) {
+function bary_X494(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -7900,7 +7901,7 @@ function barys_X494(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X495(orbit) {
+function bary_X495(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7916,7 +7917,7 @@ function barys_X495(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X496(orbit) {
+function bary_X496(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7932,7 +7933,7 @@ function barys_X496(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X497(orbit) {
+function bary_X497(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7945,7 +7946,7 @@ function barys_X497(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X498(orbit) {
+function bary_X498(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7961,7 +7962,7 @@ function barys_X498(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X499(orbit) {
+function bary_X499(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -7977,7 +7978,7 @@ function barys_X499(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X500(orbit) {
+function bary_X500(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -7993,7 +7994,7 @@ function barys_X500(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X501(orbit) {
+function bary_X501(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8009,7 +8010,7 @@ function barys_X501(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X502(orbit) {
+function bary_X502(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8025,7 +8026,7 @@ function barys_X502(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X503(orbit) {
+function bary_X503(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8040,7 +8041,7 @@ function barys_X503(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X504(orbit) {
+function bary_X504(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8054,7 +8055,7 @@ function barys_X504(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X505(orbit) {
+function bary_X505(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8068,7 +8069,7 @@ function barys_X505(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X506(orbit) {
+function bary_X506(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8082,7 +8083,7 @@ function barys_X506(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X507(orbit) {
+function bary_X507(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8096,7 +8097,7 @@ function barys_X507(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X508(orbit) {
+function bary_X508(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8111,7 +8112,7 @@ function barys_X508(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X509(orbit) {
+function bary_X509(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -8126,7 +8127,7 @@ function barys_X509(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X510(orbit) {
+function bary_X510(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8137,7 +8138,7 @@ function barys_X510(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X511(orbit) {
+function bary_X511(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8156,7 +8157,7 @@ function barys_X511(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X512(orbit) {
+function bary_X512(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8169,7 +8170,7 @@ function barys_X512(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X513(orbit) {
+function bary_X513(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8180,7 +8181,7 @@ function barys_X513(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X514(orbit) {
+function bary_X514(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8191,7 +8192,7 @@ function barys_X514(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X515(orbit) {
+function bary_X515(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8210,7 +8211,7 @@ function barys_X515(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X516(orbit) {
+function bary_X516(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8226,7 +8227,7 @@ function barys_X516(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X517(orbit) {
+function bary_X517(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -8242,7 +8243,7 @@ function barys_X517(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X518(orbit) {
+function bary_X518(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -8255,7 +8256,7 @@ function barys_X518(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X519(orbit) {
+function bary_X519(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8266,7 +8267,7 @@ function barys_X519(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X520(orbit) {
+function bary_X520(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8285,7 +8286,7 @@ function barys_X520(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X521(orbit) {
+function bary_X521(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8301,7 +8302,7 @@ function barys_X521(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X522(orbit) {
+function bary_X522(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8312,7 +8313,7 @@ function barys_X522(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X523(orbit) {
+function bary_X523(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -8325,7 +8326,7 @@ function barys_X523(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X524(orbit) {
+function bary_X524(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8338,7 +8339,7 @@ function barys_X524(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X525(orbit) {
+function bary_X525(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8354,7 +8355,7 @@ function barys_X525(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X526(orbit) {
+function bary_X526(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let b2=b*b;
@@ -8376,7 +8377,7 @@ function barys_X526(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X527(orbit) {
+function bary_X527(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8392,7 +8393,7 @@ function barys_X527(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X528(orbit) {
+function bary_X528(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8408,7 +8409,7 @@ function barys_X528(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X529(orbit) {
+function bary_X529(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8424,7 +8425,7 @@ function barys_X529(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X530(orbit) {
+function bary_X530(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8441,7 +8442,7 @@ function barys_X530(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X531(orbit) {
+function bary_X531(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8458,7 +8459,7 @@ function barys_X531(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X532(orbit) {
+function bary_X532(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8475,7 +8476,7 @@ function barys_X532(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X533(orbit) {
+function bary_X533(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8492,7 +8493,7 @@ function barys_X533(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X534(orbit) {
+function bary_X534(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8514,7 +8515,7 @@ function barys_X534(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X535(orbit) {
+function bary_X535(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8530,7 +8531,7 @@ function barys_X535(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X536(orbit) {
+function bary_X536(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8541,7 +8542,7 @@ function barys_X536(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X537(orbit) {
+function bary_X537(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8560,7 +8561,7 @@ function barys_X537(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X538(orbit) {
+function bary_X538(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8579,7 +8580,7 @@ function barys_X538(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X539(orbit) {
+function bary_X539(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8601,7 +8602,7 @@ function barys_X539(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X540(orbit) {
+function bary_X540(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8620,7 +8621,7 @@ function barys_X540(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X541(orbit) {
+function bary_X541(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8642,7 +8643,7 @@ function barys_X541(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X542(orbit) {
+function bary_X542(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8661,7 +8662,7 @@ function barys_X542(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X543(orbit) {
+function bary_X543(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -8680,7 +8681,7 @@ function barys_X543(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X544(orbit) {
+function bary_X544(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8699,7 +8700,7 @@ function barys_X544(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X545(orbit) {
+function bary_X545(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8715,7 +8716,7 @@ function barys_X545(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X546(orbit) {
+function bary_X546(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8731,7 +8732,7 @@ function barys_X546(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X547(orbit) {
+function bary_X547(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8747,7 +8748,7 @@ function barys_X547(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X548(orbit) {
+function bary_X548(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8763,7 +8764,7 @@ function barys_X548(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X549(orbit) {
+function bary_X549(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8779,7 +8780,7 @@ function barys_X549(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X550(orbit) {
+function bary_X550(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8795,7 +8796,7 @@ function barys_X550(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X551(orbit) {
+function bary_X551(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8806,7 +8807,7 @@ function barys_X551(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X552(orbit) {
+function bary_X552(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8817,7 +8818,7 @@ function barys_X552(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X553(orbit) {
+function bary_X553(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -8828,7 +8829,7 @@ function barys_X553(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X554(orbit) {
+function bary_X554(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let sc=(a+b-c)/2;
@@ -8842,7 +8843,7 @@ function barys_X554(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X555(orbit) {
+function bary_X555(orbit, [a,b,c]) {
    /* begin vars */
    let Sqrt=Math.sqrt;
    /* end vars */
@@ -8853,7 +8854,7 @@ function barys_X555(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X556(orbit) {
+function bary_X556(orbit, [a,b,c]) {
    /* begin vars */
    let sa=(b+c-a)/2;
    let sc=(a+b-c)/2;
@@ -8867,7 +8868,7 @@ function barys_X556(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X557(orbit) {
+function bary_X557(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosHalfC=cosHalfAngle(cosC);
@@ -8886,7 +8887,7 @@ function barys_X557(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X558(orbit) {
+function bary_X558(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let cosHalfC=cosHalfAngle(cosC);
@@ -8905,7 +8906,7 @@ function barys_X558(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X559(orbit) {
+function bary_X559(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8922,7 +8923,7 @@ function barys_X559(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X560(orbit) {
+function bary_X560(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -8941,7 +8942,7 @@ function barys_X560(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X561(orbit) {
+function bary_X561(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8957,7 +8958,7 @@ function barys_X561(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X562(orbit) {
+function bary_X562(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -8977,7 +8978,7 @@ function barys_X562(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X563(orbit) {
+function bary_X563(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9003,7 +9004,7 @@ function barys_X563(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X564(orbit) {
+function bary_X564(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9026,7 +9027,7 @@ function barys_X564(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X565(orbit) {
+function bary_X565(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9048,7 +9049,7 @@ function barys_X565(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X566(orbit) {
+function bary_X566(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9067,7 +9068,7 @@ function barys_X566(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X567(orbit) {
+function bary_X567(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -9089,7 +9090,7 @@ function barys_X567(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X568(orbit) {
+function bary_X568(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -9111,7 +9112,7 @@ function barys_X568(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X569(orbit) {
+function bary_X569(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -9133,7 +9134,7 @@ function barys_X569(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X570(orbit) {
+function bary_X570(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let a4=a2*a2;
@@ -9152,7 +9153,7 @@ function barys_X570(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X571(orbit) {
+function bary_X571(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9174,7 +9175,7 @@ function barys_X571(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X572(orbit) {
+function bary_X572(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9190,7 +9191,7 @@ function barys_X572(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X573(orbit) {
+function bary_X573(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9206,7 +9207,7 @@ function barys_X573(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X574(orbit) {
+function bary_X574(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9219,7 +9220,7 @@ function barys_X574(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X575(orbit) {
+function bary_X575(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9238,7 +9239,7 @@ function barys_X575(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X576(orbit) {
+function bary_X576(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9254,7 +9255,7 @@ function barys_X576(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X577(orbit) {
+function bary_X577(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9276,7 +9277,7 @@ function barys_X577(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X578(orbit) {
+function bary_X578(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -9298,7 +9299,7 @@ function barys_X578(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X579(orbit) {
+function bary_X579(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9314,7 +9315,7 @@ function barys_X579(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X580(orbit) {
+function bary_X580(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -9336,7 +9337,7 @@ function barys_X580(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X581(orbit) {
+function bary_X581(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9358,7 +9359,7 @@ function barys_X581(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X582(orbit) {
+function bary_X582(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -9380,7 +9381,7 @@ function barys_X582(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X583(orbit) {
+function bary_X583(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9396,7 +9397,7 @@ function barys_X583(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X584(orbit) {
+function bary_X584(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9412,7 +9413,7 @@ function barys_X584(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X585(orbit) {
+function bary_X585(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    /* end vars */
@@ -9423,7 +9424,7 @@ function barys_X585(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X586(orbit) {
+function bary_X586(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    /* end vars */
@@ -9434,7 +9435,7 @@ function barys_X586(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X587(orbit) {
+function bary_X587(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9454,7 +9455,7 @@ function barys_X587(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X588(orbit) {
+function bary_X588(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9468,7 +9469,7 @@ function barys_X588(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X589(orbit) {
+function bary_X589(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9482,7 +9483,7 @@ function barys_X589(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X590(orbit) {
+function bary_X590(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9496,7 +9497,7 @@ function barys_X590(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X591(orbit) {
+function bary_X591(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -9511,7 +9512,7 @@ function barys_X591(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X592(orbit) {
+function bary_X592(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9530,7 +9531,7 @@ function barys_X592(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X593(orbit) {
+function bary_X593(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -9541,7 +9542,7 @@ function barys_X593(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X594(orbit) {
+function bary_X594(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -9552,7 +9553,7 @@ function barys_X594(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X595(orbit) {
+function bary_X595(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9565,7 +9566,7 @@ function barys_X595(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X596(orbit) {
+function bary_X596(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9578,7 +9579,7 @@ function barys_X596(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X597(orbit) {
+function bary_X597(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9591,7 +9592,7 @@ function barys_X597(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X598(orbit) {
+function bary_X598(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9604,7 +9605,7 @@ function barys_X598(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X599(orbit) {
+function bary_X599(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9617,7 +9618,7 @@ function barys_X599(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X600(orbit) {
+function bary_X600(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let c2=c*c;
@@ -9632,7 +9633,7 @@ function barys_X600(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X601(orbit) {
+function bary_X601(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9652,7 +9653,7 @@ function barys_X601(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X602(orbit) {
+function bary_X602(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9672,7 +9673,7 @@ function barys_X602(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X603(orbit) {
+function bary_X603(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9691,7 +9692,7 @@ function barys_X603(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X604(orbit) {
+function bary_X604(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9707,7 +9708,7 @@ function barys_X604(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X605(orbit) {
+function bary_X605(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9724,7 +9725,7 @@ function barys_X605(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X606(orbit) {
+function bary_X606(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9741,7 +9742,7 @@ function barys_X606(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X607(orbit) {
+function bary_X607(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9757,7 +9758,7 @@ function barys_X607(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X608(orbit) {
+function bary_X608(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -9773,7 +9774,7 @@ function barys_X608(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X609(orbit) {
+function bary_X609(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9786,7 +9787,7 @@ function barys_X609(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X610(orbit) {
+function bary_X610(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9802,7 +9803,7 @@ function barys_X610(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X611(orbit) {
+function bary_X611(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9816,7 +9817,7 @@ function barys_X611(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X612(orbit) {
+function bary_X612(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9829,7 +9830,7 @@ function barys_X612(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X613(orbit) {
+function bary_X613(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9843,7 +9844,7 @@ function barys_X613(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X614(orbit) {
+function bary_X614(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9856,7 +9857,7 @@ function barys_X614(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X615(orbit) {
+function bary_X615(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9870,7 +9871,7 @@ function barys_X615(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X616(orbit) {
+function bary_X616(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -9885,7 +9886,7 @@ function barys_X616(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X617(orbit) {
+function bary_X617(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -9900,7 +9901,7 @@ function barys_X617(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X618(orbit) {
+function bary_X618(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9917,7 +9918,7 @@ function barys_X618(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X619(orbit) {
+function bary_X619(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9934,7 +9935,7 @@ function barys_X619(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X620(orbit) {
+function bary_X620(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -9953,7 +9954,7 @@ function barys_X620(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X621(orbit) {
+function bary_X621(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -9968,7 +9969,7 @@ function barys_X621(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X622(orbit) {
+function bary_X622(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -9983,7 +9984,7 @@ function barys_X622(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X623(orbit) {
+function bary_X623(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10000,7 +10001,7 @@ function barys_X623(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X624(orbit) {
+function bary_X624(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10017,7 +10018,7 @@ function barys_X624(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X625(orbit) {
+function bary_X625(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10033,7 +10034,7 @@ function barys_X625(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X626(orbit) {
+function bary_X626(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10049,7 +10050,7 @@ function barys_X626(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X627(orbit) {
+function bary_X627(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -10064,7 +10065,7 @@ function barys_X627(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X628(orbit) {
+function bary_X628(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -10079,7 +10080,7 @@ function barys_X628(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X629(orbit) {
+function bary_X629(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10096,7 +10097,7 @@ function barys_X629(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X630(orbit) {
+function bary_X630(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10113,7 +10114,7 @@ function barys_X630(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X631(orbit) {
+function bary_X631(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10129,7 +10130,7 @@ function barys_X631(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X632(orbit) {
+function bary_X632(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10145,7 +10146,7 @@ function barys_X632(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X633(orbit) {
+function bary_X633(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -10160,7 +10161,7 @@ function barys_X633(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X634(orbit) {
+function bary_X634(orbit, [a,b,c]) {
    /* begin vars */
    let area=triAreaHeron(a,b,c);
    let S=2*area;
@@ -10175,7 +10176,7 @@ function barys_X634(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X635(orbit) {
+function bary_X635(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10192,7 +10193,7 @@ function barys_X635(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X636(orbit) {
+function bary_X636(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10209,7 +10210,7 @@ function barys_X636(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X637(orbit) {
+function bary_X637(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10226,7 +10227,7 @@ function barys_X637(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X638(orbit) {
+function bary_X638(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10243,7 +10244,7 @@ function barys_X638(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X639(orbit) {
+function bary_X639(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10260,7 +10261,7 @@ function barys_X639(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X640(orbit) {
+function bary_X640(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10277,7 +10278,7 @@ function barys_X640(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X641(orbit) {
+function bary_X641(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10294,7 +10295,7 @@ function barys_X641(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X642(orbit) {
+function bary_X642(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10311,7 +10312,7 @@ function barys_X642(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X643(orbit) {
+function bary_X643(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10324,7 +10325,7 @@ function barys_X643(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X644(orbit) {
+function bary_X644(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10335,7 +10336,7 @@ function barys_X644(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X645(orbit) {
+function bary_X645(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10348,7 +10349,7 @@ function barys_X645(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X646(orbit) {
+function bary_X646(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10359,7 +10360,7 @@ function barys_X646(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X647(orbit) {
+function bary_X647(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10375,7 +10376,7 @@ function barys_X647(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X648(orbit) {
+function bary_X648(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10391,7 +10392,7 @@ function barys_X648(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X649(orbit) {
+function bary_X649(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10404,7 +10405,7 @@ function barys_X649(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X650(orbit) {
+function bary_X650(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10415,7 +10416,7 @@ function barys_X650(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X651(orbit) {
+function bary_X651(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10426,7 +10427,7 @@ function barys_X651(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X652(orbit) {
+function bary_X652(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10442,7 +10443,7 @@ function barys_X652(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X653(orbit) {
+function bary_X653(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10458,7 +10459,7 @@ function barys_X653(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X654(orbit) {
+function bary_X654(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10474,7 +10475,7 @@ function barys_X654(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X655(orbit) {
+function bary_X655(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10490,7 +10491,7 @@ function barys_X655(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X656(orbit) {
+function bary_X656(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10506,7 +10507,7 @@ function barys_X656(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X657(orbit) {
+function bary_X657(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10519,7 +10520,7 @@ function barys_X657(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X658(orbit) {
+function bary_X658(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10530,7 +10531,7 @@ function barys_X658(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X659(orbit) {
+function bary_X659(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10543,7 +10544,7 @@ function barys_X659(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X660(orbit) {
+function bary_X660(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10556,7 +10557,7 @@ function barys_X660(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X661(orbit) {
+function bary_X661(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10569,7 +10570,7 @@ function barys_X661(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X662(orbit) {
+function bary_X662(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10582,7 +10583,7 @@ function barys_X662(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X663(orbit) {
+function bary_X663(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10595,7 +10596,7 @@ function barys_X663(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X664(orbit) {
+function bary_X664(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10606,7 +10607,7 @@ function barys_X664(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X665(orbit) {
+function bary_X665(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10619,7 +10620,7 @@ function barys_X665(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X666(orbit) {
+function bary_X666(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10632,7 +10633,7 @@ function barys_X666(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X667(orbit) {
+function bary_X667(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10648,7 +10649,7 @@ function barys_X667(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X668(orbit) {
+function bary_X668(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10659,7 +10660,7 @@ function barys_X668(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X669(orbit) {
+function bary_X669(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10675,7 +10676,7 @@ function barys_X669(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X670(orbit) {
+function bary_X670(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10688,7 +10689,7 @@ function barys_X670(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X671(orbit) {
+function bary_X671(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10701,7 +10702,7 @@ function barys_X671(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X672(orbit) {
+function bary_X672(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10714,7 +10715,7 @@ function barys_X672(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X673(orbit) {
+function bary_X673(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10727,7 +10728,7 @@ function barys_X673(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X674(orbit) {
+function bary_X674(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10743,7 +10744,7 @@ function barys_X674(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X675(orbit) {
+function bary_X675(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10759,7 +10760,7 @@ function barys_X675(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X676(orbit) {
+function bary_X676(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10775,7 +10776,7 @@ function barys_X676(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X677(orbit) {
+function bary_X677(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10791,7 +10792,7 @@ function barys_X677(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X678(orbit) {
+function bary_X678(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10802,7 +10803,7 @@ function barys_X678(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X679(orbit) {
+function bary_X679(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -10813,7 +10814,7 @@ function barys_X679(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X680(orbit) {
+function bary_X680(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10835,7 +10836,7 @@ function barys_X680(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X681(orbit) {
+function bary_X681(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10857,7 +10858,7 @@ function barys_X681(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X682(orbit) {
+function bary_X682(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10879,7 +10880,7 @@ function barys_X682(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X683(orbit) {
+function bary_X683(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10895,7 +10896,7 @@ function barys_X683(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X684(orbit) {
+function bary_X684(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -10911,7 +10912,7 @@ function barys_X684(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X685(orbit) {
+function bary_X685(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10930,7 +10931,7 @@ function barys_X685(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X686(orbit) {
+function bary_X686(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10949,7 +10950,7 @@ function barys_X686(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X687(orbit) {
+function bary_X687(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10968,7 +10969,7 @@ function barys_X687(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X688(orbit) {
+function bary_X688(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -10984,7 +10985,7 @@ function barys_X688(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X689(orbit) {
+function bary_X689(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11000,7 +11001,7 @@ function barys_X689(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X690(orbit) {
+function bary_X690(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11013,7 +11014,7 @@ function barys_X690(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X691(orbit) {
+function bary_X691(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11026,7 +11027,7 @@ function barys_X691(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X692(orbit) {
+function bary_X692(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11042,7 +11043,7 @@ function barys_X692(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X693(orbit) {
+function bary_X693(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -11053,7 +11054,7 @@ function barys_X693(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X694(orbit) {
+function bary_X694(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11069,7 +11070,7 @@ function barys_X694(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X695(orbit) {
+function bary_X695(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11085,7 +11086,7 @@ function barys_X695(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X696(orbit) {
+function bary_X696(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11101,7 +11102,7 @@ function barys_X696(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X697(orbit) {
+function bary_X697(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11117,7 +11118,7 @@ function barys_X697(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X698(orbit) {
+function bary_X698(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11133,7 +11134,7 @@ function barys_X698(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X699(orbit) {
+function bary_X699(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11149,7 +11150,7 @@ function barys_X699(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X700(orbit) {
+function bary_X700(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let b2=b*b;
@@ -11168,7 +11169,7 @@ function barys_X700(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X701(orbit) {
+function bary_X701(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let b2=b*b;
@@ -11187,7 +11188,7 @@ function barys_X701(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X702(orbit) {
+function bary_X702(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11203,7 +11204,7 @@ function barys_X702(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X703(orbit) {
+function bary_X703(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11219,7 +11220,7 @@ function barys_X703(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X704(orbit) {
+function bary_X704(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11241,7 +11242,7 @@ function barys_X704(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X705(orbit) {
+function bary_X705(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11263,7 +11264,7 @@ function barys_X705(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X706(orbit) {
+function bary_X706(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11282,7 +11283,7 @@ function barys_X706(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X707(orbit) {
+function bary_X707(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11301,7 +11302,7 @@ function barys_X707(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X708(orbit) {
+function bary_X708(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11323,7 +11324,7 @@ function barys_X708(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X709(orbit) {
+function bary_X709(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11345,7 +11346,7 @@ function barys_X709(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X710(orbit) {
+function bary_X710(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11361,7 +11362,7 @@ function barys_X710(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X711(orbit) {
+function bary_X711(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11377,7 +11378,7 @@ function barys_X711(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X712(orbit) {
+function bary_X712(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11393,7 +11394,7 @@ function barys_X712(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X713(orbit) {
+function bary_X713(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11409,7 +11410,7 @@ function barys_X713(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X714(orbit) {
+function bary_X714(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11422,7 +11423,7 @@ function barys_X714(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X715(orbit) {
+function bary_X715(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11435,7 +11436,7 @@ function barys_X715(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X716(orbit) {
+function bary_X716(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11451,7 +11452,7 @@ function barys_X716(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X717(orbit) {
+function bary_X717(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11467,7 +11468,7 @@ function barys_X717(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X718(orbit) {
+function bary_X718(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -11486,7 +11487,7 @@ function barys_X718(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X719(orbit) {
+function bary_X719(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -11505,7 +11506,7 @@ function barys_X719(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X720(orbit) {
+function bary_X720(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11524,7 +11525,7 @@ function barys_X720(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X721(orbit) {
+function bary_X721(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11543,7 +11544,7 @@ function barys_X721(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X722(orbit) {
+function bary_X722(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11559,7 +11560,7 @@ function barys_X722(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X723(orbit) {
+function bary_X723(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11575,7 +11576,7 @@ function barys_X723(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X724(orbit) {
+function bary_X724(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11600,7 +11601,7 @@ function barys_X724(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X725(orbit) {
+function bary_X725(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11625,7 +11626,7 @@ function barys_X725(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X726(orbit) {
+function bary_X726(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -11638,7 +11639,7 @@ function barys_X726(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X727(orbit) {
+function bary_X727(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11651,7 +11652,7 @@ function barys_X727(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X728(orbit) {
+function bary_X728(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -11662,7 +11663,7 @@ function barys_X728(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X729(orbit) {
+function bary_X729(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11675,7 +11676,7 @@ function barys_X729(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X730(orbit) {
+function bary_X730(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11691,7 +11692,7 @@ function barys_X730(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X731(orbit) {
+function bary_X731(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11707,7 +11708,7 @@ function barys_X731(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X732(orbit) {
+function bary_X732(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11720,7 +11721,7 @@ function barys_X732(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X733(orbit) {
+function bary_X733(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11733,7 +11734,7 @@ function barys_X733(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X734(orbit) {
+function bary_X734(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -11752,7 +11753,7 @@ function barys_X734(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X735(orbit) {
+function bary_X735(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -11771,7 +11772,7 @@ function barys_X735(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X736(orbit) {
+function bary_X736(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -11790,7 +11791,7 @@ function barys_X736(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X737(orbit) {
+function bary_X737(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -11809,7 +11810,7 @@ function barys_X737(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X738(orbit) {
+function bary_X738(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -11820,7 +11821,7 @@ function barys_X738(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X739(orbit) {
+function bary_X739(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11833,7 +11834,7 @@ function barys_X739(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X740(orbit) {
+function bary_X740(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11846,7 +11847,7 @@ function barys_X740(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X741(orbit) {
+function bary_X741(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11859,7 +11860,7 @@ function barys_X741(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X742(orbit) {
+function bary_X742(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11875,7 +11876,7 @@ function barys_X742(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X743(orbit) {
+function bary_X743(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11891,7 +11892,7 @@ function barys_X743(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X744(orbit) {
+function bary_X744(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -11910,7 +11911,7 @@ function barys_X744(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X745(orbit) {
+function bary_X745(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -11929,7 +11930,7 @@ function barys_X745(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X746(orbit) {
+function bary_X746(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -11948,7 +11949,7 @@ function barys_X746(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X747(orbit) {
+function bary_X747(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -11967,7 +11968,7 @@ function barys_X747(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X748(orbit) {
+function bary_X748(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11983,7 +11984,7 @@ function barys_X748(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X749(orbit) {
+function bary_X749(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -11999,7 +12000,7 @@ function barys_X749(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X750(orbit) {
+function bary_X750(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12015,7 +12016,7 @@ function barys_X750(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X751(orbit) {
+function bary_X751(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12031,7 +12032,7 @@ function barys_X751(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X752(orbit) {
+function bary_X752(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12047,7 +12048,7 @@ function barys_X752(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X753(orbit) {
+function bary_X753(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12063,7 +12064,7 @@ function barys_X753(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X754(orbit) {
+function bary_X754(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12079,7 +12080,7 @@ function barys_X754(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X755(orbit) {
+function bary_X755(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12095,7 +12096,7 @@ function barys_X755(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X756(orbit) {
+function bary_X756(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12106,7 +12107,7 @@ function barys_X756(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X757(orbit) {
+function bary_X757(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12117,7 +12118,7 @@ function barys_X757(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X758(orbit) {
+function bary_X758(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12133,7 +12134,7 @@ function barys_X758(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X759(orbit) {
+function bary_X759(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12149,7 +12150,7 @@ function barys_X759(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X760(orbit) {
+function bary_X760(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12165,7 +12166,7 @@ function barys_X760(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X761(orbit) {
+function bary_X761(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12181,7 +12182,7 @@ function barys_X761(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X762(orbit) {
+function bary_X762(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12192,7 +12193,7 @@ function barys_X762(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X763(orbit) {
+function bary_X763(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12203,7 +12204,7 @@ function barys_X763(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X764(orbit) {
+function bary_X764(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12214,7 +12215,7 @@ function barys_X764(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X765(orbit) {
+function bary_X765(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -12225,7 +12226,7 @@ function barys_X765(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X766(orbit) {
+function bary_X766(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12244,7 +12245,7 @@ function barys_X766(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X767(orbit) {
+function bary_X767(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12263,7 +12264,7 @@ function barys_X767(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X768(orbit) {
+function bary_X768(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12279,7 +12280,7 @@ function barys_X768(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X769(orbit) {
+function bary_X769(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12295,7 +12296,7 @@ function barys_X769(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X770(orbit) {
+function bary_X770(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -12317,7 +12318,7 @@ function barys_X770(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X771(orbit) {
+function bary_X771(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -12339,7 +12340,7 @@ function barys_X771(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X772(orbit) {
+function bary_X772(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12355,7 +12356,7 @@ function barys_X772(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X773(orbit) {
+function bary_X773(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12371,7 +12372,7 @@ function barys_X773(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X774(orbit) {
+function bary_X774(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12390,7 +12391,7 @@ function barys_X774(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X775(orbit) {
+function bary_X775(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12409,7 +12410,7 @@ function barys_X775(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X776(orbit) {
+function bary_X776(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -12431,7 +12432,7 @@ function barys_X776(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X777(orbit) {
+function bary_X777(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -12453,7 +12454,7 @@ function barys_X777(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X778(orbit) {
+function bary_X778(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12472,7 +12473,7 @@ function barys_X778(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X779(orbit) {
+function bary_X779(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12491,7 +12492,7 @@ function barys_X779(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X780(orbit) {
+function bary_X780(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12519,7 +12520,7 @@ function barys_X780(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X781(orbit) {
+function bary_X781(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12547,7 +12548,7 @@ function barys_X781(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X782(orbit) {
+function bary_X782(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12563,7 +12564,7 @@ function barys_X782(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X783(orbit) {
+function bary_X783(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12579,7 +12580,7 @@ function barys_X783(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X784(orbit) {
+function bary_X784(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12592,7 +12593,7 @@ function barys_X784(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X785(orbit) {
+function bary_X785(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12605,7 +12606,7 @@ function barys_X785(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X786(orbit) {
+function bary_X786(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12618,7 +12619,7 @@ function barys_X786(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X787(orbit) {
+function bary_X787(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12631,7 +12632,7 @@ function barys_X787(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X788(orbit) {
+function bary_X788(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12647,7 +12648,7 @@ function barys_X788(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X789(orbit) {
+function bary_X789(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12660,7 +12661,7 @@ function barys_X789(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X790(orbit) {
+function bary_X790(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -12679,7 +12680,7 @@ function barys_X790(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X791(orbit) {
+function bary_X791(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -12698,7 +12699,7 @@ function barys_X791(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X792(orbit) {
+function bary_X792(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -12720,7 +12721,7 @@ function barys_X792(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X793(orbit) {
+function bary_X793(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -12742,7 +12743,7 @@ function barys_X793(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X794(orbit) {
+function bary_X794(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12758,7 +12759,7 @@ function barys_X794(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X795(orbit) {
+function bary_X795(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12774,7 +12775,7 @@ function barys_X795(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X796(orbit) {
+function bary_X796(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12802,7 +12803,7 @@ function barys_X796(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X797(orbit) {
+function bary_X797(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -12830,7 +12831,7 @@ function barys_X797(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X798(orbit) {
+function bary_X798(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12846,7 +12847,7 @@ function barys_X798(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X799(orbit) {
+function bary_X799(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12859,7 +12860,7 @@ function barys_X799(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X800(orbit) {
+function bary_X800(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12878,7 +12879,7 @@ function barys_X800(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X801(orbit) {
+function bary_X801(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -12897,7 +12898,7 @@ function barys_X801(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X802(orbit) {
+function bary_X802(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12913,7 +12914,7 @@ function barys_X802(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X803(orbit) {
+function bary_X803(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12929,7 +12930,7 @@ function barys_X803(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X804(orbit) {
+function bary_X804(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12945,7 +12946,7 @@ function barys_X804(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X805(orbit) {
+function bary_X805(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -12961,7 +12962,7 @@ function barys_X805(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X806(orbit) {
+function bary_X806(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -12983,7 +12984,7 @@ function barys_X806(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X807(orbit) {
+function bary_X807(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -13005,7 +13006,7 @@ function barys_X807(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X808(orbit) {
+function bary_X808(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -13024,7 +13025,7 @@ function barys_X808(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X809(orbit) {
+function bary_X809(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c4=c2*c2;
@@ -13043,7 +13044,7 @@ function barys_X809(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X810(orbit) {
+function bary_X810(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13062,7 +13063,7 @@ function barys_X810(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X811(orbit) {
+function bary_X811(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13078,7 +13079,7 @@ function barys_X811(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X812(orbit) {
+function bary_X812(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13091,7 +13092,7 @@ function barys_X812(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X813(orbit) {
+function bary_X813(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13104,7 +13105,7 @@ function barys_X813(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X814(orbit) {
+function bary_X814(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13120,7 +13121,7 @@ function barys_X814(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X815(orbit) {
+function bary_X815(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13136,7 +13137,7 @@ function barys_X815(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X816(orbit) {
+function bary_X816(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -13155,7 +13156,7 @@ function barys_X816(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X817(orbit) {
+function bary_X817(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -13174,7 +13175,7 @@ function barys_X817(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X818(orbit) {
+function bary_X818(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -13196,7 +13197,7 @@ function barys_X818(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X819(orbit) {
+function bary_X819(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -13218,7 +13219,7 @@ function barys_X819(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X820(orbit) {
+function bary_X820(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13240,7 +13241,7 @@ function barys_X820(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X821(orbit) {
+function bary_X821(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13259,7 +13260,7 @@ function barys_X821(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X822(orbit) {
+function bary_X822(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13281,7 +13282,7 @@ function barys_X822(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X823(orbit) {
+function bary_X823(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13300,7 +13301,7 @@ function barys_X823(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X824(orbit) {
+function bary_X824(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13316,7 +13317,7 @@ function barys_X824(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X825(orbit) {
+function bary_X825(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13332,7 +13333,7 @@ function barys_X825(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X826(orbit) {
+function bary_X826(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13348,7 +13349,7 @@ function barys_X826(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X827(orbit) {
+function bary_X827(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13364,7 +13365,7 @@ function barys_X827(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X828(orbit) {
+function bary_X828(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13386,7 +13387,7 @@ function barys_X828(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X829(orbit) {
+function bary_X829(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13408,7 +13409,7 @@ function barys_X829(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X830(orbit) {
+function bary_X830(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13421,7 +13422,7 @@ function barys_X830(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X831(orbit) {
+function bary_X831(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13434,7 +13435,7 @@ function barys_X831(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X832(orbit) {
+function bary_X832(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13450,7 +13451,7 @@ function barys_X832(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X833(orbit) {
+function bary_X833(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13466,7 +13467,7 @@ function barys_X833(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X834(orbit) {
+function bary_X834(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13482,7 +13483,7 @@ function barys_X834(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X835(orbit) {
+function bary_X835(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13498,7 +13499,7 @@ function barys_X835(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X836(orbit) {
+function bary_X836(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13517,7 +13518,7 @@ function barys_X836(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X837(orbit) {
+function bary_X837(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13536,7 +13537,7 @@ function barys_X837(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X838(orbit) {
+function bary_X838(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13555,7 +13556,7 @@ function barys_X838(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X839(orbit) {
+function bary_X839(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13574,7 +13575,7 @@ function barys_X839(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X840(orbit) {
+function bary_X840(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13590,7 +13591,7 @@ function barys_X840(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X841(orbit) {
+function bary_X841(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13612,7 +13613,7 @@ function barys_X841(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X842(orbit) {
+function bary_X842(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13631,7 +13632,7 @@ function barys_X842(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X843(orbit) {
+function bary_X843(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13650,7 +13651,7 @@ function barys_X843(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X844(orbit) {
+function bary_X844(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let s=(a+b+c)/2;
@@ -13665,7 +13666,7 @@ function barys_X844(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X845(orbit) {
+function bary_X845(orbit, [a,b,c]) {
    /* begin vars */
    let sc=(a+b-c)/2;
    let sb=(c+a-b)/2;
@@ -13679,7 +13680,7 @@ function barys_X845(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X846(orbit) {
+function bary_X846(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13695,7 +13696,7 @@ function barys_X846(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X847(orbit) {
+function bary_X847(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13715,7 +13716,7 @@ function barys_X847(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X848(orbit) {
+function bary_X848(orbit, [a,b,c]) {
    /* begin vars */
    let cosC=lawOfCosines(c,a,b);
    let sinC=getSin(cosC);
@@ -13737,7 +13738,7 @@ function barys_X848(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X849(orbit) {
+function bary_X849(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13753,7 +13754,7 @@ function barys_X849(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X850(orbit) {
+function bary_X850(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13766,7 +13767,7 @@ function barys_X850(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X851(orbit) {
+function bary_X851(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -13785,7 +13786,7 @@ function barys_X851(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X852(orbit) {
+function bary_X852(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13804,7 +13805,7 @@ function barys_X852(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X853(orbit) {
+function bary_X853(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -13826,7 +13827,7 @@ function barys_X853(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X854(orbit) {
+function bary_X854(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13842,7 +13843,7 @@ function barys_X854(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X855(orbit) {
+function bary_X855(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13858,7 +13859,7 @@ function barys_X855(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X856(orbit) {
+function bary_X856(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13874,7 +13875,7 @@ function barys_X856(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X857(orbit) {
+function bary_X857(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13893,7 +13894,7 @@ function barys_X857(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X858(orbit) {
+function bary_X858(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13909,7 +13910,7 @@ function barys_X858(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X859(orbit) {
+function bary_X859(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13925,7 +13926,7 @@ function barys_X859(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X860(orbit) {
+function bary_X860(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13941,7 +13942,7 @@ function barys_X860(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X861(orbit) {
+function bary_X861(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -13957,7 +13958,7 @@ function barys_X861(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X862(orbit) {
+function bary_X862(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13973,7 +13974,7 @@ function barys_X862(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X863(orbit) {
+function bary_X863(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -13992,7 +13993,7 @@ function barys_X863(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X864(orbit) {
+function bary_X864(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14011,7 +14012,7 @@ function barys_X864(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X865(orbit) {
+function bary_X865(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14030,7 +14031,7 @@ function barys_X865(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X866(orbit) {
+function bary_X866(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14049,7 +14050,7 @@ function barys_X866(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X867(orbit) {
+function bary_X867(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14068,7 +14069,7 @@ function barys_X867(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X868(orbit) {
+function bary_X868(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14087,7 +14088,7 @@ function barys_X868(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X869(orbit) {
+function bary_X869(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14103,7 +14104,7 @@ function barys_X869(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X870(orbit) {
+function bary_X870(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14116,7 +14117,7 @@ function barys_X870(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X871(orbit) {
+function bary_X871(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14132,7 +14133,7 @@ function barys_X871(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X872(orbit) {
+function bary_X872(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14143,7 +14144,7 @@ function barys_X872(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X873(orbit) {
+function bary_X873(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14154,7 +14155,7 @@ function barys_X873(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X874(orbit) {
+function bary_X874(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14167,7 +14168,7 @@ function barys_X874(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X875(orbit) {
+function bary_X875(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14180,7 +14181,7 @@ function barys_X875(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X876(orbit) {
+function bary_X876(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14193,7 +14194,7 @@ function barys_X876(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X877(orbit) {
+function bary_X877(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14212,7 +14213,7 @@ function barys_X877(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X878(orbit) {
+function bary_X878(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14231,7 +14232,7 @@ function barys_X878(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X879(orbit) {
+function bary_X879(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14250,7 +14251,7 @@ function barys_X879(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X880(orbit) {
+function bary_X880(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14266,7 +14267,7 @@ function barys_X880(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X881(orbit) {
+function bary_X881(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14282,7 +14283,7 @@ function barys_X881(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X882(orbit) {
+function bary_X882(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14298,7 +14299,7 @@ function barys_X882(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X883(orbit) {
+function bary_X883(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14311,7 +14312,7 @@ function barys_X883(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X884(orbit) {
+function bary_X884(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14324,7 +14325,7 @@ function barys_X884(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X885(orbit) {
+function bary_X885(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14337,7 +14338,7 @@ function barys_X885(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X886(orbit) {
+function bary_X886(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14350,7 +14351,7 @@ function barys_X886(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X887(orbit) {
+function bary_X887(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14366,7 +14367,7 @@ function barys_X887(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X888(orbit) {
+function bary_X888(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14379,7 +14380,7 @@ function barys_X888(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X889(orbit) {
+function bary_X889(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14390,7 +14391,7 @@ function barys_X889(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X890(orbit) {
+function bary_X890(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14406,7 +14407,7 @@ function barys_X890(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X891(orbit) {
+function bary_X891(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14417,7 +14418,7 @@ function barys_X891(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X892(orbit) {
+function bary_X892(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14430,7 +14431,7 @@ function barys_X892(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X893(orbit) {
+function bary_X893(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let a2=a*a;
@@ -14443,7 +14444,7 @@ function barys_X893(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X894(orbit) {
+function bary_X894(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14456,7 +14457,7 @@ function barys_X894(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X895(orbit) {
+function bary_X895(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14472,7 +14473,7 @@ function barys_X895(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X896(orbit) {
+function bary_X896(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14485,7 +14486,7 @@ function barys_X896(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X897(orbit) {
+function bary_X897(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14498,7 +14499,7 @@ function barys_X897(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X898(orbit) {
+function bary_X898(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14509,7 +14510,7 @@ function barys_X898(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X899(orbit) {
+function bary_X899(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14520,7 +14521,7 @@ function barys_X899(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X900(orbit) {
+function bary_X900(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14531,7 +14532,7 @@ function barys_X900(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X901(orbit) {
+function bary_X901(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14544,7 +14545,7 @@ function barys_X901(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X902(orbit) {
+function bary_X902(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14557,7 +14558,7 @@ function barys_X902(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X903(orbit) {
+function bary_X903(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -14568,7 +14569,7 @@ function barys_X903(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X904(orbit) {
+function bary_X904(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14584,7 +14585,7 @@ function barys_X904(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X905(orbit) {
+function bary_X905(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14600,7 +14601,7 @@ function barys_X905(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X906(orbit) {
+function bary_X906(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14619,7 +14620,7 @@ function barys_X906(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X907(orbit) {
+function bary_X907(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14632,7 +14633,7 @@ function barys_X907(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X908(orbit) {
+function bary_X908(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14648,7 +14649,7 @@ function barys_X908(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X909(orbit) {
+function bary_X909(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14664,7 +14665,7 @@ function barys_X909(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X910(orbit) {
+function bary_X910(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14680,7 +14681,7 @@ function barys_X910(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X911(orbit) {
+function bary_X911(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14696,7 +14697,7 @@ function barys_X911(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X912(orbit) {
+function bary_X912(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14712,7 +14713,7 @@ function barys_X912(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X913(orbit) {
+function bary_X913(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14728,7 +14729,7 @@ function barys_X913(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X914(orbit) {
+function bary_X914(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14744,7 +14745,7 @@ function barys_X914(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X915(orbit) {
+function bary_X915(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14760,7 +14761,7 @@ function barys_X915(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X916(orbit) {
+function bary_X916(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -14782,7 +14783,7 @@ function barys_X916(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X917(orbit) {
+function bary_X917(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -14804,7 +14805,7 @@ function barys_X917(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X918(orbit) {
+function bary_X918(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14817,7 +14818,7 @@ function barys_X918(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X919(orbit) {
+function bary_X919(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14830,7 +14831,7 @@ function barys_X919(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X920(orbit) {
+function bary_X920(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14849,7 +14850,7 @@ function barys_X920(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X921(orbit) {
+function bary_X921(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14868,7 +14869,7 @@ function barys_X921(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X922(orbit) {
+function bary_X922(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14884,7 +14885,7 @@ function barys_X922(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X923(orbit) {
+function bary_X923(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14900,7 +14901,7 @@ function barys_X923(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X924(orbit) {
+function bary_X924(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14920,7 +14921,7 @@ function barys_X924(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X925(orbit) {
+function bary_X925(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14940,7 +14941,7 @@ function barys_X925(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X926(orbit) {
+function bary_X926(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14953,7 +14954,7 @@ function barys_X926(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X927(orbit) {
+function bary_X927(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -14966,7 +14967,7 @@ function barys_X927(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X928(orbit) {
+function bary_X928(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -14988,7 +14989,7 @@ function barys_X928(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X929(orbit) {
+function bary_X929(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15010,7 +15011,7 @@ function barys_X929(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X930(orbit) {
+function bary_X930(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15030,7 +15031,7 @@ function barys_X930(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X931(orbit) {
+function bary_X931(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15043,7 +15044,7 @@ function barys_X931(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X932(orbit) {
+function bary_X932(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -15054,7 +15055,7 @@ function barys_X932(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X933(orbit) {
+function bary_X933(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15070,7 +15071,7 @@ function barys_X933(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X934(orbit) {
+function bary_X934(orbit, [a,b,c]) {
    /* begin vars */
 
    /* end vars */
@@ -15081,7 +15082,7 @@ function barys_X934(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X935(orbit) {
+function bary_X935(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15097,7 +15098,7 @@ function barys_X935(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X936(orbit) {
+function bary_X936(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15113,7 +15114,7 @@ function barys_X936(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X937(orbit) {
+function bary_X937(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15129,7 +15130,7 @@ function barys_X937(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X938(orbit) {
+function bary_X938(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -15148,7 +15149,7 @@ function barys_X938(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X939(orbit) {
+function bary_X939(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -15167,7 +15168,7 @@ function barys_X939(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X940(orbit) {
+function bary_X940(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15180,7 +15181,7 @@ function barys_X940(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X941(orbit) {
+function bary_X941(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15193,7 +15194,7 @@ function barys_X941(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X942(orbit) {
+function bary_X942(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15209,7 +15210,7 @@ function barys_X942(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X943(orbit) {
+function bary_X943(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15225,7 +15226,7 @@ function barys_X943(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X944(orbit) {
+function bary_X944(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15244,7 +15245,7 @@ function barys_X944(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X945(orbit) {
+function bary_X945(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15263,7 +15264,7 @@ function barys_X945(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X946(orbit) {
+function bary_X946(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15282,7 +15283,7 @@ function barys_X946(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X947(orbit) {
+function bary_X947(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15301,7 +15302,7 @@ function barys_X947(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X948(orbit) {
+function bary_X948(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15317,7 +15318,7 @@ function barys_X948(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X949(orbit) {
+function bary_X949(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15333,7 +15334,7 @@ function barys_X949(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X950(orbit) {
+function bary_X950(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15349,7 +15350,7 @@ function barys_X950(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X951(orbit) {
+function bary_X951(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15365,7 +15366,7 @@ function barys_X951(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X952(orbit) {
+function bary_X952(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15384,7 +15385,7 @@ function barys_X952(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X953(orbit) {
+function bary_X953(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15403,7 +15404,7 @@ function barys_X953(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X954(orbit) {
+function bary_X954(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15425,7 +15426,7 @@ function barys_X954(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X955(orbit) {
+function bary_X955(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15447,7 +15448,7 @@ function barys_X955(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X956(orbit) {
+function bary_X956(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15463,7 +15464,7 @@ function barys_X956(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X957(orbit) {
+function bary_X957(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15479,7 +15480,7 @@ function barys_X957(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X958(orbit) {
+function bary_X958(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15492,7 +15493,7 @@ function barys_X958(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X959(orbit) {
+function bary_X959(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15505,7 +15506,7 @@ function barys_X959(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X960(orbit) {
+function bary_X960(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15518,7 +15519,7 @@ function barys_X960(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X961(orbit) {
+function bary_X961(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15531,7 +15532,7 @@ function barys_X961(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X962(orbit) {
+function bary_X962(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -15550,7 +15551,7 @@ function barys_X962(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X963(orbit) {
+function bary_X963(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -15569,7 +15570,7 @@ function barys_X963(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X964(orbit) {
+function bary_X964(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15588,7 +15589,7 @@ function barys_X964(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X965(orbit) {
+function bary_X965(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15607,7 +15608,7 @@ function barys_X965(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X966(orbit) {
+function bary_X966(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15623,7 +15624,7 @@ function barys_X966(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X967(orbit) {
+function bary_X967(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15639,7 +15640,7 @@ function barys_X967(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X968(orbit) {
+function bary_X968(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15652,7 +15653,7 @@ function barys_X968(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X969(orbit) {
+function bary_X969(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15665,7 +15666,7 @@ function barys_X969(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X970(orbit) {
+function bary_X970(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15684,7 +15685,7 @@ function barys_X970(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X971(orbit) {
+function bary_X971(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15703,7 +15704,7 @@ function barys_X971(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X972(orbit) {
+function bary_X972(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15722,7 +15723,7 @@ function barys_X972(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X973(orbit) {
+function bary_X973(orbit, [a,b,c]) {
    /* begin vars */
    let b2=b*b;
    let a2=a*a;
@@ -15744,7 +15745,7 @@ function barys_X973(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X974(orbit) {
+function bary_X974(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15766,7 +15767,7 @@ function barys_X974(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X975(orbit) {
+function bary_X975(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15782,7 +15783,7 @@ function barys_X975(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X976(orbit) {
+function bary_X976(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15798,7 +15799,7 @@ function barys_X976(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X977(orbit) {
+function bary_X977(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15814,7 +15815,7 @@ function barys_X977(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X978(orbit) {
+function bary_X978(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15827,7 +15828,7 @@ function barys_X978(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X979(orbit) {
+function bary_X979(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15840,7 +15841,7 @@ function barys_X979(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X980(orbit) {
+function bary_X980(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15853,7 +15854,7 @@ function barys_X980(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X981(orbit) {
+function bary_X981(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15866,7 +15867,7 @@ function barys_X981(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X982(orbit) {
+function bary_X982(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15879,7 +15880,7 @@ function barys_X982(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X983(orbit) {
+function bary_X983(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15892,7 +15893,7 @@ function barys_X983(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X984(orbit) {
+function bary_X984(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15905,7 +15906,7 @@ function barys_X984(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X985(orbit) {
+function bary_X985(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15918,7 +15919,7 @@ function barys_X985(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X986(orbit) {
+function bary_X986(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15934,7 +15935,7 @@ function barys_X986(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X987(orbit) {
+function bary_X987(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -15950,7 +15951,7 @@ function barys_X987(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X988(orbit) {
+function bary_X988(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15966,7 +15967,7 @@ function barys_X988(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X989(orbit) {
+function bary_X989(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -15982,7 +15983,7 @@ function barys_X989(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X990(orbit) {
+function bary_X990(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let c3=c2*c;
@@ -16004,7 +16005,7 @@ function barys_X990(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X991(orbit) {
+function bary_X991(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16020,7 +16021,7 @@ function barys_X991(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X992(orbit) {
+function bary_X992(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16036,7 +16037,7 @@ function barys_X992(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X993(orbit) {
+function bary_X993(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16052,7 +16053,7 @@ function barys_X993(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X994(orbit) {
+function bary_X994(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16068,7 +16069,7 @@ function barys_X994(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X995(orbit) {
+function bary_X995(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16081,7 +16082,7 @@ function barys_X995(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X996(orbit) {
+function bary_X996(orbit, [a,b,c]) {
    /* begin vars */
    let a2=a*a;
    let c2=c*c;
@@ -16094,7 +16095,7 @@ function barys_X996(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X997(orbit) {
+function bary_X997(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16110,7 +16111,7 @@ function barys_X997(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X998(orbit) {
+function bary_X998(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16126,7 +16127,7 @@ function barys_X998(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X999(orbit) {
+function bary_X999(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
@@ -16142,7 +16143,7 @@ function barys_X999(orbit) {
    return barys_to_cartesian(orbit, barys);
 }
 
-function barys_X1000(orbit) {
+function bary_X1000(orbit, [a,b,c]) {
    /* begin vars */
    let c2=c*c;
    let b2=b*b;
