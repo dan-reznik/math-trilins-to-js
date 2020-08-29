@@ -109,8 +109,9 @@ create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence,
       "   let v1 = {.x[1]};",
       "   let v2 = {.x[2]};",
       "   let v3 = {.x[3]};",
-      "   let barys = [v1,v2,v3];",
-      "   return barys_to_cartesian(orbit, barys);",
+      "   return [v1,v2,v3];",
+      #"   let barys = [v1,v2,v3];",
+      #"   return barys_to_cartesian(orbit, barys);",
       "}}",
       .sep="\n"))
   } else {
