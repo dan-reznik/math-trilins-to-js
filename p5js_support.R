@@ -102,7 +102,7 @@ create_function_js <- function(n,trilins,vars,vars_dict,vars_dict_dependence,
   
   if(do_barys) {
     s3 %>% map_chr(~str_glue(
-      "function bary_X{n}(orbit, [a,b,c]) {{",
+      "function bary_X{n}([a,b,c]) {{",
       "   /* begin vars */",
       "{vars_block}",
       "   /* end vars */",
