@@ -1,0 +1,1000 @@
+{"X(1)", "a|b|c", "get_name"}
+{"X(2)", "1|1|1", "get_name"}
+{"X(3)", "a2*(a2 - b2 - c2)|b2*(-a2 + b2 - c2)|c2*(-a2 - b2 + c2)", "get_name"}
+{"X(4)", "(a2 + b2 - c2)*(a2 - b2 + c2)|(a2 + b2 - c2)*(-a2 + b2 + c2)|(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(5)", "-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4|a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4|a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2", "get_name"}
+{"X(6)", "a2|b2|c2", "get_name"}
+{"X(7)", "(a + b - c)*(a - b + c)|(a + b - c)*(-a + b + c)|(a - b + c)*(-a + b + c)", "get_name"}
+{"X(8)", "-a + b + c|a - b + c|a + b - c", "get_name"}
+{"X(9)", "a*(a - b - c)|b*(-a + b - c)|c*(-a - b + c)", "get_name"}
+{"X(10)", "b + c|a + c|a + b", "get_name"}
+{"X(11)", "Power(b - c,2)*(-a + b + c)|Power(-a + c,2)*(a - b + c)|Power(a - b,2)*(a + b - c)", "get_name"}
+{"X(12)", "(a + b - c)*(a - b + c)*Power(b + c,2)|(a + b - c)*Power(a + c,2)*(-a + b + c)|Power(a + b,2)*(a - b + c)*(-a + b + c)", "get_name"}
+{"X(13)", "3*(a2 + b2 - c2)*(a2 - b2 + c2) + 4*S*(S + a2*sqrt3)|3*(a2 + b2 - c2)*(-a2 + b2 + c2) + 4*S*(S + b2*sqrt3)|3*(a2 - b2 + c2)*(-a2 + b2 + c2) + 4*S*(S + c2*sqrt3)", "get_name"}
+{"X(14)", "3*(a2 + b2 - c2)*(a2 - b2 + c2) - 4*S*(-S + a2*sqrt3)|3*(a2 + b2 - c2)*(-a2 + b2 + c2) - 4*S*(-S + b2*sqrt3)|3*(a2 - b2 + c2)*(-a2 + b2 + c2) - 4*S*(-S + c2*sqrt3)", "get_name"}
+{"X(15)", "a2*(-2*S + (a2 - b2 - c2)*sqrt3)|b2*(-2*S + (-a2 + b2 - c2)*sqrt3)|c2*(-2*S + (-a2 - b2 + c2)*sqrt3)", "get_name"}
+{"X(16)", "a2*(2*S + (a2 - b2 - c2)*sqrt3)|b2*(2*S + (-a2 + b2 - c2)*sqrt3)|c2*(2*S + (-a2 - b2 + c2)*sqrt3)", "get_name"}
+{"X(17)", "(a2 + b2 - c2 + 2*S*sqrt3)*(a2 - b2 + c2 + 2*S*sqrt3)|(a2 + b2 - c2 + 2*S*sqrt3)*(-a2 + b2 + c2 + 2*S*sqrt3)|(a2 - b2 + c2 + 2*S*sqrt3)*(-a2 + b2 + c2 + 2*S*sqrt3)", "get_name"}
+{"X(18)", "(-a2 + b2 - c2 + 2*S*sqrt3)*(-a2 - b2 + c2 + 2*S*sqrt3)|(a2 - b2 - c2 + 2*S*sqrt3)*(-a2 - b2 + c2 + 2*S*sqrt3)|(a2 - b2 - c2 + 2*S*sqrt3)*(-a2 + b2 - c2 + 2*S*sqrt3)", "get_name"}
+{"X(19)", "a*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(20)", "-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4|a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4|a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4", "get_name"}
+{"X(21)", "a*(a + b)*(a - b - c)*(a + c)|b*(a + b)*(-a + b - c)*(b + c)|c*(a + c)*(-a - b + c)*(b + c)", "get_name"}
+{"X(22)", "a2*(a4 - b4 - c4)|b2*(-a4 + b4 - c4)|c2*(-a4 - b4 + c4)", "get_name"}
+{"X(23)", "a2*(a4 - b4 + b2*c2 - c4)|b2*(-a4 + b4 + a2*c2 - c4)|c2*(-a4 + a2*b2 - b4 + c4)", "get_name"}
+{"X(24)", "a2*(a2 + b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)|b2*(a2 + b2 - c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)|c2*(a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(25)", "a2*(a2 + b2 - c2)*(a2 - b2 + c2)|b2*(a2 + b2 - c2)*(-a2 + b2 + c2)|c2*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(26)", "a2*(a8 - 2*a6*b2 + 2*a2*b6 - b8 - 2*a6*c2 + 2*b6*c2 - 2*b4*c4 + 2*a2*c6 + 2*b2*c6 - c8)|b2*(-a8 + 2*a6*b2 - 2*a2*b6 + b8 + 2*a6*c2 - 2*b6*c2 - 2*a4*c4 + 2*a2*c6 + 2*b2*c6 - c8)|c2*(-a8 + 2*a6*b2 - 2*a4*b4 + 2*a2*b6 - b8 + 2*a6*c2 + 2*b6*c2 - 2*a2*c6 - 2*b2*c6 + c8)", "get_name"}
+{"X(27)", "(a + b)*(a + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(a + b)*(b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(a + c)*(b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(28)", "a*(a + b)*(a + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(a + b)*(b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(a + c)*(b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(29)", "(a + b)*(a - b - c)*(a + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(a + b)*(-a + b - c)*(b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(a + c)*(-a - b + c)*(b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(30)", "-2*a4 + a2*b2 + b4 + a2*c2 - 2*b2*c2 + c4|a4 + a2*b2 - 2*b4 - 2*a2*c2 + b2*c2 + c4|a4 - 2*a2*b2 + b4 + a2*c2 + b2*c2 - 2*c4", "get_name"}
+{"X(31)", "a3|b3|c3", "get_name"}
+{"X(32)", "a4|b4|c4", "get_name"}
+{"X(33)", "a*(a - b - c)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(-a + b - c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(-a - b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(34)", "a*(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(35)", "a2*(a2 - b2 - b*c - c2)|b2*(-a2 + b2 - a*c - c2)|c2*(-a2 - a*b - b2 + c2)", "get_name"}
+{"X(36)", "a2*(a2 - b2 + b*c - c2)|b2*(-a2 + b2 + a*c - c2)|c2*(-a2 + a*b - b2 + c2)", "get_name"}
+{"X(37)", "a*(b + c)|b*(a + c)|(a + b)*c", "get_name"}
+{"X(38)", "a*(b2 + c2)|b*(a2 + c2)|(a2 + b2)*c", "get_name"}
+{"X(39)", "a2*(b2 + c2)|b2*(a2 + c2)|(a2 + b2)*c2", "get_name"}
+{"X(40)", "a*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|c*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(41)", "a3*(a - b - c)|b3*(-a + b - c)|(-a - b + c)*c3", "get_name"}
+{"X(42)", "a2*(b + c)|b2*(a + c)|(a + b)*c2", "get_name"}
+{"X(43)", "a*(a*b + a*c - b*c)|b*(a*b - a*c + b*c)|c*(-(a*b) + a*c + b*c)", "get_name"}
+{"X(44)", "a*(2*a - b - c)|b*(-a + 2*b - c)|c*(-a - b + 2*c)", "get_name"}
+{"X(45)", "a*(a - 2*b - 2*c)|b*(-2*a + b - 2*c)|c*(-2*a - 2*b + c)", "get_name"}
+{"X(46)", "a*(a3 + a2*b - a*b2 - b3 + a2*c + b2*c - a*c2 + b*c2 - c3)|b*(-a3 - a2*b + a*b2 + b3 + a2*c + b2*c + a*c2 - b*c2 - c3)|c*(-a3 + a2*b + a*b2 - b3 - a2*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(47)", "a3*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)|b3*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)|c3*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(48)", "a3*(a2 - b2 - c2)|b3*(-a2 + b2 - c2)|(-a2 - b2 + c2)*c3", "get_name"}
+{"X(49)", "a4*(a2 - b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)|b4*(-a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)|(-a2 - b2 + c2)*c4*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(50)", "a4*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)|b4*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)|(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*c4", "get_name"}
+{"X(51)", "a2*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)|b2*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|c2*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(52)", "a2*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)|b2*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)|c2*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(53)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(54)", "a2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|b2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|c2*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(55)", "a2*(a - b - c)|b2*(-a + b - c)|(-a - b + c)*c2", "get_name"}
+{"X(56)", "a2*(a + b - c)*(a - b + c)|b2*(a + b - c)*(-a + b + c)|(a - b + c)*(-a + b + c)*c2", "get_name"}
+{"X(57)", "a*(a + b - c)*(a - b + c)|b*(a + b - c)*(-a + b + c)|c*(a - b + c)*(-a + b + c)", "get_name"}
+{"X(58)", "a2*(a + b)*(a + c)|(a + b)*b2*(b + c)|(a + c)*(b + c)*c2", "get_name"}
+{"X(59)", "a2*Power(a - b,2)*Power(a - c,2)*(a + b - c)*(a - b + c)|Power(-a + b,2)*b2*Power(b - c,2)*(a + b - c)*(-a + b + c)|Power(-a + c,2)*Power(-b + c,2)*(a - b + c)*(-a + b + c)*c2", "get_name"}
+{"X(60)", "a2*Power(a + b,2)*(a - b - c)*Power(a + c,2)|Power(a + b,2)*b2*(-a + b - c)*Power(b + c,2)|Power(a + c,2)*(-a - b + c)*Power(b + c,2)*c2", "get_name"}
+{"X(61)", "a2*(a2 - b2 - c2 - 2*S*sqrt3)|b2*(-a2 + b2 - c2 - 2*S*sqrt3)|c2*(-a2 - b2 + c2 - 2*S*sqrt3)", "get_name"}
+{"X(62)", "a2*(a2 - b2 - c2 + 2*S*sqrt3)|b2*(-a2 + b2 - c2 + 2*S*sqrt3)|c2*(-a2 - b2 + c2 + 2*S*sqrt3)", "get_name"}
+{"X(63)", "a*(a2 - b2 - c2)|b*(-a2 + b2 - c2)|c*(-a2 - b2 + c2)", "get_name"}
+{"X(64)", "a2*(a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4)*(a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4)|b2*(a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4)*(-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4)|c2*(-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4)*(a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4)", "get_name"}
+{"X(65)", "a*(a + b - c)*(a - b + c)*(b + c)|b*(a + b - c)*(a + c)*(-a + b + c)|(a + b)*c*(a - b + c)*(-a + b + c)", "get_name"}
+{"X(66)", "(a4 + b4 - c4)*(a4 - b4 + c4)|(a4 + b4 - c4)*(-a4 + b4 + c4)|(a4 - b4 + c4)*(-a4 + b4 + c4)", "get_name"}
+{"X(67)", "(a4 - a2*b2 + b4 - c4)*(a4 - b4 - a2*c2 + c4)|(a4 - a2*b2 + b4 - c4)*(-a4 + b4 - b2*c2 + c4)|(a4 - b4 - a2*c2 + c4)*(-a4 + b4 - b2*c2 + c4)", "get_name"}
+{"X(68)", "(a2 - b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)|(-a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)|(-a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)", "get_name"}
+{"X(69)", "-a2 + b2 + c2|a2 - b2 + c2|a2 + b2 - c2", "get_name"}
+{"X(70)", "(a8 - 2*a6*b2 + 2*a4*b4 - 2*a2*b6 + b8 - 2*a6*c2 - 2*b6*c2 + 2*a2*c6 + 2*b2*c6 - c8)*(a8 - 2*a6*b2 + 2*a2*b6 - b8 - 2*a6*c2 + 2*b6*c2 + 2*a4*c4 - 2*a2*c6 - 2*b2*c6 + c8)|(a8 - 2*a6*b2 + 2*a4*b4 - 2*a2*b6 + b8 - 2*a6*c2 - 2*b6*c2 + 2*a2*c6 + 2*b2*c6 - c8)*(-a8 + 2*a6*b2 - 2*a2*b6 + b8 + 2*a6*c2 - 2*b6*c2 + 2*b4*c4 - 2*a2*c6 - 2*b2*c6 + c8)|(a8 - 2*a6*b2 + 2*a2*b6 - b8 - 2*a6*c2 + 2*b6*c2 + 2*a4*c4 - 2*a2*c6 - 2*b2*c6 + c8)*(-a8 + 2*a6*b2 - 2*a2*b6 + b8 + 2*a6*c2 - 2*b6*c2 + 2*b4*c4 - 2*a2*c6 - 2*b2*c6 + c8)", "get_name"}
+{"X(71)", "a2*(b + c)*(a2 - b2 - c2)|b2*(a + c)*(-a2 + b2 - c2)|(a + b)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(72)", "a*(b + c)*(a2 - b2 - c2)|b*(a + c)*(-a2 + b2 - c2)|(a + b)*c*(-a2 - b2 + c2)", "get_name"}
+{"X(73)", "a2*(a + b - c)*(a - b + c)*(b + c)*(a2 - b2 - c2)|b2*(a + b - c)*(a + c)*(-a + b + c)*(-a2 + b2 - c2)|(a + b)*(a - b + c)*(-a + b + c)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(74)", "a2*(a4 - 2*a2*b2 + b4 + a2*c2 + b2*c2 - 2*c4)*(a4 + a2*b2 - 2*b4 - 2*a2*c2 + b2*c2 + c4)|b2*(a4 - 2*a2*b2 + b4 + a2*c2 + b2*c2 - 2*c4)*(-2*a4 + a2*b2 + b4 + a2*c2 - 2*b2*c2 + c4)|c2*(-2*a4 + a2*b2 + b4 + a2*c2 - 2*b2*c2 + c4)*(a4 + a2*b2 - 2*b4 - 2*a2*c2 + b2*c2 + c4)", "get_name"}
+{"X(75)", "b*c|a*c|a*b", "get_name"}
+{"X(76)", "b2*c2|a2*c2|a2*b2", "get_name"}
+{"X(77)", "a*(a + b - c)*(a - b + c)*(a2 - b2 - c2)|b*(a + b - c)*(-a + b + c)*(-a2 + b2 - c2)|c*(a - b + c)*(-a + b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(78)", "a*(a - b - c)*(a2 - b2 - c2)|b*(-a + b - c)*(-a2 + b2 - c2)|c*(-a - b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(79)", "(a2 + a*b + b2 - c2)*(a2 - b2 + a*c + c2)|(a2 + a*b + b2 - c2)*(-a2 + b2 + b*c + c2)|(a2 - b2 + a*c + c2)*(-a2 + b2 + b*c + c2)", "get_name"}
+{"X(80)", "(a2 - a*b + b2 - c2)*(a2 - b2 - a*c + c2)|(a2 - a*b + b2 - c2)*(-a2 + b2 - b*c + c2)|(a2 - b2 - a*c + c2)*(-a2 + b2 - b*c + c2)", "get_name"}
+{"X(81)", "a*(a + b)*(a + c)|b*(a + b)*(b + c)|c*(a + c)*(b + c)", "get_name"}
+{"X(82)", "a*(a2 + b2)*(a2 + c2)|b*(a2 + b2)*(b2 + c2)|c*(a2 + c2)*(b2 + c2)", "get_name"}
+{"X(83)", "(a2 + b2)*(a2 + c2)|(a2 + b2)*(b2 + c2)|(a2 + c2)*(b2 + c2)", "get_name"}
+{"X(84)", "a*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|b*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|c*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(85)", "b*(-a + b - c)*(a + b - c)*c|a*c*(-a - b + c)*(-a + b + c)|a*b*(a - b - c)*(a - b + c)", "get_name"}
+{"X(86)", "(a + b)*(a + c)|(a + b)*(b + c)|(a + c)*(b + c)", "get_name"}
+{"X(87)", "a*(a*b - a*c - b*c)*(a*b - a*c + b*c)|b*(-(a*b) - a*c + b*c)*(-(a*b) + a*c + b*c)|c*(-(a*b) + a*c - b*c)*(a*b + a*c - b*c)", "get_name"}
+{"X(88)", "a*(a + b - 2*c)*(a - 2*b + c)|b*(a + b - 2*c)*(-2*a + b + c)|c*(a - 2*b + c)*(-2*a + b + c)", "get_name"}
+{"X(89)", "a*(2*a + 2*b - c)*(2*a - b + 2*c)|b*(2*a + 2*b - c)*(-a + 2*b + 2*c)|c*(2*a - b + 2*c)*(-a + 2*b + 2*c)", "get_name"}
+{"X(90)", "a*(a3 - a2*b - a*b2 + b3 + a2*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c - b2*c - a*c2 + b*c2 + c3)|b*(a3 - a2*b - a*b2 + b3 + a2*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c - b2*c + a*c2 - b*c2 + c3)|c*(-a3 - a2*b + a*b2 + b3 - a2*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(91)", "b*c*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)|a*c*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)|a*b*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)", "get_name"}
+{"X(92)", "b*c*(-a2 + b2 - c2)*(a2 + b2 - c2)|a*c*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a*b*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(93)", "b2*(-a2 + b2 - c2)*(a2 + b2 - c2)*c2*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)|a2*c2*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)|a2*b2*(a2 - b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(94)", "b2*(a2 - a*b + b2 - c2)*(a2 + a*b + b2 - c2)*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)*c2|a2*c2*(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*(-a2 + b2 - b*c + c2)*(-a2 + b2 + b*c + c2)|a2*b2*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)*(a2 - b2 - a*c + c2)*(a2 - b2 + a*c + c2)", "get_name"}
+{"X(95)", "(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(96)", "(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(97)", "a2*(a2 - b2 - c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|b2*(-a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|c2*(-a2 - b2 + c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(98)", "(a4 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - b2*c2 + c4)|(a4 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|(-(a2*b2) + b4 - a2*c2 + c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(99)", "(a - b)*(a + b)*(a - c)*(a + c)|(-a + b)*(a + b)*(b - c)*(b + c)|(-a + c)*(a + c)*(-b + c)*(b + c)", "get_name"}
+{"X(100)", "a*(a - b)*(a - c)|b*(-a + b)*(b - c)|c*(-a + c)*(-b + c)", "get_name"}
+{"X(101)", "a2*(a - b)*(a - c)|(-a + b)*b2*(b - c)|(-a + c)*(-b + c)*c2", "get_name"}
+{"X(102)", "a2*(a4 - 2*a2*b2 + b4 - a3*c + a2*b*c + a*b2*c - b3*c + a2*c2 - 2*a*b*c2 + b2*c2 + a*c3 + b*c3 - 2*c4)*(a4 - a3*b + a2*b2 + a*b3 - 2*b4 + a2*b*c - 2*a*b2*c + b3*c - 2*a2*c2 + a*b*c2 + b2*c2 - b*c3 + c4)|b2*(a4 - 2*a2*b2 + b4 - a3*c + a2*b*c + a*b2*c - b3*c + a2*c2 - 2*a*b*c2 + b2*c2 + a*c3 + b*c3 - 2*c4)*(-2*a4 + a3*b + a2*b2 - a*b3 + b4 + a3*c - 2*a2*b*c + a*b2*c + a2*c2 + a*b*c2 - 2*b2*c2 - a*c3 + c4)|c2*(-2*a4 + a3*b + a2*b2 - a*b3 + b4 + a3*c - 2*a2*b*c + a*b2*c + a2*c2 + a*b*c2 - 2*b2*c2 - a*c3 + c4)*(a4 - a3*b + a2*b2 + a*b3 - 2*b4 + a2*b*c - 2*a*b2*c + b3*c - 2*a2*c2 + a*b*c2 + b2*c2 - b*c3 + c4)", "get_name"}
+{"X(103)", "a2*(a3 - a2*b - a*b2 + b3 + a*c2 + b*c2 - 2*c3)*(a3 + a*b2 - 2*b3 - a2*c + b2*c - a*c2 + c3)|b2*(a3 - a2*b - a*b2 + b3 + a*c2 + b*c2 - 2*c3)*(-2*a3 + a2*b + b3 + a2*c - b2*c - b*c2 + c3)|c2*(a3 + a*b2 - 2*b3 - a2*c + b2*c - a*c2 + c3)*(-2*a3 + a2*b + b3 + a2*c - b2*c - b*c2 + c3)", "get_name"}
+{"X(104)", "a*(a3 - a2*b - a*b2 + b3 + 2*a*b*c - a*c2 - b*c2)*(a3 - a*b2 - a2*c + 2*a*b*c - b2*c - a*c2 + c3)|b*(a3 - a2*b - a*b2 + b3 + 2*a*b*c - a*c2 - b*c2)*(-(a2*b) + b3 - a2*c + 2*a*b*c - b2*c - b*c2 + c3)|c*(a3 - a*b2 - a2*c + 2*a*b*c - b2*c - a*c2 + c3)*(-(a2*b) + b3 - a2*c + 2*a*b*c - b2*c - b*c2 + c3)", "get_name"}
+{"X(105)", "a*(a2 + b2 - a*c - b*c)*(a2 - a*b - b*c + c2)|b*(a2 + b2 - a*c - b*c)*(-(a*b) + b2 - a*c + c2)|c*(-(a*b) + b2 - a*c + c2)*(a2 - a*b - b*c + c2)", "get_name"}
+{"X(106)", "a2*(a + b - 2*c)*(a - 2*b + c)|b2*(a + b - 2*c)*(-2*a + b + c)|(a - 2*b + c)*(-2*a + b + c)*c2", "get_name"}
+{"X(107)", "(a - b)*(a + b)*(a - c)*(a + c)*Power(a2 + b2 - c2,2)*Power(a2 - b2 + c2,2)|(-a + b)*(a + b)*(b - c)*(b + c)*Power(a2 + b2 - c2,2)*Power(-a2 + b2 + c2,2)|(-a + c)*(a + c)*(-b + c)*(b + c)*Power(a2 - b2 + c2,2)*Power(-a2 + b2 + c2,2)", "get_name"}
+{"X(108)", "a*(a - b)*(a - c)*(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(-a + b)*(b - c)*(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(-a + c)*(-b + c)*(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(109)", "a2*(a - b)*(a - c)*(a + b - c)*(a - b + c)|(-a + b)*b2*(b - c)*(a + b - c)*(-a + b + c)|(-a + c)*(-b + c)*(a - b + c)*(-a + b + c)*c2", "get_name"}
+{"X(110)", "a2*(a - b)*(a + b)*(a - c)*(a + c)|(-a + b)*(a + b)*b2*(b - c)*(b + c)|(-a + c)*(a + c)*(-b + c)*(b + c)*c2", "get_name"}
+{"X(111)", "a2*(a2 + b2 - 2*c2)*(a2 - 2*b2 + c2)|b2*(a2 + b2 - 2*c2)*(-2*a2 + b2 + c2)|c2*(a2 - 2*b2 + c2)*(-2*a2 + b2 + c2)", "get_name"}
+{"X(112)", "a2*(a - b)*(a + b)*(a - c)*(a + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(-a + b)*(a + b)*b2*(b - c)*(b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(-a + c)*(a + c)*(-b + c)*(b + c)*c2*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(113)", "(2*a4 - a2*b2 - b4 - a2*c2 + 2*b2*c2 - c4)*(a4*b2 - 2*a2*b4 + b6 + a4*c2 + 2*a2*b2*c2 - b4*c2 - 2*a2*c4 - b2*c4 + c6)|(-a4 - a2*b2 + 2*b4 + 2*a2*c2 - b2*c2 - c4)*(a6 - 2*a4*b2 + a2*b4 - a4*c2 + 2*a2*b2*c2 + b4*c2 - a2*c4 - 2*b2*c4 + c6)|(-a4 + 2*a2*b2 - b4 - a2*c2 - b2*c2 + 2*c4)*(a6 - a4*b2 - a2*b4 + b6 - 2*a4*c2 + 2*a2*b2*c2 - 2*b4*c2 + a2*c4 + b2*c4)", "get_name"}
+{"X(114)", "(a2*b2 - b4 + a2*c2 - c4)*(2*a4 - a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)|(-a4 + a2*b2 + b2*c2 - c4)*(a4 - a2*b2 + 2*b4 - 2*a2*c2 - b2*c2 + c4)|(-a4 - b4 + a2*c2 + b2*c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2 + 2*c4)", "get_name"}
+{"X(115)", "Power(b - c,2)*Power(b + c,2)|Power(-a + c,2)*Power(a + c,2)|Power(a - b,2)*Power(a + b,2)", "get_name"}
+{"X(116)", "Power(b - c,2)*(-(a*b) + b2 - a*c + b*c + c2)|Power(-a + c,2)*(a2 - a*b + a*c - b*c + c2)|Power(a - b,2)*(a2 + a*b + b2 - a*c - b*c)", "get_name"}
+{"X(117)", "(2*a4 - a3*b - a2*b2 + a*b3 - b4 - a3*c + 2*a2*b*c - a*b2*c - a2*c2 - a*b*c2 + 2*b2*c2 + a*c3 - c4)*(a4*b2 - 2*a2*b4 + b6 - a3*b2*c + a2*b3*c + a*b4*c - b5*c + a4*c2 - a3*b*c2 + 2*a2*b2*c2 - a*b3*c2 - b4*c2 + a2*b*c3 - a*b2*c3 + 2*b3*c3 - 2*a2*c4 + a*b*c4 - b2*c4 - b*c5 + c6)|(-a4 + a3*b - a2*b2 - a*b3 + 2*b4 - a2*b*c + 2*a*b2*c - b3*c + 2*a2*c2 - a*b*c2 - b2*c2 + b*c3 - c4)*(a6 - 2*a4*b2 + a2*b4 - a5*c + a4*b*c + a3*b2*c - a2*b3*c - a4*c2 - a3*b*c2 + 2*a2*b2*c2 - a*b3*c2 + b4*c2 + 2*a3*c3 - a2*b*c3 + a*b2*c3 - a2*c4 + a*b*c4 - 2*b2*c4 - a*c5 + c6)|(-a4 + 2*a2*b2 - b4 + a3*c - a2*b*c - a*b2*c + b3*c - a2*c2 + 2*a*b*c2 - b2*c2 - a*c3 - b*c3 + 2*c4)*(a6 - a5*b - a4*b2 + 2*a3*b3 - a2*b4 - a*b5 + b6 + a4*b*c - a3*b2*c - a2*b3*c + a*b4*c - 2*a4*c2 + a3*b*c2 + 2*a2*b2*c2 + a*b3*c2 - 2*b4*c2 - a2*b*c3 - a*b2*c3 + a2*c4 + b2*c4)", "get_name"}
+{"X(118)", "(2*a3 - a2*b - b3 - a2*c + b2*c + b*c2 - c3)*(a3*b2 - a2*b3 - a*b4 + b5 + a3*c2 + 2*a*b2*c2 - b3*c2 - a2*c3 - b2*c3 - a*c4 + c5)|(-a3 - a*b2 + 2*b3 + a2*c - b2*c + a*c2 - c3)*(a5 - a4*b - a3*b2 + a2*b3 - a3*c2 + 2*a2*b*c2 + b3*c2 - a2*c3 - b2*c3 - b*c4 + c5)|(-a3 + a2*b + a*b2 - b3 - a*c2 - b*c2 + 2*c3)*(a5 - a3*b2 - a2*b3 + b5 - a4*c + 2*a2*b2*c - b4*c - a3*c2 - b3*c2 + a2*c3 + b2*c3)", "get_name"}
+{"X(119)", "(a2*b - b3 + a2*c - 2*a*b*c + b2*c + b*c2 - c3)*(a3*b - a2*b2 - a*b3 + b4 + a3*c + a*b2*c - a2*c2 + a*b*c2 - 2*b2*c2 - a*c3 + c4)|(-a3 + a*b2 + a2*c - 2*a*b*c + b2*c + a*c2 - c3)*(a4 - a3*b - a2*b2 + a*b3 + a2*b*c + b3*c - 2*a2*c2 + a*b*c2 - b2*c2 - b*c3 + c4)|(-a3 + a2*b + a*b2 - b3 - 2*a*b*c + a*c2 + b*c2)*(a4 - 2*a2*b2 + b4 - a3*c + a2*b*c + a*b2*c - b3*c - a2*c2 - b2*c2 + a*c3 + b*c3)", "get_name"}
+{"X(120)", "(a*b - b2 + a*c - c2)*(a2*b + b3 + a2*c - 2*a*b*c - b2*c - b*c2 + c3)|(-a2 + a*b + b*c - c2)*(a3 + a*b2 - a2*c - 2*a*b*c + b2*c - a*c2 + c3)|(-a2 - b2 + a*c + b*c)*(a3 - a2*b - a*b2 + b3 - 2*a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(121)", "(2*a - b - c)*(a*b2 + b3 - 2*b2*c + a*c2 - 2*b*c2 + c3)|(-a + 2*b - c)*(a3 + a2*b - 2*a2*c - 2*a*c2 + b*c2 + c3)|(-a - b + 2*c)*(a3 - 2*a2*b - 2*a*b2 + b3 + a2*c + b2*c)", "get_name"}
+{"X(122)", "Power(b - c,2)*Power(b + c,2)*Power(-a2 + b2 + c2,2)*(-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4)|Power(-a + c,2)*Power(a + c,2)*Power(a2 - b2 + c2,2)*(a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4)|Power(a - b,2)*Power(a + b,2)*Power(a2 + b2 - c2,2)*(a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4)", "get_name"}
+{"X(123)", "Power(b - c,2)*(-a + b + c)*(-a2 + b2 + c2)*(-a4 + b4 - 2*a2*b*c + 2*a*b2*c + 2*a*b*c2 - 2*b2*c2 + c4)|Power(-a + c,2)*(a - b + c)*(a2 - b2 + c2)*(a4 - b4 + 2*a2*b*c - 2*a*b2*c - 2*a2*c2 + 2*a*b*c2 + c4)|Power(a - b,2)*(a + b - c)*(a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 + 2*a2*b*c + 2*a*b2*c - 2*a*b*c2 - c4)", "get_name"}
+{"X(124)", "Power(b - c,2)*(-a + b + c)*(-(a2*b) + b3 - a2*c + a*b*c + c3)|Power(-a + c,2)*(a - b + c)*(a3 - a*b2 + a*b*c - b2*c + c3)|Power(a - b,2)*(a + b - c)*(a3 + b3 + a*b*c - a*c2 - b*c2)", "get_name"}
+{"X(125)", "Power(b - c,2)*Power(b + c,2)*(-a2 + b2 + c2)|Power(-a + c,2)*Power(a + c,2)*(a2 - b2 + c2)|Power(a - b,2)*Power(a + b,2)*(a2 + b2 - c2)", "get_name"}
+{"X(126)", "(2*a2 - b2 - c2)*(a2*b2 + b4 + a2*c2 - 4*b2*c2 + c4)|(-a2 + 2*b2 - c2)*(a4 + a2*b2 - 4*a2*c2 + b2*c2 + c4)|(-a2 - b2 + 2*c2)*(a4 - 4*a2*b2 + b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(127)", "Power(b - c,2)*Power(b + c,2)*(-a2 + b2 + c2)*(-a4 + b4 + c4)|Power(-a + c,2)*Power(a + c,2)*(a2 - b2 + c2)*(a4 - b4 + c4)|Power(a - b,2)*Power(a + b,2)*(a2 + b2 - c2)*(a4 + b4 - c4)", "get_name"}
+{"X(128)", "(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(2*a8 - 4*a6*b2 + 3*a4*b4 - 2*a2*b6 + b8 - 4*a6*c2 + 2*a2*b4*c2 - 4*b6*c2 + 3*a4*c4 + 2*a2*b2*c4 + 6*b4*c4 - 2*a2*c6 - 4*b2*c6 + c8)|(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a8 - 2*a6*b2 + 3*a4*b4 - 4*a2*b6 + 2*b8 - 4*a6*c2 + 2*a4*b2*c2 - 4*b6*c2 + 6*a4*c4 + 2*a2*b2*c4 + 3*b4*c4 - 4*a2*c6 - 2*b2*c6 + c8)|(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - 2*a6*c2 + 2*a4*b2*c2 + 2*a2*b4*c2 - 2*b6*c2 + 3*a4*c4 + 3*b4*c4 - 4*a2*c6 - 4*b2*c6 + 2*c8)", "get_name"}
+{"X(129)", "a2*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(a8 - 2*a6*b2 + a4*b4 - 2*a6*c2 + a4*b2*c2 + b6*c2 + a4*c4 - 2*b4*c4 + b2*c6)*(-4*a2*Power(b,10) + Power(b,12) + a8*b4 - 4*a6*b6 + 6*a4*b8 - 4*a2*Power(c,10) - 2*b2*Power(c,10) + Power(c,12) - 2*Power(b,10)*c2 - 2*a4*b6*c2 + 4*a2*b8*c2 + a8*c4 - 2*a4*b4*c4 + b8*c4 - 4*a6*c6 - 2*a4*b2*c6 + 6*a4*c8 + 4*a2*b2*c8 + b4*c8)|b2*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a4*b4 - 2*a2*b6 + b8 + a6*c2 + a2*b4*c2 - 2*b6*c2 - 2*a4*c4 + b4*c4 + a2*c6)*(Power(a,12) - 4*Power(a,10)*b2 + 6*a8*b4 - 4*a6*b6 + a4*b8 - 2*a2*Power(c,10) - 4*b2*Power(c,10) + Power(c,12) - 2*Power(a,10)*c2 + 4*a8*b2*c2 - 2*a6*b4*c2 + a8*c4 - 2*a4*b4*c4 + b8*c4 - 2*a2*b4*c6 - 4*b6*c6 + a4*c8 + 4*a2*b2*c8 + 6*b4*c8)|c2*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a6*b2 - 2*a4*b4 + a2*b6 + a4*c4 + a2*b2*c4 + b4*c4 - 2*a2*c6 - 2*b2*c6 + c8)*(Power(a,12) - 2*a2*Power(b,10) + Power(b,12) - 2*Power(a,10)*b2 + a8*b4 + a4*b8 - 4*Power(a,10)*c2 - 4*Power(b,10)*c2 + 4*a8*b2*c2 + 4*a2*b8*c2 + 6*a8*c4 - 2*a6*b2*c4 - 2*a4*b4*c4 - 2*a2*b6*c4 + 6*b8*c4 - 4*a6*c6 - 4*b6*c6 + a4*c8 + b4*c8)", "get_name"}
+{"X(130)", "a2*Power(b - c,2)*Power(b + c,2)*Power(a2 - b2 - c2,2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(a8 - 2*a6*b2 + a4*b4 - 2*a6*c2 + 3*a4*b2*c2 - b6*c2 + a4*c4 + 2*b4*c4 - b2*c6)|b2*Power(-a + c,2)*Power(a + c,2)*Power(-a2 + b2 - c2,2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a4*b4 - 2*a2*b6 + b8 - a6*c2 + 3*a2*b4*c2 - 2*b6*c2 + 2*a4*c4 + b4*c4 - a2*c6)|Power(a - b,2)*Power(a + b,2)*c2*Power(-a2 - b2 + c2,2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(-(a6*b2) + 2*a4*b4 - a2*b6 + a4*c4 + 3*a2*b2*c4 + b4*c4 - 2*a2*c6 - 2*b2*c6 + c8)", "get_name"}
+{"X(131)", "(a2 - b2 - c2)*(a4*b2 - 2*a2*b4 + b6 + a4*c2 + 2*a2*b2*c2 - b4*c2 - 2*a2*c4 - b2*c4 + c6)*(2*a8 - 3*a6*b2 + a4*b4 - a2*b6 + b8 - 3*a6*c2 + 2*a4*b2*c2 + a2*b4*c2 - 4*b6*c2 + a4*c4 + a2*b2*c4 + 6*b4*c4 - a2*c6 - 4*b2*c6 + c8)|(-a2 + b2 - c2)*(a6 - 2*a4*b2 + a2*b4 - a4*c2 + 2*a2*b2*c2 + b4*c2 - a2*c4 - 2*b2*c4 + c6)*(a8 - a6*b2 + a4*b4 - 3*a2*b6 + 2*b8 - 4*a6*c2 + a4*b2*c2 + 2*a2*b4*c2 - 3*b6*c2 + 6*a4*c4 + a2*b2*c4 + b4*c4 - 4*a2*c6 - b2*c6 + c8)|(-a2 - b2 + c2)*(a6 - a4*b2 - a2*b4 + b6 - 2*a4*c2 + 2*a2*b2*c2 - 2*b4*c2 + a2*c4 + b2*c4)*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - a6*c2 + a4*b2*c2 + a2*b4*c2 - b6*c2 + a4*c4 + 2*a2*b2*c4 + b4*c4 - 3*a2*c6 - 3*b2*c6 + 2*c8)", "get_name"}
+{"X(132)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 - c4)*(2*a6 - a4*b2 - b6 - a4*c2 + b4*c2 + b2*c4 - c6)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + b2*c2 - c4)*(-a6 - a2*b4 + 2*b6 + a4*c2 - b4*c2 + a2*c4 - c6)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 - b4 + a2*c2 + b2*c2)*(-a6 + a4*b2 + a2*b4 - b6 - a2*c4 - b2*c4 + 2*c6)", "get_name"}
+{"X(133)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(2*a4 - a2*b2 - b4 - a2*c2 + 2*b2*c2 - c4)*(a6*b2 - 3*a4*b4 + 3*a2*b6 - b8 + a6*c2 + 4*a4*b2*c2 - 3*a2*b4*c2 - 2*b6*c2 - 3*a4*c4 - 3*a2*b2*c4 + 6*b4*c4 + 3*a2*c6 - 2*b2*c6 - c8)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 - a2*b2 + 2*b4 + 2*a2*c2 - b2*c2 - c4)*(-a8 + 3*a6*b2 - 3*a4*b4 + a2*b6 - 2*a6*c2 - 3*a4*b2*c2 + 4*a2*b4*c2 + b6*c2 + 6*a4*c4 - 3*a2*b2*c4 - 3*b4*c4 - 2*a2*c6 + 3*b2*c6 - c8)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 + 2*a2*b2 - b4 - a2*c2 - b2*c2 + 2*c4)*(-a8 - 2*a6*b2 + 6*a4*b4 - 2*a2*b6 - b8 + 3*a6*c2 - 3*a4*b2*c2 - 3*a2*b4*c2 + 3*b6*c2 - 3*a4*c4 + 4*a2*b2*c4 - 3*b4*c4 + a2*c6 + b2*c6)", "get_name"}
+{"X(134)", "a2*Power(b - c,2)*Power(b + c,2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*Power(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4,2)*(Power(a,12) - 4*Power(a,10)*b2 + 6*a8*b4 - 4*a6*b6 + a4*b8 - b2*Power(c,10) - 4*Power(a,10)*c2 - Power(b,10)*c2 + 5*a8*b2*c2 + 2*a6*b4*c2 - 4*a4*b6*c2 + 2*a2*b8*c2 + 6*a8*c4 + 2*a6*b2*c4 + 2*a4*b4*c4 - 2*a2*b6*c4 + 4*b8*c4 - 4*a6*c6 - 4*a4*b2*c6 - 2*a2*b4*c6 - 6*b6*c6 + a4*c8 + 2*a2*b2*c8 + 4*b4*c8)|b2*Power(-a + c,2)*Power(a + c,2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*Power(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4,2)*(-4*a2*Power(b,10) + Power(b,12) + a8*b4 - 4*a6*b6 + 6*a4*b8 - a2*Power(c,10) - Power(a,10)*c2 - 4*Power(b,10)*c2 + 2*a8*b2*c2 - 4*a6*b4*c2 + 2*a4*b6*c2 + 5*a2*b8*c2 + 4*a8*c4 - 2*a6*b2*c4 + 2*a4*b4*c4 + 2*a2*b6*c4 + 6*b8*c4 - 6*a6*c6 - 2*a4*b2*c6 - 4*a2*b4*c6 - 4*b6*c6 + 4*a4*c8 + 2*a2*b2*c8 + b4*c8)|Power(a - b,2)*Power(a + b,2)*c2*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*Power(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4,2)*(-(a2*Power(b,10)) - Power(a,10)*b2 + 4*a8*b4 - 6*a6*b6 + 4*a4*b8 - 4*a2*Power(c,10) - 4*b2*Power(c,10) + Power(c,12) + 2*a8*b2*c2 - 2*a6*b4*c2 - 2*a4*b6*c2 + 2*a2*b8*c2 + a8*c4 - 4*a6*b2*c4 + 2*a4*b4*c4 - 4*a2*b6*c4 + b8*c4 - 4*a6*c6 + 2*a4*b2*c6 + 2*a2*b4*c6 - 4*b6*c6 + 6*a4*c8 + 5*a2*b2*c8 + 6*b4*c8)", "get_name"}
+{"X(135)", "Power(b - c,2)*Power(b + c,2)*(-a2 + b2 - c2)*(a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(-a6 + 3*a4*b2 - 3*a2*b4 + b6 + 3*a4*c2 + 2*a2*b2*c2 - b4*c2 - 3*a2*c4 - b2*c4 + c6)|Power(-a + c,2)*Power(a + c,2)*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(a6 - 3*a4*b2 + 3*a2*b4 - b6 - a4*c2 + 2*a2*b2*c2 + 3*b4*c2 - a2*c4 - 3*b2*c4 + c6)|Power(a - b,2)*Power(a + b,2)*(a2 - b2 - c2)*(a2 - b2 + c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(a6 - a4*b2 - a2*b4 + b6 - 3*a4*c2 + 2*a2*b2*c2 - 3*b4*c2 + 3*a2*c4 + 3*b2*c4 - c6)", "get_name"}
+{"X(136)", "Power(b - c,2)*Power(b + c,2)*(-a2 + b2 - c2)*(a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)|Power(-a + c,2)*Power(a + c,2)*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)|Power(a - b,2)*Power(a + b,2)*(a2 - b2 - c2)*(a2 - b2 + c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(137)", "Power(b - c,2)*Power(b + c,2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)|Power(-a + c,2)*Power(a + c,2)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|Power(a - b,2)*Power(a + b,2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(138)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(2*a8 - 4*a6*b2 + a4*b4 + 2*a2*b6 - b8 - 4*a6*c2 + 4*a4*b2*c2 - 2*a2*b4*c2 + 2*b6*c2 + a4*c4 - 2*a2*b2*c4 - 2*b4*c4 + 2*a2*c6 + 2*b2*c6 - c8)*(a8 - 2*a6*b2 + 2*a4*b4 - 2*a2*b6 + b8 - 2*a6*c2 - a4*b2*c2 + 2*a2*b4*c2 + b6*c2 + 2*a4*c4 + 2*a2*b2*c4 - 4*b4*c4 - 2*a2*c6 + b2*c6 + c8)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(-a8 + 2*a6*b2 + a4*b4 - 4*a2*b6 + 2*b8 + 2*a6*c2 - 2*a4*b2*c2 + 4*a2*b4*c2 - 4*b6*c2 - 2*a4*c4 - 2*a2*b2*c4 + b4*c4 + 2*a2*c6 + 2*b2*c6 - c8)*(a8 - 2*a6*b2 + 2*a4*b4 - 2*a2*b6 + b8 + a6*c2 + 2*a4*b2*c2 - a2*b4*c2 - 2*b6*c2 - 4*a4*c4 + 2*a2*b2*c4 + 2*b4*c4 + a2*c6 - 2*b2*c6 + c8)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a8 + a6*b2 - 4*a4*b4 + a2*b6 + b8 - 2*a6*c2 + 2*a4*b2*c2 + 2*a2*b4*c2 - 2*b6*c2 + 2*a4*c4 - a2*b2*c4 + 2*b4*c4 - 2*a2*c6 - 2*b2*c6 + c8)*(-a8 + 2*a6*b2 - 2*a4*b4 + 2*a2*b6 - b8 + 2*a6*c2 - 2*a4*b2*c2 - 2*a2*b4*c2 + 2*b6*c2 + a4*c4 + 4*a2*b2*c4 + b4*c4 - 4*a2*c6 - 4*b2*c6 + 2*c8)", "get_name"}
+{"X(139)", "Power(b - c,2)*Power(b + c,2)*(-a2 + b2 - c2)*(a2 + b2 - c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(Power(a,12) - 4*a2*Power(b,10) + Power(b,12) - 4*Power(a,10)*b2 + 7*a8*b4 - 8*a6*b6 + 7*a4*b8 - 4*a2*Power(c,10) - 3*b2*Power(c,10) + Power(c,12) - 4*Power(a,10)*c2 - 3*Power(b,10)*c2 + 11*a8*b2*c2 - 10*a6*b4*c2 + 6*a2*b8*c2 + 7*a8*c4 - 10*a6*b2*c4 + 2*a4*b4*c4 - 2*a2*b6*c4 + 3*b8*c4 - 8*a6*c6 - 2*a2*b4*c6 - 2*b6*c6 + 7*a4*c8 + 6*a2*b2*c8 + 3*b4*c8)|Power(-a + c,2)*Power(a + c,2)*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)*(Power(a,12) - 4*a2*Power(b,10) + Power(b,12) - 4*Power(a,10)*b2 + 7*a8*b4 - 8*a6*b6 + 7*a4*b8 - 3*a2*Power(c,10) - 4*b2*Power(c,10) + Power(c,12) - 3*Power(a,10)*c2 - 4*Power(b,10)*c2 + 6*a8*b2*c2 - 10*a4*b6*c2 + 11*a2*b8*c2 + 3*a8*c4 - 2*a6*b2*c4 + 2*a4*b4*c4 - 10*a2*b6*c4 + 7*b8*c4 - 2*a6*c6 - 2*a4*b2*c6 - 8*b6*c6 + 3*a4*c8 + 6*a2*b2*c8 + 7*b4*c8)|Power(a - b,2)*Power(a + b,2)*(a2 - b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(Power(a,12) - 3*a2*Power(b,10) + Power(b,12) - 3*Power(a,10)*b2 + 3*a8*b4 - 2*a6*b6 + 3*a4*b8 - 4*a2*Power(c,10) - 4*b2*Power(c,10) + Power(c,12) - 4*Power(a,10)*c2 - 4*Power(b,10)*c2 + 6*a8*b2*c2 - 2*a6*b4*c2 - 2*a4*b6*c2 + 6*a2*b8*c2 + 7*a8*c4 + 2*a4*b4*c4 + 7*b8*c4 - 8*a6*c6 - 10*a4*b2*c6 - 10*a2*b4*c6 - 8*b6*c6 + 7*a4*c8 + 11*a2*b2*c8 + 7*b4*c8)", "get_name"}
+{"X(140)", "2*a4 - 3*a2*b2 + b4 - 3*a2*c2 - 2*b2*c2 + c4|a4 - 3*a2*b2 + 2*b4 - 2*a2*c2 - 3*b2*c2 + c4|a4 - 2*a2*b2 + b4 - 3*a2*c2 - 3*b2*c2 + 2*c4", "get_name"}
+{"X(141)", "b2 + c2|a2 + c2|a2 + b2", "get_name"}
+{"X(142)", "-(a*b) + b2 - a*c - 2*b*c + c2|a2 - a*b - 2*a*c - b*c + c2|a2 - 2*a*b + b2 - a*c - b*c", "get_name"}
+{"X(143)", "a2*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)|b2*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)|c2*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(144)", "-3*a2 + 2*a*b + b2 + 2*a*c - 2*b*c + c2|a2 + 2*a*b - 3*b2 - 2*a*c + 2*b*c + c2|a2 - 2*a*b + b2 + 2*a*c + 2*b*c - 3*c2", "get_name"}
+{"X(145)", "-3*a + b + c|a - 3*b + c|a + b - 3*c", "get_name"}
+{"X(146)", "-Power(a,10) + Power(b,10) - a8*b2 + 8*a6*b4 - 8*a4*b6 + a2*b8 + Power(c,10) - a8*c2 - 9*a6*b2*c2 + 6*a4*b4*c2 + 7*a2*b6*c2 - 3*b8*c2 + 8*a6*c4 + 6*a4*b2*c4 - 16*a2*b4*c4 + 2*b6*c4 - 8*a4*c6 + 7*a2*b2*c6 + 2*b4*c6 + a2*c8 - 3*b2*c8|Power(a,10) - Power(b,10) + a8*b2 - 8*a6*b4 + 8*a4*b6 - a2*b8 + Power(c,10) - 3*a8*c2 + 7*a6*b2*c2 + 6*a4*b4*c2 - 9*a2*b6*c2 - b8*c2 + 2*a6*c4 - 16*a4*b2*c4 + 6*a2*b4*c4 + 8*b6*c4 + 2*a4*c6 + 7*a2*b2*c6 - 8*b4*c6 - 3*a2*c8 + b2*c8|Power(a,10) + Power(b,10) - 3*a8*b2 + 2*a6*b4 + 2*a4*b6 - 3*a2*b8 - Power(c,10) + a8*c2 + 7*a6*b2*c2 - 16*a4*b4*c2 + 7*a2*b6*c2 + b8*c2 - 8*a6*c4 + 6*a4*b2*c4 + 6*a2*b4*c4 - 8*b6*c4 + 8*a4*c6 - 9*a2*b2*c6 + 8*b4*c6 - a2*c8 - b2*c8", "get_name"}
+{"X(147)", "a8 + a6*b2 - 2*a4*b4 + a2*b6 - b8 + a6*c2 - 3*a4*b2*c2 + a2*b4*c2 + b6*c2 - 2*a4*c4 + a2*b2*c4 + a2*c6 + b2*c6 - c8|-a8 + a6*b2 - 2*a4*b4 + a2*b6 + b8 + a6*c2 + a4*b2*c2 - 3*a2*b4*c2 + b6*c2 + a2*b2*c4 - 2*b4*c4 + a2*c6 + b2*c6 - c8|-a8 + a6*b2 + a2*b6 - b8 + a6*c2 + a4*b2*c2 + a2*b4*c2 + b6*c2 - 2*a4*c4 - 3*a2*b2*c4 - 2*b4*c4 + a2*c6 + b2*c6 + c8", "get_name"}
+{"X(148)", "-a4 + a2*b2 + b4 + a2*c2 - 3*b2*c2 + c4|a4 + a2*b2 - b4 - 3*a2*c2 + b2*c2 + c4|a4 - 3*a2*b2 + b4 + a2*c2 + b2*c2 - c4", "get_name"}
+{"X(149)", "-a3 + a2*b - a*b2 + b3 + a2*c + a*b*c - b2*c - a*c2 - b*c2 + c3|a3 - a2*b + a*b2 - b3 - a2*c + a*b*c + b2*c - a*c2 - b*c2 + c3|a3 - a2*b - a*b2 + b3 - a2*c + a*b*c - b2*c + a*c2 + b*c2 - c3", "get_name"}
+{"X(150)", "-a4 + a3*b - a*b3 + b4 + a3*c - a2*b*c + a*b2*c - b3*c + a*b*c2 - a*c3 - b*c3 + c4|a4 - a3*b + a*b3 - b4 - a3*c + a2*b*c - a*b2*c + b3*c + a*b*c2 - a*c3 - b*c3 + c4|a4 - a3*b - a*b3 + b4 - a3*c + a2*b*c + a*b2*c - b3*c - a*b*c2 + a*c3 + b*c3 - c4", "get_name"}
+{"X(151)", "Power(a,10) - Power(a,9)*b + a*Power(b,9) - Power(b,10) + a8*b2 + 2*a7*b3 - 8*a6*b4 + 8*a4*b6 - 2*a3*b7 - a2*b8 - Power(a,9)*c + 3*a8*b*c + Power(b,9)*c - 6*a7*b2*c + 2*a6*b3*c + 12*a5*b4*c - 12*a4*b5*c - 2*a3*b6*c + 6*a2*b7*c - 3*a*b8*c + a*Power(c,9) + b*Power(c,9) - Power(c,10) + a8*c2 - 6*a7*b*c2 + 16*a6*b2*c2 - 12*a5*b3*c2 - 8*a4*b4*c2 + 18*a3*b5*c2 - 12*a2*b6*c2 + 3*b8*c2 + 2*a7*c3 + 2*a6*b*c3 - 12*a5*b2*c3 + 24*a4*b3*c3 - 14*a3*b4*c3 - 6*a2*b5*c3 + 8*a*b6*c3 - 4*b7*c3 - 8*a6*c4 + 12*a5*b*c4 - 8*a4*b2*c4 - 14*a3*b3*c4 + 26*a2*b4*c4 - 6*a*b5*c4 - 2*b6*c4 - 12*a4*b*c5 + 18*a3*b2*c5 - 6*a2*b3*c5 - 6*a*b4*c5 + 6*b5*c5 + 8*a4*c6 - 2*a3*b*c6 - 12*a2*b2*c6 + 8*a*b3*c6 - 2*b4*c6 - 2*a3*c7 + 6*a2*b*c7 - 4*b3*c7 - a2*c8 - 3*a*b*c8 + 3*b2*c8|-Power(a,10) + Power(a,9)*b - a*Power(b,9) + Power(b,10) - a8*b2 - 2*a7*b3 + 8*a6*b4 - 8*a4*b6 + 2*a3*b7 + a2*b8 + Power(a,9)*c - 3*a8*b*c - Power(b,9)*c + 6*a7*b2*c - 2*a6*b3*c - 12*a5*b4*c + 12*a4*b5*c + 2*a3*b6*c - 6*a2*b7*c + 3*a*b8*c + a*Power(c,9) + b*Power(c,9) - Power(c,10) + 3*a8*c2 - 12*a6*b2*c2 + 18*a5*b3*c2 - 8*a4*b4*c2 - 12*a3*b5*c2 + 16*a2*b6*c2 - 6*a*b7*c2 + b8*c2 - 4*a7*c3 + 8*a6*b*c3 - 6*a5*b2*c3 - 14*a4*b3*c3 + 24*a3*b4*c3 - 12*a2*b5*c3 + 2*a*b6*c3 + 2*b7*c3 - 2*a6*c4 - 6*a5*b*c4 + 26*a4*b2*c4 - 14*a3*b3*c4 - 8*a2*b4*c4 + 12*a*b5*c4 - 8*b6*c4 + 6*a5*c5 - 6*a4*b*c5 - 6*a3*b2*c5 + 18*a2*b3*c5 - 12*a*b4*c5 - 2*a4*c6 + 8*a3*b*c6 - 12*a2*b2*c6 - 2*a*b3*c6 + 8*b4*c6 - 4*a3*c7 + 6*a*b2*c7 - 2*b3*c7 + 3*a2*c8 - 3*a*b*c8 - b2*c8|-Power(a,10) + Power(a,9)*b + a*Power(b,9) - Power(b,10) + 3*a8*b2 - 4*a7*b3 - 2*a6*b4 + 6*a5*b5 - 2*a4*b6 - 4*a3*b7 + 3*a2*b8 + Power(a,9)*c - 3*a8*b*c + Power(b,9)*c + 8*a6*b3*c - 6*a5*b4*c - 6*a4*b5*c + 8*a3*b6*c - 3*a*b8*c - a*Power(c,9) - b*Power(c,9) + Power(c,10) - a8*c2 + 6*a7*b*c2 - 12*a6*b2*c2 - 6*a5*b3*c2 + 26*a4*b4*c2 - 6*a3*b5*c2 - 12*a2*b6*c2 + 6*a*b7*c2 - b8*c2 - 2*a7*c3 - 2*a6*b*c3 + 18*a5*b2*c3 - 14*a4*b3*c3 - 14*a3*b4*c3 + 18*a2*b5*c3 - 2*a*b6*c3 - 2*b7*c3 + 8*a6*c4 - 12*a5*b*c4 - 8*a4*b2*c4 + 24*a3*b3*c4 - 8*a2*b4*c4 - 12*a*b5*c4 + 8*b6*c4 + 12*a4*b*c5 - 12*a3*b2*c5 - 12*a2*b3*c5 + 12*a*b4*c5 - 8*a4*c6 + 2*a3*b*c6 + 16*a2*b2*c6 + 2*a*b3*c6 - 8*b4*c6 + 2*a3*c7 - 6*a2*b*c7 - 6*a*b2*c7 + 2*b3*c7 + a2*c8 + 3*a*b*c8 + b2*c8", "get_name"}
+{"X(152)", "-a8 + a7*b - 2*a6*b2 + 5*a5*b3 - 5*a3*b5 + 2*a2*b6 - a*b7 + b8 + a7*c - a6*b*c - a5*b2*c + a4*b3*c - a3*b4*c + a2*b5*c + a*b6*c - b7*c - 2*a6*c2 - a5*b*c2 - 6*a4*b2*c2 + 6*a3*b3*c2 + 2*a2*b4*c2 + 3*a*b5*c2 - 2*b6*c2 + 5*a5*c3 + a4*b*c3 + 6*a3*b2*c3 - 10*a2*b3*c3 - 3*a*b4*c3 + b5*c3 - a3*b*c4 + 2*a2*b2*c4 - 3*a*b3*c4 + 2*b4*c4 - 5*a3*c5 + a2*b*c5 + 3*a*b2*c5 + b3*c5 + 2*a2*c6 + a*b*c6 - 2*b2*c6 - a*c7 - b*c7 + c8|a8 - a7*b + 2*a6*b2 - 5*a5*b3 + 5*a3*b5 - 2*a2*b6 + a*b7 - b8 - a7*c + a6*b*c + a5*b2*c - a4*b3*c + a3*b4*c - a2*b5*c - a*b6*c + b7*c - 2*a6*c2 + 3*a5*b*c2 + 2*a4*b2*c2 + 6*a3*b3*c2 - 6*a2*b4*c2 - a*b5*c2 - 2*b6*c2 + a5*c3 - 3*a4*b*c3 - 10*a3*b2*c3 + 6*a2*b3*c3 + a*b4*c3 + 5*b5*c3 + 2*a4*c4 - 3*a3*b*c4 + 2*a2*b2*c4 - a*b3*c4 + a3*c5 + 3*a2*b*c5 + a*b2*c5 - 5*b3*c5 - 2*a2*c6 + a*b*c6 + 2*b2*c6 - a*c7 - b*c7 + c8|a8 - a7*b - 2*a6*b2 + a5*b3 + 2*a4*b4 + a3*b5 - 2*a2*b6 - a*b7 + b8 - a7*c + a6*b*c + 3*a5*b2*c - 3*a4*b3*c - 3*a3*b4*c + 3*a2*b5*c + a*b6*c - b7*c + 2*a6*c2 + a5*b*c2 + 2*a4*b2*c2 - 10*a3*b3*c2 + 2*a2*b4*c2 + a*b5*c2 + 2*b6*c2 - 5*a5*c3 - a4*b*c3 + 6*a3*b2*c3 + 6*a2*b3*c3 - a*b4*c3 - 5*b5*c3 + a3*b*c4 - 6*a2*b2*c4 + a*b3*c4 + 5*a3*c5 - a2*b*c5 - a*b2*c5 + 5*b3*c5 - 2*a2*c6 - a*b*c6 - 2*b2*c6 + a*c7 + b*c7 - c8", "get_name"}
+{"X(153)", "-a7 + a6*b + a5*b2 - a4*b3 + a3*b4 - a2*b5 - a*b6 + b7 + a6*c - 7*a5*b*c + 5*a4*b2*c + 2*a3*b3*c - 5*a2*b4*c + 5*a*b5*c - b6*c + a5*c2 + 5*a4*b*c2 - 10*a3*b2*c2 + 6*a2*b3*c2 + a*b4*c2 - 3*b5*c2 - a4*c3 + 2*a3*b*c3 + 6*a2*b2*c3 - 10*a*b3*c3 + 3*b4*c3 + a3*c4 - 5*a2*b*c4 + a*b2*c4 + 3*b3*c4 - a2*c5 + 5*a*b*c5 - 3*b2*c5 - a*c6 - b*c6 + c7|a7 - a6*b - a5*b2 + a4*b3 - a3*b4 + a2*b5 + a*b6 - b7 - a6*c + 5*a5*b*c - 5*a4*b2*c + 2*a3*b3*c + 5*a2*b4*c - 7*a*b5*c + b6*c - 3*a5*c2 + a4*b*c2 + 6*a3*b2*c2 - 10*a2*b3*c2 + 5*a*b4*c2 + b5*c2 + 3*a4*c3 - 10*a3*b*c3 + 6*a2*b2*c3 + 2*a*b3*c3 - b4*c3 + 3*a3*c4 + a2*b*c4 - 5*a*b2*c4 + b3*c4 - 3*a2*c5 + 5*a*b*c5 - b2*c5 - a*c6 - b*c6 + c7|a7 - a6*b - 3*a5*b2 + 3*a4*b3 + 3*a3*b4 - 3*a2*b5 - a*b6 + b7 - a6*c + 5*a5*b*c + a4*b2*c - 10*a3*b3*c + a2*b4*c + 5*a*b5*c - b6*c - a5*c2 - 5*a4*b*c2 + 6*a3*b2*c2 + 6*a2*b3*c2 - 5*a*b4*c2 - b5*c2 + a4*c3 + 2*a3*b*c3 - 10*a2*b2*c3 + 2*a*b3*c3 + b4*c3 - a3*c4 + 5*a2*b*c4 + 5*a*b2*c4 - b3*c4 + a2*c5 - 7*a*b*c5 + b2*c5 + a*c6 + b*c6 - c7", "get_name"}
+{"X(154)", "a2*(3*a4 - 2*a2*b2 - b4 - 2*a2*c2 + 2*b2*c2 - c4)|b2*(-a4 - 2*a2*b2 + 3*b4 + 2*a2*c2 - 2*b2*c2 - c4)|c2*(-a4 + 2*a2*b2 - b4 - 2*a2*c2 - 2*b2*c2 + 3*c4)", "get_name"}
+{"X(155)", "a2*(a2 - b2 - c2)*(a6 - 3*a4*b2 + 3*a2*b4 - b6 - 3*a4*c2 - 2*a2*b2*c2 + b4*c2 + 3*a2*c4 + b2*c4 - c6)|b2*(-a2 + b2 - c2)*(-a6 + 3*a4*b2 - 3*a2*b4 + b6 + a4*c2 - 2*a2*b2*c2 - 3*b4*c2 + a2*c4 + 3*b2*c4 - c6)|c2*(-a2 - b2 + c2)*(-a6 + a4*b2 + a2*b4 - b6 + 3*a4*c2 - 2*a2*b2*c2 + 3*b4*c2 - 3*a2*c4 - 3*b2*c4 + c6)", "get_name"}
+{"X(156)", "a2*(a8 - 3*a6*b2 + 3*a4*b4 - a2*b6 - 3*a6*c2 + 2*a4*b2*c2 + b6*c2 + 3*a4*c4 - 2*b4*c4 - a2*c6 + b2*c6)|b2*(-(a6*b2) + 3*a4*b4 - 3*a2*b6 + b8 + a6*c2 + 2*a2*b4*c2 - 3*b6*c2 - 2*a4*c4 + 3*b4*c4 + a2*c6 - b2*c6)|c2*(a6*b2 - 2*a4*b4 + a2*b6 - a6*c2 - b6*c2 + 3*a4*c4 + 2*a2*b2*c4 + 3*b4*c4 - 3*a2*c6 - 3*b2*c6 + c8)", "get_name"}
+{"X(157)", "a2*(a6 - a4*b2 + a2*b4 - b6 - a4*c2 + b4*c2 + a2*c4 + b2*c4 - c6)|b2*(-a6 + a4*b2 - a2*b4 + b6 + a4*c2 - b4*c2 + a2*c4 + b2*c4 - c6)|c2*(-a6 + a4*b2 + a2*b4 - b6 + a4*c2 + b4*c2 - a2*c4 - b2*c4 + c6)", "get_name"}
+{"X(158)", "b*c*Power(-a2 + b2 - c2,2)*Power(a2 + b2 - c2,2)|a*c*Power(-a2 - b2 + c2,2)*Power(-a2 + b2 + c2,2)|a*b*Power(a2 - b2 - c2,2)*Power(a2 - b2 + c2,2)", "get_name"}
+{"X(159)", "a2*(a6 + a4*b2 - a2*b4 - b6 + a4*c2 - 2*a2*b2*c2 + b4*c2 - a2*c4 + b2*c4 - c6)|b2*(-a6 - a4*b2 + a2*b4 + b6 + a4*c2 - 2*a2*b2*c2 + b4*c2 + a2*c4 - b2*c4 - c6)|c2*(-a6 + a4*b2 + a2*b4 - b6 - a4*c2 - 2*a2*b2*c2 - b4*c2 + a2*c4 + b2*c4 + c6)", "get_name"}
+{"X(160)", "a4*(a2*b2 - b4 + a2*c2 - b2*c2 - c4)|b4*(-a4 + a2*b2 - a2*c2 + b2*c2 - c4)|(-a4 - a2*b2 - b4 + a2*c2 + b2*c2)*c4", "get_name"}
+{"X(161)", "a2*(Power(a,10) - Power(b,10) - a8*b2 - 2*a6*b4 + 2*a4*b6 + a2*b8 - Power(c,10) - a8*c2 - 2*a6*b2*c2 + 2*a4*b4*c2 - 2*a2*b6*c2 + 3*b8*c2 - 2*a6*c4 + 2*a4*b2*c4 + 2*a2*b4*c4 - 2*b6*c4 + 2*a4*c6 - 2*a2*b2*c6 - 2*b4*c6 + a2*c8 + 3*b2*c8)|b2*(-Power(a,10) + Power(b,10) + a8*b2 + 2*a6*b4 - 2*a4*b6 - a2*b8 - Power(c,10) + 3*a8*c2 - 2*a6*b2*c2 + 2*a4*b4*c2 - 2*a2*b6*c2 - b8*c2 - 2*a6*c4 + 2*a4*b2*c4 + 2*a2*b4*c4 - 2*b6*c4 - 2*a4*c6 - 2*a2*b2*c6 + 2*b4*c6 + 3*a2*c8 + b2*c8)|c2*(-Power(a,10) - Power(b,10) + 3*a8*b2 - 2*a6*b4 - 2*a4*b6 + 3*a2*b8 + Power(c,10) + a8*c2 - 2*a6*b2*c2 + 2*a4*b4*c2 - 2*a2*b6*c2 + b8*c2 + 2*a6*c4 + 2*a4*b2*c4 + 2*a2*b4*c4 + 2*b6*c4 - 2*a4*c6 - 2*a2*b2*c6 - 2*b4*c6 - a2*c8 - b2*c8)", "get_name"}
+{"X(162)", "a*(a - b)*(a + b)*(a - c)*(a + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*(-a + b)*(a + b)*(b - c)*(b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*(-a + c)*(a + c)*(-b + c)*(b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(163)", "a3*(a - b)*(a + b)*(a - c)*(a + c)|(-a + b)*(a + b)*b3*(b - c)*(b + c)|(-a + c)*(a + c)*(-b + c)*(b + c)*c3", "get_name"}
+{"X(164)", "a*(-Sqrt(a*(a + b - c)*(a - b + c)) + Sqrt(b*(a + b - c)*(-a + b + c)) + Sqrt(c*(a - b + c)*(-a + b + c)))|b*(Sqrt(a*(a + b - c)*(a - b + c)) - Sqrt(b*(a + b - c)*(-a + b + c)) + Sqrt(c*(a - b + c)*(-a + b + c)))|c*(Sqrt(a*(a + b - c)*(a - b + c)) + Sqrt(b*(a + b - c)*(-a + b + c)) - Sqrt(c*(a - b + c)*(-a + b + c)))", "get_name"}
+{"X(165)", "a*(3*a2 - 2*a*b - b2 - 2*a*c + 2*b*c - c2)|b*(-a2 - 2*a*b + 3*b2 + 2*a*c - 2*b*c - c2)|c*(-a2 + 2*a*b - b2 - 2*a*c - 2*b*c + 3*c2)", "get_name"}
+{"X(166)", "a*(1/(sc*(Sqrt(a*s*sa) + Sqrt(b*s*sb) - Sqrt(c*s*sc))) + 1/(sb*(Sqrt(a*s*sa) - Sqrt(b*s*sb) + Sqrt(c*s*sc))) - 1/(sa*(-Sqrt(a*s*sa) + Sqrt(b*s*sb) + Sqrt(c*s*sc))))|b*(1/(sc*(Sqrt(a*s*sa) + Sqrt(b*s*sb) - Sqrt(c*s*sc))) - 1/(sb*(Sqrt(a*s*sa) - Sqrt(b*s*sb) + Sqrt(c*s*sc))) + 1/(sa*(-Sqrt(a*s*sa) + Sqrt(b*s*sb) + Sqrt(c*s*sc))))|c*(-(1/(sc*(Sqrt(a*s*sa) + Sqrt(b*s*sb) - Sqrt(c*s*sc)))) + 1/(sb*(Sqrt(a*s*sa) - Sqrt(b*s*sb) + Sqrt(c*s*sc))) + 1/(sa*(-Sqrt(a*s*sa) + Sqrt(b*s*sb) + Sqrt(c*s*sc))))", "get_name"}
+{"X(167)", "a*(-(c*(a*Sqrt((sa*sc)/(a*c)) - b*Sqrt((sb*sc)/(b*c)))*(2*(-a + c)*sb*Sqrt((sa*sc)/(a*c)) + 2*sa*sc*(-Sqrt((sa*sb)/(a*b)) + Sqrt((sb*sc)/(b*c))))) + b*(-(a*Sqrt((sa*sb)/(a*b))) + c*Sqrt((sb*sc)/(b*c)))*(2*(a - b)*Sqrt((sa*sb)/(a*b))*sc + (-Sqrt((sa*sc)/(a*c)) + Sqrt((sb*sc)/(b*c)))*(-(a*b) + SC)))|b*(c*(a*Sqrt((sa*sc)/(a*c)) - b*Sqrt((sb*sc)/(b*c)))*(2*(b - c)*sa*Sqrt((sb*sc)/(b*c)) + (-(b*c) + SA)*(-Sqrt((sa*sb)/(a*b)) + Sqrt((sa*sc)/(a*c)))) - a*(b*Sqrt((sa*sb)/(a*b)) - c*Sqrt((sa*sc)/(a*c)))*(2*(a - b)*Sqrt((sa*sb)/(a*b))*sc + 2*sa*sb*(Sqrt((sa*sc)/(a*c)) - Sqrt((sb*sc)/(b*c)))))|c*(-(b*(-(a*Sqrt((sa*sb)/(a*b))) + c*Sqrt((sb*sc)/(b*c)))*(2*(b - c)*sa*Sqrt((sb*sc)/(b*c)) + 2*sb*sc*(Sqrt((sa*sb)/(a*b)) - Sqrt((sa*sc)/(a*c))))) + a*(b*Sqrt((sa*sb)/(a*b)) - c*Sqrt((sa*sc)/(a*c)))*(2*(-a + c)*sb*Sqrt((sa*sc)/(a*c)) + (-(a*c) + SB)*(Sqrt((sa*sb)/(a*b)) - Sqrt((sb*sc)/(b*c)))))", "get_name"}
+{"X(168)", "a*(2*area*sa - a*(c*Sqrt((s*sb)/(a*c))*(sa - sc) + b*(c*Sqrt((s*sa)/(b*c)) + (sa - sb)*Sqrt((s*sc)/(a*b)))))|b*(2*area*sb - b*(c*(a*Sqrt((s*sb)/(a*c)) + Sqrt((s*sa)/(b*c))*(sb - sc)) + a*(-sa + sb)*Sqrt((s*sc)/(a*b))))|c*(2*area*sc - c*(b*Sqrt((s*sa)/(b*c))*(-sb + sc) + a*(b*Sqrt((s*sc)/(a*b)) + Sqrt((s*sb)/(a*c))*(-sa + sc))))", "get_name"}
+{"X(169)", "a*(a3 - a2*b + a*b2 - b3 - a2*c + b2*c + a*c2 + b*c2 - c3)|b*(-a3 + a2*b - a*b2 + b3 + a2*c - b2*c + a*c2 + b*c2 - c3)|c*(-a3 + a2*b + a*b2 - b3 + a2*c + b2*c - a*c2 - b*c2 + c3)", "get_name"}
+{"X(170)", "a*(a5*b - 4*a4*b2 + 6*a3*b3 - 4*a2*b4 + a*b5 + a5*c - a4*b*c - 2*a3*b2*c + 2*a2*b3*c + a*b4*c - b5*c - 4*a4*c2 - 2*a3*b*c2 + 4*a2*b2*c2 - 2*a*b3*c2 + 4*b4*c2 + 6*a3*c3 + 2*a2*b*c3 - 2*a*b2*c3 - 6*b3*c3 - 4*a2*c4 + a*b*c4 + 4*b2*c4 + a*c5 - b*c5)|b*(a5*b - 4*a4*b2 + 6*a3*b3 - 4*a2*b4 + a*b5 - a5*c + a4*b*c + 2*a3*b2*c - 2*a2*b3*c - a*b4*c + b5*c + 4*a4*c2 - 2*a3*b*c2 + 4*a2*b2*c2 - 2*a*b3*c2 - 4*b4*c2 - 6*a3*c3 - 2*a2*b*c3 + 2*a*b2*c3 + 6*b3*c3 + 4*a2*c4 + a*b*c4 - 4*b2*c4 - a*c5 + b*c5)|c*(-(a5*b) + 4*a4*b2 - 6*a3*b3 + 4*a2*b4 - a*b5 + a5*c + a4*b*c - 2*a3*b2*c - 2*a2*b3*c + a*b4*c + b5*c - 4*a4*c2 + 2*a3*b*c2 + 4*a2*b2*c2 + 2*a*b3*c2 - 4*b4*c2 + 6*a3*c3 - 2*a2*b*c3 - 2*a*b2*c3 + 6*b3*c3 - 4*a2*c4 - a*b*c4 - 4*b2*c4 + a*c5 + b*c5)", "get_name"}
+{"X(171)", "a*(a2 + b*c)|b*(b2 + a*c)|c*(a*b + c2)", "get_name"}
+{"X(172)", "a2*(a2 + b*c)|b2*(b2 + a*c)|c2*(a*b + c2)", "get_name"}
+{"X(173)", "a*(-Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))|b*(Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))|c*(Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b)))", "get_name"}
+{"X(174)", "Sqrt((sb*sc)/(b*c))|Sqrt((sa*sc)/(a*c))|Sqrt((sa*sb)/(a*b))", "get_name"}
+{"X(175)", "(a + b - c)*(a - b + c)*(a*(a - b - c) + S)|(a + b - c)*(-a + b + c)*(b*(-a + b - c) + S)|(a - b + c)*(-a + b + c)*(c*(-a - b + c) + S)", "get_name"}
+{"X(176)", "(a + b - c)*(a - b + c)*(a*(a - b - c) - S)|(a + b - c)*(-a + b + c)*(b*(-a + b - c) - S)|(a - b + c)*(-a + b + c)*(c*(-a - b + c) - S)", "get_name"}
+{"X(177)", "(Sqrt(b*(a + b - c))*(a - b + c) + (a + b - c)*Sqrt(c*(a - b + c)))*sqrta|(Sqrt(a*(a + b - c))*(-a + b + c) + (a + b - c)*Sqrt(c*(-a + b + c)))*sqrtb|(Sqrt(a*(a - b + c))*(-a + b + c) + (a - b + c)*Sqrt(b*(-a + b + c)))*sqrtc", "get_name"}
+{"X(178)", "Sqrt((a + b - c)*c) + Sqrt(b*(a - b + c))|Sqrt((a + b - c)*c) + Sqrt(a*(-a + b + c))|Sqrt(b*(a - b + c)) + Sqrt(a*(-a + b + c))", "get_name"}
+{"X(179)", "Power(secQuarterA,4)*sinA|Power(secQuarterB,4)*sinB|Power(secQuarterC,4)*sinC", "get_name"}
+{"X(180)", "(1/(-1 - 2*Power(cosQuarterB,2)*Power(cosQuarterC,2)*Power(secQuarterA,2)) + 1/(1 + 2*Power(cosQuarterA,2)*Power(cosQuarterC,2)*Power(secQuarterB,2)) + 1/(1 + 2*Power(cosQuarterA,2)*Power(cosQuarterB,2)*Power(secQuarterC,2)))*sinA|(1/(1 + 2*Power(cosQuarterB,2)*Power(cosQuarterC,2)*Power(secQuarterA,2)) + 1/(-1 - 2*Power(cosQuarterA,2)*Power(cosQuarterC,2)*Power(secQuarterB,2)) + 1/(1 + 2*Power(cosQuarterA,2)*Power(cosQuarterB,2)*Power(secQuarterC,2)))*sinB|(1/(1 + 2*Power(cosQuarterB,2)*Power(cosQuarterC,2)*Power(secQuarterA,2)) + 1/(1 + 2*Power(cosQuarterA,2)*Power(cosQuarterC,2)*Power(secQuarterB,2)) + 1/(-1 - 2*Power(cosQuarterA,2)*Power(cosQuarterB,2)*Power(secQuarterC,2)))*sinC", "get_name"}
+{"X(181)", "a2*(a + b - c)*(a - b + c)*Power(b + c,2)|b2*(a + b - c)*Power(a + c,2)*(-a + b + c)|Power(a + b,2)*(a - b + c)*(-a + b + c)*c2", "get_name"}
+{"X(182)", "a2*(a4 - a2*b2 - a2*c2 - 2*b2*c2)|b2*(-(a2*b2) + b4 - 2*a2*c2 - b2*c2)|c2*(-2*a2*b2 - a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(183)", "a4 - a2*b2 - a2*c2 - 2*b2*c2|-(a2*b2) + b4 - 2*a2*c2 - b2*c2|-2*a2*b2 - a2*c2 - b2*c2 + c4", "get_name"}
+{"X(184)", "a4*(a2 - b2 - c2)|b4*(-a2 + b2 - c2)|(-a2 - b2 + c2)*c4", "get_name"}
+{"X(185)", "a2*(a2 - b2 - c2)*(a4*b2 - 2*a2*b4 + b6 + a4*c2 + 4*a2*b2*c2 - b4*c2 - 2*a2*c4 - b2*c4 + c6)|b2*(-a2 + b2 - c2)*(a6 - 2*a4*b2 + a2*b4 - a4*c2 + 4*a2*b2*c2 + b4*c2 - a2*c4 - 2*b2*c4 + c6)|c2*(-a2 - b2 + c2)*(a6 - a4*b2 - a2*b4 + b6 - 2*a4*c2 + 4*a2*b2*c2 - 2*b4*c2 + a2*c4 + b2*c4)", "get_name"}
+{"X(186)", "a2*(a2 + b2 - c2)*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)*(a2 - b2 + c2)|b2*(a2 + b2 - c2)*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)*(-a2 + b2 + c2)|c2*(a2 - b2 + c2)*(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(187)", "a2*(2*a2 - b2 - c2)|b2*(-a2 + 2*b2 - c2)|c2*(-a2 - b2 + 2*c2)", "get_name"}
+{"X(188)", "a*Sqrt(b*c*(-a + b + c))|b*Sqrt(a*c*(a - b + c))|Sqrt(a*b*(a + b - c))*c", "get_name"}
+{"X(189)", "(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(190)", "(a - b)*(a - c)|(-a + b)*(b - c)|(-a + c)*(-b + c)", "get_name"}
+{"X(191)", "a*(a3 + a2*b - a*b2 - b3 + a2*c - a*b*c - b2*c - a*c2 - b*c2 - c3)|b*(-a3 - a2*b + a*b2 + b3 - a2*c - a*b*c + b2*c - a*c2 - b*c2 - c3)|c*(-a3 - a2*b - a*b2 - b3 - a2*c - a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(192)", "a*b + a*c - b*c|a*b - a*c + b*c|-(a*b) + a*c + b*c", "get_name"}
+{"X(193)", "-3*a2 + b2 + c2|a2 - 3*b2 + c2|a2 + b2 - 3*c2", "get_name"}
+{"X(194)", "a2*b2 + a2*c2 - b2*c2|a2*b2 - a2*c2 + b2*c2|-(a2*b2) + a2*c2 + b2*c2", "get_name"}
+{"X(195)", "a2*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - 4*a6*c2 + 5*a4*b2*c2 + a2*b4*c2 - 2*b6*c2 + 6*a4*c4 + a2*b2*c4 + 2*b4*c4 - 4*a2*c6 - 2*b2*c6 + c8)|b2*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - 2*a6*c2 + a4*b2*c2 + 5*a2*b4*c2 - 4*b6*c2 + 2*a4*c4 + a2*b2*c4 + 6*b4*c4 - 2*a2*c6 - 4*b2*c6 + c8)|c2*(a8 - 2*a6*b2 + 2*a4*b4 - 2*a2*b6 + b8 - 4*a6*c2 + a4*b2*c2 + a2*b4*c2 - 4*b6*c2 + 6*a4*c4 + 5*a2*b2*c4 + 6*b4*c4 - 4*a2*c6 - 4*b2*c6 + c8)", "get_name"}
+{"X(196)", "(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(197)", "a2*(a4 - b4 + 2*a2*b*c - 2*a*b2*c - 2*a*b*c2 + 2*b2*c2 - c4)|b2*(-a4 + b4 - 2*a2*b*c + 2*a*b2*c + 2*a2*c2 - 2*a*b*c2 - c4)|c2*(-a4 + 2*a2*b2 - b4 - 2*a2*b*c - 2*a*b2*c + 2*a*b*c2 + c4)", "get_name"}
+{"X(198)", "a2*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b2*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|c2*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(199)", "a2*(a4 + a3*b - a*b3 - b4 + a3*c + a2*b*c - a*b2*c - b3*c - a*b*c2 - a*c3 - b*c3 - c4)|b2*(-a4 - a3*b + a*b3 + b4 - a3*c - a2*b*c + a*b2*c + b3*c - a*b*c2 - a*c3 - b*c3 - c4)|c2*(-a4 - a3*b - a*b3 - b4 - a3*c - a2*b*c - a*b2*c - b3*c + a*b*c2 + a*c3 + b*c3 + c4)", "get_name"}
+{"X(200)", "a*Power(a - b - c,2)|b*Power(-a + b - c,2)|c*Power(-a - b + c,2)", "get_name"}
+{"X(201)", "a*(a + b - c)*(a - b + c)*Power(b + c,2)*(a2 - b2 - c2)|b*(a + b - c)*Power(a + c,2)*(-a + b + c)*(-a2 + b2 - c2)|Power(a + b,2)*c*(a - b + c)*(-a + b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(202)", "a2*(a2 - b2 + 4*b*c - c2 + 2*S*sqrt3)|b2*(-a2 + b2 + 4*a*c - c2 + 2*S*sqrt3)|c2*(-a2 + 4*a*b - b2 + c2 + 2*S*sqrt3)", "get_name"}
+{"X(203)", "a2*(a2 - b2 + 4*b*c - c2 - 2*S*sqrt3)|b2*(-a2 + b2 + 4*a*c - c2 - 2*S*sqrt3)|c2*(-a2 + 4*a*b - b2 + c2 - 2*S*sqrt3)", "get_name"}
+{"X(204)", "a*(a2 + b2 - c2)*(a2 - b2 + c2)*(3*a4 - 2*a2*b2 - b4 - 2*a2*c2 + 2*b2*c2 - c4)|b*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 - 2*a2*b2 + 3*b4 + 2*a2*c2 - 2*b2*c2 - c4)|c*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 + 2*a2*b2 - b4 - 2*a2*c2 - 2*b2*c2 + 3*c4)", "get_name"}
+{"X(205)", "a3*(a4 - b4 + 2*a2*b*c - 2*a*b2*c - 2*a*b*c2 + 2*b2*c2 - c4)|b3*(-a4 + b4 - 2*a2*b*c + 2*a*b2*c + 2*a2*c2 - 2*a*b*c2 - c4)|c3*(-a4 + 2*a2*b2 - b4 - 2*a2*b*c - 2*a*b2*c + 2*a*b*c2 + c4)", "get_name"}
+{"X(206)", "a4*(a4 - b4 - c4)|b4*(-a4 + b4 - c4)|c4*(-a4 - b4 + c4)", "get_name"}
+{"X(207)", "a*(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)*(a6 - 2*a5*b - a4*b2 + 4*a3*b3 - a2*b4 - 2*a*b5 + b6 - 2*a5*c - 2*a4*b*c + 2*a*b4*c + 2*b5*c - a4*c2 + 2*a2*b2*c2 - b4*c2 + 4*a3*c3 - 4*b3*c3 - a2*c4 + 2*a*b*c4 - b2*c4 - 2*a*c5 + 2*b*c5 + c6)|b*(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)*(a6 - 2*a5*b - a4*b2 + 4*a3*b3 - a2*b4 - 2*a*b5 + b6 + 2*a5*c + 2*a4*b*c - 2*a*b4*c - 2*b5*c - a4*c2 + 2*a2*b2*c2 - b4*c2 - 4*a3*c3 + 4*b3*c3 - a2*c4 + 2*a*b*c4 - b2*c4 + 2*a*c5 - 2*b*c5 + c6)|c*(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)*(a6 + 2*a5*b - a4*b2 - 4*a3*b3 - a2*b4 + 2*a*b5 + b6 - 2*a5*c + 2*a4*b*c + 2*a*b4*c - 2*b5*c - a4*c2 + 2*a2*b2*c2 - b4*c2 + 4*a3*c3 + 4*b3*c3 - a2*c4 - 2*a*b*c4 - b2*c4 - 2*a*c5 - 2*b*c5 + c6)", "get_name"}
+{"X(208)", "a*(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b*(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|c*(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(209)", "a2*(b + c)*(a2*b - b3 + a2*c + a*b*c - c3)|b2*(a + c)*(-a3 + a*b2 + a*b*c + b2*c - c3)|(a + b)*c2*(-a3 - b3 + a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(210)", "a*(a - b - c)*(b + c)|b*(-a + b - c)*(a + c)|(a + b)*c*(-a - b + c)", "get_name"}
+{"X(211)", "a4*(b2 + c2)*(a2*b2 - b4 + a2*c2 + b2*c2 - c4)|b4*(a2 + c2)*(-a4 + a2*b2 + a2*c2 + b2*c2 - c4)|(a2 + b2)*(-a4 + a2*b2 - b4 + a2*c2 + b2*c2)*c4", "get_name"}
+{"X(212)", "a3*(a - b - c)*(a2 - b2 - c2)|b3*(-a + b - c)*(-a2 + b2 - c2)|(-a - b + c)*(-a2 - b2 + c2)*c3", "get_name"}
+{"X(213)", "a3*(b + c)|b3*(a + c)|(a + b)*c3", "get_name"}
+{"X(214)", "a*(2*a - b - c)*(a2 - b2 + b*c - c2)|b*(-a + 2*b - c)*(-a2 + b2 + a*c - c2)|c*(-a - b + 2*c)*(-a2 + a*b - b2 + c2)", "get_name"}
+{"X(215)", "a4*(a - b - c)*Power(a2 - b2 + b*c - c2,2)|b4*(-a + b - c)*Power(-a2 + b2 + a*c - c2,2)|(-a - b + c)*Power(-a2 + a*b - b2 + c2,2)*c4", "get_name"}
+{"X(216)", "a2*(a2 - b2 - c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)|b2*(-a2 + b2 - c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|c2*(-a2 - b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(217)", "a4*(a2 - b2 - c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)|b4*(-a2 + b2 - c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|(-a2 - b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*c4", "get_name"}
+{"X(218)", "a2*(a2 - 2*a*b + b2 - 2*a*c + c2)|b2*(a2 - 2*a*b + b2 - 2*b*c + c2)|c2*(a2 + b2 - 2*a*c - 2*b*c + c2)", "get_name"}
+{"X(219)", "a2*(a - b - c)*(a2 - b2 - c2)|b2*(-a + b - c)*(-a2 + b2 - c2)|(-a - b + c)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(220)", "a2*Power(a - b - c,2)|b2*Power(-a + b - c,2)|Power(-a - b + c,2)*c2", "get_name"}
+{"X(221)", "a2*(a + b - c)*(a - b + c)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b2*(a + b - c)*(-a + b + c)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|(a - b + c)*(-a + b + c)*c2*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(222)", "a2*(a + b - c)*(a - b + c)*(a2 - b2 - c2)|b2*(a + b - c)*(-a + b + c)*(-a2 + b2 - c2)|(a - b + c)*(-a + b + c)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(223)", "a*(a + b - c)*(a - b + c)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b*(a + b - c)*(-a + b + c)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|c*(a - b + c)*(-a + b + c)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(224)", "a*(a2 - b2 - c2)*(a4 - 2*a3*b + 2*a*b3 - b4 - 2*a3*c - 2*a2*b*c + 2*b2*c2 + 2*a*c3 - c4)|b*(-a2 + b2 - c2)*(-a4 + 2*a3*b - 2*a*b3 + b4 - 2*a*b2*c - 2*b3*c + 2*a2*c2 + 2*b*c3 - c4)|c*(-a2 - b2 + c2)*(-a4 + 2*a2*b2 - b4 + 2*a3*c + 2*b3*c - 2*a*b*c2 - 2*a*c3 - 2*b*c3 + c4)", "get_name"}
+{"X(225)", "(a + b - c)*(a - b + c)*(b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(a + b - c)*(a + c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(a + b)*(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(226)", "(a + b - c)*(a - b + c)*(b + c)|(a + b - c)*(a + c)*(-a + b + c)|(a + b)*(a - b + c)*(-a + b + c)", "get_name"}
+{"X(227)", "a*(a + b - c)*(a - b + c)*(b + c)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|b*(a + b - c)*(a + c)*(-a + b + c)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|(a + b)*c*(a - b + c)*(-a + b + c)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(228)", "a3*(b + c)*(a2 - b2 - c2)|b3*(a + c)*(-a2 + b2 - c2)|(a + b)*(-a2 - b2 + c2)*c3", "get_name"}
+{"X(229)", "a*(a + b)*(a + c)*(a4 - b4 + a2*b*c + a*b2*c + a*b*c2 + 2*b2*c2 - c4)|b*(a + b)*(b + c)*(-a4 + b4 + a2*b*c + a*b2*c + 2*a2*c2 + a*b*c2 - c4)|c*(a + c)*(b + c)*(-a4 + 2*a2*b2 - b4 + a2*b*c + a*b2*c + a*b*c2 + c4)", "get_name"}
+{"X(230)", "2*a4 - a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4|a4 - a2*b2 + 2*b4 - 2*a2*c2 - b2*c2 + c4|a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2 + 2*c4", "get_name"}
+{"X(231)", "2*a8 - 4*a6*b2 + 3*a4*b4 - 2*a2*b6 + b8 - 4*a6*c2 + 2*a2*b4*c2 - 4*b6*c2 + 3*a4*c4 + 2*a2*b2*c4 + 6*b4*c4 - 2*a2*c6 - 4*b2*c6 + c8|a8 - 2*a6*b2 + 3*a4*b4 - 4*a2*b6 + 2*b8 - 4*a6*c2 + 2*a4*b2*c2 - 4*b6*c2 + 6*a4*c4 + 2*a2*b2*c4 + 3*b4*c4 - 4*a2*c6 - 2*b2*c6 + c8|a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - 2*a6*c2 + 2*a4*b2*c2 + 2*a2*b4*c2 - 2*b6*c2 + 3*a4*c4 + 3*b4*c4 - 4*a2*c6 - 4*b2*c6 + 2*c8", "get_name"}
+{"X(232)", "a2*(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 - c4)|b2*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + b2*c2 - c4)|c2*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(233)", "(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(2*a4 - 3*a2*b2 + b4 - 3*a2*c2 - 2*b2*c2 + c4)|(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)*(a4 - 3*a2*b2 + 2*b4 - 2*a2*c2 - 3*b2*c2 + c4)|(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(a4 - 2*a2*b2 + b4 - 3*a2*c2 - 3*b2*c2 + 2*c4)", "get_name"}
+{"X(234)", "s2*sb*sc*(Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))|s2*sa*sc*(Sqrt((s*sa)/(b*c)) + Sqrt((s*sc)/(a*b)))|s2*sa*sb*(Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)))", "get_name"}
+{"X(235)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a4*b2 - 2*a2*b4 + b6 + a4*c2 + 4*a2*b2*c2 - b4*c2 - 2*a2*c4 - b2*c4 + c6)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(a6 - 2*a4*b2 + a2*b4 - a4*c2 + 4*a2*b2*c2 + b4*c2 - a2*c4 - 2*b2*c4 + c6)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(a6 - a4*b2 - a2*b4 + b6 - 2*a4*c2 + 4*a2*b2*c2 - 2*b4*c2 + a2*c4 + b2*c4)", "get_name"}
+{"X(236)", "Sqrt((s*sa)/(b*c))*(Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b)))|Sqrt((s*sb)/(a*c))*(-Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b)))|Sqrt((s*sc)/(a*b))*(-Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))", "get_name"}
+{"X(237)", "a4*(a2*b2 - b4 + a2*c2 - c4)|b4*(-a4 + a2*b2 + b2*c2 - c4)|(-a4 - b4 + a2*c2 + b2*c2)*c4", "get_name"}
+{"X(238)", "a*(a2 - b*c)|b*(b2 - a*c)|c*(-(a*b) + c2)", "get_name"}
+{"X(239)", "a2 - b*c|b2 - a*c|-(a*b) + c2", "get_name"}
+{"X(240)", "a*(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 - c4)|b*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + b2*c2 - c4)|c*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(241)", "a*(a + b - c)*(a - b + c)*(a*b - b2 + a*c - c2)|b*(a + b - c)*(-a + b + c)*(-a2 + a*b + b*c - c2)|c*(a - b + c)*(-a + b + c)*(-a2 - b2 + a*c + b*c)", "get_name"}
+{"X(242)", "(a2 - b*c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(b2 - a*c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(-(a*b) + c2)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(243)", "(a - b - c)*(a2 + b2 - c2)*(a2 - b2 + c2)*(a4 - a2*b2 + a2*b*c - b3*c - a2*c2 + 2*b2*c2 - b*c3)|(-a + b - c)*(a2 + b2 - c2)*(-a2 + b2 + c2)*(-(a2*b2) + b4 - a3*c + a*b2*c + 2*a2*c2 - b2*c2 - a*c3)|(-a - b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-(a3*b) + 2*a2*b2 - a*b3 - a2*c2 + a*b*c2 - b2*c2 + c4)", "get_name"}
+{"X(244)", "a*Power(b - c,2)|b*Power(-a + c,2)|Power(a - b,2)*c", "get_name"}
+{"X(245)", "a*Power(b - c,2)*(b + c)*(a7 - 2*a5*b2 + a4*b3 + a3*b4 - 2*a2*b5 + b7 - a5*b*c + a4*b2*c + a3*b3*c - 2*a2*b4*c + b6*c - 2*a5*c2 + a4*b*c2 + 3*a3*b2*c2 - a*b4*c2 + a4*c3 + a3*b*c3 - a*b3*c3 + a3*c4 - 2*a2*b*c4 - a*b2*c4 - 2*a2*c5 + b*c6 + c7)|b*Power(-a + c,2)*(a + c)*(a7 - 2*a5*b2 + a4*b3 + a3*b4 - 2*a2*b5 + b7 + a6*c - 2*a4*b2*c + a3*b3*c + a2*b4*c - a*b5*c - a4*b*c2 + 3*a2*b3*c2 + a*b4*c2 - 2*b5*c2 - a3*b*c3 + a*b3*c3 + b4*c3 - a2*b*c4 - 2*a*b2*c4 + b3*c4 - 2*b2*c5 + a*c6 + c7)|Power(a - b,2)*(a + b)*c*(a7 + a6*b + a*b6 + b7 - a4*b2*c - a3*b3*c - a2*b4*c - 2*a5*c2 - 2*a4*b*c2 - 2*a*b4*c2 - 2*b5*c2 + a4*c3 + a3*b*c3 + 3*a2*b2*c3 + a*b3*c3 + b4*c3 + a3*c4 + a2*b*c4 + a*b2*c4 + b3*c4 - 2*a2*c5 - a*b*c5 - 2*b2*c5 + c7)", "get_name"}
+{"X(246)", "a2*Power(b - c,2)*Power(b + c,2)*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 - 4*a6*c2 + 7*a4*b2*c2 - 5*a2*b4*c2 + 2*b6*c2 + 6*a4*c4 - 5*a2*b2*c4 - 4*a2*c6 + 2*b2*c6 + c8)|b2*Power(-a + c,2)*Power(a + c,2)*(a8 - 4*a6*b2 + 6*a4*b4 - 4*a2*b6 + b8 + 2*a6*c2 - 5*a4*b2*c2 + 7*a2*b4*c2 - 4*b6*c2 - 5*a2*b2*c4 + 6*b4*c4 + 2*a2*c6 - 4*b2*c6 + c8)|Power(a - b,2)*Power(a + b,2)*c2*(a8 + 2*a6*b2 + 2*a2*b6 + b8 - 4*a6*c2 - 5*a4*b2*c2 - 5*a2*b4*c2 - 4*b6*c2 + 6*a4*c4 + 7*a2*b2*c4 + 6*b4*c4 - 4*a2*c6 - 4*b2*c6 + c8)", "get_name"}
+{"X(247)", "Power(b - c,2)*Power(b + c,2)*(Power(a,10) + Power(b,10) - 4*a8*b2 + 5*a6*b4 - a4*b6 - 2*a2*b8 + Power(c,10) - 4*a8*c2 + 7*a6*b2*c2 - 6*a4*b4*c2 + 5*a2*b6*c2 - 2*b8*c2 + 5*a6*c4 - 6*a4*b2*c4 - 2*a2*b4*c4 + b6*c4 - a4*c6 + 5*a2*b2*c6 + b4*c6 - 2*a2*c8 - 2*b2*c8)|Power(-a + c,2)*Power(a + c,2)*(Power(a,10) + Power(b,10) - 2*a8*b2 - a6*b4 + 5*a4*b6 - 4*a2*b8 + Power(c,10) - 2*a8*c2 + 5*a6*b2*c2 - 6*a4*b4*c2 + 7*a2*b6*c2 - 4*b8*c2 + a6*c4 - 2*a4*b2*c4 - 6*a2*b4*c4 + 5*b6*c4 + a4*c6 + 5*a2*b2*c6 - b4*c6 - 2*a2*c8 - 2*b2*c8)|Power(a - b,2)*Power(a + b,2)*(Power(a,10) + Power(b,10) - 2*a8*b2 + a6*b4 + a4*b6 - 2*a2*b8 + Power(c,10) - 2*a8*c2 + 5*a6*b2*c2 - 2*a4*b4*c2 + 5*a2*b6*c2 - 2*b8*c2 - a6*c4 - 6*a4*b2*c4 - 6*a2*b4*c4 - b6*c4 + 5*a4*c6 + 7*a2*b2*c6 + 5*b4*c6 - 4*a2*c8 - 4*b2*c8)", "get_name"}
+{"X(248)", "a2*(a2 - b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - b2*c2 + c4)|b2*(-a2 + b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|c2*(-a2 - b2 + c2)*(-(a2*b2) + b4 - a2*c2 + c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(249)", "a2*Power(a - b,2)*Power(a + b,2)*Power(a - c,2)*Power(a + c,2)|Power(-a + b,2)*Power(a + b,2)*b2*Power(b - c,2)*Power(b + c,2)|Power(-a + c,2)*Power(a + c,2)*Power(-b + c,2)*Power(b + c,2)*c2", "get_name"}
+{"X(250)", "a2*Power(a - b,2)*Power(a + b,2)*Power(a - c,2)*Power(a + c,2)*(a2 + b2 - c2)*(a2 - b2 + c2)|Power(-a + b,2)*Power(a + b,2)*b2*Power(b - c,2)*Power(b + c,2)*(a2 + b2 - c2)*(-a2 + b2 + c2)|Power(-a + c,2)*Power(a + c,2)*Power(-b + c,2)*Power(b + c,2)*c2*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(251)", "a2*(a2 + b2)*(a2 + c2)|b2*(a2 + b2)*(b2 + c2)|c2*(a2 + c2)*(b2 + c2)", "get_name"}
+{"X(252)", "(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 + b4 - 2*a2*c2 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)|(a4 - 2*a2*b2 + b4 - a2*c2 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(253)", "(a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4)*(a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4)|(a4 - 2*a2*b2 + b4 + 2*a2*c2 + 2*b2*c2 - 3*c4)*(-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4)|(-3*a4 + 2*a2*b2 + b4 + 2*a2*c2 - 2*b2*c2 + c4)*(a4 + 2*a2*b2 - 3*b4 - 2*a2*c2 + 2*b2*c2 + c4)", "get_name"}
+{"X(254)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a6 - a4*b2 - a2*b4 + b6 - 3*a4*c2 + 2*a2*b2*c2 - 3*b4*c2 + 3*a2*c4 + 3*b2*c4 - c6)*(a6 - 3*a4*b2 + 3*a2*b4 - b6 - a4*c2 + 2*a2*b2*c2 + 3*b4*c2 - a2*c4 - 3*b2*c4 + c6)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(a6 - a4*b2 - a2*b4 + b6 - 3*a4*c2 + 2*a2*b2*c2 - 3*b4*c2 + 3*a2*c4 + 3*b2*c4 - c6)*(-a6 + 3*a4*b2 - 3*a2*b4 + b6 + 3*a4*c2 + 2*a2*b2*c2 - b4*c2 - 3*a2*c4 - b2*c4 + c6)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(a6 - 3*a4*b2 + 3*a2*b4 - b6 - a4*c2 + 2*a2*b2*c2 + 3*b4*c2 - a2*c4 - 3*b2*c4 + c6)*(-a6 + 3*a4*b2 - 3*a2*b4 + b6 + 3*a4*c2 + 2*a2*b2*c2 - b4*c2 - 3*a2*c4 - b2*c4 + c6)", "get_name"}
+{"X(255)", "a3*Power(a2 - b2 - c2,2)|b3*Power(-a2 + b2 - c2,2)|Power(-a2 - b2 + c2,2)*c3", "get_name"}
+{"X(256)", "a*(b2 + a*c)*(a*b + c2)|b*(a2 + b*c)*(a*b + c2)|c*(b2 + a*c)*(a2 + b*c)", "get_name"}
+{"X(257)", "(b2 + a*c)*(a*b + c2)|(a2 + b*c)*(a*b + c2)|(b2 + a*c)*(a2 + b*c)", "get_name"}
+{"X(258)", "a/(Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b)))|b/(-Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b)))|c/(-Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))", "get_name"}
+{"X(259)", "a2*Sqrt((b*c)/(sb*sc))|b2*Sqrt((a*c)/(sa*sc))|c2*Sqrt((a*b)/(sa*sb))", "get_name"}
+{"X(260)", "(a2*Sqrt((b*c)/(sb*sc)))/(Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b)))|(b2*Sqrt((a*c)/(sa*sc)))/(Sqrt((s*sa)/(b*c)) + Sqrt((s*sc)/(a*b)))|(c2*Sqrt((a*b)/(sa*sb)))/(Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)))", "get_name"}
+{"X(261)", "Power(a + b,2)*(a - b - c)*Power(a + c,2)|Power(a + b,2)*(-a + b - c)*Power(b + c,2)|Power(a + c,2)*(-a - b + c)*Power(b + c,2)", "get_name"}
+{"X(262)", "(a2*b2 - b4 + 2*a2*c2 + b2*c2)*(2*a2*b2 + a2*c2 + b2*c2 - c4)|(-a4 + a2*b2 + a2*c2 + 2*b2*c2)*(2*a2*b2 + a2*c2 + b2*c2 - c4)|(a2*b2 - b4 + 2*a2*c2 + b2*c2)*(-a4 + a2*b2 + a2*c2 + 2*b2*c2)", "get_name"}
+{"X(263)", "a2*(a2*b2 - b4 + 2*a2*c2 + b2*c2)*(2*a2*b2 + a2*c2 + b2*c2 - c4)|b2*(-a4 + a2*b2 + a2*c2 + 2*b2*c2)*(2*a2*b2 + a2*c2 + b2*c2 - c4)|c2*(a2*b2 - b4 + 2*a2*c2 + b2*c2)*(-a4 + a2*b2 + a2*c2 + 2*b2*c2)", "get_name"}
+{"X(264)", "b2*(-a2 + b2 - c2)*(a2 + b2 - c2)*c2|a2*c2*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a2*b2*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(265)", "(a2 - b2 - c2)*(a2 - a*b + b2 - c2)*(a2 + a*b + b2 - c2)*(a2 - b2 - a*c + c2)*(a2 - b2 + a*c + c2)|(-a2 + b2 - c2)*(a2 - a*b + b2 - c2)*(a2 + a*b + b2 - c2)*(-a2 + b2 - b*c + c2)*(-a2 + b2 + b*c + c2)|(-a2 - b2 + c2)*(a2 - b2 - a*c + c2)*(a2 - b2 + a*c + c2)*(-a2 + b2 - b*c + c2)*(-a2 + b2 + b*c + c2)", "get_name"}
+{"X(266)", "a*Sqrt((sb*sc)/(b*c))|b*Sqrt((sa*sc)/(a*c))|c*Sqrt((sa*sb)/(a*b))", "get_name"}
+{"X(267)", "a*(a3 + a2*b + a*b2 + b3 + a2*c + a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 + a2*c + a*b*c - b2*c + a*c2 + b*c2 + c3)|b*(a3 + a2*b + a*b2 + b3 + a2*c + a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + a*b*c + b2*c + a*c2 + b*c2 + c3)|c*(a3 + a2*b - a*b2 - b3 + a2*c + a*b*c - b2*c + a*c2 + b*c2 + c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + a*b*c + b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(268)", "a2*(a - b - c)*(a2 - b2 - c2)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|b2*(-a + b - c)*(-a2 + b2 - c2)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|(-a - b + c)*c2*(-a2 - b2 + c2)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(269)", "a*Power(a + b - c,2)*Power(a - b + c,2)|b*Power(a + b - c,2)*Power(-a + b + c,2)|c*Power(a - b + c,2)*Power(-a + b + c,2)", "get_name"}
+{"X(270)", "a*Power(a + b,2)*(a - b - c)*Power(a + c,2)*(a2 + b2 - c2)*(a2 - b2 + c2)|b*Power(a + b,2)*(-a + b - c)*Power(b + c,2)*(a2 + b2 - c2)*(-a2 + b2 + c2)|c*Power(a + c,2)*(-a - b + c)*Power(b + c,2)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(271)", "a*(a - b - c)*(a2 - b2 - c2)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|b*(-a + b - c)*(-a2 + b2 - c2)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|c*(-a - b + c)*(-a2 - b2 + c2)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(272)", "(a + b)*(a + c)*(a3 + b3 - a*b*c - a*c2 - b*c2)*(a3 - a*b2 - a*b*c - b2*c + c3)|(a + b)*(b + c)*(a3 + b3 - a*b*c - a*c2 - b*c2)*(-(a2*b) + b3 - a2*c - a*b*c + c3)|(a + c)*(b + c)*(-(a2*b) + b3 - a2*c - a*b*c + c3)*(a3 - a*b2 - a*b*c - b2*c + c3)", "get_name"}
+{"X(273)", "b*(-a + b - c)*(a + b - c)*c*(-a2 + b2 - c2)*(a2 + b2 - c2)|a*c*(-a - b + c)*(-a + b + c)*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a*b*(a - b - c)*(a - b + c)*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(274)", "b*(a + b)*c*(a + c)|a*(a + b)*c*(b + c)|a*b*(a + c)*(b + c)", "get_name"}
+{"X(275)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(276)", "b2*(-a2 + b2 - c2)*(a2 + b2 - c2)*c2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|a2*c2*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|a2*b2*(a2 - b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(277)", "(a2 - 2*a*b + b2 - 2*b*c + c2)*(a2 + b2 - 2*a*c - 2*b*c + c2)|(a2 - 2*a*b + b2 - 2*a*c + c2)*(a2 + b2 - 2*a*c - 2*b*c + c2)|(a2 - 2*a*b + b2 - 2*a*c + c2)*(a2 - 2*a*b + b2 - 2*b*c + c2)", "get_name"}
+{"X(278)", "(a + b - c)*(a - b + c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(a + b - c)*(-a + b + c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(a - b + c)*(-a + b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(279)", "Power(a + b - c,2)*Power(a - b + c,2)|Power(a + b - c,2)*Power(-a + b + c,2)|Power(a - b + c,2)*Power(-a + b + c,2)", "get_name"}
+{"X(280)", "(a - b - c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|(-a + b - c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|(-a - b + c)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(281)", "(a - b - c)*(a2 + b2 - c2)*(a2 - b2 + c2)|(-a + b - c)*(a2 + b2 - c2)*(-a2 + b2 + c2)|(-a - b + c)*(a2 - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(282)", "a*(a - b - c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|b*(-a + b - c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|c*(-a - b + c)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(283)", "a2*(a + b)*(a - b - c)*(a + c)*(a2 - b2 - c2)|(a + b)*b2*(-a + b - c)*(b + c)*(-a2 + b2 - c2)|(a + c)*(-a - b + c)*(b + c)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(284)", "a2*(a + b)*(a - b - c)*(a + c)|(a + b)*b2*(-a + b - c)*(b + c)|(a + c)*(-a - b + c)*(b + c)*c2", "get_name"}
+{"X(285)", "a*(a + b)*(a - b - c)*(a + c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|b*(a + b)*(-a + b - c)*(b + c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|c*(a + c)*(-a - b + c)*(b + c)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(286)", "b*(a + b)*c*(a + c)*(-a2 + b2 - c2)*(a2 + b2 - c2)|a*(a + b)*c*(b + c)*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a*b*(a + c)*(b + c)*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(287)", "(a2 - b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - b2*c2 + c4)|(-a2 + b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|(-a2 - b2 + c2)*(-(a2*b2) + b4 - a2*c2 + c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(288)", "a2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(a4 - 3*a2*b2 + 2*b4 - 2*a2*c2 - 3*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 3*a2*c2 - 3*b2*c2 + 2*c4)|b2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)*(2*a4 - 3*a2*b2 + b4 - 3*a2*c2 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - 2*a2*b2 + b4 - 3*a2*c2 - 3*b2*c2 + 2*c4)|c2*(a4 - 3*a2*b2 + 2*b4 - 2*a2*c2 - 3*b2*c2 + c4)*(2*a4 - 3*a2*b2 + b4 - 3*a2*c2 - 2*b2*c2 + c4)*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)", "get_name"}
+{"X(289)", "a2/(Sqrt((s*sa)/(b*c))*(Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b))))|b2/(Sqrt((s*sb)/(a*c))*(-Sqrt((s*sa)/(b*c)) + Sqrt((s*sb)/(a*c)) - Sqrt((s*sc)/(a*b))))|c2/(Sqrt((s*sc)/(a*b))*(-Sqrt((s*sa)/(b*c)) - Sqrt((s*sb)/(a*c)) + Sqrt((s*sc)/(a*b))))", "get_name"}
+{"X(290)", "b2*c2*(a4 + b4 - a2*c2 - b2*c2)*(-a4 + a2*b2 + b2*c2 - c4)|a2*c2*(-a4 - b4 + a2*c2 + b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|a2*b2*(a2*b2 - b4 + a2*c2 - c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(291)", "a*(-b2 + a*c)*(a*b - c2)|b*(-a2 + b*c)*(a*b - c2)|c*(-b2 + a*c)*(-a2 + b*c)", "get_name"}
+{"X(292)", "a2*(-b2 + a*c)*(a*b - c2)|b2*(-a2 + b*c)*(a*b - c2)|(-b2 + a*c)*(-a2 + b*c)*c2", "get_name"}
+{"X(293)", "a*(a2 - b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(a4 - a2*b2 - b2*c2 + c4)|b*(-a2 + b2 - c2)*(a4 + b4 - a2*c2 - b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|c*(-a2 - b2 + c2)*(-(a2*b2) + b4 - a2*c2 + c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(294)", "a*(a - b - c)*(a2 + b2 - a*c - b*c)*(a2 - a*b - b*c + c2)|b*(-a + b - c)*(a2 + b2 - a*c - b*c)*(-(a*b) + b2 - a*c + c2)|c*(-a - b + c)*(-(a*b) + b2 - a*c + c2)*(a2 - a*b - b*c + c2)", "get_name"}
+{"X(295)", "a2*(-b2 + a*c)*(a*b - c2)*(a2 - b2 - c2)|b2*(-a2 + b*c)*(a*b - c2)*(-a2 + b2 - c2)|(-b2 + a*c)*(-a2 + b*c)*c2*(-a2 - b2 + c2)", "get_name"}
+{"X(296)", "a2*(a + b - c)*(a - b + c)*(a2 - b2 - c2)*(a2*b2 - b4 + a3*c - a*b2*c - 2*a2*c2 + b2*c2 + a*c3)*(a3*b - 2*a2*b2 + a*b3 + a2*c2 - a*b*c2 + b2*c2 - c4)|b2*(a + b - c)*(-a + b + c)*(-a2 + b2 - c2)*(-a4 + a2*b2 - a2*b*c + b3*c + a2*c2 - 2*b2*c2 + b*c3)*(a3*b - 2*a2*b2 + a*b3 + a2*c2 - a*b*c2 + b2*c2 - c4)|(a - b + c)*(-a + b + c)*c2*(-a2 - b2 + c2)*(a2*b2 - b4 + a3*c - a*b2*c - 2*a2*c2 + b2*c2 + a*c3)*(-a4 + a2*b2 - a2*b*c + b3*c + a2*c2 - 2*b2*c2 + b*c3)", "get_name"}
+{"X(297)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a2*b2 - b4 + a2*c2 - c4)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(-a4 + a2*b2 + b2*c2 - c4)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(298)", "(2*a4 - a2*b2 - b4 - 4*a2*c2 - b2*c2 + 2*c4 - 2*b2*S*sqrt3)*(2*a4 - 4*a2*b2 + 2*b4 - a2*c2 - b2*c2 - c4 - 2*c2*S*sqrt3)|(-a4 - a2*b2 + 2*b4 - a2*c2 - 4*b2*c2 + 2*c4 - 2*a2*S*sqrt3)*(2*a4 - 4*a2*b2 + 2*b4 - a2*c2 - b2*c2 - c4 - 2*c2*S*sqrt3)|(-a4 - a2*b2 + 2*b4 - a2*c2 - 4*b2*c2 + 2*c4 - 2*a2*S*sqrt3)*(2*a4 - a2*b2 - b4 - 4*a2*c2 - b2*c2 + 2*c4 - 2*b2*S*sqrt3)", "get_name"}
+{"X(299)", "(2*a4 - a2*b2 - b4 - 4*a2*c2 - b2*c2 + 2*c4 + 2*b2*S*sqrt3)*(2*a4 - 4*a2*b2 + 2*b4 - a2*c2 - b2*c2 - c4 + 2*c2*S*sqrt3)|(-a4 - a2*b2 + 2*b4 - a2*c2 - 4*b2*c2 + 2*c4 + 2*a2*S*sqrt3)*(2*a4 - 4*a2*b2 + 2*b4 - a2*c2 - b2*c2 - c4 + 2*c2*S*sqrt3)|(-a4 - a2*b2 + 2*b4 - a2*c2 - 4*b2*c2 + 2*c4 + 2*a2*S*sqrt3)*(2*a4 - a2*b2 - b4 - 4*a2*c2 - b2*c2 + 2*c4 + 2*b2*S*sqrt3)", "get_name"}
+{"X(300)", "b2*c2*(-2*S + (-a2 + b2 - c2)*sqrt3)*(-2*S + (-a2 - b2 + c2)*sqrt3)|a2*c2*(-2*S + (a2 - b2 - c2)*sqrt3)*(-2*S + (-a2 - b2 + c2)*sqrt3)|a2*b2*(-2*S + (a2 - b2 - c2)*sqrt3)*(-2*S + (-a2 + b2 - c2)*sqrt3)", "get_name"}
+{"X(301)", "b2*c2*(2*S + (-a2 + b2 - c2)*sqrt3)*(2*S + (-a2 - b2 + c2)*sqrt3)|a2*c2*(2*S + (a2 - b2 - c2)*sqrt3)*(2*S + (-a2 - b2 + c2)*sqrt3)|a2*b2*(2*S + (a2 - b2 - c2)*sqrt3)*(2*S + (-a2 + b2 - c2)*sqrt3)", "get_name"}
+{"X(302)", "-a2 + b2 + c2 + 2*S*sqrt3|a2 - b2 + c2 + 2*S*sqrt3|a2 + b2 - c2 + 2*S*sqrt3", "get_name"}
+{"X(303)", "-a2 + b2 + c2 - 2*S*sqrt3|a2 - b2 + c2 - 2*S*sqrt3|a2 + b2 - c2 - 2*S*sqrt3", "get_name"}
+{"X(304)", "b*c*(-a2 + b2 + c2)|a*c*(a2 - b2 + c2)|a*b*(a2 + b2 - c2)", "get_name"}
+{"X(305)", "b2*c2*(-a2 + b2 + c2)|a2*c2*(a2 - b2 + c2)|a2*b2*(a2 + b2 - c2)", "get_name"}
+{"X(306)", "(b + c)*(-a2 + b2 + c2)|(a + c)*(a2 - b2 + c2)|(a + b)*(a2 + b2 - c2)", "get_name"}
+{"X(307)", "(a + b - c)*(a - b + c)*(b + c)*(a2 - b2 - c2)|(a + b - c)*(a + c)*(-a + b + c)*(-a2 + b2 - c2)|(a + b)*(a - b + c)*(-a + b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(308)", "b2*(a2 + b2)*c2*(a2 + c2)|a2*(a2 + b2)*c2*(b2 + c2)|a2*b2*(a2 + c2)*(b2 + c2)", "get_name"}
+{"X(309)", "b*c*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|a*c*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)|a*b*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)", "get_name"}
+{"X(310)", "(a + b)*b2*(a + c)*c2|a2*(a + b)*(b + c)*c2|a2*b2*(a + c)*(b + c)", "get_name"}
+{"X(311)", "b2*c2*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|a2*c2*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|a2*b2*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)", "get_name"}
+{"X(312)", "b*c*(-a + b + c)|a*c*(a - b + c)|a*b*(a + b - c)", "get_name"}
+{"X(313)", "b2*(b + c)*c2|a2*(a + c)*c2|a2*(a + b)*b2", "get_name"}
+{"X(314)", "b*(a + b)*c*(a + c)*(-a + b + c)|a*(a + b)*c*(a - b + c)*(b + c)|a*b*(a + b - c)*(a + c)*(b + c)", "get_name"}
+{"X(315)", "-a4 + b4 + c4|a4 - b4 + c4|a4 + b4 - c4", "get_name"}
+{"X(316)", "-a4 + b4 - b2*c2 + c4|a4 - b4 - a2*c2 + c4|a4 - a2*b2 + b4 - c4", "get_name"}
+{"X(317)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*a2*c2 + c4)|(a2 + b2 - c2)*(-a2 + b2 + c2)*(a4 - 2*a2*b2 + b4 - 2*b2*c2 + c4)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 + b4 - 2*a2*c2 - 2*b2*c2 + c4)", "get_name"}
+{"X(318)", "b*c*(-a + b + c)*(-a2 + b2 - c2)*(a2 + b2 - c2)|a*c*(a - b + c)*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a*b*(a + b - c)*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(319)", "-a2 + b2 + b*c + c2|a2 - b2 + a*c + c2|a2 + a*b + b2 - c2", "get_name"}
+{"X(320)", "-a2 + b2 - b*c + c2|a2 - b2 - a*c + c2|a2 - a*b + b2 - c2", "get_name"}
+{"X(321)", "b*c*(b + c)|a*c*(a + c)|a*b*(a + b)", "get_name"}
+{"X(322)", "b*c*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|a*c*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|a*b*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)", "get_name"}
+{"X(323)", "a2*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)|b2*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)|c2*(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)", "get_name"}
+{"X(324)", "b2*(-a2 + b2 - c2)*(a2 + b2 - c2)*c2*(-(a2*b2) + b4 - a2*c2 - 2*b2*c2 + c4)|a2*c2*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a4 - a2*b2 - 2*a2*c2 - b2*c2 + c4)|a2*b2*(a2 - b2 - c2)*(a2 - b2 + c2)*(a4 - 2*a2*b2 + b4 - a2*c2 - b2*c2)", "get_name"}
+{"X(325)", "-(a2*b2) + b4 - a2*c2 + c4|a4 - a2*b2 - b2*c2 + c4|a4 + b4 - a2*c2 - b2*c2", "get_name"}
+{"X(326)", "a*Power(a2 - b2 - c2,2)|b*Power(-a2 + b2 - c2,2)|c*Power(-a2 - b2 + c2,2)", "get_name"}
+{"X(327)", "b2*c2*(-(a2*b2) + b4 - 2*a2*c2 - b2*c2)*(2*a2*b2 + a2*c2 + b2*c2 - c4)|a2*c2*(-a4 + a2*b2 + a2*c2 + 2*b2*c2)*(-2*a2*b2 - a2*c2 - b2*c2 + c4)|a2*b2*(a4 - a2*b2 - a2*c2 - 2*b2*c2)*(a2*b2 - b4 + 2*a2*c2 + b2*c2)", "get_name"}
+{"X(328)", "b2*(a2 - a*b + b2 - c2)*(a2 + a*b + b2 - c2)*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)*c2*(-a2 + b2 + c2)|a2*c2*(a2 - b2 + c2)*(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*(-a2 + b2 - b*c + c2)*(-a2 + b2 + b*c + c2)|a2*b2*(a2 + b2 - c2)*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)*(a2 - b2 - a*c + c2)*(a2 - b2 + a*c + c2)", "get_name"}
+{"X(329)", "a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3|-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3|-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3", "get_name"}
+{"X(330)", "(a*b - a*c - b*c)*(a*b - a*c + b*c)|(-(a*b) - a*c + b*c)*(-(a*b) + a*c + b*c)|(-(a*b) + a*c - b*c)*(a*b + a*c - b*c)", "get_name"}
+{"X(331)", "b2*(-a + b - c)*(a + b - c)*(-a2 + b2 - c2)*(a2 + b2 - c2)*c2|a2*(-a - b + c)*(-a + b + c)*c2*(-a2 - b2 + c2)*(-a2 + b2 + c2)|a2*b2*(a - b - c)*(a - b + c)*(a2 - b2 - c2)*(a2 - b2 + c2)", "get_name"}
+{"X(332)", "(a + b)*(a - b - c)*(a + c)*(a2 - b2 - c2)|(a + b)*(-a + b - c)*(b + c)*(-a2 + b2 - c2)|(a + c)*(-a - b + c)*(b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(333)", "(a + b)*(a - b - c)*(a + c)|(a + b)*(-a + b - c)*(b + c)|(a + c)*(-a - b + c)*(b + c)", "get_name"}
+{"X(334)", "b*c*(b2 - a*c)*(a*b - c2)|a*c*(-a2 + b*c)*(-(a*b) + c2)|a*b*(-b2 + a*c)*(a2 - b*c)", "get_name"}
+{"X(335)", "(b2 - a*c)*(a*b - c2)|(-a2 + b*c)*(-(a*b) + c2)|(-b2 + a*c)*(a2 - b*c)", "get_name"}
+{"X(336)", "b*c*(-a2 + b2 + c2)*(a4 + b4 - a2*c2 - b2*c2)*(-a4 + a2*b2 + b2*c2 - c4)|a*c*(a2 - b2 + c2)*(-a4 - b4 + a2*c2 + b2*c2)*(-(a2*b2) + b4 - a2*c2 + c4)|a*b*(a2 + b2 - c2)*(a2*b2 - b4 + a2*c2 - c4)*(a4 - a2*b2 - b2*c2 + c4)", "get_name"}
+{"X(337)", "(b2 - a*c)*(a*b - c2)*(-a2 + b2 + c2)|(-a2 + b*c)*(-(a*b) + c2)*(a2 - b2 + c2)|(-b2 + a*c)*(a2 - b*c)*(a2 + b2 - c2)", "get_name"}
+{"X(338)", "b2*Power(b - c,2)*Power(b + c,2)*c2|a2*Power(-a + c,2)*Power(a + c,2)*c2|a2*Power(a - b,2)*Power(a + b,2)*b2", "get_name"}
+{"X(339)", "b2*Power(b - c,2)*Power(b + c,2)*c2*(-a2 + b2 + c2)|a2*Power(-a + c,2)*Power(a + c,2)*c2*(a2 - b2 + c2)|a2*Power(a - b,2)*Power(a + b,2)*b2*(a2 + b2 - c2)", "get_name"}
+{"X(340)", "(a2 + b2 - c2)*(a2 - b2 - b*c - c2)*(a2 - b2 + b*c - c2)*(a2 - b2 + c2)|(a2 + b2 - c2)*(-a2 + b2 - a*c - c2)*(-a2 + b2 + a*c - c2)*(-a2 + b2 + c2)|(a2 - b2 + c2)*(-a2 - a*b - b2 + c2)*(-a2 + a*b - b2 + c2)*(-a2 + b2 + c2)", "get_name"}
+{"X(341)", "b*c*Power(-a + b + c,2)|a*c*Power(a - b + c,2)|a*b*Power(a + b - c,2)", "get_name"}
+{"X(342)", "b*(-a + b - c)*(a + b - c)*c*(-a2 + b2 - c2)*(a2 + b2 - c2)*(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|a*c*(-a - b + c)*(-a + b + c)*(-a2 - b2 + c2)*(-a2 + b2 + c2)*(a3 + a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c - a*c2 + b*c2 + c3)|a*b*(a - b - c)*(a - b + c)*(a2 - b2 - c2)*(a2 - b2 + c2)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)", "get_name"}
+{"X(343)", "(a2 - b2 - c2)*(a2*b2 - b4 + a2*c2 + 2*b2*c2 - c4)|(-a2 + b2 - c2)*(-a4 + a2*b2 + 2*a2*c2 + b2*c2 - c4)|(-a2 - b2 + c2)*(-a4 + 2*a2*b2 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(344)", "a2 - 2*a*b + b2 - 2*a*c + c2|a2 - 2*a*b + b2 - 2*b*c + c2|a2 + b2 - 2*a*c - 2*b*c + c2", "get_name"}
+{"X(345)", "(a - b - c)*(a2 - b2 - c2)|(-a + b - c)*(-a2 + b2 - c2)|(-a - b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(346)", "Power(a - b - c,2)|Power(-a + b - c,2)|Power(-a - b + c,2)", "get_name"}
+{"X(347)", "(a + b - c)*(a - b + c)*(a3 + a2*b - a*b2 - b3 + a2*c - 2*a*b*c + b2*c - a*c2 + b*c2 - c3)|(a + b - c)*(-a + b + c)*(-a3 - a2*b + a*b2 + b3 + a2*c - 2*a*b*c + b2*c + a*c2 - b*c2 - c3)|(a - b + c)*(-a + b + c)*(-a3 + a2*b + a*b2 - b3 - a2*c - 2*a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(348)", "(a + b - c)*(a - b + c)*(a2 - b2 - c2)|(a + b - c)*(-a + b + c)*(-a2 + b2 - c2)|(a - b + c)*(-a + b + c)*(-a2 - b2 + c2)", "get_name"}
+{"X(349)", "b2*(-a + b - c)*(a + b - c)*(b + c)*c2|a2*(a + c)*(-a - b + c)*(-a + b + c)*c2|a2*(a + b)*b2*(a - b - c)*(a - b + c)", "get_name"}
+{"X(350)", "b*c*(-a2 + b*c)|a*c*(-b2 + a*c)|a*b*(a*b - c2)", "get_name"}
+{"X(351)", "a2*(b2 - c2)*(-2*a2 + b2 + c2)|b2*(-a2 + c2)*(a2 - 2*b2 + c2)|(a2 - b2)*(a2 + b2 - 2*c2)*c2", "get_name"}
+{"X(352)", "a2*(a4 - 4*a2*b2 + b4 - 4*a2*c2 + 5*b2*c2 + c4)|b2*(a4 - 4*a2*b2 + b4 + 5*a2*c2 - 4*b2*c2 + c4)|c2*(a4 + 5*a2*b2 + b4 - 4*a2*c2 - 4*b2*c2 + c4)", "get_name"}
+{"X(353)", "a2*(4*a4 - 4*a2*b2 - 2*b4 - 4*a2*c2 - b2*c2 - 2*c4)|b2*(-2*a4 - 4*a2*b2 + 4*b4 - a2*c2 - 4*b2*c2 - 2*c4)|c2*(-2*a4 - a2*b2 - 2*b4 - 4*a2*c2 - 4*b2*c2 + 4*c4)", "get_name"}
+{"X(354)", "a*(a*b - b2 + a*c + 2*b*c - c2)|b*(-a2 + a*b + 2*a*c + b*c - c2)|c*(-a2 + 2*a*b - b2 + a*c + b*c)", "get_name"}
+{"X(355)", "a4 - a3*b + a*b3 - b4 - a3*c + 2*a2*b*c - a*b2*c - a*b*c2 + 2*b2*c2 + a*c3 - c4|-a4 + a3*b - a*b3 + b4 - a2*b*c + 2*a*b2*c - b3*c + 2*a2*c2 - a*b*c2 + b*c3 - c4|-a4 + 2*a2*b2 - b4 + a3*c - a2*b*c - a*b2*c + b3*c + 2*a*b*c2 - a*c3 - b*c3 + c4", "get_name"}
+{"X(356)", "(cosThirdA + 2*cosThirdB*cosThirdC)*sinA|(cosThirdB + 2*cosThirdA*cosThirdC)*sinB|(2*cosThirdA*cosThirdB + cosThirdC)*sinC", "get_name"}
+{"X(357)", "secThirdA*sinA|secThirdB*sinB|secThirdC*sinC", "get_name"}
+{"X(358)", "cosThirdA*sinA|cosThirdB*sinB|cosThirdC*sinC", "get_name"}
+{"X(359)", "a2/A|b2/B|c2/C", "get_name"}
+{"X(360)", "A|B|C", "get_name"}
+{"X(361)", "a*(Sqrt((a*b)/(sa*sb)) + Sqrt((a*c)/(sa*sc)) - Sqrt((b*c)/(sb*sc)))|b*(Sqrt((a*b)/(sa*sb)) - Sqrt((a*c)/(sa*sc)) + Sqrt((b*c)/(sb*sc)))|c*(-Sqrt((a*b)/(sa*sb)) + Sqrt((a*c)/(sa*sc)) + Sqrt((b*c)/(sb*sc)))", "get_name"}
+{"X(362)", "a*(-(a*Sqrt((s*sa)/(b*c))) + b*Sqrt((s*sb)/(a*c)) + c*Sqrt((s*sc)/(a*b)))|b*(a*Sqrt((s*sa)/(b*c)) - b*Sqrt((s*sb)/(a*c)) + c*Sqrt((s*sc)/(a*b)))|c*(a*Sqrt((s*sa)/(b*c)) + b*Sqrt((s*sb)/(a*c)) - c*Sqrt((s*sc)/(a*b)))", "get_name"}
+{"X(363)", "a*(c/(1 + Sqrt((sa*sb)/(a*b))) + b/(1 + Sqrt((sa*sc)/(a*c))) - a/(1 + Sqrt((sb*sc)/(b*c))))|b*(c/(1 + Sqrt((sa*sb)/(a*b))) - b/(1 + Sqrt((sa*sc)/(a*c))) + a/(1 + Sqrt((sb*sc)/(b*c))))|c*(-(c/(1 + Sqrt((sa*sb)/(a*b)))) + b/(1 + Sqrt((sa*sc)/(a*c))) + a/(1 + Sqrt((sb*sc)/(b*c))))", "get_name"}
+{"X(364)", "a*(-sqrta + sqrtb + sqrtc)|b*(sqrta - sqrtb + sqrtc)|c*(sqrta + sqrtb - sqrtc)", "get_name"}
+{"X(365)", "Power(a,1.5)|Power(b,1.5)|Power(c,1.5)", "get_name"}
+{"X(366)", "sqrta|sqrtb|sqrtc", "get_name"}
+{"X(367)", "a*(sqrtb + sqrtc)|b*(sqrta + sqrtc)|c*(sqrta + sqrtb)", "get_name"}
+{"X(368)", "S2 - 3*SB*SC|S2 - 3*SA*SC|S2 - 3*SA*SB", "get_name"}
+{"X(369)", "a2 - 2*a*b - b2 - 3*a*c - 2*b*c - 2*c2 + (a + 2*c)*((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333))) - Power((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333)),2)|-2*a2 - 3*a*b + b2 - 2*a*c - 2*b*c - c2 + (2*a + b)*((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333))) - Power((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333)),2)|-a2 - 2*a*b - 2*b2 - 2*a*c - 3*b*c + c2 + (2*b + c)*((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333))) - Power((a + b + c)/2. + (a2 + b2 - 10*(a*b + a*c + b*c) + c2)/(Power(2,0.6666666666666666)*Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)) + Power(216*(a - b)*(b - c)*(-a + c) + Sqrt(46656*Power(a - b,2)*Power(b - c,2)*Power(-a + c,2) - 108*Power(a2 + b2 - 10*(a*b + a*c + b*c) + c2,3)),0.3333333333333333)/(6.*Power(2,0.3333333333333333)),2)", "get_name"}
+{"X(370)", "S2 - 3*SB*SC|S2 - 3*SA*SC|S2 - 3*SA*SB", "get_name"}
+{"X(371)", "a2*(a2 - b2 - c2 - 2*S)|b2*(-a2 + b2 - c2 - 2*S)|c2*(-a2 - b2 + c2 - 2*S)", "get_name"}
+{"X(372)", "a2*(a2 - b2 - c2 + 2*S)|b2*(-a2 + b2 - c2 + 2*S)|c2*(-a2 - b2 + c2 + 2*S)", "get_name"}
+{"X(373)", "a2*(a2*b2 - b4 + a2*c2 + 6*b2*c2 - c4)|b2*(-a4 + a2*b2 + 6*a2*c2 + b2*c2 - c4)|c2*(-a4 + 6*a2*b2 - b4 + a2*c2 + b2*c2)", "get_name"}
+{"X(374)", "a*(a3*b + a2*b2 - a*b3 - b4 + a3*c - 6*a2*b*c + 5*a*b2*c + a2*c2 + 5*a*b*c2 + 2*b2*c2 - a*c3 - c4)|b*(-a4 - a3*b + a2*b2 + a*b3 + 5*a2*b*c - 6*a*b2*c + b3*c + 2*a2*c2 + 5*a*b*c2 + b2*c2 - b*c3 - c4)|c*(-a4 + 2*a2*b2 - b4 - a3*c + 5*a2*b*c + 5*a*b2*c - b3*c + a2*c2 - 6*a*b*c2 + b2*c2 + a*c3 + b*c3)", "get_name"}
+{"X(375)", "a2*(a2*b2 - b4 - a*b2*c + b3*c + a2*c2 - a*b*c2 + 4*b2*c2 + b*c3 - c4)|b2*(-a4 + a2*b2 + a3*c - a2*b*c + 4*a2*c2 - a*b*c2 + b2*c2 + a*c3 - c4)|c2*(-a4 + a3*b + 4*a2*b2 + a*b3 - b4 - a2*b*c - a*b2*c + a2*c2 + b2*c2)", "get_name"}
+{"X(376)", "2*a2*SA - SB*SC|2*b2*SB - SA*SC|-(SA*SB) + 2*c2*SC", "get_name"}
+{"X(377)", "a*b*c*(a + b + c) + 2*SB*SC|a*b*c*(a + b + c) + 2*SA*SC|a*b*c*(a + b + c) + 2*SA*SB", "get_name"}
+{"X(378)", "a2*(4*Power(area,2) + 3*SA2)*SB*SC|b2*SA*(4*Power(area,2) + 3*SB2)*SC|c2*SA*SB*(4*Power(area,2) + 3*SC2)", "get_name"}
+{"X(379)", "a5 - a*b4 + a2*b2*c - b4*c + a2*b*c2 + 2*a*b2*c2 + b3*c2 + b2*c3 - a*c4 - b*c4|-(a4*b) + b5 - a4*c + a2*b2*c + a3*c2 + 2*a2*b*c2 + a*b2*c2 + a2*c3 - a*c4 - b*c4|-(a4*b) + a3*b2 + a2*b3 - a*b4 - a4*c + 2*a2*b2*c - b4*c + a2*b*c2 + a*b2*c2 + c5", "get_name"}
+{"X(380)", "a*(a4 - 4*a*b*c*(b + c) - 4*a2*(b*c + SA) - Power(SB - SC,2))|b*(b4 - 4*a*b*c*(a + c) - 4*b2*(a*c + SB) - Power(-SA + SC,2))|c*(-4*a*b*(a + b)*c + c4 - Power(SA - SB,2) - 4*c2*(a*b + SC))", "get_name"}
+{"X(381)", "a2*SA + 4*SB*SC|b2*SB + 4*SA*SC|4*SA*SB + c2*SC", "get_name"}
+{"X(382)", "a2*SA - 4*SB*SC|b2*SB - 4*SA*SC|-4*SA*SB + c2*SC", "get_name"}
+{"X(383)", "(c2 + SC)*(a2*SA + SB*SC)*(a2*SA + 4*SB*SC) - 2*area*(SA2*SB2 + c2*SA*SC*(3*SB + SC) + SB*SC*(c2*(SB + 3*SC) + SC2))*sqrt3|(a2 + SA)*(b2*SB + SA*SC)*(b2*SB + 4*SA*SC) - 2*area*(a2*SA*SB*(SA + 3*SC) + SA*SC*(SA2 + a2*(3*SA + SC)) + SB2*SC2)*sqrt3|(b2 + SB)*(SA*SB + c2*SC)*(4*SA*SB + c2*SC) - 2*area*(SA*SB*(b2*(SA + 3*SB) + SB2) + b2*SB*(3*SA + SB)*SC + SA2*SC2)*sqrt3", "get_name"}
+{"X(384)", "a4 + b2*c2|b4 + a2*c2|a2*b2 + c4", "get_name"}
+{"X(385)", "a4 - b2*c2|b4 - a2*c2|-(a2*b2) + c4", "get_name"}
+{"X(386)", "a2*((a + b)*(a + c) + 2*SA)|b2*((a + b)*(b + c) + 2*SB)|c2*((a + c)*(b + c) + 2*SC)", "get_name"}
+{"X(387)", "a2*(a + c)*(b + c) + SC2|(a + b)*b2*(a + c) + SA2|(a + b)*(b + c)*c2 + SB2", "get_name"}
+{"X(388)", "(a2 + b2 + 2*b*c + c2)/(a - b - c)|(a2 + b2 + 2*a*c + c2)/(-a + b - c)|(a2 + 2*a*b + b2 + c2)/(-a - b + c)", "get_name"}
+{"X(389)", "a4*b2*c2*SA + 4*a2*Power(area,2)*(-SA2 + SB*SC)|a2*b4*c2*SB + 4*Power(area,2)*b2*(-SB2 + SA*SC)|a2*b2*c4*SC + 4*Power(area,2)*c2*(SA*SB - SC2)", "get_name"}
+{"X(390)", "(a - b - c)*(3*a2 + b2 - 2*b*c + c2)|(-a + b - c)*(a2 + 3*b2 - 2*a*c + c2)|(-a - b + c)*(a2 - 2*a*b + b2 + 3*c2)", "get_name"}
+{"X(391)", "(a - b - c)*(3*a + b + c)|(-a + b - c)*(a + 3*b + c)|(-a - b + c)*(a + b + 3*c)", "get_name"}
+{"X(392)", "a*(a2*b - b3 + a2*c - 4*a*b*c - b2*c - b*c2 - c3)|b*(-a3 + a*b2 - a2*c - 4*a*b*c + b2*c - a*c2 - c3)|c*(-a3 - a2*b - a*b2 - b3 - 4*a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(393)", "SB2*SC2|SA2*SC2|SA2*SB2", "get_name"}
+{"X(394)", "a2*SA2|b2*SB2|c2*SC2", "get_name"}
+{"X(395)", "-4*area + a2*sqrt3|-4*area + b2*sqrt3|-4*area + c2*sqrt3", "get_name"}
+{"X(396)", "4*area + a2*sqrt3|4*area + b2*sqrt3|4*area + c2*sqrt3", "get_name"}
+{"X(397)", "SB*SC + a2*area*sqrt3|SA*SC + area*b2*sqrt3|SA*SB + area*c2*sqrt3", "get_name"}
+{"X(398)", "SB*SC - a2*area*sqrt3|SA*SC - area*b2*sqrt3|SA*SB - area*c2*sqrt3", "get_name"}
+{"X(399)", "a2*(-32*Power(area,2)*SA2 + b2*c2*(5*a2*SA - 4*SB*SC))|b2*(-32*Power(area,2)*SB2 + a2*c2*(5*b2*SB - 4*SA*SC))|c2*(a2*b2*(-4*SA*SB + 5*c2*SC) - 32*Power(area,2)*SC2)", "get_name"}
+{"X(400)", "Power(cscQuarterA,4)*sinA|Power(cscQuarterB,4)*sinB|Power(cscQuarterC,4)*sinC", "get_name"}
+{"X(401)", "a2*SA*SB*SC + SB2*SC2 - SA2*(SB2 + SB*SC + SC2)|b2*SA*SB*SC + SA2*SC2 - SB2*(SA2 + SA*SC + SC2)|SA2*SB2 + c2*SA*SB*SC - (SA2 + SA*SB + SB2)*SC2", "get_name"}
+{"X(402)", "(a2*SA - 2*SB*SC)*(a2*SA*SB*SC - SB2*SC2 + SA2*(SB2 - 3*SB*SC + SC2))|(b2*SB - 2*SA*SC)*(b2*SA*SB*SC - SA2*SC2 + SB2*(SA2 - 3*SA*SC + SC2))|(-2*SA*SB + c2*SC)*(-(SA2*SB2) + c2*SA*SB*SC + (SA2 - 3*SA*SB + SB2)*SC2)", "get_name"}
+{"X(403)", "SB*SC*(SA*Power(SB - SC,2) + a2*(-SA2 + SB*SC))|SA*SC*(SB*Power(-SA + SC,2) + b2*(-SB2 + SA*SC))|SA*SB*(Power(SA - SB,2)*SC + c2*(SA*SB - SC2))", "get_name"}
+{"X(404)", "a*(b*c*(a + b + c) - 2*a*SA)|b*(a*c*(a + b + c) - 2*b*SB)|c*(a*b*(a + b + c) - 2*c*SC)", "get_name"}
+{"X(405)", "a*(b*c*(a + b + c) + a*SA)|b*(a*c*(a + b + c) + b*SB)|c*(a*b*(a + b + c) + c*SC)", "get_name"}
+{"X(406)", "SB*(b3 + c3 + 2*a*(b*c + SA) + c*(SA - SB) + b*(SA - SC))*SC|SA*(a3 + c3 + 2*b*(a*c + SB) + c*(-SA + SB) + a*(SB - SC))*SC|SA*SB*(a3 + b3 + 2*c*(a*b + SC) + b*(-SA + SC) + a*(-SB + SC))", "get_name"}
+{"X(407)", "(b + c)*(a2 + 2*b*c + a*(b + c) - 2*SA)*SB*SC|(a + c)*SA*(b2 + 2*a*c + b*(a + c) - 2*SB)*SC|(a + b)*SA*SB*(2*a*b + (a + b)*c + c2 - 2*SC)", "get_name"}
+{"X(408)", "a3*(b + c)*Power(-a2 + b2 + c2,2)*(-(a4*b) - a3*b2 + a2*b3 + a*b4 - a4*c - a2*b2*c + 2*b4*c - a3*c2 - a2*b*c2 - 2*a*b2*c2 - 2*b3*c2 + a2*c3 - 2*b2*c3 + a*c4 + 2*b*c4)|b3*(a + c)*Power(a2 - b2 + c2,2)*(a4*b + a3*b2 - a2*b3 - a*b4 + 2*a4*c - a2*b2*c - b4*c - 2*a3*c2 - 2*a2*b*c2 - a*b2*c2 - b3*c2 - 2*a2*c3 + b2*c3 + 2*a*c4 + b*c4)|(a + b)*Power(a2 + b2 - c2,2)*c3*(2*a4*b - 2*a3*b2 - 2*a2*b3 + 2*a*b4 + a4*c - 2*a2*b2*c + b4*c + a3*c2 - a2*b*c2 - a*b2*c2 + b3*c2 - a2*c3 - b2*c3 - a*c4 - b*c4)", "get_name"}
+{"X(409)", "a*(a + b)*(a + c)*((a + b - c)*(a - b + c)*Power(b + c,2) + (a + b)*(a + c)*Power(-a + b + c,2))|b*(a + b)*(b + c)*((a + b)*Power(a - b + c,2)*(b + c) + (a + b - c)*Power(a + c,2)*(-a + b + c))|c*(a + c)*(b + c)*(Power(a + b - c,2)*(a + c)*(b + c) + Power(a + b,2)*(a - b + c)*(-a + b + c))", "get_name"}
+{"X(410)", "(a + b)*(a + c)*SB*SC*(a2*(a + b - c)*(a - b + c)*Power(b + c,2)*SA2 + b*(a + b)*c*(a + c)*Power(-a + b + c,2)*SB*SC)|(a + b)*(b + c)*SA*SC*(b2*(a + b - c)*Power(a + c,2)*(-a + b + c)*SB2 + a*(a + b)*c*Power(a - b + c,2)*(b + c)*SA*SC)|(a + c)*(b + c)*SA*SB*(a*b*Power(a + b - c,2)*(a + c)*(b + c)*SA*SB + Power(a + b,2)*(a - b + c)*(-a + b + c)*c2*SC2)", "get_name"}
+{"X(411)", "a*(a4*b*c + a5*(b + c) - b*c*Power(b2 - c2,2) + a*Power(b - c,2)*(b + c)*(b2 + c2) - 2*a3*(b3 + c3) - 4*a2*SA2)|b*(a*b4*c + b5*(a + c) - a*c*Power(-a2 + c2,2) + b*Power(-a + c,2)*(a + c)*(a2 + c2) - 2*b3*(a3 + c3) - 4*b2*SB2)|c*(-(a*b*Power(a2 - b2,2)) + Power(a - b,2)*(a + b)*(a2 + b2)*c - 2*(a3 + b3)*c3 + a*b*c4 + (a + b)*c5 - 4*c2*SC2)", "get_name"}
+{"X(412)", "(-(a5*(b + c)) + b*c*(a4 - Power(b - c,2)*Power(b + c,2)) + 2*a3*(b3 + c3) + a*(-b5 + b4*c + b*c4 - c5) - 4*a2*SA2)*SB*SC|SA*(-(b5*(a + c)) + a*c*(b4 - Power(-a + c,2)*Power(a + c,2)) + 2*b3*(a3 + c3) + b*(-a5 + a4*c + a*c4 - c5) - 4*b2*SB2)*SC|SA*SB*((-a5 + a4*b + a*b4 - b5)*c + 2*(a3 + b3)*c3 + a*b*(-(Power(a - b,2)*Power(a + b,2)) + c4) - (a + b)*c5 - 4*c2*SC2)", "get_name"}
+{"X(413)", "a*(a + b)*Power(a - b - c,3)*(a + c)*(a4 + a2*b*c + a3*(b + c) + a*Power(b - c,2)*(b + c) + Power(b - c,2)*(b2 + b*c + c2))|b*(a + b)*Power(-a + b - c,3)*(b + c)*(b4 + a*b2*c + b3*(a + c) + b*Power(-a + c,2)*(a + c) + Power(-a + c,2)*(a2 + a*c + c2))|c*(a + c)*Power(-a - b + c,3)*(b + c)*(Power(a - b,2)*(a2 + a*b + b2) + Power(a - b,2)*(a + b)*c + a*b*c2 + (a + b)*c3 + c4)", "get_name"}
+{"X(414)", "(a + b)*(a + c)*Power(sa,3)*SB*SC*(b2*Power(a + c,2)*SB2*Power(sc,2) - b*(a + b)*c*(a + c)*sb*SB*sc*SC + Power(a + b,2)*c2*Power(sb,2)*SC2)|(a + b)*(b + c)*SA*Power(sb,3)*SC*(a2*Power(b + c,2)*SA2*Power(sc,2) - a*(a + b)*c*(b + c)*sa*SA*sc*SC + Power(a + b,2)*c2*Power(sa,2)*SC2)|(a + c)*(b + c)*SA*SB*(a2*Power(b + c,2)*SA2*Power(sb,2) - a*b*(a + c)*(b + c)*sa*SA*sb*SB + b2*Power(a + c,2)*Power(sa,2)*SB2)*Power(sc,3)", "get_name"}
+{"X(415)", "(a + b)*(a + c)*(a3 - 2*a2*b + b3 - 2*a2*c + a*b*c + c3)*SB*SC|(a + b)*(b + c)*(a3 - 2*a*b2 + b3 + a*b*c - 2*b2*c + c3)*SA*SC|(a + c)*(b + c)*(a3 + b3 + a*b*c - 2*a*c2 - 2*b*c2 + c3)*SA*SB", "get_name"}
+{"X(416)", "a*(a + b)*(a + c)*(-(a2*Power(b + c,2)*SA2*sb*sc) + b*(a + b)*c*(a + c)*Power(sa,2)*SB*SC)|b*(a + b)*(b + c)*(-(b2*Power(a + c,2)*sa*SB2*sc) + a*(a + b)*c*(b + c)*SA*Power(sb,2)*SC)|c*(a + c)*(b + c)*(a*b*(a + c)*(b + c)*SA*SB*Power(sc,2) - Power(a + b,2)*c2*sa*sb*SC2)", "get_name"}
+{"X(417)", "a4*Power(SA,3)*(a2*SB*SC + SA*(SB2 + SC2))|b4*Power(SB,3)*(b2*SA*SC + SB*(SA2 + SC2))|c4*Power(SC,3)*(c2*SA*SB + (SA2 + SB2)*SC)", "get_name"}
+{"X(418)", "a4*SA2*(a2*SA + 2*SB*SC)|b4*SB2*(b2*SB + 2*SA*SC)|c4*(2*SA*SB + c2*SC)*SC2", "get_name"}
+{"X(419)", "(a4 - b2*c2)*SB*SC|(b4 - a2*c2)*SA*SC|(-(a2*b2) + c4)*SA*SB", "get_name"}
+{"X(420)", "SB*SC*(-(SA*(a2 + 3*SA)) + SB2 + 3*SB*SC + SC2)|SA*SC*(SA2 - SB*(b2 + 3*SB) + 3*SA*SC + SC2)|SA*SB*(SA2 + 3*SA*SB + SB2 - SC*(c2 + 3*SC))", "get_name"}
+{"X(421)", "SB*SC*(a2*SA*(SB2 + SC2) + SB*SC*(SB2 + SC2) - SA2*(SB2 + 4*SB*SC + SC2))|SA*SC*(b2*SB*(SA2 + SC2) + SA*SC*(SA2 + SC2) - SB2*(SA2 + 4*SA*SC + SC2))|SA*SB*(SA*SB*(SA2 + SB2) + c2*(SA2 + SB2)*SC - (SA2 + 4*SA*SB + SB2)*SC2)", "get_name"}
+{"X(422)", "(a + b)*(a + c)*(a3 + a*b*c - b*c*(b + c))*SB*SC|(a + b)*(b + c)*(b3 + a*b*c - a*c*(a + c))*SA*SC|(a + c)*(b + c)*(-(a*b*(a + b)) + a*b*c + c3)*SA*SB", "get_name"}
+{"X(423)", "(a + b)*(a + c)*(a*b + a*c - b*c - 2*SA)*SB*SC|(a + b)*(b + c)*SA*(a*b - a*c + b*c - 2*SB)*SC|(a + c)*(b + c)*SA*SB*(-(a*b) + a*c + b*c - 2*SC)", "get_name"}
+{"X(424)", "(b + c)*(a3*b + a2*b2 - a*b3 - b4 + a3*c + a2*c2 - a*c3 - c4)*SB*SC|(a + c)*(-a4 - a3*b + a2*b2 + a*b3 + b3*c + b2*c2 - b*c3 - c4)*SA*SC|(a + b)*(-a4 - b4 - a3*c - b3*c + a2*c2 + b2*c2 + a*c3 + b*c3)*SA*SB", "get_name"}
+{"X(425)", "(a + b)*(a + c)*(-a6 + a5*b + a4*b2 - a3*b3 + a5*c - a4*b*c - a3*b2*c + b5*c + a4*c2 - a3*b*c2 - 2*a2*b2*c2 + 2*a*b3*c2 - a3*c3 + 2*a*b2*c3 - 2*b3*c3 + b*c5)*SB*SC|(a + b)*(b + c)*(-(a3*b3) + a2*b4 + a*b5 - b6 + a5*c - a2*b3*c - a*b4*c + b5*c + 2*a3*b*c2 - 2*a2*b2*c2 - a*b3*c2 + b4*c2 - 2*a3*c3 + 2*a2*b*c3 - b3*c3 + a*c5)*SA*SC|(a + c)*(b + c)*(a5*b - 2*a3*b3 + a*b5 + 2*a3*b2*c + 2*a2*b3*c - 2*a2*b2*c2 - a3*c3 - a2*b*c3 - a*b2*c3 - b3*c3 + a2*c4 - a*b*c4 + b2*c4 + a*c5 + b*c5 - c6)*SA*SB", "get_name"}
+{"X(426)", "a2*Power(SA,3)*(SB2 + SC2)|b2*Power(SB,3)*(SA2 + SC2)|c2*(SA2 + SB2)*Power(SC,3)", "get_name"}
+{"X(427)", "(a2 + 2*SA)*SB*SC|SA*(b2 + 2*SB)*SC|SA*SB*(c2 + 2*SC)", "get_name"}
+{"X(428)", "(3*a2 + 2*SA)*SB*SC|SA*(3*b2 + 2*SB)*SC|SA*SB*(3*c2 + 2*SC)", "get_name"}
+{"X(429)", "(b + c)*(a*(a + b + c) + 2*SA)*SB*SC|(a + c)*SA*(b*(a + b + c) + 2*SB)*SC|(a + b)*SA*SB*(c*(a + b + c) + 2*SC)", "get_name"}
+{"X(430)", "(b + c)*(2*a + b + c)*SB*SC|(a + c)*(a + 2*b + c)*SA*SC|(a + b)*(a + b + 2*c)*SA*SB", "get_name"}
+{"X(431)", "(a4*b - 2*a2*b3 + b5 + a4*c + 2*a3*b*c + 2*a2*b2*c - b4*c + 2*a2*b*c2 - 2*a2*c3 - b*c4 + c5)/((a + b)*(a + c)*(a2 - b2 - c2))|(a5 - 2*a3*b2 + a*b4 - a4*c + 2*a2*b2*c + 2*a*b3*c + b4*c + 2*a*b2*c2 - 2*b2*c3 - a*c4 + c5)/((a + b)*(b + c)*(-a2 + b2 - c2))|(a5 - a4*b - a*b4 + b5 - 2*a3*c2 + 2*a2*b*c2 + 2*a*b2*c2 - 2*b3*c2 + 2*a*b*c3 + a*c4 + b*c4)/((a + c)*(b + c)*(-a2 - b2 + c2))", "get_name"}
+{"X(432)", "SB*SC*(b2*SB2*Power(b2*(SB2 - SA*SC) - SB*(SA2 + SC2),2) + c2*SC2*Power((-SA2 - SB2)*SC + c2*(-(SA*SB) + SC2),2))|SA*SC*(a2*SA2*Power(a2*(SA2 - SB*SC) + SA*(-SB2 - SC2),2) + c2*SC2*Power(-((SA2 + SB2)*SC) + c2*(-(SA*SB) + SC2),2))|SA*SB*(b2*SB2*Power(b2*(SB2 - SA*SC) + SB*(-SA2 - SC2),2) + a2*SA2*Power(a2*(SA2 - SB*SC) - SA*(SB2 + SC2),2))", "get_name"}
+{"X(433)", "SB*SC*(c2*Power(-((SA2 + SB2)*SC) + c2*(SA*SB - SC2),2) + b2*Power(b2*(-SB2 + SA*SC) - SB*(SA2 + SC2),2))|SA*SC*(c2*Power(-((SA2 + SB2)*SC) + c2*(SA*SB - SC2),2) + a2*Power(a2*(-SA2 + SB*SC) - SA*(SB2 + SC2),2))|SA*SB*(b2*Power(b2*(-SB2 + SA*SC) - SB*(SA2 + SC2),2) + a2*Power(a2*(-SA2 + SB*SC) - SA*(SB2 + SC2),2))", "get_name"}
+{"X(434)", "SB*SC*(c2*Power(4*SA2*SB2 + 9*SA2*SB*SC + 9*SA*SB2*SC - 3*SA*Power(SC,3) - 3*SB*Power(SC,3) + 5*SA2*SC2 + 6*SA*SB*SC2 + 5*SB2*SC2,2) + b2*Power(-3*SA*Power(SB,3) + 5*SA2*SB2 + 9*SA2*SB*SC - 3*Power(SB,3)*SC + 6*SA*SB2*SC + 4*SA2*SC2 + 9*SA*SB*SC2 + 5*SB2*SC2,2))|SA*SC*(a2*Power(-3*Power(SA,3)*SB + 5*SA2*SB2 - 3*Power(SA,3)*SC + 6*SA2*SB*SC + 9*SA*SB2*SC + 5*SA2*SC2 + 9*SA*SB*SC2 + 4*SB2*SC2,2) + c2*Power(4*SA2*SB2 + 9*SA2*SB*SC + 9*SA*SB2*SC - 3*SA*Power(SC,3) - 3*SB*Power(SC,3) + 5*SA2*SC2 + 6*SA*SB*SC2 + 5*SB2*SC2,2))|SA*SB*(a2*Power(-3*Power(SA,3)*SB + 5*SA2*SB2 - 3*Power(SA,3)*SC + 6*SA2*SB*SC + 9*SA*SB2*SC + 5*SA2*SC2 + 9*SA*SB*SC2 + 4*SB2*SC2,2) + b2*Power(-3*SA*Power(SB,3) + 5*SA2*SB2 + 9*SA2*SB*SC - 3*Power(SB,3)*SC + 6*SA*SB2*SC + 4*SA2*SC2 + 9*SA*SB*SC2 + 5*SB2*SC2,2))", "get_name"}
+{"X(435)", "SB*SC*(b2*Power(-(a2*SA2*(5*SB - 4*SC)) + a2*SA*SB*(3*SB - SC) + SB2*(3*SB - 5*SC)*SC,2) + c2*Power(b2*SB*SC*(-SA + 3*SC) - b2*SB2*(-4*SA + 5*SC) + SA*(-5*SA + 3*SC)*SC2,2))|SA*SC*(a2*Power(SA2*(3*SA - 5*SB)*SB + c2*SA*(3*SA - SB)*SC - c2*(5*SA - 4*SB)*SC2,2) + c2*Power(b2*SB*SC*(-SA + 3*SC) - b2*SB2*(-4*SA + 5*SC) + SA*(-5*SA + 3*SC)*SC2,2))|SA*SB*(b2*Power(-(a2*SA2*(5*SB - 4*SC)) + a2*SA*SB*(3*SB - SC) + SB2*(3*SB - 5*SC)*SC,2) + a2*Power(SA2*(3*SA - 5*SB)*SB + c2*SA*(3*SA - SB)*SC - c2*(5*SA - 4*SB)*SC2,2))", "get_name"}
+{"X(436)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(a4*Power(a2 - b2 - c2,2) + b2*(-a2 + b2 - c2)*c2*(-a2 - b2 + c2))|(a2 + b2 - c2)*(-a2 + b2 + c2)*(b4*Power(-a2 + b2 - c2,2) + a2*(a2 - b2 - c2)*c2*(-a2 - b2 + c2))|(a2 - b2 + c2)*(-a2 + b2 + c2)*(a2*b2*(a2 - b2 - c2)*(-a2 + b2 - c2) + Power(-a2 - b2 + c2,2)*c4)", "get_name"}
+{"X(437)", "(a2 + b2 - c2)*(a2 - b2 + c2)*(Power(2*a - b - c,2)*Power(a2 - b2 + b*c - c2,2) + (-a + 2*b - c)*(-a - b + 2*c)*(-a2 + b2 + a*c - c2)*(-a2 + a*b - b2 + c2))|(a2 + b2 - c2)*(-a2 + b2 + c2)*(Power(-a + 2*b - c,2)*Power(-a2 + b2 + a*c - c2,2) + (2*a - b - c)*(-a - b + 2*c)*(a2 - b2 + b*c - c2)*(-a2 + a*b - b2 + c2))|(a2 - b2 + c2)*(-a2 + b2 + c2)*((2*a - b - c)*(-a + 2*b - c)*(-a2 + b2 + a*c - c2)*(a2 - b2 + b*c - c2) + Power(-a - b + 2*c,2)*Power(-a2 + a*b - b2 + c2,2))", "get_name"}
+{"X(438)", "Power(a2 + b2 - c2,2)*Power(a2 - b2 + c2,2)*Power(3*a4 - 2*a2*b2 - b4 - 2*a2*c2 + 2*b2*c2 - c4,2) + (a2 + b2 - c2)*(a2 - b2 + c2)*Power(-a2 + b2 + c2,2)*(-a4 - 2*a2*b2 + 3*b4 + 2*a2*c2 - 2*b2*c2 - c4)*(-a4 + 2*a2*b2 - b4 - 2*a2*c2 - 2*b2*c2 + 3*c4)|Power(a2 + b2 - c2,2)*Power(-a2 + b2 + c2,2)*Power(-a4 - 2*a2*b2 + 3*b4 + 2*a2*c2 - 2*b2*c2 - c4,2) + (a2 + b2 - c2)*Power(a2 - b2 + c2,2)*(-a2 + b2 + c2)*(3*a4 - 2*a2*b2 - b4 - 2*a2*c2 + 2*b2*c2 - c4)*(-a4 + 2*a2*b2 - b4 - 2*a2*c2 - 2*b2*c2 + 3*c4)|Power(a2 + b2 - c2,2)*(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a4 - 2*a2*b2 + 3*b4 + 2*a2*c2 - 2*b2*c2 - c4)*(3*a4 - 2*a2*b2 - b4 - 2*a2*c2 + 2*b2*c2 - c4) + Power(a2 - b2 + c2,2)*Power(-a2 + b2 + c2,2)*Power(-a4 + 2*a2*b2 - b4 - 2*a2*c2 - 2*b2*c2 + 3*c4,2)", "get_name"}
+{"X(439)", "Power(3*a2 - b2 - c2,2)|Power(-a2 + 3*b2 - c2,2)|Power(-a2 - b2 + 3*c2,2)", "get_name"}
+{"X(440)", "(b + c)*(2*a3 + a2*b + b3 + a2*c - b2*c - b*c2 + c3)*SA|(a + c)*(a3 + a*b2 + 2*b3 - a2*c + b2*c - a*c2 + c3)*SB|(a + b)*(a3 - a2*b - a*b2 + b3 + a*c2 + b*c2 + 2*c3)*SC", "get_name"}
+{"X(441)", "SA*(-(a2*SB*SC) + SA*(SB2 + SC2))|SB*(-(b2*SA*SC) + SB*(SA2 + SC2))|SC*(-(c2*SA*SB) + (SA2 + SB2)*SC)", "get_name"}
+{"X(442)", "(b + c)*(a2*b - b3 + a2*c + 2*a*b*c + b2*c + b*c2 - c3)|(a + c)*(-a3 + a*b2 + a2*c + 2*a*b*c + b2*c + a*c2 - c3)|(a + b)*(-a3 + a2*b + a*b2 - b3 + 2*a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(443)", "a*b*c*(a + b + c) + SB*SC|a*b*c*(a + b + c) + SA*SC|a*b*c*(a + b + c) + SA*SB", "get_name"}
+{"X(444)", "a*(a2 + b*c)*(a*(a + b + c) + 2*SA)*SB*SC|b*(b2 + a*c)*SA*(b*(a + b + c) + 2*SB)*SC|c*(a*b + c2)*SA*SB*(c*(a + b + c) + 2*SC)", "get_name"}
+{"X(445)", "(2*a*b*c + a2*(b + c) - Power(b - c,2)*(b + c))*(b*c + 2*SA)*SB*SC|(2*a*b*c + b2*(a + c) - Power(-a + c,2)*(a + c))*SA*(a*c + 2*SB)*SC|(-(Power(a - b,2)*(a + b)) + 2*a*b*c + (a + b)*c2)*SA*SB*(a*b + 2*SC)", "get_name"}
+{"X(446)", "a2*(a2*b2 - b4 + a2*c2 - c4)*(a8*b2 - 2*a6*b4 + a4*b6 + a8*c2 + 2*a2*b6*c2 + b8*c2 - 2*a6*c4 - 4*a2*b4*c4 - b6*c4 + a4*c6 + 2*a2*b2*c6 - b4*c6 + b2*c8)|b2*(-a4 + a2*b2 + b2*c2 - c4)*(a6*b4 - 2*a4*b6 + a2*b8 + a8*c2 + 2*a6*b2*c2 + b8*c2 - a6*c4 - 4*a4*b2*c4 - 2*b6*c4 - a4*c6 + 2*a2*b2*c6 + b4*c6 + a2*c8)|c2*(-a4 - b4 + a2*c2 + b2*c2)*(a8*b2 - a6*b4 - a4*b6 + a2*b8 + 2*a6*b2*c2 - 4*a4*b4*c2 + 2*a2*b6*c2 + a6*c4 + b6*c4 - 2*a4*c6 - 2*b4*c6 + a2*c8 + b2*c8)", "get_name"}
+{"X(447)", "(a + b)*(a + c)*(a4 - a3*b + a*b3 - b4 - a3*c + a2*b*c + a*b2*c - b3*c + a*b*c2 + a*c3 - b*c3 - c4)*SB*SC|(a + b)*(b + c)*(-a4 + a3*b - a*b3 + b4 - a3*c + a2*b*c + a*b2*c - b3*c + a*b*c2 - a*c3 + b*c3 - c4)*SA*SC|(a + c)*(b + c)*(-a4 - a3*b - a*b3 - b4 + a3*c + a2*b*c + a*b2*c + b3*c + a*b*c2 - a*c3 - b*c3 + c4)*SA*SB", "get_name"}
+{"X(448)", "-(b*(a + b)*(a + b - c)*c*(a + c)*(a - b + c)*Power(b + c,2)) + a2*Power(a + b,2)*Power(a + c,2)*Power(-a + b + c,2)|Power(a + b,2)*b2*Power(a - b + c,2)*Power(b + c,2) - a*(a + b)*(a + b - c)*c*Power(a + c,2)*(b + c)*(-a + b + c)|-(a*b*Power(a + b,2)*(a + c)*(a - b + c)*(b + c)*(-a + b + c)) + Power(a + b - c,2)*Power(a + c,2)*Power(b + c,2)*c2", "get_name"}
+{"X(449)", "Power(a - b - c,2)*Power(3*a3 + 3*a2*b + a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3,2) - (-a + b - c)*(-a - b + c)*(a3 + a2*b + 3*a*b2 + 3*b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + b*c2 + c3)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c + 3*a*c2 + 3*b*c2 + 3*c3)|Power(-a + b - c,2)*Power(a3 + a2*b + 3*a*b2 + 3*b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + b*c2 + c3,2) - (a - b - c)*(-a - b + c)*(3*a3 + 3*a2*b + a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c + 3*a*c2 + 3*b*c2 + 3*c3)|-((a - b - c)*(-a + b - c)*(3*a3 + 3*a2*b + a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)*(a3 + a2*b + 3*a*b2 + 3*b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + b*c2 + c3)) + Power(-a - b + c,2)*Power(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c + 3*a*c2 + 3*b*c2 + 3*c3,2)", "get_name"}
+{"X(450)", "-(a4*Power(SA,4)*SB*SC) + b2*c2*Power(SB,3)*Power(SC,3)|-(b4*SA*Power(SB,4)*SC) + a2*c2*Power(SA,3)*Power(SC,3)|a2*b2*Power(SA,3)*Power(SB,3) - c4*SA*SB*Power(SC,4)", "get_name"}
+{"X(451)", "(-a3 - a2*b + a*b2 + b3 - a2*c + a*b*c + b2*c + a*c2 + b*c2 + c3)*SB*SC|(a3 + a2*b - a*b2 - b3 + a2*c + a*b*c - b2*c + a*c2 + b*c2 + c3)*SA*SC|(a3 + a2*b + a*b2 + b3 + a2*c + a*b*c + b2*c - a*c2 - b*c2 - c3)*SA*SB", "get_name"}
+{"X(452)", "(a - b - c)*(3*a3 + 3*a2*b + a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + a*c2 - b*c2 + c3)|(-a + b - c)*(a3 + a2*b + 3*a*b2 + 3*b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + b*c2 + c3)|(-a - b + c)*(a3 - a2*b - a*b2 + b3 + a2*c + 2*a*b*c + b2*c + 3*a*c2 + 3*b*c2 + 3*c3)", "get_name"}
+{"X(453)", "a*(a + b)*(a + c)*(-a + b + c)*Power(-(a*SA) + b*SB + c*SC,2)|b*(a + b)*(a - b + c)*(b + c)*Power(a*SA - b*SB + c*SC,2)|(a + b - c)*c*(a + c)*(b + c)*Power(a*SA + b*SB - c*SC,2)", "get_name"}
+{"X(454)", "a2*SA*Power(a2*(SA2 - SB*SC) - SA*(SB2 + SC2),2)|b2*SB*Power(b2*(SB2 - SA*SC) - SB*(SA2 + SC2),2)|c2*SC*Power(-((SA2 + SB2)*SC) + c2*(-(SA*SB) + SC2),2)", "get_name"}
+{"X(455)", "a2*SB*SC*Power(a2*(SA2 - SB*SC) + SA*(SB2 + SC2),2)|b2*SA*SC*Power(b2*(SB2 - SA*SC) + SB*(SA2 + SC2),2)|c2*SA*SB*Power((SA2 + SB2)*SC + c2*(-(SA*SB) + SC2),2)", "get_name"}
+{"X(456)", "a2*SB*SC*Power(SA2*(3*SA - 5*SB)*SB + 3*c2*SA*(SA - 3*SB)*SC - c2*(5*SA + 4*SB)*SC2,2)|b2*SA*SC*Power(3*a2*SA*SB*(SB - 3*SC) + SB2*(3*SB - 5*SC)*SC - a2*SA2*(5*SB + 4*SC),2)|c2*SA*SB*Power(3*b2*SB*SC*(-3*SA + SC) - b2*SB2*(4*SA + 5*SC) + SA*(-5*SA + 3*SC)*SC2,2)", "get_name"}
+{"X(457)", "a2*SB*SC*Power(-3*Power(SA,3)*SB + c2*SA*SC*(SB + 5*SC) + SA2*(5*SB2 - 3*c2*SC) - 4*c2*SB*SC2,2)|b2*SA*SC*Power(-4*a2*SA2*SC - 3*Power(SB,3)*SC + a2*SA*SB*(5*SA + SC) + SB2*(-3*a2*SA + 5*SC2),2)|c2*SA*SB*Power(-4*b2*SA*SB2 + b2*SB*(SA + 5*SB)*SC - 3*SA*Power(SC,3) + (5*SA2 - 3*b2*SB)*SC2,2)", "get_name"}
+{"X(458)", "SB*SC*(2*a2*SA + SA2 + SB*SC)|SA*SC*(2*b2*SB + SB2 + SA*SC)|SA*SB*(SA*SB + 2*c2*SC + SC2)", "get_name"}
+{"X(459)", "1/(SA*(S2 - 2*SB*SC))|1/(SB*(S2 - 2*SA*SC))|1/((S2 - 2*SA*SB)*SC)", "get_name"}
+{"X(460)", "SB*SC*(-(a2*SA) + SB2 + SC2)|SA*SC*(SA2 - b2*SB + SC2)|SA*SB*(SA2 + SB2 - c2*SC)", "get_name"}
+{"X(461)", "(-a + b + c)*(3*a + b + c)*SB*SC|(a - b + c)*(a + 3*b + c)*SA*SC|(a + b - c)*(a + b + 3*c)*SA*SB", "get_name"}
+{"X(462)", "SB*SC*(-4*area + a2*sqrt3)|SA*SC*(-4*area + b2*sqrt3)|SA*SB*(-4*area + c2*sqrt3)", "get_name"}
+{"X(463)", "SB*SC*(4*area + a2*sqrt3)|SA*SC*(4*area + b2*sqrt3)|SA*SB*(4*area + c2*sqrt3)", "get_name"}
+{"X(464)", "SA*(a2*(a + c)*(b + c) + SC2)|((a + b)*b2*(a + c) + SA2)*SB|((a + b)*(b + c)*c2 + SB2)*SC", "get_name"}
+{"X(465)", "SA*(SB*SC + a2*area*sqrt3)|SB*(SA*SC + area*b2*sqrt3)|SC*(SA*SB + area*c2*sqrt3)", "get_name"}
+{"X(466)", "SA*(SB*SC - a2*area*sqrt3)|SB*(SA*SC - area*b2*sqrt3)|SC*(SA*SB - area*c2*sqrt3)", "get_name"}
+{"X(467)", "SB*SC*((a2 - SA)*SA + SB*SC)*(a2*SA + 2*SB*SC)|SA*SC*((b2 - SB)*SB + SA*SC)*(b2*SB + 2*SA*SC)|SA*SB*(2*SA*SB + c2*SC)*(SA*SB + (c2 - SC)*SC)", "get_name"}
+{"X(468)", "(2*a2 - b2 - c2)*(a2 + b2 - c2)*(a2 - b2 + c2)|(a2 + b2 - c2)*(-a2 + 2*b2 - c2)*(-a2 + b2 + c2)|(a2 - b2 + c2)*(-a2 + b2 + c2)*(-a2 - b2 + 2*c2)", "get_name"}
+{"X(469)", "(a2 + a*b + a*c + b*c + 2*SA)*SB*SC|SA*(a*b + b2 + a*c + b*c + 2*SB)*SC|SA*SB*(a*b + a*c + b*c + c2 + 2*SC)", "get_name"}
+{"X(470)", "SB*SC*(2*area + SA*sqrt3)|SA*SC*(2*area + SB*sqrt3)|SA*SB*(2*area + SC*sqrt3)", "get_name"}
+{"X(471)", "SB*SC*(-2*area + SA*sqrt3)|SA*SC*(-2*area + SB*sqrt3)|SA*SB*(-2*area + SC*sqrt3)", "get_name"}
+{"X(472)", "SB*SC*(-SA + 2*area*sqrt3)|SA*SC*(-SB + 2*area*sqrt3)|SA*SB*(-SC + 2*area*sqrt3)", "get_name"}
+{"X(473)", "SB*SC*(SA + 2*area*sqrt3)|SA*SC*(SB + 2*area*sqrt3)|SA*SB*(SC + 2*area*sqrt3)", "get_name"}
+{"X(474)", "a*(b*c*(a + b + c) - a*SA)|b*(a*c*(a + b + c) - b*SB)|c*(a*b*(a + b + c) - c*SC)", "get_name"}
+{"X(475)", "(a3 + a2*b - a*b2 - b3 + a2*c + 2*a*b*c - b2*c - a*c2 - b*c2 - c3)*SB*SC|(-a3 - a2*b + a*b2 + b3 - a2*c + 2*a*b*c + b2*c - a*c2 - b*c2 - c3)*SA*SC|(-a3 - a2*b - a*b2 - b3 - a2*c + 2*a*b*c - b2*c + a*c2 + b*c2 + c3)*SA*SB", "get_name"}
+{"X(476)", "1/(Power(-(a2*b) + b3,2) - a4*c2 + 2*a2*c4 - c6)|1/(-a6 + 2*a4*b2 - a2*b4 + Power(-(b2*c) + c3,2))|1/(-b6 + 2*b4*c2 + Power(a3 - a*c2,2) - b2*c4)", "get_name"}
+{"X(477)", "1/(a2*SA*(SA2 - SB*SC) + SA2*(-3*SB2 + 4*SB*SC - 3*SC2) + 2*SB2*SC2)|1/(b2*SB*(SB2 - SA*SC) + SB2*(-3*SA2 + 4*SA*SC - 3*SC2) + 2*SA2*SC2)|1/(2*SA2*SB2 + (-3*SA2 + 4*SA*SB - 3*SB2)*SC2 + c2*SC*(-(SA*SB) + SC2))", "get_name"}
+{"X(478)", "a2*(a + b - c)*(a - b + c)*(a*b*(a - b - c)*c + 2*SB*SC)|b2*(a + b - c)*(-a + b + c)*(a*b*(-a + b - c)*c + 2*SA*SC)|(a - b + c)*(-a + b + c)*c2*(a*b*c*(-a - b + c) + 2*SA*SB)", "get_name"}
+{"X(479)", "Power(-a + b + c,-3)|Power(a - b + c,-3)|Power(a + b - c,-3)", "get_name"}
+{"X(480)", "a2*Power(-a + b + c,3)|b2*Power(a - b + c,3)|Power(a + b - c,3)*c2", "get_name"}
+{"X(481)", "a - (4*area)/(-a + b + c)|b - (4*area)/(a - b + c)|(-4*area)/(a + b - c) + c", "get_name"}
+{"X(482)", "a + (4*area)/(-a + b + c)|b + (4*area)/(a - b + c)|(4*area)/(a + b - c) + c", "get_name"}
+{"X(483)", "Power(secQuarterA,2)*sinA|Power(secQuarterB,2)*sinB|Power(secQuarterC,2)*sinC", "get_name"}
+{"X(484)", "a*(a3 + a2*b - a*b2 - b3 + a2*c - a*b*c + b2*c - a*c2 + b*c2 - c3)|b*(-a3 - a2*b + a*b2 + b3 + a2*c - a*b*c + b2*c + a*c2 - b*c2 - c3)|c*(-a3 + a2*b + a*b2 - b3 - a2*c - a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(485)", "(2*area + SB)*(2*area + SC)|(2*area + SA)*(2*area + SC)|(2*area + SA)*(2*area + SB)", "get_name"}
+{"X(486)", "(-2*area + SB)*(-2*area + SC)|(-2*area + SA)*(-2*area + SC)|(-2*area + SA)*(-2*area + SB)", "get_name"}
+{"X(487)", "a2*SA - 4*area*(-area + SA) - SB*SC|b2*SB - 4*area*(-area + SB) - SA*SC|-(SA*SB) + c2*SC - 4*area*(-area + SC)", "get_name"}
+{"X(488)", "a2*SA + 4*area*(area + SA) - SB*SC|b2*SB + 4*area*(area + SB) - SA*SC|-(SA*SB) + c2*SC + 4*area*(area + SC)", "get_name"}
+{"X(489)", "a2*SA - 2*area*SA - SB*SC|-2*area*SB + b2*SB - SA*SC|-(SA*SB) - 2*area*SC + c2*SC", "get_name"}
+{"X(490)", "a2*SA + 2*area*SA - SB*SC|2*area*SB + b2*SB - SA*SC|-(SA*SB) + 2*area*SC + c2*SC", "get_name"}
+{"X(491)", "-2*area + SA|-2*area + SB|-2*area + SC", "get_name"}
+{"X(492)", "2*area + SA|2*area + SB|2*area + SC", "get_name"}
+{"X(493)", "a2*(b2 + S)*(c2 + S)|b2*(a2 + S)*(c2 + S)|c2*(a2 + S)*(b2 + S)", "get_name"}
+{"X(494)", "a2*(b2 - S)*(c2 - S)|b2*(a2 - S)*(c2 - S)|c2*(a2 - S)*(b2 - S)", "get_name"}
+{"X(495)", "a2*b2 - b4 + 4*a2*b*c + a2*c2 + 2*b2*c2 - c4|-a4 + a2*b2 + 4*a*b2*c + 2*a2*c2 + b2*c2 - c4|-a4 + 2*a2*b2 - b4 + a2*c2 + 4*a*b*c2 + b2*c2", "get_name"}
+{"X(496)", "a2*b2 - b4 - 4*a2*b*c + a2*c2 + 2*b2*c2 - c4|-a4 + a2*b2 - 4*a*b2*c + 2*a2*c2 + b2*c2 - c4|-a4 + 2*a2*b2 - b4 + a2*c2 - 4*a*b*c2 + b2*c2", "get_name"}
+{"X(497)", "(a - b - c)*(a2 + b2 - 2*b*c + c2)|(-a + b - c)*(a2 + b2 - 2*a*c + c2)|(-a - b + c)*(a2 - 2*a*b + b2 + c2)", "get_name"}
+{"X(498)", "a4 - 2*a2*b2 + b4 - 2*a2*b*c - 2*a2*c2 - 2*b2*c2 + c4|a4 - 2*a2*b2 + b4 - 2*a*b2*c - 2*a2*c2 - 2*b2*c2 + c4|a4 - 2*a2*b2 + b4 - 2*a2*c2 - 2*a*b*c2 - 2*b2*c2 + c4", "get_name"}
+{"X(499)", "a4 - 2*a2*b2 + b4 + 2*a2*b*c - 2*a2*c2 - 2*b2*c2 + c4|a4 - 2*a2*b2 + b4 + 2*a*b2*c - 2*a2*c2 - 2*b2*c2 + c4|a4 - 2*a2*b2 + b4 - 2*a2*c2 + 2*a*b*c2 - 2*b2*c2 + c4", "get_name"}
+{"X(500)", "a2*(a2 - b2 - b*c - c2)*(a2*b - b3 + a2*c + 2*a*b*c + b2*c + b*c2 - c3)|b2*(-a2 + b2 - a*c - c2)*(-a3 + a*b2 + a2*c + 2*a*b*c + b2*c + a*c2 - c3)|c2*(-a2 - a*b - b2 + c2)*(-a3 + a2*b + a*b2 - b3 + 2*a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(501)", "a2*(a + b)*(a + c)*(a3 + a2*b - a*b2 - b3 + a2*c - a*b*c - b2*c - a*c2 - b*c2 - c3)|(a + b)*b2*(b + c)*(-a3 - a2*b + a*b2 + b3 - a2*c - a*b*c + b2*c - a*c2 - b*c2 - c3)|(a + c)*(b + c)*c2*(-a3 - a2*b - a*b2 - b3 - a2*c - a*b*c - b2*c + a*c2 + b*c2 + c3)", "get_name"}
+{"X(502)", "1/((a + b)*(a + c)*(a3 + a2*b - a*b2 - b3 + a2*c - a*b*c - b2*c - a*c2 - b*c2 - c3))|1/((a + b)*(b + c)*(-a3 - a2*b + a*b2 + b3 - a2*c - a*b*c + b2*c - a*c2 - b*c2 - c3))|1/((a + c)*(b + c)*(-a3 - a2*b - a*b2 - b3 - a2*c - a*b*c - b2*c + a*c2 + b*c2 + c3))", "get_name"}
+{"X(503)", "a*(-Sqrt((b*c)/(s*sa)) + Sqrt((a*c)/(s*sb)) + Sqrt((a*b)/(s*sc)))|b*(Sqrt((b*c)/(s*sa)) - Sqrt((a*c)/(s*sb)) + Sqrt((a*b)/(s*sc)))|c*(Sqrt((b*c)/(s*sa)) + Sqrt((a*c)/(s*sb)) - Sqrt((a*b)/(s*sc)))", "get_name"}
+{"X(504)", "a*(c*Sqrt((sa*sb)/(a*b)) + b*Sqrt((sa*sc)/(a*c)) - a*Sqrt((sb*sc)/(b*c)))|b*(c*Sqrt((sa*sb)/(a*b)) - b*Sqrt((sa*sc)/(a*c)) + a*Sqrt((sb*sc)/(b*c)))|c*(-(c*Sqrt((sa*sb)/(a*b))) + b*Sqrt((sa*sc)/(a*c)) + a*Sqrt((sb*sc)/(b*c)))", "get_name"}
+{"X(505)", "a/(Sqrt((sa*sb)/(a*b)) + Sqrt((sa*sc)/(a*c)) - Sqrt((sb*sc)/(b*c)))|b/(Sqrt((sa*sb)/(a*b)) - Sqrt((sa*sc)/(a*c)) + Sqrt((sb*sc)/(b*c)))|c/(-Sqrt((sa*sb)/(a*b)) + Sqrt((sa*sc)/(a*c)) + Sqrt((sb*sc)/(b*c)))", "get_name"}
+{"X(506)", "Power(a,0.6666666666666666)/(Power(s,0.3333333333333333)*Power(sa,0.3333333333333333))|Power(b,0.6666666666666666)/(Power(s,0.3333333333333333)*Power(sb,0.3333333333333333))|Power(c,0.6666666666666666)/(Power(s,0.3333333333333333)*Power(sc,0.3333333333333333))", "get_name"}
+{"X(507)", "Power(a,0.75)/(Power(s,0.25)*Power(sa,0.25))|Power(b,0.75)/(Power(s,0.25)*Power(sb,0.25))|Power(c,0.75)/(Power(s,0.25)*Power(sc,0.25))", "get_name"}
+{"X(508)", "Sqrt(1/(s*sa))|Sqrt(1/(s*sb))|Sqrt(1/(s*sc))", "get_name"}
+{"X(509)", "a*Sqrt(1/(s*sa))|b*Sqrt(1/(s*sb))|c*Sqrt(1/(s*sc))", "get_name"}
+{"X(510)", "a*(-Power(a,1.5) + Power(b,1.5) + Power(c,1.5))|b*(Power(a,1.5) - Power(b,1.5) + Power(c,1.5))|c*(Power(a,1.5) + Power(b,1.5) - Power(c,1.5))", "get_name"}
+{"X(511)", "a2*(-SA2 + SB*SC)|b2*(-SB2 + SA*SC)|c2*(SA*SB - SC2)", "get_name"}
+{"X(512)", "a2*(b2 - c2)|b2*(-a2 + c2)|(a2 - b2)*c2", "get_name"}
+{"X(513)", "a*(b - c)|b*(-a + c)|(a - b)*c", "get_name"}
+{"X(514)", "b - c|-a + c|a - b", "get_name"}
+{"X(515)", "a3*SA - (b + c)*SB*SC|b3*SB - (a + c)*SA*SC|-((a + b)*SA*SB) + c3*SC", "get_name"}
+{"X(516)", "2*a3 - a2*(b + c) - Power(b - c,2)*(b + c)|2*b3 - b2*(a + c) - Power(-a + c,2)*(a + c)|-(Power(a - b,2)*(a + b)) - (a + b)*c2 + 2*c3", "get_name"}
+{"X(517)", "a*(a*b*c - b*SB - c*SC)|b*(a*b*c - a*SA - c*SC)|c*(a*b*c - a*SA - b*SB)", "get_name"}
+{"X(518)", "a*(a*b - b2 + a*c - c2)|b*(-a2 + a*b + b*c - c2)|c*(-a2 - b2 + a*c + b*c)", "get_name"}
+{"X(519)", "2*a - b - c|-a + 2*b - c|-a - b + 2*c", "get_name"}
+{"X(520)", "a2*SA2*(-SB + SC)|b2*SB2*(SA - SC)|c2*(-SA + SB)*SC2", "get_name"}
+{"X(521)", "a*(a - b - c)*(b - c)*SA|b*(-a + b - c)*(-a + c)*SB|(a - b)*c*(-a - b + c)*SC", "get_name"}
+{"X(522)", "(a - b - c)*(b - c)|(-a + b - c)*(-a + c)|(a - b)*(-a - b + c)", "get_name"}
+{"X(523)", "b2 - c2|-a2 + c2|a2 - b2", "get_name"}
+{"X(524)", "2*a2 - b2 - c2|-a2 + 2*b2 - c2|-a2 - b2 + 2*c2", "get_name"}
+{"X(525)", "(b2 - c2)*SA|(-a2 + c2)*SB|(a2 - b2)*SC", "get_name"}
+{"X(526)", "a2*(Power(-(a2*b) + b3,2) - a4*c2 + 2*a2*c4 - c6)|b2*(-a6 + 2*a4*b2 - a2*b4 + Power(-(b2*c) + c3,2))|c2*(-b6 + 2*b4*c2 + Power(a3 - a*c2,2) - b2*c4)", "get_name"}
+{"X(527)", "a2 + 2*b*c - a*(b + c) - 2*SA|b2 + 2*a*c - b*(a + c) - 2*SB|2*a*b - (a + b)*c + c2 - 2*SC", "get_name"}
+{"X(528)", "2*a3 - 2*a2*b + a*b2 - b3 - 2*a2*c + b2*c + a*c2 + b*c2 - c3|-a3 + a2*b - 2*a*b2 + 2*b3 + a2*c - 2*b2*c + a*c2 + b*c2 - c3|-a3 + a2*b + a*b2 - b3 + a2*c + b2*c - 2*a*c2 - 2*b*c2 + 2*c3", "get_name"}
+{"X(529)", "a*(-(b*c*(-2*a + b + c)) - a*SA) + 2*SB*SC|b*(-(a*c*(a - 2*b + c)) - b*SB) + 2*SA*SC|2*SA*SB + c*(-(a*b*(a + b - 2*c)) - c*SC)", "get_name"}
+{"X(530)", "3*(a2*SA - 2*SB*SC) + 2*area*(-a2 + 2*SA)*sqrt3|3*(b2*SB - 2*SA*SC) + 2*area*(-b2 + 2*SB)*sqrt3|3*(-2*SA*SB + c2*SC) + 2*area*(-c2 + 2*SC)*sqrt3", "get_name"}
+{"X(531)", "3*(a2*SA - 2*SB*SC) - 2*area*(-a2 + 2*SA)*sqrt3|3*(b2*SB - 2*SA*SC) - 2*area*(-b2 + 2*SB)*sqrt3|3*(-2*SA*SB + c2*SC) - 2*area*(-c2 + 2*SC)*sqrt3", "get_name"}
+{"X(532)", "a2*SA - 2*SB*SC + 2*area*(-a2 + 2*SA)*sqrt3|b2*SB - 2*SA*SC + 2*area*(-b2 + 2*SB)*sqrt3|-2*SA*SB + c2*SC + 2*area*(-c2 + 2*SC)*sqrt3", "get_name"}
+{"X(533)", "a2*SA - 2*SB*SC - 2*area*(-a2 + 2*SA)*sqrt3|b2*SB - 2*SA*SC - 2*area*(-b2 + 2*SB)*sqrt3|-2*SA*SB + c2*SC - 2*area*(-c2 + 2*SC)*sqrt3", "get_name"}
+{"X(534)", "-2*a5 + b5 + c5 - c*Power(SA - SB,2) - b*Power(SA - SC,2) + 2*a*Power(SB - SC,2)|a5 - 2*b5 + c5 - c*Power(-SA + SB,2) - a*Power(SB - SC,2) + 2*b*Power(-SA + SC,2)|a5 + b5 - 2*c5 + 2*c*Power(SA - SB,2) - b*Power(-SA + SC,2) - a*Power(-SB + SC,2)", "get_name"}
+{"X(535)", "a*(b*c*(-2*a + b + c) + 2*a*SA) - 4*SB*SC|b*(a*c*(a - 2*b + c) + 2*b*SB) - 4*SA*SC|-4*SA*SB + c*(a*b*(a + b - 2*c) + 2*c*SC)", "get_name"}
+{"X(536)", "a*b + a*c - 2*b*c|a*b - 2*a*c + b*c|-2*a*b + a*c + b*c", "get_name"}
+{"X(537)", "2*a3 - b3 - c3 + 4*a*SA - 2*b*SB - 2*c*SC|-a3 + 2*b3 - c3 - 2*a*SA + 4*b*SB - 2*c*SC|-a3 - b3 + 2*c3 - 2*a*SA - 2*b*SB + 4*c*SC", "get_name"}
+{"X(538)", "-2*SA2 + SB2 + SC2|SA2 - 2*SB2 + SC2|SA2 + SB2 - 2*SC2", "get_name"}
+{"X(539)", "SA*(3*a4*SA2 + SB*SC*(-3*SB2 + 2*SB*SC - 3*SC2) - a2*SA*(3*SB2 - 2*SB*SC + 3*SC2))|SB*(3*b4*SB2 + SA*SC*(-3*SA2 + 2*SA*SC - 3*SC2) - b2*SB*(3*SA2 - 2*SA*SC + 3*SC2))|SC*(SA*SB*(-3*SA2 + 2*SA*SB - 3*SB2) - c2*(3*SA2 - 2*SA*SB + 3*SB2)*SC + 3*c4*SC2)", "get_name"}
+{"X(540)", "-2*a4 - 2*a3*b + a*b3 + b4 - 2*a3*c - 2*a2*b*c + a*b2*c + b3*c + a*b*c2 + a*c3 + b*c3 + c4|a4 + a3*b - 2*a*b3 - 2*b4 + a3*c + a2*b*c - 2*a*b2*c - 2*b3*c + a*b*c2 + a*c3 + b*c3 + c4|a4 + a3*b + a*b3 + b4 + a3*c + a2*b*c + a*b2*c + b3*c - 2*a*b*c2 - 2*a*c3 - 2*b*c3 - 2*c4", "get_name"}
+{"X(541)", "-(a4*Power(SA,3)) + SA*SB*SC*(SB2 + 10*SB*SC + SC2) + a2*(5*SA2*Power(SB - SC,2) - 4*SB2*SC2)|-(b4*Power(SB,3)) + SA*SB*SC*(SA2 + 10*SA*SC + SC2) + b2*(5*SB2*Power(-SA + SC,2) - 4*SA2*SC2)|SA*SB*(SA2 + 10*SA*SB + SB2)*SC - c4*Power(SC,3) + c2*(-4*SA2*SB2 + 5*Power(SA - SB,2)*SC2)", "get_name"}
+{"X(542)", "-(a2*(SA2 + SB*SC)) + 2*SA*(SB2 + SC2)|-(b2*(SB2 + SA*SC)) + 2*SB*(SA2 + SC2)|2*(SA2 + SB2)*SC - c2*(SA*SB + SC2)", "get_name"}
+{"X(543)", "2*(a2 - SA)*SA + SB2 - 4*SB*SC + SC2|SA2 + 2*(b2 - SB)*SB - 4*SA*SC + SC2|SA2 - 4*SA*SB + SB2 + 2*(c2 - SC)*SC", "get_name"}
+{"X(544)", "2*a4 - 2*a3*b + a*b3 - b4 - 2*a3*c + 2*a2*b*c - a*b2*c + b3*c - a*b*c2 + a*c3 + b*c3 - c4|-a4 + a3*b - 2*a*b3 + 2*b4 + a3*c - a2*b*c + 2*a*b2*c - 2*b3*c - a*b*c2 + a*c3 + b*c3 - c4|-a4 + a3*b + a*b3 - b4 + a3*c - a2*b*c - a*b2*c + b3*c + 2*a*b*c2 - 2*a*c3 - 2*b*c3 + 2*c4", "get_name"}
+{"X(545)", "(a - 2*b)*(a - 2*c) - 2*SA|(-2*a + b)*(b - 2*c) - 2*SB|(-2*a + c)*(-2*b + c) - 2*SC", "get_name"}
+{"X(546)", "a2*SA + 6*SB*SC|b2*SB + 6*SA*SC|6*SA*SB + c2*SC", "get_name"}
+{"X(547)", "7*a2*SA + 10*SB*SC|7*b2*SB + 10*SA*SC|10*SA*SB + 7*c2*SC", "get_name"}
+{"X(548)", "5*a2*SA - 2*SB*SC|5*b2*SB - 2*SA*SC|-2*SA*SB + 5*c2*SC", "get_name"}
+{"X(549)", "5*a2*SA + 2*SB*SC|5*b2*SB + 2*SA*SC|2*SA*SB + 5*c2*SC", "get_name"}
+{"X(550)", "3*a2*SA - 2*SB*SC|3*b2*SB - 2*SA*SC|-2*SA*SB + 3*c2*SC", "get_name"}
+{"X(551)", "4*a + b + c|a + 4*b + c|a + b + 4*c", "get_name"}
+{"X(552)", "1/(Power(b + c,2)*(-a + b + c))|1/(Power(a + c,2)*(a - b + c))|1/(Power(a + b,2)*(a + b - c))", "get_name"}
+{"X(553)", "(2*a + b + c)/(-a + b + c)|(a + 2*b + c)/(a - b + c)|(a + b + 2*c)/(a + b - c)", "get_name"}
+{"X(554)", "1/(sa*(sb*sc + area*sqrt3))|1/(sb*(sa*sc + area*sqrt3))|1/(sc*(sa*sb + area*sqrt3))", "get_name"}
+{"X(555)", "(a + b - c)*(a - b + c)*Sqrt(b*(a + b - c)*c*(a - b + c))|(a + b - c)*(-a + b + c)*Sqrt(a*(a + b - c)*c*(-a + b + c))|(a - b + c)*(-a + b + c)*Sqrt(a*b*(a - b + c)*(-a + b + c))", "get_name"}
+{"X(556)", "Sqrt((b*c)/(sb*sc))|Sqrt((a*c)/(sa*sc))|Sqrt((a*b)/(sa*sb))", "get_name"}
+{"X(557)", "Power(cosQuarterA,2)|Power(cosQuarterB,2)|Power(cosQuarterC,2)", "get_name"}
+{"X(558)", "Power(sinQuarterA,2)|Power(sinQuarterB,2)|Power(sinQuarterC,2)", "get_name"}
+{"X(559)", "a*(b*c - SA + 2*area*sqrt3)|b*(a*c - SB + 2*area*sqrt3)|c*(a*b - SC + 2*area*sqrt3)", "get_name"}
+{"X(560)", "a5|b5|c5", "get_name"}
+{"X(561)", "1/a3|1/b3|1/c3", "get_name"}
+{"X(562)", "(b2*c2 - 4*SA2)/(SA*(-12*Power(area,2) + SA2))|(a2*c2 - 4*SB2)/(SB*(-12*Power(area,2) + SB2))|(a2*b2 - 4*SC2)/(SC*(-12*Power(area,2) + SC2))", "get_name"}
+{"X(563)", "a5*SA*(-4*Power(area,2) + SA2)|b5*SB*(-4*Power(area,2) + SB2)|c5*SC*(-4*Power(area,2) + SC2)", "get_name"}
+{"X(564)", "b*c*(a4*SA2 - a2*SA*Power(SB - SC,2) + SB*(16*Power(area,2) - Power(SB - SC,2))*SC)|a*c*(b4*SB2 - b2*SB*Power(-SA + SC,2) + SA*SC*(16*Power(area,2) - Power(-SA + SC,2)))|a*b*(SA*(16*Power(area,2) - Power(SA - SB,2))*SB - c2*Power(SA - SB,2)*SC + c4*SC2)", "get_name"}
+{"X(565)", "b2*c2*(a2*SA + 2*SB*SC)*(a4*SA2 - a2*SA*(SB - 3*SC)*(3*SB - SC) - SB*(SB - 3*SC)*(3*SB - SC)*SC)|a2*c2*(b2*SB + 2*SA*SC)*(b4*SB2 - b2*SB*(-3*SA + SC)*(-SA + 3*SC) - SA*SC*(-3*SA + SC)*(-SA + 3*SC))|a2*b2*(2*SA*SB + c2*SC)*(-(SA*(SA - 3*SB)*(3*SA - SB)*SB) - c2*(SA - 3*SB)*(3*SA - SB)*SC + c4*SC2)", "get_name"}
+{"X(566)", "a2*(a2*(5*SA2 + SB*SC) + SA*(SB2 + 10*SB*SC + SC2))|b2*(b2*(5*SB2 + SA*SC) + SB*(SA2 + 10*SA*SC + SC2))|c2*((SA2 + 10*SA*SB + SB2)*SC + c2*(SA*SB + 5*SC2))", "get_name"}
+{"X(567)", "a2*(a8 - 3*a6*b2 + 3*a4*b4 - a2*b6 - 3*a6*c2 + 3*a4*b2*c2 + 2*a2*b4*c2 - 2*b6*c2 + 3*a4*c4 + 2*a2*b2*c4 + 4*b4*c4 - a2*c6 - 2*b2*c6)|b2*(-(a6*b2) + 3*a4*b4 - 3*a2*b6 + b8 - 2*a6*c2 + 2*a4*b2*c2 + 3*a2*b4*c2 - 3*b6*c2 + 4*a4*c4 + 2*a2*b2*c4 + 3*b4*c4 - 2*a2*c6 - b2*c6)|c2*(-2*a6*b2 + 4*a4*b4 - 2*a2*b6 - a6*c2 + 2*a4*b2*c2 + 2*a2*b4*c2 - b6*c2 + 3*a4*c4 + 3*a2*b2*c4 + 3*b4*c4 - 3*a2*c6 - 3*b2*c6 + c8)", "get_name"}
+{"X(568)", "a2*(a6*b2 - 3*a4*b4 + 3*a2*b6 - b8 + a6*c2 - a4*b2*c2 - 2*a2*b4*c2 + 2*b6*c2 - 3*a4*c4 - 2*a2*b2*c4 - 2*b4*c4 + 3*a2*c6 + 2*b2*c6 - c8)|b2*(-a8 + 3*a6*b2 - 3*a4*b4 + a2*b6 + 2*a6*c2 - 2*a4*b2*c2 - a2*b4*c2 + b6*c2 - 2*a4*c4 - 2*a2*b2*c4 - 3*b4*c4 + 2*a2*c6 + 3*b2*c6 - c8)|c2*(-a8 + 2*a6*b2 - 2*a4*b4 + 2*a2*b6 - b8 + 3*a6*c2 - 2*a4*b2*c2 - 2*a2*b4*c2 + 3*b6*c2 - 3*a4*c4 - a2*b2*c4 - 3*b4*c4 + a2*c6 + b2*c6)", "get_name"}
+{"X(569)", "a2*(a8 - 3*a6*b2 + 3*a4*b4 - a2*b6 - 3*a6*c2 + 2*a4*b2*c2 + 3*a2*b4*c2 - 2*b6*c2 + 3*a4*c4 + 3*a2*b2*c4 + 4*b4*c4 - a2*c6 - 2*b2*c6)|b2*(-(a6*b2) + 3*a4*b4 - 3*a2*b6 + b8 - 2*a6*c2 + 3*a4*b2*c2 + 2*a2*b4*c2 - 3*b6*c2 + 4*a4*c4 + 3*a2*b2*c4 + 3*b4*c4 - 2*a2*c6 - b2*c6)|c2*(-2*a6*b2 + 4*a4*b4 - 2*a2*b6 - a6*c2 + 3*a4*b2*c2 + 3*a2*b4*c2 - b6*c2 + 3*a4*c4 + 2*a2*b2*c4 + 3*b4*c4 - 3*a2*c6 - 3*b2*c6 + c8)", "get_name"}
+{"X(570)", "a2*(a4*b2 - 2*a2*b4 + b6 + a4*c2 - 2*a2*b2*c2 - b4*c2 - 2*a2*c4 - b2*c4 + c6)|b2*(a6 - 2*a4*b2 + a2*b4 - a4*c2 - 2*a2*b2*c2 + b4*c2 - a2*c4 - 2*b2*c4 + c6)|c2*(a6 - a4*b2 - a2*b4 + b6 - 2*a4*c2 - 2*a2*b2*c2 - 2*b4*c2 + a2*c4 + b2*c4)", "get_name"}
+{"X(571)", "a4*SA*(a4*SA2 - b4*SB2 - c4*SC2)|b4*SB*(-(a4*SA2) + b4*SB2 - c4*SC2)|c4*SC*(-(a4*SA2) - b4*SB2 + c4*SC2)", "get_name"}
+{"X(572)", "a2*(-(b*c*(-a + b + c)) - 2*a*SA)|b2*(-(a*c*(a - b + c)) - 2*b*SB)|c2*(-(a*b*(a + b - c)) - 2*c*SC)", "get_name"}
+{"X(573)", "a2*(a2*b - b3 + a2*c - a*b*c - c3)|b2*(-a3 + a*b2 - a*b*c + b2*c - c3)|c2*(-a3 - b3 - a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(574)", "a2*(-a2 + 2*b2 + 2*c2)|b2*(2*a2 - b2 + 2*c2)|(2*a2 + 2*b2 - c2)*c2", "get_name"}
+{"X(575)", "a2*(4*a2*SA + SA2 + 3*SB*SC)|b2*(4*b2*SB + SB2 + 3*SA*SC)|c2*(3*SA*SB + 4*c2*SC + SC2)", "get_name"}
+{"X(576)", "a2*(a4 - 3*a2*b2 + 2*b4 - 3*a2*c2 - 2*b2*c2 + 2*c4)|b2*(2*a4 - 3*a2*b2 + b4 - 2*a2*c2 - 3*b2*c2 + 2*c4)|c2*(2*a4 - 2*a2*b2 + 2*b4 - 3*a2*c2 - 3*b2*c2 + c4)", "get_name"}
+{"X(577)", "a4*SA2|b4*SB2|c4*SC2", "get_name"}
+{"X(578)", "a2*(a8 - 3*a6*b2 + 3*a4*b4 - a2*b6 - 3*a6*c2 + 4*a4*b2*c2 + a2*b4*c2 - 2*b6*c2 + 3*a4*c4 + a2*b2*c4 + 4*b4*c4 - a2*c6 - 2*b2*c6)|b2*(-(a6*b2) + 3*a4*b4 - 3*a2*b6 + b8 - 2*a6*c2 + a4*b2*c2 + 4*a2*b4*c2 - 3*b6*c2 + 4*a4*c4 + a2*b2*c4 + 3*b4*c4 - 2*a2*c6 - b2*c6)|c2*(-2*a6*b2 + 4*a4*b4 - 2*a2*b6 - a6*c2 + a4*b2*c2 + a2*b4*c2 - b6*c2 + 3*a4*c4 + 4*a2*b2*c4 + 3*b4*c4 - 3*a2*c6 - 3*b2*c6 + c8)", "get_name"}
+{"X(579)", "a2*(a2*b - b3 + a2*c + a*b*c - c3)|b2*(-a3 + a*b2 + a*b*c + b2*c - c3)|c2*(-a3 - b3 + a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(580)", "a2*(a5 - 2*a3*b2 + a*b4 - a3*b*c - a2*b2*c + a*b3*c + b4*c - 2*a3*c2 - a2*b*c2 - b3*c2 + a*b*c3 - b2*c3 + a*c4 + b*c4)|b2*(a4*b - 2*a2*b3 + b5 + a4*c + a3*b*c - a2*b2*c - a*b3*c - a3*c2 - a*b2*c2 - 2*b3*c2 - a2*c3 + a*b*c3 + a*c4 + b*c4)|c2*(a4*b - a3*b2 - a2*b3 + a*b4 + a4*c + a3*b*c + a*b3*c + b4*c - a2*b*c2 - a*b2*c2 - 2*a2*c3 - a*b*c3 - 2*b2*c3 + c5)", "get_name"}
+{"X(581)", "a2*(a4*b - 2*a2*b3 + b5 + a4*c + a3*b*c - a2*b2*c - a*b3*c - a2*b*c2 - 2*a*b2*c2 - b3*c2 - 2*a2*c3 - a*b*c3 - b2*c3 + c5)|b2*(a5 - 2*a3*b2 + a*b4 - a3*b*c - a2*b2*c + a*b3*c + b4*c - a3*c2 - 2*a2*b*c2 - a*b2*c2 - a2*c3 - a*b*c3 - 2*b2*c3 + c5)|c2*(a5 - a3*b2 - a2*b3 + b5 - a3*b*c - 2*a2*b2*c - a*b3*c - 2*a3*c2 - a2*b*c2 - a*b2*c2 - 2*b3*c2 + a*b*c3 + a*c4 + b*c4)", "get_name"}
+{"X(582)", "a2*(a5 - 2*a3*b2 + a*b4 - 2*a3*b*c - a2*b2*c + 2*a*b3*c + b4*c - 2*a3*c2 - a2*b*c2 - b3*c2 + 2*a*b*c3 - b2*c3 + a*c4 + b*c4)|b2*(a4*b - 2*a2*b3 + b5 + a4*c + 2*a3*b*c - a2*b2*c - 2*a*b3*c - a3*c2 - a*b2*c2 - 2*b3*c2 - a2*c3 + 2*a*b*c3 + a*c4 + b*c4)|c2*(a4*b - a3*b2 - a2*b3 + a*b4 + a4*c + 2*a3*b*c + 2*a*b3*c + b4*c - a2*b*c2 - a*b2*c2 - 2*a2*c3 - 2*a*b*c3 - 2*b2*c3 + c5)", "get_name"}
+{"X(583)", "a2*(a2*b - b3 + a2*c + 2*a*b*c - c3)|b2*(-a3 + a*b2 + 2*a*b*c + b2*c - c3)|c2*(-a3 - b3 + 2*a*b*c + a*c2 + b*c2)", "get_name"}
+{"X(584)", "a2*(a3 - a*b2 - 2*a*b*c - b2*c - a*c2 - b*c2)|b2*(-(a2*b) + b3 - a2*c - 2*a*b*c - a*c2 - b*c2)|c2*(-(a2*b) - a*b2 - a2*c - 2*a*b*c - b2*c + c3)", "get_name"}
+{"X(585)", "-a + b + 2*area*(-(1/a) + 1/b + 1/c) + c|a - b + 2*area*(1/a - 1/b + 1/c) + c|a + b + 2*area*(1/a + 1/b - 1/c) - c", "get_name"}
+{"X(586)", "-a + b - 2*area*(-(1/a) + 1/b + 1/c) + c|a - b - 2*area*(1/a - 1/b + 1/c) + c|a + b - 2*area*(1/a + 1/b - 1/c) - c", "get_name"}
+{"X(587)", "area*(2*a - 2*(b + c))*SB*SC + SB*SC*(b3 + c3 + 2*a*SA + b*SA + c*SA - c*SB - b*SC)|area*(2*b - 2*(a + c))*SA*SC + SA*SC*(a3 + c3 - c*SA + a*SB + 2*b*SB + c*SB - a*SC)|area*(-2*(a + b) + 2*c)*SA*SB + SA*SB*(a3 + b3 - b*SA - a*SB + a*SC + b*SC + 2*c*SC)", "get_name"}
+{"X(588)", "a2/(a2 + 4*area)|b2/(4*area + b2)|c2/(4*area + c2)", "get_name"}
+{"X(589)", "a2/(a2 - 4*area)|b2/(-4*area + b2)|c2/(-4*area + c2)", "get_name"}
+{"X(590)", "a2 + 4*area|4*area + b2|4*area + c2", "get_name"}
+{"X(591)", "2*a2 - b2 - c2 - 2*S|-a2 + 2*b2 - c2 - 2*S|-a2 - b2 + 2*c2 - 2*S", "get_name"}
+{"X(592)", "a2/(2*SB*(a2 + SB)*SC*(a2 + SC) + a2*SA*(SA2 + 3*SB2 + 17*SB*SC + 3*SC2) + SA2*(7*SB2 + 16*SB*SC + 7*SC2))|b2/(2*SA*(b2 + SA)*SC*(b2 + SC) + b2*SB*(3*SA2 + SB2 + 17*SA*SC + 3*SC2) + SB2*(7*SA2 + 16*SA*SC + 7*SC2))|c2/(2*SA*(c2 + SA)*SB*(c2 + SB) + (7*SA2 + 16*SA*SB + 7*SB2)*SC2 + c2*SC*(3*SA2 + 17*SA*SB + 3*SB2 + SC2))", "get_name"}
+{"X(593)", "Power(a,2)/Power(b + c,2)|Power(b,2)/Power(a + c,2)|Power(c,2)/Power(a + b,2)", "get_name"}
+{"X(594)", "Power(b + c,2)|Power(a + c,2)|Power(a + b,2)", "get_name"}
+{"X(595)", "a2*(a2 + a*b + a*c - b*c)|b2*(a*b + b2 - a*c + b*c)|c2*(-(a*b) + a*c + b*c + c2)", "get_name"}
+{"X(596)", "1/(a2 + a*b + a*c - b*c)|1/(a*b + b2 - a*c + b*c)|1/(-(a*b) + a*c + b*c + c2)", "get_name"}
+{"X(597)", "4*a2 + b2 + c2|a2 + 4*b2 + c2|a2 + b2 + 4*c2", "get_name"}
+{"X(598)", "1/(a2 - 2*b2 - 2*c2)|1/(-2*a2 + b2 - 2*c2)|1/(-2*a2 - 2*b2 + c2)", "get_name"}
+{"X(599)", "a2 - 2*b2 - 2*c2|-2*a2 + b2 - 2*c2|-2*a2 - 2*b2 + c2", "get_name"}
+{"X(600)", "a2*(b*c + 2*S)*(a2*b*c - a*b2*c - a*b*c2 + 2*(a2 - b2 - c2)*S)|b2*(a*c + 2*S)*(-(a2*b*c) + a*b2*c - a*b*c2 + 2*(-a2 + b2 - c2)*S)|c2*(a*b + 2*S)*(-(a2*b*c) - a*b2*c + a*b*c2 + 2*(-a2 - b2 + c2)*S)", "get_name"}
+{"X(601)", "a3*(4*Power(area,2) + b*c*SA)|b3*(4*Power(area,2) + a*c*SB)|c3*(4*Power(area,2) + a*b*SC)", "get_name"}
+{"X(602)", "a3*(-4*Power(area,2) + b*c*SA)|b3*(-4*Power(area,2) + a*c*SB)|c3*(-4*Power(area,2) + a*b*SC)", "get_name"}
+{"X(603)", "a3*(a + b - c)*(a - b + c)*SA|b3*(a + b - c)*(-a + b + c)*SB|(a - b + c)*(-a + b + c)*c3*SC", "get_name"}
+{"X(604)", "a3*(a + b - c)*(a - b + c)|b3*(a + b - c)*(-a + b + c)|(a - b + c)*(-a + b + c)*c3", "get_name"}
+{"X(605)", "a3*(2*area + b*c)|b3*(2*area + a*c)|(2*area + a*b)*c3", "get_name"}
+{"X(606)", "a3*(-2*area + b*c)|b3*(-2*area + a*c)|(-2*area + a*b)*c3", "get_name"}
+{"X(607)", "a2*(a - b - c)*SB*SC|b2*(-a + b - c)*SA*SC|(-a - b + c)*c2*SA*SB", "get_name"}
+{"X(608)", "a2*(a + b - c)*(a - b + c)*SB*SC|b2*(a + b - c)*(-a + b + c)*SA*SC|(a - b + c)*(-a + b + c)*c2*SA*SB", "get_name"}
+{"X(609)", "a2*(2*a2 + b*c)|b2*(2*b2 + a*c)|c2*(a*b + 2*c2)", "get_name"}
+{"X(610)", "a*(-(a2*SA) + SB*SC)|b*(-(b2*SB) + SA*SC)|c*(SA*SB - c2*SC)", "get_name"}
+{"X(611)", "a2*(8*Power(area,2) + b*c*(a2 + b2 + c2))|b2*(8*Power(area,2) + a*c*(a2 + b2 + c2))|c2*(8*Power(area,2) + a*b*(a2 + b2 + c2))", "get_name"}
+{"X(612)", "a*(a2 + b2 + 2*b*c + c2)|b*(a2 + b2 + 2*a*c + c2)|c*(a2 + 2*a*b + b2 + c2)", "get_name"}
+{"X(613)", "a2*(-8*Power(area,2) + b*c*(a2 + b2 + c2))|b2*(-8*Power(area,2) + a*c*(a2 + b2 + c2))|c2*(-8*Power(area,2) + a*b*(a2 + b2 + c2))", "get_name"}
+{"X(614)", "a*(a2 + b2 - 2*b*c + c2)|b*(a2 + b2 - 2*a*c + c2)|c*(a2 - 2*a*b + b2 + c2)", "get_name"}
+{"X(615)", "a2 - 4*area|-4*area + b2|-4*area + c2", "get_name"}
+{"X(616)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*a2*(a2 - b2 - c2) + 2*(a2 - b2 - c2)*S*sqrt3|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*b2*(-a2 + b2 - c2) + 2*(-a2 + b2 - c2)*S*sqrt3|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*c2*(-a2 - b2 + c2) + 2*(-a2 - b2 + c2)*S*sqrt3", "get_name"}
+{"X(617)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*a2*(a2 - b2 - c2) - 2*(a2 - b2 - c2)*S*sqrt3|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*b2*(-a2 + b2 - c2) - 2*(-a2 + b2 - c2)*S*sqrt3|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 6*c2*(-a2 - b2 + c2) - 2*(-a2 - b2 + c2)*S*sqrt3", "get_name"}
+{"X(618)", "5*a2*SA + 2*SB*SC + 2*area*(b2 + c2)*sqrt3|5*b2*SB + 2*SA*SC + 2*area*(a2 + c2)*sqrt3|2*SA*SB + 5*c2*SC + 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(619)", "5*a2*SA + 2*SB*SC - 2*area*(b2 + c2)*sqrt3|5*b2*SB + 2*SA*SC - 2*area*(a2 + c2)*sqrt3|2*SA*SB + 5*c2*SC - 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(620)", "b4 + c4 - 4*a2*SA|a4 + c4 - 4*b2*SB|a4 + b4 - 4*c2*SC", "get_name"}
+{"X(621)", "-2*(a2 - b2 - c2)*S + (a2 + b2 - c2)*(a2 - b2 + c2)*sqrt3|-2*(-a2 + b2 - c2)*S + (a2 + b2 - c2)*(-a2 + b2 + c2)*sqrt3|-2*(-a2 - b2 + c2)*S + (a2 - b2 + c2)*(-a2 + b2 + c2)*sqrt3", "get_name"}
+{"X(622)", "2*(a2 - b2 - c2)*S + (a2 + b2 - c2)*(a2 - b2 + c2)*sqrt3|2*(-a2 + b2 - c2)*S + (a2 + b2 - c2)*(-a2 + b2 + c2)*sqrt3|2*(-a2 - b2 + c2)*S + (a2 - b2 + c2)*(-a2 + b2 + c2)*sqrt3", "get_name"}
+{"X(623)", "2*area*(b2 + c2) + (a2*SA + 2*SB*SC)*sqrt3|2*area*(a2 + c2) + (b2*SB + 2*SA*SC)*sqrt3|2*area*(a2 + b2) + (2*SA*SB + c2*SC)*sqrt3", "get_name"}
+{"X(624)", "-2*area*(b2 + c2) + (a2*SA + 2*SB*SC)*sqrt3|-2*area*(a2 + c2) + (b2*SB + 2*SA*SC)*sqrt3|-2*area*(a2 + b2) + (2*SA*SB + c2*SC)*sqrt3", "get_name"}
+{"X(625)", "a2*(b2 + c2) - 2*(b4 - b2*c2 + c4)|b2*(a2 + c2) - 2*(a4 - a2*c2 + c4)|-2*(a4 - a2*b2 + b4) + (a2 + b2)*c2", "get_name"}
+{"X(626)", "b4 + c4|a4 + c4|a4 + b4", "get_name"}
+{"X(627)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(a2 - b2 - c2)*(a2 + S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(-a2 + b2 - c2)*(b2 + S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(-a2 - b2 + c2)*(c2 + S*sqrt3)", "get_name"}
+{"X(628)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(a2 - b2 - c2)*(a2 - S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(-a2 + b2 - c2)*(b2 - S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) - 2*(-a2 - b2 + c2)*(c2 - S*sqrt3)", "get_name"}
+{"X(629)", "7*a2*SA + 6*SB*SC + 2*area*(b2 + c2)*sqrt3|7*b2*SB + 6*SA*SC + 2*area*(a2 + c2)*sqrt3|6*SA*SB + 7*c2*SC + 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(630)", "7*a2*SA + 6*SB*SC - 2*area*(b2 + c2)*sqrt3|7*b2*SB + 6*SA*SC - 2*area*(a2 + c2)*sqrt3|6*SA*SB + 7*c2*SC - 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(631)", "2*a2*SA + SB*SC|2*b2*SB + SA*SC|SA*SB + 2*c2*SC", "get_name"}
+{"X(632)", "7*a2*SA + 6*SB*SC|7*b2*SB + 6*SA*SC|6*SA*SB + 7*c2*SC", "get_name"}
+{"X(633)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(a2 - b2 - c2)*(a2 - S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(-a2 + b2 - c2)*(b2 - S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(-a2 - b2 + c2)*(c2 - S*sqrt3)", "get_name"}
+{"X(634)", "(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(a2 - b2 - c2)*(a2 + S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(-a2 + b2 - c2)*(b2 + S*sqrt3)|(a + b - c)*(a - b + c)*(-a + b + c)*(a + b + c) + 2*(-a2 - b2 + c2)*(c2 + S*sqrt3)", "get_name"}
+{"X(635)", "a2*SA + 2*SB*SC + 2*area*(b2 + c2)*sqrt3|b2*SB + 2*SA*SC + 2*area*(a2 + c2)*sqrt3|2*SA*SB + c2*SC + 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(636)", "a2*SA + 2*SB*SC - 2*area*(b2 + c2)*sqrt3|b2*SB + 2*SA*SC - 2*area*(a2 + c2)*sqrt3|2*SA*SB + c2*SC - 2*area*(a2 + b2)*sqrt3", "get_name"}
+{"X(637)", "2*area*SA + SB*SC|2*area*SB + SA*SC|SA*SB + 2*area*SC", "get_name"}
+{"X(638)", "-2*area*SA + SB*SC|-2*area*SB + SA*SC|SA*SB - 2*area*SC", "get_name"}
+{"X(639)", "2*area*(b2 + c2) + a2*SA + 2*SB*SC|2*area*(a2 + c2) + b2*SB + 2*SA*SC|2*area*(a2 + b2) + 2*SA*SB + c2*SC", "get_name"}
+{"X(640)", "-2*area*(b2 + c2) + a2*SA + 2*SB*SC|-2*area*(a2 + c2) + b2*SB + 2*SA*SC|-2*area*(a2 + b2) + 2*SA*SB + c2*SC", "get_name"}
+{"X(641)", "2*area*(b2 + c2) + 3*a2*SA + 2*SB*SC|2*area*(a2 + c2) + 3*b2*SB + 2*SA*SC|2*area*(a2 + b2) + 2*SA*SB + 3*c2*SC", "get_name"}
+{"X(642)", "-2*area*(b2 + c2) + 3*a2*SA + 2*SB*SC|-2*area*(a2 + c2) + 3*b2*SB + 2*SA*SC|-2*area*(a2 + b2) + 2*SA*SB + 3*c2*SC", "get_name"}
+{"X(643)", "(a*(-a + b + c))/(b2 - c2)|(b*(a - b + c))/(-a2 + c2)|((a + b - c)*c)/(a2 - b2)", "get_name"}
+{"X(644)", "(a*(-a + b + c))/(b - c)|(b*(a - b + c))/(-a + c)|((a + b - c)*c)/(a - b)", "get_name"}
+{"X(645)", "(-a + b + c)/(b2 - c2)|(a - b + c)/(-a2 + c2)|(a + b - c)/(a2 - b2)", "get_name"}
+{"X(646)", "(-a + b + c)/(a*(b - c))|(a - b + c)/(b*(-a + c))|(a + b - c)/((a - b)*c)", "get_name"}
+{"X(647)", "a2*(b2 - c2)*SA|b2*(-a2 + c2)*SB|(a2 - b2)*c2*SC", "get_name"}
+{"X(648)", "SB*(-SA + SB)*(SA - SC)*SC|SA*(-SA + SB)*SC*(-SB + SC)|SA*SB*(SA - SC)*(-SB + SC)", "get_name"}
+{"X(649)", "a2*(b - c)|b2*(-a + c)|(a - b)*c2", "get_name"}
+{"X(650)", "a*(b - c)*(-a + b + c)|b*(-a + c)*(a - b + c)|(a - b)*(a + b - c)*c", "get_name"}
+{"X(651)", "a/((b - c)*(-a + b + c))|b/((-a + c)*(a - b + c))|c/((a - b)*(a + b - c))", "get_name"}
+{"X(652)", "a2*(a - b - c)*(b - c)*SA|b2*(-a + b - c)*(-a + c)*SB|(a - b)*(-a - b + c)*c2*SC", "get_name"}
+{"X(653)", "1/((a - b - c)*(b - c)*SA)|1/((-a + b - c)*(-a + c)*SB)|1/((a - b)*(-a - b + c)*SC)", "get_name"}
+{"X(654)", "a2*(a - b - c)*(b - c)*(b*c - 2*SA)|b2*(-a + b - c)*(-a + c)*(a*c - 2*SB)|(a - b)*(-a - b + c)*c2*(a*b - 2*SC)", "get_name"}
+{"X(655)", "1/((a - b - c)*(b - c)*(b*c - 2*SA))|1/((-a + b - c)*(-a + c)*(a*c - 2*SB))|1/((a - b)*(-a - b + c)*(a*b - 2*SC))", "get_name"}
+{"X(656)", "a*SA*(SB - SC)|b*SB*(-SA + SC)|c*(SA - SB)*SC", "get_name"}
+{"X(657)", "a2*Power(a - b - c,2)*(b - c)|b2*Power(-a + b - c,2)*(-a + c)|(a - b)*Power(-a - b + c,2)*c2", "get_name"}
+{"X(658)", "1/(Power(a - b - c,2)*(b - c))|1/(Power(-a + b - c,2)*(-a + c))|1/((a - b)*Power(-a - b + c,2))", "get_name"}
+{"X(659)", "a*(b - c)*(a2 - b*c)|b*(-a + c)*(b2 - a*c)|(a - b)*c*(-(a*b) + c2)", "get_name"}
+{"X(660)", "a/((b - c)*(a2 - b*c))|b/((-a + c)*(b2 - a*c))|c/((a - b)*(-(a*b) + c2))", "get_name"}
+{"X(661)", "a*(b2 - c2)|b*(-a2 + c2)|(a2 - b2)*c", "get_name"}
+{"X(662)", "a/(b2 - c2)|b/(-a2 + c2)|c/(a2 - b2)", "get_name"}
+{"X(663)", "a2*(b - c)*(-a + b + c)|b2*(-a + c)*(a - b + c)|(a - b)*(a + b - c)*c2", "get_name"}
+{"X(664)", "1/((a - b - c)*(b - c))|1/((-a + b - c)*(-a + c))|1/((a - b)*(-a - b + c))", "get_name"}
+{"X(665)", "a2*(Power(a - b,2)*(a + b - c) - Power(-a + c,2)*(a - b + c))|b2*(-(Power(a - b,2)*(a + b - c)) + Power(b - c,2)*(-a + b + c))|(Power(-a + c,2)*(a - b + c) - Power(b - c,2)*(-a + b + c))*c2", "get_name"}
+{"X(666)", "(a - b)*(a - c)*(a2 + b2 - a*c - b*c)*(a2 - a*b - b*c + c2)|(-a + b)*(b - c)*(a2 + b2 - a*c - b*c)*(-(a*b) + b2 - a*c + c2)|(-a + c)*(-b + c)*(-(a*b) + b2 - a*c + c2)*(a2 - a*b - b*c + c2)", "get_name"}
+{"X(667)", "a3*(b - c)|b3*(-a + c)|(a - b)*c3", "get_name"}
+{"X(668)", "1/(a*(b - c))|1/(b*(-a + c))|1/((a - b)*c)", "get_name"}
+{"X(669)", "a4*(b2 - c2)|b4*(-a2 + c2)|(a2 - b2)*c4", "get_name"}
+{"X(670)", "1/(a2*(b2 - c2))|1/(b2*(-a2 + c2))|1/((a2 - b2)*c2)", "get_name"}
+{"X(671)", "1/(2*a2 - b2 - c2)|1/(-a2 + 2*b2 - c2)|1/(-a2 - b2 + 2*c2)", "get_name"}
+{"X(672)", "a2*(b2 - a*(b + c) + c2)|b2*(a2 - b*(a + c) + c2)|(a2 + b2 - (a + b)*c)*c2", "get_name"}
+{"X(673)", "1/(b2 - a*(b + c) + c2)|1/(a2 - b*(a + c) + c2)|1/(a2 + b2 - (a + b)*c)", "get_name"}
+{"X(674)", "a2*(b3 - a*(b2 + c2) + c3)|b2*(a3 - b*(a2 + c2) + c3)|(a3 + b3 - (a2 + b2)*c)*c2", "get_name"}
+{"X(675)", "1/(b3 - a*(b2 + c2) + c3)|1/(a3 - b*(a2 + c2) + c3)|1/(a3 + b3 - (a2 + b2)*c)", "get_name"}
+{"X(676)", "(b - c)*(2*a3 - a2*b - b3 - a2*c + b2*c + b*c2 - c3)|(-a + c)*(-a3 - a*b2 + 2*b3 + a2*c - b2*c + a*c2 - c3)|(a - b)*(-a3 + a2*b + a*b2 - b3 - a*c2 - b*c2 + 2*c3)", "get_name"}
+{"X(677)", "a2/((b - c)*(2*a3 - a2*b - b3 - a2*c + b2*c + b*c2 - c3))|b2/((-a + c)*(-a3 - a*b2 + 2*b3 + a2*c - b2*c + a*c2 - c3))|c2/((a - b)*(-a3 + a2*b + a*b2 - b3 - a*c2 - b*c2 + 2*c3))", "get_name"}
+{"X(678)", "a*Power(-2*a + b + c,2)|b*Power(a - 2*b + c,2)|Power(a + b - 2*c,2)*c", "get_name"}
+{"X(679)", "a/Power(-2*a + b + c,2)|b/Power(a - 2*b + c,2)|c/Power(a + b - 2*c,2)", "get_name"}
+{"X(680)", "a3*SA2*(-(b3*SB2) + c3*SC2)|b3*SB2*(a3*SA2 - c3*SC2)|c3*(-(a3*SA2) + b3*SB2)*SC2", "get_name"}
+{"X(681)", "1/(a*SA2*(-(b3*SB2) + c3*SC2))|1/(b*SB2*(a3*SA2 - c3*SC2))|1/(c*(-(a3*SA2) + b3*SB2)*SC2)", "get_name"}
+{"X(682)", "a4*SA*(a2*SA + SB2 + SC2)|b4*SB*(SA2 + b2*SB + SC2)|c4*SC*(SA2 + SB2 + c2*SC)", "get_name"}
+{"X(683)", "b2*c2*SB*SC*(SA*(SA + SB) + a2*SC)*(a2*SB + SA*(SA + SC))|a2*c2*SA*SC*(SB*(SA + SB) + b2*SC)*(b2*SA + SB*(SB + SC))|a2*b2*SA*SB*(c2*SB + SC*(SA + SC))*(c2*SA + SC*(SB + SC))", "get_name"}
+{"X(684)", "a2*(b2 + c2 + b4/(-a2 + c2) + c4/(-a2 + b2))|b2*(a2 + c2 + a4/(-b2 + c2) + c4/(a2 - b2))|(a2 + b2 + b4/(a2 - c2) + a4/(b2 - c2))*c2", "get_name"}
+{"X(685)", "1/((-b2 + c2)*SA*(SA2 - SB*SC))|1/((a2 - c2)*SB*(SB2 - SA*SC))|1/((-a2 + b2)*SC*(-(SA*SB) + SC2))", "get_name"}
+{"X(686)", "a2*SA*(SB - SC)*(-(SA*Power(SB - SC,2)) + a2*(SA2 - SB*SC))|b2*SB*(-SA + SC)*(-(SB*Power(-SA + SC,2)) + b2*(SB2 - SA*SC))|c2*(SA - SB)*SC*(-(Power(SA - SB,2)*SC) + c2*(-(SA*SB) + SC2))", "get_name"}
+{"X(687)", "1/(SA*(SB - SC)*(-(SA*Power(SB - SC,2)) + a2*(SA2 - SB*SC)))|1/(SB*(-SA + SC)*(-(SB*Power(-SA + SC,2)) + b2*(SB2 - SA*SC)))|1/((SA - SB)*SC*(-(Power(SA - SB,2)*SC) + c2*(-(SA*SB) + SC2)))", "get_name"}
+{"X(688)", "a4*(b4 - c4)|b4*(-a4 + c4)|(a4 - b4)*c4", "get_name"}
+{"X(689)", "1/(a2*(b4 - c4))|1/(b2*(-a4 + c4))|1/((a4 - b4)*c2)", "get_name"}
+{"X(690)", "(2*a2 - b2 - c2)*(b2 - c2)|(-a2 + 2*b2 - c2)*(-a2 + c2)|(a2 - b2)*(-a2 - b2 + 2*c2)", "get_name"}
+{"X(691)", "a2/((2*a2 - b2 - c2)*(b2 - c2))|b2/((-a2 + 2*b2 - c2)*(-a2 + c2))|c2/((a2 - b2)*(-a2 - b2 + 2*c2))", "get_name"}
+{"X(692)", "a3/(b - c)|b3/(-a + c)|c3/(a - b)", "get_name"}
+{"X(693)", "(b - c)/a|(-a + c)/b|(a - b)/c", "get_name"}
+{"X(694)", "a2/(a4 - b2*c2)|b2/(b4 - a2*c2)|c2/(-(a2*b2) + c4)", "get_name"}
+{"X(695)", "a2/(a4 + b2*c2)|b2/(b4 + a2*c2)|c2/(a2*b2 + c4)", "get_name"}
+{"X(696)", "a*b4 - b4*c + a*c4 - b*c4|a4*b - a4*c - a*c4 + b*c4|-(a4*b) - a*b4 + a4*c + b4*c", "get_name"}
+{"X(697)", "a2/(a*b4 - b4*c + a*c4 - b*c4)|b2/(a4*b - a4*c - a*c4 + b*c4)|c2/(-(a4*b) - a*b4 + a4*c + b4*c)", "get_name"}
+{"X(698)", "a2*b4 - b4*c2 + a2*c4 - b2*c4|a4*b2 - a4*c2 - a2*c4 + b2*c4|-(a4*b2) - a2*b4 + a4*c2 + b4*c2", "get_name"}
+{"X(699)", "a2/(a2*b4 - b4*c2 + a2*c4 - b2*c4)|b2/(a4*b2 - a4*c2 - a2*c4 + b2*c4)|c2/(-(a4*b2) - a2*b4 + a4*c2 + b4*c2)", "get_name"}
+{"X(700)", "a3*b4 - b4*c3 + a3*c4 - b3*c4|a4*b3 - a4*c3 - a3*c4 + b3*c4|-(a4*b3) - a3*b4 + a4*c3 + b4*c3", "get_name"}
+{"X(701)", "a2/(a3*b4 - b4*c3 + a3*c4 - b3*c4)|b2/(a4*b3 - a4*c3 - a3*c4 + b3*c4)|c2/(-(a4*b3) - a3*b4 + a4*c3 + b4*c3)", "get_name"}
+{"X(702)", "2/a4 - 1/b4 - 1/c4|-(1/a4) + 2/b4 - 1/c4|-(1/a4) - 1/b4 + 2/c4", "get_name"}
+{"X(703)", "a2/(a4*b4 + a4*c4 - 2*b4*c4)|b2/(a4*b4 - 2*a4*c4 + b4*c4)|c2/(-2*a4*b4 + a4*c4 + b4*c4)", "get_name"}
+{"X(704)", "a5*b4 + a5*c4 - b5*c4 - b4*c5|a4*b5 - a5*c4 + b5*c4 - a4*c5|-(a5*b4) - a4*b5 + a4*c5 + b4*c5", "get_name"}
+{"X(705)", "a2/(a5*b4 + a5*c4 - b5*c4 - b4*c5)|b2/(a4*b5 - a5*c4 + b5*c4 - a4*c5)|c2/(-(a5*b4) - a4*b5 + a4*c5 + b4*c5)", "get_name"}
+{"X(706)", "a6*b4 + a6*c4 - b6*c4 - b4*c6|a4*b6 - a6*c4 + b6*c4 - a4*c6|-(a6*b4) - a4*b6 + a4*c6 + b4*c6", "get_name"}
+{"X(707)", "a2/(a6*b4 + a6*c4 - b6*c4 - b4*c6)|b2/(a4*b6 - a6*c4 + b6*c4 - a4*c6)|c2/(-(a6*b4) - a4*b6 + a4*c6 + b4*c6)", "get_name"}
+{"X(708)", "a7*b4 + a7*c4 - b7*c4 - b4*c7|a4*b7 - a7*c4 + b7*c4 - a4*c7|-(a7*b4) - a4*b7 + a4*c7 + b4*c7", "get_name"}
+{"X(709)", "a2/(a7*b4 + a7*c4 - b7*c4 - b4*c7)|b2/(a4*b7 - a7*c4 + b7*c4 - a4*c7)|c2/(-(a7*b4) - a4*b7 + a4*c7 + b4*c7)", "get_name"}
+{"X(710)", "(a2 - b*c)*(a2 + b*c)*(a4 + b2*c2)*(b4 + c4)|(b2 - a*c)*(b2 + a*c)*(b4 + a2*c2)*(a4 + c4)|(a4 + b4)*(-(a*b) + c2)*(a*b + c2)*(a2*b2 + c4)", "get_name"}
+{"X(711)", "a2/((a2 - b*c)*(a2 + b*c)*(a4 + b2*c2)*(b4 + c4))|b2/((b2 - a*c)*(b2 + a*c)*(b4 + a2*c2)*(a4 + c4))|c2/((a4 + b4)*(-(a*b) + c2)*(a*b + c2)*(a2*b2 + c4))", "get_name"}
+{"X(712)", "a*b3 - b3*c + a*c3 - b*c3|a3*b - a3*c - a*c3 + b*c3|-(a3*b) - a*b3 + a3*c + b3*c", "get_name"}
+{"X(713)", "a2/(a*b3 - b3*c + a*c3 - b*c3)|b2/(a3*b - a3*c - a*c3 + b*c3)|c2/(-(a3*b) - a*b3 + a3*c + b3*c)", "get_name"}
+{"X(714)", "(b + c)*(a2*b2 - a2*b*c + a2*c2 - b2*c2)|(a + c)*(a2*b2 - a*b2*c - a2*c2 + b2*c2)|(a + b)*(-(a2*b2) + a2*c2 - a*b*c2 + b2*c2)", "get_name"}
+{"X(715)", "a2/((b + c)*(a2*b2 - a2*b*c + a2*c2 - b2*c2))|b2/((a + c)*(a2*b2 - a*b2*c - a2*c2 + b2*c2))|c2/((a + b)*(-(a2*b2) + a2*c2 - a*b*c2 + b2*c2))", "get_name"}
+{"X(716)", "2/a3 - 1/b3 - 1/c3|-(1/a3) + 2/b3 - 1/c3|-(1/a3) - 1/b3 + 2/c3", "get_name"}
+{"X(717)", "a2/(a3*b3 + a3*c3 - 2*b3*c3)|b2/(a3*b3 - 2*a3*c3 + b3*c3)|c2/(-2*a3*b3 + a3*c3 + b3*c3)", "get_name"}
+{"X(718)", "(b + c)*(a4*b2 - a4*b*c + a4*c2 - b3*c3)|(a + c)*(a2*b4 - a*b4*c + b4*c2 - a3*c3)|(a + b)*(-(a3*b3) + a2*c4 - a*b*c4 + b2*c4)", "get_name"}
+{"X(719)", "a2/((b + c)*(a4*b2 - a4*b*c + a4*c2 - b3*c3))|b2/((a + c)*(a2*b4 - a*b4*c + b4*c2 - a3*c3))|c2/((a + b)*(-(a3*b3) + a2*c4 - a*b*c4 + b2*c4))", "get_name"}
+{"X(720)", "a5*b3 + a5*c3 - b5*c3 - b3*c5|a3*b5 - a5*c3 + b5*c3 - a3*c5|-(a5*b3) - a3*b5 + a3*c5 + b3*c5", "get_name"}
+{"X(721)", "a2/(a5*b3 + a5*c3 - b5*c3 - b3*c5)|b2/(a3*b5 - a5*c3 + b5*c3 - a3*c5)|c2/(-(a5*b3) - a3*b5 + a3*c5 + b3*c5)", "get_name"}
+{"X(722)", "(b + c)*(a2 - b*c)*(b2 - b*c + c2)*(a4 + a2*b*c + b2*c2)|(a + c)*(b2 - a*c)*(a2 - a*c + c2)*(b4 + a*b2*c + a2*c2)|(a + b)*(a2 - a*b + b2)*(-(a*b) + c2)*(a2*b2 + a*b*c2 + c4)", "get_name"}
+{"X(723)", "a2/((b + c)*(a2 - b*c)*(b2 - b*c + c2)*(a4 + a2*b*c + b2*c2))|b2/((a + c)*(b2 - a*c)*(a2 - a*c + c2)*(b4 + a*b2*c + a2*c2))|c2/((a + b)*(a2 - a*b + b2)*(-(a*b) + c2)*(a2*b2 + a*b*c2 + c4))", "get_name"}
+{"X(724)", "a7*b3 + a7*c3 - b7*c3 - b3*c7|a3*b7 - a7*c3 + b7*c3 - a3*c7|-(a7*b3) - a3*b7 + a3*c7 + b3*c7", "get_name"}
+{"X(725)", "a2/(a7*b3 + a7*c3 - b7*c3 - b3*c7)|b2/(a3*b7 - a7*c3 + b7*c3 - a3*c7)|c2/(-(a7*b3) - a3*b7 + a3*c7 + b3*c7)", "get_name"}
+{"X(726)", "a*b2 - b2*c + a*c2 - b*c2|a2*b - a2*c - a*c2 + b*c2|-(a2*b) - a*b2 + a2*c + b2*c", "get_name"}
+{"X(727)", "a2/(a*b2 - b2*c + a*c2 - b*c2)|b2/(a2*b - a2*c - a*c2 + b*c2)|c2/(-(a2*b) - a*b2 + a2*c + b2*c)", "get_name"}
+{"X(728)", "a*Power(-a + b + c,3)|b*Power(a - b + c,3)|Power(a + b - c,3)*c", "get_name"}
+{"X(729)", "a2/(a2*b2 + a2*c2 - 2*b2*c2)|b2/(a2*b2 - 2*a2*c2 + b2*c2)|c2/(-2*a2*b2 + a2*c2 + b2*c2)", "get_name"}
+{"X(730)", "a3*b2 + a3*c2 - b3*c2 - b2*c3|a2*b3 - a3*c2 + b3*c2 - a2*c3|-(a3*b2) - a2*b3 + a2*c3 + b2*c3", "get_name"}
+{"X(731)", "a2/(a3*b2 + a3*c2 - b3*c2 - b2*c3)|b2/(a2*b3 - a3*c2 + b3*c2 - a2*c3)|c2/(-(a3*b2) - a2*b3 + a2*c3 + b2*c3)", "get_name"}
+{"X(732)", "(a2 - b*c)*(a2 + b*c)*(b2 + c2)|(b2 - a*c)*(b2 + a*c)*(a2 + c2)|(a2 + b2)*(-(a*b) + c2)*(a*b + c2)", "get_name"}
+{"X(733)", "a2/((a2 - b*c)*(a2 + b*c)*(b2 + c2))|b2/((b2 - a*c)*(b2 + a*c)*(a2 + c2))|c2/((a2 + b2)*(-(a*b) + c2)*(a*b + c2))", "get_name"}
+{"X(734)", "a5*b2 + a5*c2 - b5*c2 - b2*c5|a2*b5 - a5*c2 + b5*c2 - a2*c5|-(a5*b2) - a2*b5 + a2*c5 + b2*c5", "get_name"}
+{"X(735)", "a2/(a5*b2 + a5*c2 - b5*c2 - b2*c5)|b2/(a2*b5 - a5*c2 + b5*c2 - a2*c5)|c2/(-(a5*b2) - a2*b5 + a2*c5 + b2*c5)", "get_name"}
+{"X(736)", "a6*b2 + a6*c2 - b6*c2 - b2*c6|a2*b6 - a6*c2 + b6*c2 - a2*c6|-(a6*b2) - a2*b6 + a2*c6 + b2*c6", "get_name"}
+{"X(737)", "a2/(a6*b2 + a6*c2 - b6*c2 - b2*c6)|b2/(a2*b6 - a6*c2 + b6*c2 - a2*c6)|c2/(-(a6*b2) - a2*b6 + a2*c6 + b2*c6)", "get_name"}
+{"X(738)", "a/Power(-a + b + c,3)|b/Power(a - b + c,3)|c/Power(a + b - c,3)", "get_name"}
+{"X(739)", "a2/(a*b + a*c - 2*b*c)|b2/(a*b - 2*a*c + b*c)|c2/(-2*a*b + a*c + b*c)", "get_name"}
+{"X(740)", "(b + c)*(a2 - b*c)|(a + c)*(b2 - a*c)|(a + b)*(-(a*b) + c2)", "get_name"}
+{"X(741)", "a2/((b + c)*(a2 - b*c))|b2/((a + c)*(b2 - a*c))|c2/((a + b)*(-(a*b) + c2))", "get_name"}
+{"X(742)", "a3*b + a3*c - b3*c - b*c3|a*b3 - a3*c + b3*c - a*c3|-(a3*b) - a*b3 + a*c3 + b*c3", "get_name"}
+{"X(743)", "a2/(a3*b + a3*c - b3*c - b*c3)|b2/(a*b3 - a3*c + b3*c - a*c3)|c2/(-(a3*b) - a*b3 + a*c3 + b*c3)", "get_name"}
+{"X(744)", "(b + c)*(a4 - b3*c + b2*c2 - b*c3)|(a + c)*(b4 - a3*c + a2*c2 - a*c3)|(a + b)*(-(a3*b) + a2*b2 - a*b3 + c4)", "get_name"}
+{"X(745)", "a2/((b + c)*(a4 - b3*c + b2*c2 - b*c3))|b2/((a + c)*(b4 - a3*c + a2*c2 - a*c3))|c2/((a + b)*(-(a3*b) + a2*b2 - a*b3 + c4))", "get_name"}
+{"X(746)", "a5*b + a5*c - b5*c - b*c5|a*b5 - a5*c + b5*c - a*c5|-(a5*b) - a*b5 + a*c5 + b*c5", "get_name"}
+{"X(747)", "a2/(a5*b + a5*c - b5*c - b*c5)|b2/(a*b5 - a5*c + b5*c - a*c5)|c2/(-(a5*b) - a*b5 + a*c5 + b*c5)", "get_name"}
+{"X(748)", "a3 - 2*a*b*c|b3 - 2*a*b*c|-2*a*b*c + c3", "get_name"}
+{"X(749)", "a2/(a3 - 2*a*b*c)|b2/(b3 - 2*a*b*c)|c2/(-2*a*b*c + c3)", "get_name"}
+{"X(750)", "a3 + 2*a*b*c|b3 + 2*a*b*c|2*a*b*c + c3", "get_name"}
+{"X(751)", "a2/(a3 + 2*a*b*c)|b2/(b3 + 2*a*b*c)|c2/(2*a*b*c + c3)", "get_name"}
+{"X(752)", "2*a3 - b3 - c3|-a3 + 2*b3 - c3|-a3 - b3 + 2*c3", "get_name"}
+{"X(753)", "a2/(2*a3 - b3 - c3)|b2/(-a3 + 2*b3 - c3)|c2/(-a3 - b3 + 2*c3)", "get_name"}
+{"X(754)", "2*a4 - b4 - c4|-a4 + 2*b4 - c4|-a4 - b4 + 2*c4", "get_name"}
+{"X(755)", "a2/(2*a4 - b4 - c4)|b2/(-a4 + 2*b4 - c4)|c2/(-a4 - b4 + 2*c4)", "get_name"}
+{"X(756)", "a*Power(b + c,2)|b*Power(a + c,2)|Power(a + b,2)*c", "get_name"}
+{"X(757)", "a/Power(b + c,2)|b/Power(a + c,2)|c/Power(a + b,2)", "get_name"}
+{"X(758)", "a3*(b + c) - a*(b3 + c3)|b3*(a + c) - b*(a3 + c3)|-((a3 + b3)*c) + (a + b)*c3", "get_name"}
+{"X(759)", "a2/(a3*(b + c) - a*(b3 + c3))|b2/(b3*(a + c) - b*(a3 + c3))|c2/(-((a3 + b3)*c) + (a + b)*c3)", "get_name"}
+{"X(760)", "a4*(b + c) - a*(b4 + c4)|b4*(a + c) - b*(a4 + c4)|-((a4 + b4)*c) + (a + b)*c4", "get_name"}
+{"X(761)", "a2/(a4*(b + c) - a*(b4 + c4))|b2/(b4*(a + c) - b*(a4 + c4))|c2/(-((a4 + b4)*c) + (a + b)*c4)", "get_name"}
+{"X(762)", "a*Power(b + c,3)|b*Power(a + c,3)|Power(a + b,3)*c", "get_name"}
+{"X(763)", "a/Power(b + c,3)|b/Power(a + c,3)|c/Power(a + b,3)", "get_name"}
+{"X(764)", "a*Power(b - c,3)|b*Power(-a + c,3)|Power(a - b,3)*c", "get_name"}
+{"X(765)", "a/Power(b - c,2)|b/Power(-a + c,2)|c/Power(a - b,2)", "get_name"}
+{"X(766)", "a4*(b3 + c3) - a3*(b4 + c4)|b4*(a3 + c3) - b3*(a4 + c4)|-((a4 + b4)*c3) + (a3 + b3)*c4", "get_name"}
+{"X(767)", "a2/(a4*(b3 + c3) - a3*(b4 + c4))|b2/(b4*(a3 + c3) - b3*(a4 + c4))|c2/(-((a4 + b4)*c3) + (a3 + b3)*c4)", "get_name"}
+{"X(768)", "(b - c)*(a*b3 + a*b2*c + b3*c + a*b*c2 + b2*c2 + a*c3 + b*c3)|(-a + c)*(a3*b + a3*c + a2*b*c + a2*c2 + a*b*c2 + a*c3 + b*c3)|(a - b)*(a3*b + a2*b2 + a*b3 + a3*c + a2*b*c + a*b2*c + b3*c)", "get_name"}
+{"X(769)", "a2/((b - c)*(a*b3 + a*b2*c + b3*c + a*b*c2 + b2*c2 + a*c3 + b*c3))|b2/((-a + c)*(a3*b + a3*c + a2*b*c + a2*c2 + a*b*c2 + a*c3 + b*c3))|c2/((a - b)*(a3*b + a2*b2 + a*b3 + a3*c + a2*b*c + a*b2*c + b3*c))", "get_name"}
+{"X(770)", "a*(a - b - c)*(b - c)*(a4*b*c - b*Power(b - c,2)*c*Power(b + c,2) + 4*a2*SB*SC + 4*SA*(SB2 + SC2))|b*(-a + b - c)*(-a + c)*(a*b4*c - a*c*Power(-a + c,2)*Power(a + c,2) + 4*b2*SA*SC + 4*SB*(SA2 + SC2))|(a - b)*c*(-a - b + c)*(-(a*Power(a - b,2)*b*Power(a + b,2)) + a*b*c4 + 4*c2*SA*SB + 4*(SA2 + SB2)*SC)", "get_name"}
+{"X(771)", "a/((a - b - c)*(b - c)*(a4*b*c - b*Power(b - c,2)*c*Power(b + c,2) + 4*a2*SB*SC + 4*SA*(SB2 + SC2)))|b/((-a + b - c)*(-a + c)*(a*b4*c - a*c*Power(-a + c,2)*Power(a + c,2) + 4*b2*SA*SC + 4*SB*(SA2 + SC2)))|c/((a - b)*(-a - b + c)*(-(a*Power(a - b,2)*b*Power(a + b,2)) + a*b*c4 + 4*c2*SA*SB + 4*(SA2 + SB2)*SC))", "get_name"}
+{"X(772)", "(b - c)*(a3*b3 + a3*b2*c + a3*b*c2 + a3*c3 + b3*c3)|(-a + c)*(a3*b3 + a2*b3*c + a*b3*c2 + a3*c3 + b3*c3)|(a - b)*(a3*b3 + a3*c3 + a2*b*c3 + a*b2*c3 + b3*c3)", "get_name"}
+{"X(773)", "a2/((b - c)*(a3*b3 + a3*b2*c + a3*b*c2 + a3*c3 + b3*c3))|b2/((-a + c)*(a3*b3 + a2*b3*c + a*b3*c2 + a3*c3 + b3*c3))|c2/((a - b)*(a3*b3 + a3*c3 + a2*b*c3 + a*b2*c3 + b3*c3))", "get_name"}
+{"X(774)", "a*(a2*SB*SC + SA*(SB2 + SC2))|b*(b2*SA*SC + SB*(SA2 + SC2))|c*(c2*SA*SB + (SA2 + SB2)*SC)", "get_name"}
+{"X(775)", "a/(a2*SB*SC + SA*(SB2 + SC2))|b/(b2*SA*SC + SB*(SA2 + SC2))|c/(c2*SA*SB + (SA2 + SB2)*SC)", "get_name"}
+{"X(776)", "(b - c)*(a5*b3 + a5*b2*c + a5*b*c2 + a5*c3 - b4*c4)|(-a + c)*(a3*b5 + a2*b5*c + a*b5*c2 + b5*c3 - a4*c4)|(a - b)*(-(a4*b4) + a3*c5 + a2*b*c5 + a*b2*c5 + b3*c5)", "get_name"}
+{"X(777)", "a2/((b - c)*(a5*b3 + a5*b2*c + a5*b*c2 + a5*c3 - b4*c4))|b2/((-a + c)*(a3*b5 + a2*b5*c + a*b5*c2 + b5*c3 - a4*c4))|c2/((a - b)*(-(a4*b4) + a3*c5 + a2*b*c5 + a*b2*c5 + b3*c5))", "get_name"}
+{"X(778)", "(b - c)*(b + c)*(a6*b2 + a6*c2 - b4*c4)|(-a + c)*(a + c)*(a2*b6 + b6*c2 - a4*c4)|(a - b)*(a + b)*(-(a4*b4) + a2*c6 + b2*c6)", "get_name"}
+{"X(779)", "a2/((b - c)*(b + c)*(a6*b2 + a6*c2 - b4*c4))|b2/((-a + c)*(a + c)*(a2*b6 + b6*c2 - a4*c4))|c2/((a - b)*(a + b)*(-(a4*b4) + a2*c6 + b2*c6))", "get_name"}
+{"X(780)", "(b - c)*(a7*b3 + a7*b2*c + a7*b*c2 + a7*c3 - b6*c4 - b5*c5 - b4*c6)|(-a + c)*(a3*b7 + a2*b7*c + a*b7*c2 + b7*c3 - a6*c4 - a5*c5 - a4*c6)|(a - b)*(-(a6*b4) - a5*b5 - a4*b6 + a3*c7 + a2*b*c7 + a*b2*c7 + b3*c7)", "get_name"}
+{"X(781)", "a2/((b - c)*(a7*b3 + a7*b2*c + a7*b*c2 + a7*c3 - b6*c4 - b5*c5 - b4*c6))|b2/((-a + c)*(a3*b7 + a2*b7*c + a*b7*c2 + b7*c3 - a6*c4 - a5*c5 - a4*c6))|c2/((a - b)*(-(a6*b4) - a5*b5 - a4*b6 + a3*c7 + a2*b*c7 + a*b2*c7 + b3*c7))", "get_name"}
+{"X(782)", "(a4 - b2*c2)*(a4 + b2*c2)*(b4 - c4)|(b4 - a2*c2)*(b4 + a2*c2)*(-a4 + c4)|(a4 - b4)*(-(a2*b2) + c4)*(a2*b2 + c4)", "get_name"}
+{"X(783)", "a2/((a4 - b2*c2)*(a4 + b2*c2)*(b4 - c4))|b2/((b4 - a2*c2)*(b4 + a2*c2)*(-a4 + c4))|c2/((a4 - b4)*(-(a2*b2) + c4)*(a2*b2 + c4))", "get_name"}
+{"X(784)", "(b - c)*(a*b2 + a*b*c + b2*c + a*c2 + b*c2)|(-a + c)*(a2*b + a2*c + a*b*c + a*c2 + b*c2)|(a - b)*(a2*b + a*b2 + a2*c + a*b*c + b2*c)", "get_name"}
+{"X(785)", "a2/((b - c)*(a*b2 + a*b*c + b2*c + a*c2 + b*c2))|b2/((-a + c)*(a2*b + a2*c + a*b*c + a*c2 + b*c2))|c2/((a - b)*(a2*b + a*b2 + a2*c + a*b*c + b2*c))", "get_name"}
+{"X(786)", "(b - c)*(a2*b2 + a2*b*c + a2*c2 + b2*c2)|(-a + c)*(a2*b2 + a*b2*c + a2*c2 + b2*c2)|(a - b)*(a2*b2 + a2*c2 + a*b*c2 + b2*c2)", "get_name"}
+{"X(787)", "a2/((b - c)*(a2*b2 + a2*b*c + a2*c2 + b2*c2))|b2/((-a + c)*(a2*b2 + a*b2*c + a2*c2 + b2*c2))|c2/((a - b)*(a2*b2 + a2*c2 + a*b*c2 + b2*c2))", "get_name"}
+{"X(788)", "1/b3 - 1/c3|-(1/a3) + 1/c3|1/a3 - 1/b3", "get_name"}
+{"X(789)", "1/(a*(b - c)*(b2 + b*c + c2))|1/(b*(-a + c)*(a2 + a*c + c2))|1/((a - b)*(a2 + a*b + b2)*c)", "get_name"}
+{"X(790)", "(b - c)*(a4*b2 + a4*b*c + a4*c2 - b3*c3)|(-a + c)*(a2*b4 + a*b4*c + b4*c2 - a3*c3)|(a - b)*(-(a3*b3) + a2*c4 + a*b*c4 + b2*c4)", "get_name"}
+{"X(791)", "a2/((b - c)*(a4*b2 + a4*b*c + a4*c2 - b3*c3))|b2/((-a + c)*(a2*b4 + a*b4*c + b4*c2 - a3*c3))|c2/((a - b)*(-(a3*b3) + a2*c4 + a*b*c4 + b2*c4))", "get_name"}
+{"X(792)", "(b - c)*(a5*b2 + a5*b*c + a5*c2 - b4*c3 - b3*c4)|(-a + c)*(a2*b5 + a*b5*c + b5*c2 - a4*c3 - a3*c4)|(a - b)*(-(a4*b3) - a3*b4 + a2*c5 + a*b*c5 + b2*c5)", "get_name"}
+{"X(793)", "a2/((b - c)*(a5*b2 + a5*b*c + a5*c2 - b4*c3 - b3*c4))|b2/((-a + c)*(a2*b5 + a*b5*c + b5*c2 - a4*c3 - a3*c4))|c2/((a - b)*(-(a4*b3) - a3*b4 + a2*c5 + a*b*c5 + b2*c5))", "get_name"}
+{"X(794)", "(b - c)*(a2 - b*c)*(b2 + b*c + c2)*(a4 + a2*b*c + b2*c2)|(-a + c)*(b2 - a*c)*(a2 + a*c + c2)*(b4 + a*b2*c + a2*c2)|(a - b)*(a2 + a*b + b2)*(-(a*b) + c2)*(a2*b2 + a*b*c2 + c4)", "get_name"}
+{"X(795)", "a2/((b - c)*(a2 - b*c)*(b2 + b*c + c2)*(a4 + a2*b*c + b2*c2))|b2/((-a + c)*(b2 - a*c)*(a2 + a*c + c2)*(b4 + a*b2*c + a2*c2))|c2/((a - b)*(a2 + a*b + b2)*(-(a*b) + c2)*(a2*b2 + a*b*c2 + c4))", "get_name"}
+{"X(796)", "(b - c)*(a7*b2 + a7*b*c + a7*c2 - b6*c3 - b5*c4 - b4*c5 - b3*c6)|(-a + c)*(a2*b7 + a*b7*c + b7*c2 - a6*c3 - a5*c4 - a4*c5 - a3*c6)|(a - b)*(-(a6*b3) - a5*b4 - a4*b5 - a3*b6 + a2*c7 + a*b*c7 + b2*c7)", "get_name"}
+{"X(797)", "a2/((b - c)*(a7*b2 + a7*b*c + a7*c2 - b6*c3 - b5*c4 - b4*c5 - b3*c6))|b2/((-a + c)*(a2*b7 + a*b7*c + b7*c2 - a6*c3 - a5*c4 - a4*c5 - a3*c6))|c2/((a - b)*(-(a6*b3) - a5*b4 - a4*b5 - a3*b6 + a2*c7 + a*b*c7 + b2*c7))", "get_name"}
+{"X(798)", "a3*(b2 - c2)|b3*(-a2 + c2)|(a2 - b2)*c3", "get_name"}
+{"X(799)", "1/(a*(b2 - c2))|1/(b*(-a2 + c2))|1/((a2 - b2)*c)", "get_name"}
+{"X(800)", "a2*(a2*SB*SC + SA*(SB2 + SC2))|b2*(b2*SA*SC + SB*(SA2 + SC2))|c2*(c2*SA*SB + (SA2 + SB2)*SC)", "get_name"}
+{"X(801)", "1/(a2*SB*SC + SA*(SB2 + SC2))|1/(b2*SA*SC + SB*(SA2 + SC2))|1/(c2*SA*SB + (SA2 + SB2)*SC)", "get_name"}
+{"X(802)", "(b - c)*(a3*b + a3*c - b2*c2)|(-a + c)*(a*b3 + b3*c - a2*c2)|(a - b)*(-(a2*b2) + a*c3 + b*c3)", "get_name"}
+{"X(803)", "a2/((b - c)*(a3*b + a3*c - b2*c2))|b2/((-a + c)*(a*b3 + b3*c - a2*c2))|c2/((a - b)*(-(a2*b2) + a*c3 + b*c3))", "get_name"}
+{"X(804)", "(b2 - c2)*(a4 - b2*c2)|(-a2 + c2)*(b4 - a2*c2)|(a2 - b2)*(-(a2*b2) + c4)", "get_name"}
+{"X(805)", "a2/((b2 - c2)*(a4 - b2*c2))|b2/((-a2 + c2)*(b4 - a2*c2))|c2/((a2 - b2)*(-(a2*b2) + c4))", "get_name"}
+{"X(806)", "(b - c)*(a5*b + a5*c - b4*c2 - b3*c3 - b2*c4)|(-a + c)*(a*b5 + b5*c - a4*c2 - a3*c3 - a2*c4)|(a - b)*(-(a4*b2) - a3*b3 - a2*b4 + a*c5 + b*c5)", "get_name"}
+{"X(807)", "a2/((b - c)*(a5*b + a5*c - b4*c2 - b3*c3 - b2*c4))|b2/((-a + c)*(a*b5 + b5*c - a4*c2 - a3*c3 - a2*c4))|c2/((a - b)*(-(a4*b2) - a3*b3 - a2*b4 + a*c5 + b*c5))", "get_name"}
+{"X(808)", "(b2 - c2)*(a6 - b4*c2 - b2*c4)|(-a2 + c2)*(b6 - a4*c2 - a2*c4)|(a2 - b2)*(-(a4*b2) - a2*b4 + c6)", "get_name"}
+{"X(809)", "a2/((b2 - c2)*(a6 - b4*c2 - b2*c4))|b2/((-a2 + c2)*(b6 - a4*c2 - a2*c4))|c2/((a2 - b2)*(-(a4*b2) - a2*b4 + c6))", "get_name"}
+{"X(810)", "a3*(b2 - c2)*SA|b3*(-a2 + c2)*SB|(a2 - b2)*c3*SC", "get_name"}
+{"X(811)", "1/(a*(b2 - c2)*SA)|1/(b*(-a2 + c2)*SB)|1/((a2 - b2)*c*SC)", "get_name"}
+{"X(812)", "(b - c)*(a2 - b*c)|(-a + c)*(b2 - a*c)|(a - b)*(-(a*b) + c2)", "get_name"}
+{"X(813)", "a2/((b - c)*(a2 - b*c))|b2/((-a + c)*(b2 - a*c))|c2/((a - b)*(-(a*b) + c2))", "get_name"}
+{"X(814)", "(b - c)*(a3 - b2*c - b*c2)|(-a + c)*(b3 - a2*c - a*c2)|(a - b)*(-(a2*b) - a*b2 + c3)", "get_name"}
+{"X(815)", "a2/((b - c)*(a3 - b2*c - b*c2))|b2/((-a + c)*(b3 - a2*c - a*c2))|c2/((a - b)*(-(a2*b) - a*b2 + c3))", "get_name"}
+{"X(816)", "(b - c)*(a4 - b3*c - b2*c2 - b*c3)|(-a + c)*(b4 - a3*c - a2*c2 - a*c3)|(a - b)*(-(a3*b) - a2*b2 - a*b3 + c4)", "get_name"}
+{"X(817)", "a2/((b - c)*(a4 - b3*c - b2*c2 - b*c3))|b2/((-a + c)*(b4 - a3*c - a2*c2 - a*c3))|c2/((a - b)*(-(a3*b) - a2*b2 - a*b3 + c4))", "get_name"}
+{"X(818)", "(b - c)*(a5 - b4*c - b3*c2 - b2*c3 - b*c4)|(-a + c)*(b5 - a4*c - a3*c2 - a2*c3 - a*c4)|(a - b)*(-(a4*b) - a3*b2 - a2*b3 - a*b4 + c5)", "get_name"}
+{"X(819)", "a2/((b - c)*(a5 - b4*c - b3*c2 - b2*c3 - b*c4))|b2/((-a + c)*(b5 - a4*c - a3*c2 - a2*c3 - a*c4))|c2/((a - b)*(-(a4*b) - a3*b2 - a2*b3 - a*b4 + c5))", "get_name"}
+{"X(820)", "a3*SA2*(b2*SB2 + c2*SC2)|b3*SB2*(a2*SA2 + c2*SC2)|c3*(a2*SA2 + b2*SB2)*SC2", "get_name"}
+{"X(821)", "1/(a*SA2*(b2*SB2 + c2*SC2))|1/(b*SB2*(a2*SA2 + c2*SC2))|1/(c*(a2*SA2 + b2*SB2)*SC2)", "get_name"}
+{"X(822)", "a3*(b2 - c2)*SA2|b3*(-a2 + c2)*SB2|(a2 - b2)*c3*SC2", "get_name"}
+{"X(823)", "1/(a*(b2 - c2)*SA2)|1/(b*(-a2 + c2)*SB2)|1/((a2 - b2)*c*SC2)", "get_name"}
+{"X(824)", "b3 - c3|-a3 + c3|a3 - b3", "get_name"}
+{"X(825)", "a2/(b3 - c3)|b2/(-a3 + c3)|c2/(a3 - b3)", "get_name"}
+{"X(826)", "b4 - c4|-a4 + c4|a4 - b4", "get_name"}
+{"X(827)", "a2/(b4 - c4)|b2/(-a4 + c4)|c2/(a4 - b4)", "get_name"}
+{"X(828)", "a3*SA2*(b3*SB2 + c3*SC2)|b3*SB2*(a3*SA2 + c3*SC2)|c3*(a3*SA2 + b3*SB2)*SC2", "get_name"}
+{"X(829)", "1/(a*SA2*(b3*SB2 + c3*SC2))|1/(b*SB2*(a3*SA2 + c3*SC2))|1/(c*(a3*SA2 + b3*SB2)*SC2)", "get_name"}
+{"X(830)", "a*(b - c)*(a2 + b2 + b*c + c2)|b*(-a + c)*(a2 + b2 + a*c + c2)|(a - b)*c*(a2 + a*b + b2 + c2)", "get_name"}
+{"X(831)", "a/((b - c)*(a2 + b2 + b*c + c2))|b/((-a + c)*(a2 + b2 + a*c + c2))|c/((a - b)*(a2 + a*b + b2 + c2))", "get_name"}
+{"X(832)", "a4*(b - c) + a*(b4 - c4)|b4*(-a + c) + b*(-a4 + c4)|(a4 - b4)*c + (a - b)*c4", "get_name"}
+{"X(833)", "a2/(a4*(b - c) + a*(b4 - c4))|b2/(b4*(-a + c) + b*(-a4 + c4))|c2/((a4 - b4)*c + (a - b)*c4)", "get_name"}
+{"X(834)", "a3*(b2 - c2) + a2*(b3 - c3)|b3*(-a2 + c2) + b2*(-a3 + c3)|(a3 - b3)*c2 + (a2 - b2)*c3", "get_name"}
+{"X(835)", "a2/(a3*(b2 - c2) + a2*(b3 - c3))|b2/(b3*(-a2 + c2) + b2*(-a3 + c3))|c2/((a3 - b3)*c2 + (a2 - b2)*c3)", "get_name"}
+{"X(836)", "a2*SA2*(b*SB2 + c*SC2)|b2*SB2*(a*SA2 + c*SC2)|c2*(a*SA2 + b*SB2)*SC2", "get_name"}
+{"X(837)", "1/(SA2*(b*SB2 + c*SC2))|1/(SB2*(a*SA2 + c*SC2))|1/((a*SA2 + b*SB2)*SC2)", "get_name"}
+{"X(838)", "a4*(b3 - c3) + a3*(b4 - c4)|b4*(-a3 + c3) + b3*(-a4 + c4)|(a4 - b4)*c3 + (a3 - b3)*c4", "get_name"}
+{"X(839)", "a2/(a4*(b3 - c3) + a3*(b4 - c4))|b2/(b4*(-a3 + c3) + b3*(-a4 + c4))|c2/((a4 - b4)*c3 + (a3 - b3)*c4)", "get_name"}
+{"X(840)", "a2/(2*a3 - 2*a2*b + a*b2 - b3 - 2*a2*c + b2*c + a*c2 + b*c2 - c3)|b2/(-a3 + a2*b - 2*a*b2 + 2*b3 + a2*c - 2*b2*c + a*c2 + b*c2 - c3)|c2/(-a3 + a2*b + a*b2 - b3 + a2*c + b2*c - 2*a*c2 - 2*b*c2 + 2*c3)", "get_name"}
+{"X(841)", "a2/(-(a4*Power(SA,3)) + SA*SB*SC*(SB2 + 10*SB*SC + SC2) + a2*(5*SA2*Power(SB - SC,2) - 4*SB2*SC2))|b2/(-(b4*Power(SB,3)) + SA*SB*SC*(SA2 + 10*SA*SC + SC2) + b2*(5*SB2*Power(-SA + SC,2) - 4*SA2*SC2))|c2/(SA*SB*(SA2 + 10*SA*SB + SB2)*SC - c4*Power(SC,3) + c2*(-4*SA2*SB2 + 5*Power(SA - SB,2)*SC2))", "get_name"}
+{"X(842)", "a2/(-(a2*(SA2 + SB*SC)) + 2*SA*(SB2 + SC2))|b2/(-(b2*(SB2 + SA*SC)) + 2*SB*(SA2 + SC2))|c2/(2*(SA2 + SB2)*SC - c2*(SA*SB + SC2))", "get_name"}
+{"X(843)", "a2/(2*(a2 - SA)*SA + SB2 - 4*SB*SC + SC2)|b2/(SA2 + 2*(b2 - SB)*SB - 4*SA*SC + SC2)|c2/(SA2 - 4*SA*SB + SB2 + 2*(c2 - SC)*SC)", "get_name"}
+{"X(844)", "a*(sa*sb*Sqrt((a*b)/(s*sc)) + sa*Sqrt((a*c)/(s*sb))*sc - Sqrt((b*c)/(s*sa))*sb*sc)|b*(sa*sb*Sqrt((a*b)/(s*sc)) - sa*Sqrt((a*c)/(s*sb))*sc + Sqrt((b*c)/(s*sa))*sb*sc)|c*(-(sa*sb*Sqrt((a*b)/(s*sc))) + sa*Sqrt((a*c)/(s*sb))*sc + Sqrt((b*c)/(s*sa))*sb*sc)", "get_name"}
+{"X(845)", "a*(Sqrt((Power(sa,3)*Power(sb,3))/(a*b)) + Sqrt((Power(sa,3)*Power(sc,3))/(a*c)) - Sqrt((Power(sb,3)*Power(sc,3))/(b*c)))|b*(Sqrt((Power(sa,3)*Power(sb,3))/(a*b)) - Sqrt((Power(sa,3)*Power(sc,3))/(a*c)) + Sqrt((Power(sb,3)*Power(sc,3))/(b*c)))|c*(-Sqrt((Power(sa,3)*Power(sb,3))/(a*b)) + Sqrt((Power(sa,3)*Power(sc,3))/(a*c)) + Sqrt((Power(sb,3)*Power(sc,3))/(b*c)))", "get_name"}
+{"X(846)", "a*(a*b + a*c + b*c + 2*SA)|b*(a*b + a*c + b*c + 2*SB)|c*(a*b + a*c + b*c + 2*SC)", "get_name"}
+{"X(847)", "(b2*c2)/(SA*(-4*Power(area,2) + SA2))|(a2*c2)/(SB*(-4*Power(area,2) + SB2))|(a2*b2)/(SC*(-4*Power(area,2) + SC2))", "get_name"}
+{"X(848)", "1/(cotA - cotAp)|1/(cotB - cotBp)|1/(cotC - cotCp)", "get_name"}
+{"X(849)", "a3/Power(b + c,2)|b3/Power(a + c,2)|c3/Power(a + b,2)", "get_name"}
+{"X(850)", "(b2 - c2)/a2|(-a2 + c2)/b2|(a2 - b2)/c2", "get_name"}
+{"X(851)", "a*(b + c)*(a4 - a2*b2 + a2*b*c - b3*c - a2*c2 + 2*b2*c2 - b*c3)|b*(a + c)*(-(a2*b2) + b4 - a3*c + a*b2*c + 2*a2*c2 - b2*c2 - a*c3)|(a + b)*c*(-(a3*b) + 2*a2*b2 - a*b3 - a2*c2 + a*b*c2 - b2*c2 + c4)", "get_name"}
+{"X(852)", "a2*SA*(SA2*SB2 + SA2*SC2 - 2*SB2*SC2)|b2*SB*(SA2*SB2 - 2*SA2*SC2 + SB2*SC2)|c2*SC*(-2*SA2*SB2 + SA2*SC2 + SB2*SC2)", "get_name"}
+{"X(853)", "a2*(a - b - c)*(a5*b2 - a4*b3 - a3*b4 + a2*b5 + a4*b2*c - a2*b4*c + a5*c2 + a4*b*c2 - 2*b5*c2 - a4*c3 + 2*b4*c3 - a3*c4 - a2*b*c4 + 2*b3*c4 + a2*c5 - 2*b2*c5)|b2*(-a + b - c)*(a5*b2 - a4*b3 - a3*b4 + a2*b5 - a4*b2*c + a2*b4*c - 2*a5*c2 + a*b4*c2 + b5*c2 + 2*a4*c3 - b4*c3 + 2*a3*c4 - a*b2*c4 - b3*c4 - 2*a2*c5 + b2*c5)|(-a - b + c)*c2*(-2*a5*b2 + 2*a4*b3 + 2*a3*b4 - 2*a2*b5 + a5*c2 - a4*b*c2 - a*b4*c2 + b5*c2 - a4*c3 - b4*c3 - a3*c4 + a2*b*c4 + a*b2*c4 - b3*c4 + a2*c5 + b2*c5)", "get_name"}
+{"X(854)", "-((a2*c2*(-(a2*SA) + b2*SB))/((a + b - c)*(-a + b + c))) + (a2*b2*(a2*SA - c2*SC))/((a - b + c)*(-a + b + c))|(b2*c2*(-(a2*SA) + b2*SB))/((a + b - c)*(a - b + c)) - (a2*b2*(-(b2*SB) + c2*SC))/((a - b + c)*(-a + b + c))|-((b2*c2*(a2*SA - c2*SC))/((a + b - c)*(a - b + c))) + (a2*c2*(-(b2*SB) + c2*SC))/((a + b - c)*(-a + b + c))", "get_name"}
+{"X(855)", "-((a*c*(-(a2*SA) + b2*SB))/((a + b - c)*(-a + b + c))) + (a*b*(a2*SA - c2*SC))/((a - b + c)*(-a + b + c))|(b*c*(-(a2*SA) + b2*SB))/((a + b - c)*(a - b + c)) - (a*b*(-(b2*SB) + c2*SC))/((a - b + c)*(-a + b + c))|-((b*c*(a2*SA - c2*SC))/((a + b - c)*(a - b + c))) + (a*c*(-(b2*SB) + c2*SC))/((a + b - c)*(-a + b + c))", "get_name"}
+{"X(856)", "a*SA*(-(b*c*(b + c)*SB*SC) + a2*SA*(b*SB + c*SC))|b*SB*(-(a*c*(a + c)*SA*SC) + b2*SB*(a*SA + c*SC))|c*SC*(-(a*b*(a + b)*SA*SB) + c2*(a*SA + b*SB)*SC)", "get_name"}
+{"X(857)", "a2*(b + c)*SA - b3*SB - c3*SC|-(a3*SA) + b2*(a + c)*SB - c3*SC|-(a3*SA) - b3*SB + (a + b)*c2*SC", "get_name"}
+{"X(858)", "c2*(a4 - a2*b2 + b4 - c4) + b2*(a4 - b4 - a2*c2 + c4)|c2*(a4 - a2*b2 + b4 - c4) + a2*(-a4 + b4 - b2*c2 + c4)|b2*(a4 - b4 - a2*c2 + c4) + a2*(-a4 + b4 - b2*c2 + c4)", "get_name"}
+{"X(859)", "a2*(a + b)*(a + c)*(a*b*c - b*SB - c*SC)|(a + b)*b2*(b + c)*(a*b*c - a*SA - c*SC)|(a + c)*(b + c)*c2*(a*b*c - a*SA - b*SB)", "get_name"}
+{"X(860)", "(b + c)*(b*c - 2*SA)*SB*SC|(a + c)*SA*(a*c - 2*SB)*SC|(a + b)*SA*SB*(a*b - 2*SC)", "get_name"}
+{"X(861)", "a*(-a + b + c)*((a + b - c)*c*(-(a2*SA) + b2*SB) - b*(a - b + c)*(a2*SA - c2*SC))|b*(a - b + c)*(-((a + b - c)*c*(-(a2*SA) + b2*SB)) + a*(-a + b + c)*(-(b2*SB) + c2*SC))|(a + b - c)*c*(b*(a - b + c)*(a2*SA - c2*SC) - a*(-a + b + c)*(-(b2*SB) + c2*SC))", "get_name"}
+{"X(862)", "a*(b + c)*(-a2 + b*c)*SB*SC|b*(a + c)*(-b2 + a*c)*SA*SC|(a + b)*c*(a*b - c2)*SA*SB", "get_name"}
+{"X(863)", "a2*(-(SA/b3) - SA/c3) + SB/b + SC/c|SA/a + b2*(-(SB/a3) - SB/c3) + SC/c|SA/a + SB/b + c2*(-(SC/a3) - SC/b3)", "get_name"}
+{"X(864)", "a2*(-(SA/b4) - SA/c4) + SB/b2 + SC/c2|SA/a2 + b2*(-(SB/a4) - SB/c4) + SC/c2|SA/a2 + SB/b2 + c2*(-(SC/a4) - SC/b4)", "get_name"}
+{"X(865)", "a2*Power(SB - SC,2)*(a2*SB*SC - SA*(SA2 + SB*SC))|b2*Power(-SA + SC,2)*(b2*SA*SC - SB*(SB2 + SA*SC))|c2*Power(SA - SB,2)*(c2*SA*SB - SC*(SA*SB + SC2))", "get_name"}
+{"X(866)", "a*(b - c)*(a3*(b - c)*SA - b3*c*SB + b*c3*SC + a*b*c*(b*SB - c*SC))|b*(-a + c)*(a3*c*SA + b3*(-a + c)*SB - a*c3*SC + a*b*c*(-(a*SA) + c*SC))|(a - b)*c*(-(a3*b*SA) + a*b3*SB + a*b*c*(a*SA - b*SB) + (a - b)*c3*SC)", "get_name"}
+{"X(867)", "(b - c)*(a2*(-b + c)*SA + b3*SB - c3*SC + a*(-(b2*SB) + c2*SC))|(-a + c)*(-(a3*SA) + b2*(a - c)*SB + c3*SC + b*(a2*SA - c2*SC))|(a - b)*(a3*SA - b3*SB + c*(-(a2*SA) + b2*SB) + (-a + b)*c2*SC)", "get_name"}
+{"X(868)", "Power(SB - SC,2)*(-SA2 + SB*SC)|Power(-SA + SC,2)*(-SB2 + SA*SC)|Power(SA - SB,2)*(SA*SB - SC2)", "get_name"}
+{"X(869)", "a3*(b2 + b*c + c2)|b3*(a2 + a*c + c2)|(a2 + a*b + b2)*c3", "get_name"}
+{"X(870)", "1/(a*(b2 + b*c + c2))|1/(b*(a2 + a*c + c2))|1/((a2 + a*b + b2)*c)", "get_name"}
+{"X(871)", "1/(a3*(b2 + b*c + c2))|1/(b3*(a2 + a*c + c2))|1/((a2 + a*b + b2)*c3)", "get_name"}
+{"X(872)", "Power(a,3)*Power(b + c,2)|Power(b,3)*Power(a + c,2)|Power(a + b,2)*Power(c,3)", "get_name"}
+{"X(873)", "1/(a*Power(b + c,2))|1/(b*Power(a + c,2))|1/(Power(a + b,2)*c)", "get_name"}
+{"X(874)", "(a2 - b*c)/(a*b - a*c)|(b2 - a*c)/(-(a*b) + b*c)|(-(a*b) + c2)/(a*c - b*c)", "get_name"}
+{"X(875)", "(a2*(a*b - a*c))/(a2 - b*c)|(b2*(-(a*b) + b*c))/(b2 - a*c)|((a*c - b*c)*c2)/(-(a*b) + c2)", "get_name"}
+{"X(876)", "(a*b - a*c)/(a2 - b*c)|(-(a*b) + b*c)/(b2 - a*c)|(a*c - b*c)/(-(a*b) + c2)", "get_name"}
+{"X(877)", "(SA - SB)*SB*(SA - SC)*SC*(SA2 - SB*SC)|SA*(-SA + SB)*(SB - SC)*SC*(SB2 - SA*SC)|SA*SB*(-SA + SC)*(-SB + SC)*(-(SA*SB) + SC2)", "get_name"}
+{"X(878)", "(a2*SA*(SB - SC))/(SA2 - SB*SC)|(b2*SB*(-SA + SC))/(SB2 - SA*SC)|(c2*(SA - SB)*SC)/(-(SA*SB) + SC2)", "get_name"}
+{"X(879)", "(SA*(SB - SC))/(SA2 - SB*SC)|(SB*(-SA + SC))/(SB2 - SA*SC)|((SA - SB)*SC)/(-(SA*SB) + SC2)", "get_name"}
+{"X(880)", "(a4 - b2*c2)/(a2*(b2 - c2))|(b4 - a2*c2)/(b2*(-a2 + c2))|(-(a2*b2) + c4)/((a2 - b2)*c2)", "get_name"}
+{"X(881)", "(a4*(b2 - c2))/(a4 - b2*c2)|(b4*(-a2 + c2))/(b4 - a2*c2)|((a2 - b2)*c4)/(-(a2*b2) + c4)", "get_name"}
+{"X(882)", "(a2*(b2 - c2))/(a4 - b2*c2)|(b2*(-a2 + c2))/(b4 - a2*c2)|((a2 - b2)*c2)/(-(a2*b2) + c4)", "get_name"}
+{"X(883)", "(b2 - a*(b + c) + c2)/((a - b - c)*(b - c))|(a2 - b*(a + c) + c2)/((-a + b - c)*(-a + c))|(a2 + b2 - (a + b)*c)/((a - b)*(-a - b + c))", "get_name"}
+{"X(884)", "(a2*(a - b - c)*(b - c))/(b2 - a*(b + c) + c2)|(b2*(-a + b - c)*(-a + c))/(a2 - b*(a + c) + c2)|((a - b)*(-a - b + c)*c2)/(a2 + b2 - (a + b)*c)", "get_name"}
+{"X(885)", "((a - b - c)*(b - c))/(b2 - a*(b + c) + c2)|((-a + b - c)*(-a + c))/(a2 - b*(a + c) + c2)|((a - b)*(-a - b + c))/(a2 + b2 - (a + b)*c)", "get_name"}
+{"X(886)", "1/(a2*(b2 - c2)*(-2*b2*c2 + a2*(b2 + c2)))|1/(b2*(-a2 + c2)*(-2*a2*c2 + b2*(a2 + c2)))|1/((a2 - b2)*c2*(-2*a2*b2 + (a2 + b2)*c2))", "get_name"}
+{"X(887)", "a4*(b2 - c2)*(-2*b2*c2 + a2*(b2 + c2))|b4*(-a2 + c2)*(-2*a2*c2 + b2*(a2 + c2))|(a2 - b2)*(-2*a2*b2 + (a2 + b2)*c2)*c4", "get_name"}
+{"X(888)", "a2*(b2 - c2)*(-2*b2*c2 + a2*(b2 + c2))|b2*(-a2 + c2)*(-2*a2*c2 + b2*(a2 + c2))|(a2 - b2)*c2*(-2*a2*b2 + (a2 + b2)*c2)", "get_name"}
+{"X(889)", "1/(a*(b - c)*(-2*b*c + a*(b + c)))|1/(b*(-a + c)*(-2*a*c + b*(a + c)))|1/((a - b)*c*(-2*a*b + (a + b)*c))", "get_name"}
+{"X(890)", "a3*(b - c)*(-2*b*c + a*(b + c))|b3*(-a + c)*(-2*a*c + b*(a + c))|(a - b)*(-2*a*b + (a + b)*c)*c3", "get_name"}
+{"X(891)", "a*(b - c)*(-2*b*c + a*(b + c))|b*(-a + c)*(-2*a*c + b*(a + c))|(a - b)*c*(-2*a*b + (a + b)*c)", "get_name"}
+{"X(892)", "1/((b2 - c2)*(-2*a2 + b2 + c2))|1/((-a2 + c2)*(a2 - 2*b2 + c2))|1/((a2 - b2)*(a2 + b2 - 2*c2))", "get_name"}
+{"X(893)", "1/(b2*(a2 + b*c)*c2)|1/(a2*(b2 + a*c)*c2)|1/(a2*b2*(a*b + c2))", "get_name"}
+{"X(894)", "a2 + b*c|b2 + a*c|a*b + c2", "get_name"}
+{"X(895)", "a2/((a2 - 2*SA)*SB*SC)|b2/(SA*(b2 - 2*SB)*SC)|c2/(SA*SB*(c2 - 2*SC))", "get_name"}
+{"X(896)", "a*(2*a2 - b2 - c2)|b*(-a2 + 2*b2 - c2)|c*(-a2 - b2 + 2*c2)", "get_name"}
+{"X(897)", "a/(2*a2 - b2 - c2)|b/(-a2 + 2*b2 - c2)|c/(-a2 - b2 + 2*c2)", "get_name"}
+{"X(898)", "a/((b - c)*(-2*b*c + a*(b + c)))|b/((-a + c)*(-2*a*c + b*(a + c)))|c/((a - b)*(-2*a*b + (a + b)*c))", "get_name"}
+{"X(899)", "a*(-2/a + 1/b + 1/c)|b*(1/a - 2/b + 1/c)|(1/a + 1/b - 2/c)*c", "get_name"}
+{"X(900)", "(b - c)*(-2*a + b + c)|(-a + c)*(a - 2*b + c)|(a - b)*(a + b - 2*c)", "get_name"}
+{"X(901)", "a2/((b - c)*(-2*a + b + c))|b2/((-a + c)*(a - 2*b + c))|c2/((a - b)*(a + b - 2*c))", "get_name"}
+{"X(902)", "a2*(-2*a + b + c)|b2*(a - 2*b + c)|(a + b - 2*c)*c2", "get_name"}
+{"X(903)", "1/(-2*a + b + c)|1/(a - 2*b + c)|1/(a + b - 2*c)", "get_name"}
+{"X(904)", "a3/(a2 + b*c)|b3/(b2 + a*c)|c3/(a*b + c2)", "get_name"}
+{"X(905)", "a*(b - c)*SA|b*(-a + c)*SB|(a - b)*c*SC", "get_name"}
+{"X(906)", "(2*a3*SA)/(b - c)|(2*b3*SB)/(-a + c)|(2*c3*SC)/(a - b)", "get_name"}
+{"X(907)", "a2/((b2 - c2)*(3*a2 + b2 + c2))|b2/((-a2 + c2)*(a2 + 3*b2 + c2))|c2/((a2 - b2)*(a2 + b2 + 3*c2))", "get_name"}
+{"X(908)", "a*b*c - b*SB - c*SC|a*b*c - a*SA - c*SC|a*b*c - a*SA - b*SB", "get_name"}
+{"X(909)", "a2/(a*b*c - b*SB - c*SC)|b2/(a*b*c - a*SA - c*SC)|c2/(a*b*c - a*SA - b*SB)", "get_name"}
+{"X(910)", "a*(2*a3 - a2*b - b3 - a2*c + b2*c + b*c2 - c3)|b*(-a3 - a*b2 + 2*b3 + a2*c - b2*c + a*c2 - c3)|c*(-a3 + a2*b + a*b2 - b3 - a*c2 - b*c2 + 2*c3)", "get_name"}
+{"X(911)", "a3/(2*a3 - a2*(b + c) - Power(b - c,2)*(b + c))|b3/(2*b3 - b2*(a + c) - Power(-a + c,2)*(a + c))|c3/(-(Power(a - b,2)*(a + b)) - (a + b)*c2 + 2*c3)", "get_name"}
+{"X(912)", "a*SA*(a*((a + b - c)*(a - b + c)*(b + c) - 2*a*SA) - 4*SB*SC)|b*SB*(b*((a + b - c)*(a + c)*(-a + b + c) - 2*b*SB) - 4*SA*SC)|c*SC*(-4*SA*SB + c*((a + b)*(a - b + c)*(-a + b + c) - 2*c*SC))", "get_name"}
+{"X(913)", "a2/(2*a*SA*((a + b - c)*(a - b + c)*(b + c) - 2*a*SA) - 8*SA*SB*SC)|b2/(2*b*SB*((a + b - c)*(a + c)*(-a + b + c) - 2*b*SB) - 8*SA*SB*SC)|c2/(-8*SA*SB*SC + 2*c*SC*((a + b)*(a - b + c)*(-a + b + c) - 2*c*SC))", "get_name"}
+{"X(914)", "2*a*SA*((a + b - c)*(a - b + c)*(b + c) - 2*a*SA) - 8*SA*SB*SC|2*b*SB*((a + b - c)*(a + c)*(-a + b + c) - 2*b*SB) - 8*SA*SB*SC|-8*SA*SB*SC + 2*c*SC*((a + b)*(a - b + c)*(-a + b + c) - 2*c*SC)", "get_name"}
+{"X(915)", "a/(SA*(a*((a + b - c)*(a - b + c)*(b + c) - 2*a*SA) - 4*SB*SC))|b/(SB*(b*((a + b - c)*(a + c)*(-a + b + c) - 2*b*SB) - 4*SA*SC))|c/(SC*(-4*SA*SB + c*((a + b)*(a - b + c)*(-a + b + c) - 2*c*SC)))", "get_name"}
+{"X(916)", "a2*SA*(a5 + 2*a3*SA - a*Power(SB - SC,2) - 2*(b3*SB + c3*SC))|b2*SB*(b5 + 2*b3*SB - b*Power(-SA + SC,2) - 2*(a3*SA + c3*SC))|c2*SC*(c5 - c*Power(SA - SB,2) - 2*(a3*SA + b3*SB) + 2*c3*SC)", "get_name"}
+{"X(917)", "1/(SA*(a5 + 2*a3*SA - a*Power(SB - SC,2) - 2*(b3*SB + c3*SC)))|1/(SB*(b5 + 2*b3*SB - b*Power(-SA + SC,2) - 2*(a3*SA + c3*SC)))|1/(SC*(c5 - c*Power(SA - SB,2) - 2*(a3*SA + b3*SB) + 2*c3*SC))", "get_name"}
+{"X(918)", "(b - c)*(b2 - a*(b + c) + c2)|(-a + c)*(a2 - b*(a + c) + c2)|(a - b)*(a2 + b2 - (a + b)*c)", "get_name"}
+{"X(919)", "a2/((b - c)*(b2 - a*(b + c) + c2))|b2/((-a + c)*(a2 - b*(a + c) + c2))|c2/((a - b)*(a2 + b2 - (a + b)*c))", "get_name"}
+{"X(920)", "a*(-(a2*SA2) + b2*SB2 + c2*SC2)|b*(a2*SA2 - b2*SB2 + c2*SC2)|c*(a2*SA2 + b2*SB2 - c2*SC2)", "get_name"}
+{"X(921)", "a/(-(a2*SA2) + b2*SB2 + c2*SC2)|b/(a2*SA2 - b2*SB2 + c2*SC2)|c/(a2*SA2 + b2*SB2 - c2*SC2)", "get_name"}
+{"X(922)", "a3*(2*a2 - b2 - c2)|b3*(-a2 + 2*b2 - c2)|(-a2 - b2 + 2*c2)*c3", "get_name"}
+{"X(923)", "a3/(2*a2 - b2 - c2)|b3/(-a2 + 2*b2 - c2)|c3/(-a2 - b2 + 2*c2)", "get_name"}
+{"X(924)", "a2*(-4*Power(area,2) + SA2)*(SB - SC)|b2*(-4*Power(area,2) + SB2)*(-SA + SC)|c2*(SA - SB)*(-4*Power(area,2) + SC2)", "get_name"}
+{"X(925)", "1/((-4*Power(area,2) + SA2)*(SB - SC))|1/((-4*Power(area,2) + SB2)*(-SA + SC))|1/((SA - SB)*(-4*Power(area,2) + SC2))", "get_name"}
+{"X(926)", "a2*(a - b - c)*(b - c)*(-b2 + a*(b + c) - c2)|b2*(-a + b - c)*(-a + c)*(-a2 + b*(a + c) - c2)|(a - b)*(-a - b + c)*(-a2 - b2 + (a + b)*c)*c2", "get_name"}
+{"X(927)", "1/((a - b - c)*(b - c)*(-b2 + a*(b + c) - c2))|1/((-a + b - c)*(-a + c)*(-a2 + b*(a + c) - c2))|1/((a - b)*(-a - b + c)*(-a2 - b2 + (a + b)*c))", "get_name"}
+{"X(928)", "a2*(b - c)*(-2*a2*b*c + a3*(b + c) - a*Power(b - c,2)*(b + c) + 2*(SA2 - SB*SC))|b2*(-a + c)*(-2*a*b2*c + b3*(a + c) - b*Power(-a + c,2)*(a + c) + 2*(SB2 - SA*SC))|(a - b)*c2*(-(Power(a - b,2)*(a + b)*c) - 2*a*b*c2 + (a + b)*c3 + 2*(-(SA*SB) + SC2))", "get_name"}
+{"X(929)", "1/((b - c)*(-2*a2*b*c + a3*(b + c) - a*Power(b - c,2)*(b + c) + 2*(SA2 - SB*SC)))|1/((-a + c)*(-2*a*b2*c + b3*(a + c) - b*Power(-a + c,2)*(a + c) + 2*(SB2 - SA*SC)))|1/((a - b)*(-(Power(a - b,2)*(a + b)*c) - 2*a*b*c2 + (a + b)*c3 + 2*(-(SA*SB) + SC2)))", "get_name"}
+{"X(930)", "1/((b2 - c2)*(12*Power(area,2) - SA2))|1/((-a2 + c2)*(12*Power(area,2) - SB2))|1/((a2 - b2)*(12*Power(area,2) - SC2))", "get_name"}
+{"X(931)", "a/((a2 + a*b + a*c + 2*b*c)*(b2 - c2))|b/((a*b + b2 + 2*a*c + b*c)*(-a2 + c2))|c/((a2 - b2)*(2*a*b + a*c + b*c + c2))", "get_name"}
+{"X(932)", "(a*(a - b)*(a - c))/(a*b + a*c - b*c)|(b*(-a + b)*(b - c))/(a*b - a*c + b*c)|(c*(-a + c)*(-b + c))/(-(a*b) + a*c + b*c)", "get_name"}
+{"X(933)", "a2/(SA*(SB - SC)*(a2*SA + 2*SB*SC))|b2/(SB*(-SA + SC)*(b2*SB + 2*SA*SC))|c2/((SA - SB)*SC*(2*SA*SB + c2*SC))", "get_name"}
+{"X(934)", "a*(a - b)*Power(a + b - c,2)*(-a + c)*Power(a - b + c,2)|(a - b)*b*(b - c)*Power(a + b - c,2)*Power(-a + b + c,2)|(b - c)*c*(-a + c)*Power(a - b + c,2)*Power(-a + b + c,2)", "get_name"}
+{"X(935)", "(SB*SC)/((SB - SC)*(SA*(a2 + SA) - 3*SB*SC))|(SA*SC)/((-SA + SC)*(SB*(b2 + SB) - 3*SA*SC))|(SA*SB)/((SA - SB)*(-3*SA*SB + SC*(c2 + SC)))", "get_name"}
+{"X(936)", "a*(a3 - a2*b - a*b2 + b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + 3*b*c2 + c3)|b*(a3 - a2*b - a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + 3*a*c2 - b*c2 + c3)|c*(a3 + 3*a2*b + 3*a*b2 + b3 - a2*c + 2*a*b*c - b2*c - a*c2 - b*c2 + c3)", "get_name"}
+{"X(937)", "a/(a3 - a2*b - a*b2 + b3 - a2*c + 2*a*b*c + 3*b2*c - a*c2 + 3*b*c2 + c3)|b/(a3 - a2*b - a*b2 + b3 + 3*a2*c + 2*a*b*c - b2*c + 3*a*c2 - b*c2 + c3)|c/(a3 + 3*a2*b + 3*a*b2 + b3 - a2*c + 2*a*b*c - b2*c - a*c2 - b*c2 + c3)", "get_name"}
+{"X(938)", "Power(a - b,3)*(a + b) - 2*a*Power(a + b,2)*c - 2*(a - b)*b*c2 + 2*a*c3 - c4|-a4 + 2*a3*b - 2*a2*(b - c)*c + Power(b - c,3)*(b + c) - 2*a*b*Power(b + c,2)|-b4 + 2*b3*c - 2*a*b2*(-a + c) + Power(-a + c,3)*(a + c) - 2*b*c*Power(a + c,2)", "get_name"}
+{"X(939)", "a2/(Power(a - b,3)*(a + b) - 2*a*Power(a + b,2)*c - 2*(a - b)*b*c2 + 2*a*c3 - c4)|b2/(-a4 + 2*a3*b - 2*a2*(b - c)*c + Power(b - c,3)*(b + c) - 2*a*b*Power(b + c,2))|c2/(-b4 + 2*b3*c - 2*a*b2*(-a + c) + Power(-a + c,3)*(a + c) - 2*b*c*Power(a + c,2))", "get_name"}
+{"X(940)", "a*(a2 + a*b + a*c + 2*b*c)|b*(a*b + b2 + 2*a*c + b*c)|c*(2*a*b + a*c + b*c + c2)", "get_name"}
+{"X(941)", "a/(a2 + a*b + a*c + 2*b*c)|b/(a*b + b2 + 2*a*c + b*c)|c/(2*a*b + a*c + b*c + c2)", "get_name"}
+{"X(942)", "b*(a + c)*SB + (a + b)*c*SC|a*(b + c)*SA + (a + b)*c*SC|a*(b + c)*SA + b*(a + c)*SB", "get_name"}
+{"X(943)", "a2/(b*(a + c)*SB + (a + b)*c*SC)|b2/(a*(b + c)*SA + (a + b)*c*SC)|c2/(a*(b + c)*SA + b*(a + c)*SB)", "get_name"}
+{"X(944)", "a3*(b + c) - a*Power(b - c,2)*(b + c) + a2*(-2*b*c + 2*SA) - 2*SB*SC|b3*(a + c) - b*Power(-a + c,2)*(a + c) + b2*(-2*a*c + 2*SB) - 2*SA*SC|-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 - 2*SA*SB + c2*(-2*a*b + 2*SC)", "get_name"}
+{"X(945)", "a2/(a3*(b + c) - a*Power(b - c,2)*(b + c) + a2*(-2*b*c + 2*SA) - 2*SB*SC)|b2/(b3*(a + c) - b*Power(-a + c,2)*(a + c) + b2*(-2*a*c + 2*SB) - 2*SA*SC)|c2/(-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 - 2*SA*SB + c2*(-2*a*b + 2*SC))", "get_name"}
+{"X(946)", "a3*(b + c) - a*Power(b - c,2)*(b + c) - 2*a2*(b*c - SA) + 4*SB*SC|b3*(a + c) - b*Power(-a + c,2)*(a + c) - 2*b2*(a*c - SB) + 4*SA*SC|-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 + 4*SA*SB - 2*c2*(a*b - SC)", "get_name"}
+{"X(947)", "a2/(a3*(b + c) - a*Power(b - c,2)*(b + c) - 2*a2*(b*c - SA) + 4*SB*SC)|b2/(b3*(a + c) - b*Power(-a + c,2)*(a + c) - 2*b2*(a*c - SB) + 4*SA*SC)|c2/(-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 + 4*SA*SB - 2*c2*(a*b - SC))", "get_name"}
+{"X(948)", "(a + b - c)*(a - b + c)*(a3 - a2*(b + c) - Power(b - c,2)*(b + c) + a*Power(b + c,2))|(a + b - c)*(-a + b + c)*(b3 - b2*(a + c) - Power(-a + c,2)*(a + c) + b*Power(a + c,2))|(a - b + c)*(-a + b + c)*(-(Power(a - b,2)*(a + b)) + Power(a + b,2)*c - (a + b)*c2 + c3)", "get_name"}
+{"X(949)", "a2/((a + b - c)*(a - b + c)*(a3 - a2*(b + c) - Power(b - c,2)*(b + c) + a*Power(b + c,2)))|b2/((a + b - c)*(-a + b + c)*(b3 - b2*(a + c) - Power(-a + c,2)*(a + c) + b*Power(a + c,2)))|c2/((a - b + c)*(-a + b + c)*(-(Power(a - b,2)*(a + b)) + Power(a + b,2)*c - (a + b)*c2 + c3))", "get_name"}
+{"X(950)", "(a - b - c)*(2*a3 + a2*b + b3 + a2*c - b2*c - b*c2 + c3)|(-a + b - c)*(a3 + a*b2 + 2*b3 - a2*c + b2*c - a*c2 + c3)|(-a - b + c)*(a3 - a2*b - a*b2 + b3 + a*c2 + b*c2 + 2*c3)", "get_name"}
+{"X(951)", "a2/((a - b - c)*(2*a3 + a2*b + b3 + a2*c - b2*c - b*c2 + c3))|b2/((-a + b - c)*(a3 + a*b2 + 2*b3 - a2*c + b2*c - a*c2 + c3))|c2/((-a - b + c)*(a3 - a2*b - a*b2 + b3 + a*c2 + b*c2 + 2*c3))", "get_name"}
+{"X(952)", "a3*(b + c) - a*Power(b - c,2)*(b + c) + a2*(-2*b*c + SA) - 2*SB*SC|b3*(a + c) - b*Power(-a + c,2)*(a + c) + b2*(-2*a*c + SB) - 2*SA*SC|-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 - 2*SA*SB + c2*(-2*a*b + SC)", "get_name"}
+{"X(953)", "a2/(a3*(b + c) - a*Power(b - c,2)*(b + c) + a2*(-2*b*c + SA) - 2*SB*SC)|b2/(b3*(a + c) - b*Power(-a + c,2)*(a + c) + b2*(-2*a*c + SB) - 2*SA*SC)|c2/(-(Power(a - b,2)*(a + b)*c) + (a + b)*c3 - 2*SA*SB + c2*(-2*a*b + SC))", "get_name"}
+{"X(954)", "a*(a5 - a*Power(SB - SC,2) + 2*(b5 + c5 - c*Power(SA - SB,2) + 2*b3*SB - b*Power(SA - SC,2) + 2*c3*SC))|b*(b5 - b*Power(-SA + SC,2) + 2*(a5 + c5 + 2*a3*SA - c*Power(-SA + SB,2) - a*Power(SB - SC,2) + 2*c3*SC))|c*(c5 - c*Power(SA - SB,2) + 2*(a5 + b5 + 2*a3*SA + 2*b3*SB - b*Power(-SA + SC,2) - a*Power(-SB + SC,2)))", "get_name"}
+{"X(955)", "a/(a5 - a*Power(SB - SC,2) + 2*(b5 + c5 - c*Power(SA - SB,2) + 2*b3*SB - b*Power(SA - SC,2) + 2*c3*SC))|b/(b5 - b*Power(-SA + SC,2) + 2*(a5 + c5 + 2*a3*SA - c*Power(-SA + SB,2) - a*Power(SB - SC,2) + 2*c3*SC))|c/(c5 - c*Power(SA - SB,2) + 2*(a5 + b5 + 2*a3*SA + 2*b3*SB - b*Power(-SA + SC,2) - a*Power(-SB + SC,2)))", "get_name"}
+{"X(956)", "a*b*c*(-a + b + c) + a2*SA|a*b*c*(a - b + c) + b2*SB|a*b*(a + b - c)*c + c2*SC", "get_name"}
+{"X(957)", "a2/(a*b*c*(-a + b + c) + a2*SA)|b2/(a*b*c*(a - b + c) + b2*SB)|c2/(a*b*(a + b - c)*c + c2*SC)", "get_name"}
+{"X(958)", "a*(a - b - c)*(a2 + a*b + a*c + 2*b*c)|b*(-a + b - c)*(a*b + b2 + 2*a*c + b*c)|c*(-a - b + c)*(2*a*b + a*c + b*c + c2)", "get_name"}
+{"X(959)", "a/((a - b - c)*(a2 + a*b + a*c + 2*b*c))|b/((-a + b - c)*(a*b + b2 + 2*a*c + b*c))|c/((-a - b + c)*(2*a*b + a*c + b*c + c2))", "get_name"}
+{"X(960)", "a*(-a + b + c)*(a*b + b2 + a*c + c2)|b*(a - b + c)*(a2 + a*b + b*c + c2)|(a + b - c)*c*(a2 + b2 + a*c + b*c)", "get_name"}
+{"X(961)", "a/((-a + b + c)*(a*b + b2 + a*c + c2))|b/((a - b + c)*(a2 + a*b + b*c + c2))|c/((a + b - c)*(a2 + b2 + a*c + b*c))", "get_name"}
+{"X(962)", "(a - b)*Power(a + b,3) + 2*a*Power(a - b,2)*c + 2*b*(a + b)*c2 - 2*a*c3 - c4|-a4 - 2*a3*b + 2*a*b*Power(b - c,2) + 2*a2*c*(b + c) + (b - c)*Power(b + c,3)|-b4 - 2*b3*c + 2*b*c*Power(-a + c,2) + 2*a*b2*(a + c) + (-a + c)*Power(a + c,3)", "get_name"}
+{"X(963)", "a2/((a - b)*Power(a + b,3) + 2*a*Power(a - b,2)*c + 2*b*(a + b)*c2 - 2*a*c3 - c4)|b2/(-a4 - 2*a3*b + 2*a*b*Power(b - c,2) + 2*a2*c*(b + c) + (b - c)*Power(b + c,3))|c2/(-b4 - 2*b3*c + 2*b*c*Power(-a + c,2) + 2*a*b2*(a + c) + (-a + c)*Power(a + c,3))", "get_name"}
+{"X(964)", "a4 + a3*(b + c) + a2*Power(b + c,2) + b*c*Power(b + c,2) + a*(b + c)*(b2 + b*c + c2)|b4 + b3*(a + c) + b2*Power(a + c,2) + a*c*Power(a + c,2) + b*(a + c)*(a2 + a*c + c2)|a*b*Power(a + b,2) + (a + b)*(a2 + a*b + b2)*c + Power(a + b,2)*c2 + (a + b)*c3 + c4", "get_name"}
+{"X(965)", "a*(a4 - a3*(b + c) + 2*b*c*Power(b + c,2) + a*Power(b + c,3) - a2*(b2 + c2))|b*(b4 - b3*(a + c) + 2*a*c*Power(a + c,2) + b*Power(a + c,3) - b2*(a2 + c2))|c*(2*a*b*Power(a + b,2) + Power(a + b,3)*c - (a2 + b2)*c2 - (a + b)*c3 + c4)", "get_name"}
+{"X(966)", "b*c + a*(b + c) + SA|a*c + b*(a + c) + SB|a*b + (a + b)*c + SC", "get_name"}
+{"X(967)", "a2/(b*c + a*(b + c) + SA)|b2/(a*c + b*(a + c) + SB)|c2/(a*b + (a + b)*c + SC)", "get_name"}
+{"X(968)", "a*(a2 - 2*a*(b + c) - Power(b + c,2))|b*(b2 - 2*b*(a + c) - Power(a + c,2))|c*(-Power(a + b,2) - 2*(a + b)*c + c2)", "get_name"}
+{"X(969)", "a/(a2 - 2*a*(b + c) - Power(b + c,2))|b/(b2 - 2*b*(a + c) - Power(a + c,2))|c/(-Power(a + b,2) - 2*(a + b)*c + c2)", "get_name"}
+{"X(970)", "a2*(a3*Power(b + c,2) + a2*(b + c)*(b2 + c2) - (b + c)*(b4 + c4) - a*(b4 + 2*b3*c + 2*b*c3 + c4))|b2*(b3*Power(a + c,2) + b2*(a + c)*(a2 + c2) - (a + c)*(a4 + c4) - b*(a4 + 2*a3*c + 2*a*c3 + c4))|c2*(-((a + b)*(a4 + b4)) - (a4 + 2*a3*b + 2*a*b3 + b4)*c + (a + b)*(a2 + b2)*c2 + Power(a + b,2)*c3)", "get_name"}
+{"X(971)", "a*(a4*(b + c) - Power(b - c,2)*Power(b + c,3) - 2*a3*(b2 - b*c + c2) + 2*a*Power(b - c,2)*(b2 + b*c + c2))|b*(b4*(a + c) - Power(-a + c,2)*Power(a + c,3) - 2*b3*(a2 - a*c + c2) + 2*b*Power(-a + c,2)*(a2 + a*c + c2))|c*(-(Power(a - b,2)*Power(a + b,3)) + 2*Power(a - b,2)*(a2 + a*b + b2)*c - 2*(a2 - a*b + b2)*c3 + (a + b)*c4)", "get_name"}
+{"X(972)", "a/(a4*(b + c) - Power(b - c,2)*Power(b + c,3) - 2*a3*(b2 - b*c + c2) + 2*a*Power(b - c,2)*(b2 + b*c + c2))|b/(b4*(a + c) - Power(-a + c,2)*Power(a + c,3) - 2*b3*(a2 - a*c + c2) + 2*b*Power(-a + c,2)*(a2 + a*c + c2))|c/(-(Power(a - b,2)*Power(a + b,3)) + 2*Power(a - b,2)*(a2 + a*b + b2)*c - 2*(a2 - a*b + b2)*c3 + (a + b)*c4)", "get_name"}
+{"X(973)", "a2*(a2*SA + 2*SB*SC)*(SA*SB*(SA2 + 7*SA*SB + 2*SB2)*SC + c4*Power(SC,3) + c2*(SA2*SB2 + (SA2 + 6*SA*SB + SB2)*SC2))|b2*(b2*SB + 2*SA*SC)*(a4*Power(SA,3) + SA*SB*SC*(SB2 + 7*SB*SC + 2*SC2) + a2*(SB2*SC2 + SA2*(SB2 + 6*SB*SC + SC2)))|c2*(2*SA*SB + c2*SC)*(b4*Power(SB,3) + SA*SB*SC*(2*SA2 + 7*SA*SC + SC2) + b2*(SA2*SC2 + SB2*(SA2 + 6*SA*SC + SC2)))", "get_name"}
+{"X(974)", "a2*SA*(c4*Power(SC,4) + Power(SB,3)*SC*(-2*SA2 + 2*SA*SB - 3*SA*SC + SB*SC) + c2*SA*(SA*Power(SB,3) + (SA - 3*SB)*Power(SC,3)))|b2*SB*(a4*Power(SA,4) + SA*Power(SC,3)*(-3*SA*SB - 2*SB2 + SA*SC + 2*SB*SC) + a2*SB*(Power(SA,3)*(SB - 3*SC) + SB*Power(SC,3)))|c2*SC*(b4*Power(SB,4) + b2*SC*(Power(SA,3)*SC + Power(SB,3)*(-3*SA + SC)) + Power(SA,3)*SB*(SA*SB + 2*SA*SC - 3*SB*SC - 2*SC2))", "get_name"}
+{"X(975)", "a*(a3 + a2*(b + c) + Power(b + c,3) + a*(b2 + 4*b*c + c2))|b*(b3 + b2*(a + c) + Power(a + c,3) + b*(a2 + 4*a*c + c2))|c*(Power(a + b,3) + (a2 + 4*a*b + b2)*c + (a + b)*c2 + c3)", "get_name"}
+{"X(976)", "a*(a3 + (b + c)*(b2 + c2))|b*(b3 + (a + c)*(a2 + c2))|c*((a + b)*(a2 + b2) + c3)", "get_name"}
+{"X(977)", "a/(a3 + (b + c)*(b2 + c2))|b/(b3 + (a + c)*(a2 + c2))|c/((a + b)*(a2 + b2) + c3)", "get_name"}
+{"X(978)", "a*(a2*(b + c) - b*c*(b + c) + a*(b2 - b*c + c2))|b*(b2*(a + c) - a*c*(a + c) + b*(a2 - a*c + c2))|c*(-(a*b*(a + b)) + (a2 - a*b + b2)*c + (a + b)*c2)", "get_name"}
+{"X(979)", "a/(a2*(b + c) - b*c*(b + c) + a*(b2 - b*c + c2))|b/(b2*(a + c) - a*c*(a + c) + b*(a2 - a*c + c2))|c/(-(a*b*(a + b)) + (a2 - a*b + b2)*c + (a + b)*c2)", "get_name"}
+{"X(980)", "a*((a*b + a*c + b*c)*(b2 + c2) + a2*(b2 + b*c + c2))|b*((a*b + a*c + b*c)*(a2 + c2) + b2*(a2 + a*c + c2))|c*((a2 + b2)*(a*b + a*c + b*c) + (a2 + a*b + b2)*c2)", "get_name"}
+{"X(981)", "a/((a*b + a*c + b*c)*(b2 + c2) + a2*(b2 + b*c + c2))|b/((a*b + a*c + b*c)*(a2 + c2) + b2*(a2 + a*c + c2))|c/((a2 + b2)*(a*b + a*c + b*c) + (a2 + a*b + b2)*c2)", "get_name"}
+{"X(982)", "a*(b2 - b*c + c2)|b*(a2 - a*c + c2)|(a2 - a*b + b2)*c", "get_name"}
+{"X(983)", "a/(b2 - b*c + c2)|b/(a2 - a*c + c2)|c/(a2 - a*b + b2)", "get_name"}
+{"X(984)", "a*(b2 + b*c + c2)|b*(a2 + a*c + c2)|(a2 + a*b + b2)*c", "get_name"}
+{"X(985)", "a/(b2 + b*c + c2)|b/(a2 + a*c + c2)|c/(a2 + a*b + b2)", "get_name"}
+{"X(986)", "a*(b3 + a*(b2 + b*c + c2) + c3)|b*(a3 + b*(a2 + a*c + c2) + c3)|c*(a3 + b3 + (a2 + a*b + b2)*c)", "get_name"}
+{"X(987)", "a/(b3 + a*(b2 + b*c + c2) + c3)|b/(a3 + b*(a2 + a*c + c2) + c3)|c/(a3 + b3 + (a2 + a*b + b2)*c)", "get_name"}
+{"X(988)", "a*(a3 - a2*(b + c) - (3*a + b + c)*(b2 + c2))|b*(b3 - b2*(a + c) - (a + 3*b + c)*(a2 + c2))|c*(-((a2 + b2)*(a + b + 3*c)) - (a + b)*c2 + c3)", "get_name"}
+{"X(989)", "a/(a3 - a2*(b + c) - (3*a + b + c)*(b2 + c2))|b/(b3 - b2*(a + c) - (a + 3*b + c)*(a2 + c2))|c/(-((a2 + b2)*(a + b + 3*c)) - (a + b)*c2 + c3)", "get_name"}
+{"X(990)", "a*(a5 - 2*a3*b*c - a4*(b + c) + Power(b - c,2)*Power(b + c,3) - a*Power(b - c,2)*(b2 + c2))|b*(b5 - 2*a*b3*c - b4*(a + c) + Power(-a + c,2)*Power(a + c,3) - b*Power(-a + c,2)*(a2 + c2))|c*(Power(a - b,2)*Power(a + b,3) - Power(a - b,2)*(a2 + b2)*c - 2*a*b*c3 - (a + b)*c4 + c5)", "get_name"}
+{"X(991)", "a2*(a3*(b + c) - a*(b + c)*(b2 + c2) - a2*(b2 - b*c + c2) + (b - c)*(b3 - c3))|b2*(b3*(a + c) - b*(a + c)*(a2 + c2) - b2*(a2 - a*c + c2) + (-a + c)*(-a3 + c3))|c2*((a - b)*(a3 - b3) - (a + b)*(a2 + b2)*c - (a2 - a*b + b2)*c2 + (a + b)*c3)", "get_name"}
+{"X(992)", "a*(a3*(b + c) - a*b*c*(b + c) - b*c*Power(b + c,2) + a2*(b2 + c2))|b*(b3*(a + c) - a*b*c*(a + c) - a*c*Power(a + c,2) + b2*(a2 + c2))|c*(-(a*b*Power(a + b,2)) - a*b*(a + b)*c + (a2 + b2)*c2 + (a + b)*c3)", "get_name"}
+{"X(993)", "a*(a3 - b*c*(b + c) - a*(b2 + c2))|b*(b3 - a*c*(a + c) - b*(a2 + c2))|c*(-(a*b*(a + b)) - (a2 + b2)*c + c3)", "get_name"}
+{"X(994)", "a/(a3 - b*c*(b + c) - a*(b2 + c2))|b/(b3 - a*c*(a + c) - b*(a2 + c2))|c/(-(a*b*(a + b)) - (a2 + b2)*c + c3)", "get_name"}
+{"X(995)", "a2*(a*b + b2 + a*c - b*c + c2)|b2*(a2 + a*b - a*c + b*c + c2)|(a2 - a*b + b2 + a*c + b*c)*c2", "get_name"}
+{"X(996)", "1/(a*b + b2 + a*c - b*c + c2)|1/(a2 + a*b - a*c + b*c + c2)|1/(a2 - a*b + b2 + a*c + b*c)", "get_name"}
+{"X(997)", "a*(a3 - a*Power(b - c,2) - a2*(b + c) + (b + c)*(b2 + c2))|b*(b3 - b*Power(-a + c,2) - b2*(a + c) + (a + c)*(a2 + c2))|c*((a + b)*(a2 + b2) - Power(a - b,2)*c - (a + b)*c2 + c3)", "get_name"}
+{"X(998)", "a/(a3 - a*Power(b - c,2) - a2*(b + c) + (b + c)*(b2 + c2))|b/(b3 - b*Power(-a + c,2) - b2*(a + c) + (a + c)*(a2 + c2))|c/((a + b)*(a2 + b2) - Power(a - b,2)*c - (a + b)*c2 + c3)", "get_name"}
+{"X(999)", "a2*(2*b*c - SA)|b2*(2*a*c - SB)|c2*(2*a*b - SC)", "get_name"}
+{"X(1000)", "1/(2*b*c - SA)|1/(2*a*c - SB)|1/(2*a*b - SC)", "get_name"}

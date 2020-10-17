@@ -38,4 +38,5 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-data_moses/
+data_moses/ETCPoints_39381.m
+data_moses/vec_moses_clean.txt

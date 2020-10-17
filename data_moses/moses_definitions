@@ -1,0 +1,21 @@
+Symbols used;
+fundamental;
+a,b,c;
+A,B,C;
+Derived;
+SA = 1/2 (b^2+c^2-a^2);
+SB = 1/2 (c^2+a^2-b^2);
+SC = 1/2 (a^2+b^2-c^2);
+SW = 1/2 (a^2+b^2+c^2);
+sa = 1/2 (b+c-a);
+sb = 1/2 (c+a-b);
+sc = 1/2 (a+b-c);
+s = 1/2 (a+b+c);
+R = circumradius;
+r = inradius;
+\[CapitalDelta] = 1/4 Sqrt[(a+b-c) (a-b+c) (-a+b+c) (a+b+c)] = Area;
+S = 2 \[CapitalDelta];
+
+J = Sqrt[a^6-a^4 b^2-a^2 b^4+b^6-a^4 c^2+3 a^2 b^2 c^2-b^4 c^2-a^2 c^4-b^2 c^4+c^6]/(a b c) = |OH|/R;
+e = Sqrt[(a^4-a^2 b^2+b^4-a^2 c^2-b^2 c^2+c^4)/(a^2 b^2+a^2 c^2+b^2 c^2)] = Sqrt[1-4 Sin[w]^2];
+\[Tau] = (Sqrt[5]+1)/2;
