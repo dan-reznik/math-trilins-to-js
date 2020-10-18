@@ -7,7 +7,7 @@ clean_lines <- function(lines) {
     str_remove_all(fixed('\"')) %>%
     str_replace_all(" ([+-]) ","\\1") %>%
     str_replace_all(fixed(", "),",") %>%
-    str_replace_all("Power\\(([[:alnum:] +-/*]+), ?2\\)","(\\1)*(\\1)") %>%
+    str_replace_all("Power\\(([[:alnum:] +-/*]+), ?2\\)","\\((\\1)*(\\1)\\)") %>%
     str_replace_all("\\(([:word:]+)\\)", "\\1") %>%
     str_replace_all(fixed("Power"),"Math.pow")
 }
